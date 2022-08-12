@@ -1,10 +1,15 @@
 import React from 'react'
+import { BsFillCheckCircleFill } from 'react-icons/bs';
 import Navbar from '../../components/Navbar/navbar'
 import './login.css';
 
 import { LoginImg, Frame, MobilePhone} from '../../assets';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
+  const [valid, setValidation] = useState(false);
+  const number = 0;
   return (
     <>
       <Navbar />
@@ -20,9 +25,20 @@ const Login = () => {
             <div className="mobileNumber">
               <div className="numberInput">
                 <img src={MobilePhone} alt="" />
-                <input type="tel" name="" id="" placeholder='Mobile Number' maxLength={10}/>
+                <input type="tel" name="number" id="" placeholder='Mobile Number' pattern="[0-9]{3} [0-9]{3} [0-9]{4}" maxLength={10} onChange={(e) => {
+                  if(e.target.value.length === 10){
+                    setValidation(true);
+                    number = e.target.value
+                  }else{
+                    setValidation(false);
+                  }
+                }}/>
+                {valid ? <BsFillCheckCircleFill className='checkCircle'/>: ''}
+                {console.log(number)}
               </div>
-              <button type="submit" className='loginBtn'>Send OTP</button>
+              <button type="submit" className='loginBtn'> 
+                  <Link to="/otp" style={{textDecoration:"none",color:"#fff"}}>Send OTP</Link>
+              </button>
             </div>
           </div>
         </div>

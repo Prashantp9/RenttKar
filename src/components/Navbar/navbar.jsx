@@ -68,6 +68,7 @@ const Dropdown = () => {
 
   if(window.innerWidth <= 768){
     return (
+      <div className="dropOuterContainer">
       <div className="dropdownContainer">
       <div className="dropdownContent">
       <div className="Content"></div>
@@ -160,9 +161,11 @@ const Dropdown = () => {
       </div>
       </div>
       </div>
+      </div>
     )
   }else{
     return (
+      <div className="dropOuterContainer">
       <div className="dropdownContainer">
       <div className="dropdownContent">
       <div className="Content"></div>
@@ -185,6 +188,7 @@ const Dropdown = () => {
         <a href="" className="menu5">
           Invest in Ecosystem
         </a>
+      </div>
       </div>
       </div>
       </div>
@@ -260,6 +264,7 @@ const Navbar = () => {
 
 
         {/* search bar */}
+
         {isClicked ? (
           <>
             <div

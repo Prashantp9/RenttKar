@@ -133,7 +133,7 @@
       height: 0.946rem;
       
   }
-  
+
   .afterSearch {
     width: 25vw;
     height: 2.188rem;
@@ -306,7 +306,8 @@
   
   .dropButton{
     border: none;
-    background: transparent 
+    background: transparent; 
+    z-index: 3;
   }
 
   .dropButton .cross, .ham{
@@ -321,7 +322,16 @@
   }
 
 
-
+  .dropOuterContainer{
+    background: rgba(0,0,0,.7);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+  }
   
   .dropdownContainer{
     position: fixed;
