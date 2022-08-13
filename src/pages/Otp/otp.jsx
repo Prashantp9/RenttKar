@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../../components/Navbar/navbar";
 import "./otp.css";
+import { Link } from 'react-router-dom';
 
 // images
 import { LoginImg, Frame } from "../../assets";
@@ -11,7 +12,7 @@ const Otp = () => {
       <Navbar />
       <div className="otpContainer">
         <div className="otpContent">
-          <div className="artWork">
+          <div className="otpArtWork">
             <img src={LoginImg} alt="image" id="otpImg" />
             <img src={Frame} alt="Frame" id="otpframe" />
           </div>
@@ -79,7 +80,7 @@ const Otp = () => {
             </div>
             <p id='resend'>Didn’t recieve the OTP? <a href="" style={{textDecoration:"none", color:"#0E9BE1"}}>Resend OTP</a></p>
             <button type="submit" className='otpBtn'> 
-                  <a href="#" style={{textDecoration:"none",color:"#fff"}}>Confirm</a>
+                  <Link to="/registeration" style={{textDecoration:"none",color:"#fff"}}>Confirm</Link>
             </button>
           </div>
         </div>

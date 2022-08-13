@@ -307,7 +307,6 @@
   .dropButton{
     border: none;
     background: transparent; 
-    z-index: 3;
   }
 
   .dropButton .cross, .ham{

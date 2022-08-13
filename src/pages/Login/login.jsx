@@ -9,13 +9,12 @@ import { Link } from 'react-router-dom';
 
 const Login = () => {
   const [valid, setValidation] = useState(false);
-  const number = 0;
   return (
     <>
       <Navbar />
       <div className="loginContainer">
         <div className="loginContent">
-          <div className="artWork">
+          <div className="loginArtWork">
             <img src={LoginImg} alt="image" id='loginImg'/>
             <img src={Frame} alt="Frame" id='loginframe'/>
           </div>
@@ -28,13 +27,11 @@ const Login = () => {
                 <input type="tel" name="number" id="" placeholder='Mobile Number' pattern="[0-9]{3} [0-9]{3} [0-9]{4}" maxLength={10} onChange={(e) => {
                   if(e.target.value.length === 10){
                     setValidation(true);
-                    number = e.target.value
                   }else{
                     setValidation(false);
                   }
                 }}/>
                 {valid ? <BsFillCheckCircleFill className='checkCircle'/>: ''}
-                {console.log(number)}
               </div>
               <button type="submit" className='loginBtn'> 
                   <Link to="/otp" style={{textDecoration:"none",color:"#fff"}}>Send OTP</Link>

@@ -59,3 +59,6 @@ export {default as LoginImg} from "./Images/loginImg.png";
 export {default as Frame} from "./Images/Frame.png";
 export {default as MobilePhone} from "./Images/mobilPhone.png";
 
+export {default as Person} from "./Images/person.png";
+export {default as Email} from "./Images/email.png";
+export {default as Referal} from "./Images/referal.png";
