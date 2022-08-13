@@ -3,9 +3,9 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 32.25rem;
+    height: 60vh;
     min-height: 25rem;
-    max-height: 32.25rem;
+    max-height: 27.25rem;
     margin-top: 14%;
 }
 
@@ -80,7 +80,7 @@
     line-height: 1.063rem;
     color: #9B9B9B;
     flex-wrap: wrap;
-    margin-top: 1.063rem;   
+    margin-top: .5rem;   
 }
 
 #changeNumber{
@@ -96,25 +96,27 @@
     /* new blue */
     
     color: #0E9BE1;
-    margin-top: 0.75rem;
     text-decoration: none;
+    margin-top: -1rem;
 }
 
 .otpNumberContainer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 26.875rem;
-    height: 4.063rem;
-    margin-top: 3rem;
+    width: 20.475rem;
+    height: 3.063rem;
+    min-height: 3rem;
+    max-height: 3rem;
+    margin-top: 2.5rem;
 }
 
 .otpInput{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 4.063rem;
-    height: 4.063rem;
+    width: 3rem;
+    height: 100%;
     background: #111111;
     box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.16);
     border-radius: 6px;
@@ -152,14 +154,23 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 20px 56px;
+    padding: 3% 10%;
     gap: 10px;
     background: #0E9BE1;
     border-radius: 5px;
     border: none;
     outline: none;
-    margin-top: 3rem;
-    margin-bottom: 3.5rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.125rem;
+    /* identical to box height */
+    
+    
+    color: #FFFFFF;
 }
 
 
@@ -232,6 +243,125 @@
         max-width: 27.813rem;
     
     }
+
+    #otpText{
+        text-align: center;
+        margin-top: 13%;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.175rem;
+        line-height: 1.388rem;
+        color: #DFDFDF; 
+        margin-top: 4rem;
+    }
+    
+    #otpDesc{
+        width: 80%;
+        height: 35%;
+        max-width: 20.75rem;
+        max-height: 1.375rem;
+        text-align: center;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.775rem;
+        line-height: 1rem;
+        color: #9B9B9B;
+        flex-wrap: wrap;
+        margin-top: 1.5rem;   
+    }
+    
+    #changeNumber{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.775rem;
+        line-height: 1rem;
+        /* identical to box height */
+        
+        text-align: center;
+        
+        /* new blue */
+        
+        color: #0E9BE1;
+        text-decoration: none;
+        margin-top: .5rem;
+    }
+    
+    .otpNumberContainer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 20.475rem;
+        height: 3.063rem;
+        min-height: 3rem;
+        max-height: 3rem;
+        margin-top: 2.5rem;
+    }
+    
+    .otpInput{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3rem;
+        height: 100%;
+        background: #111111;
+        box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.16);
+        border-radius: 6px;
+        border: none;
+        outline: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.063rem;
+        /* identical to box height */
+        
+        color: #9B9B9B;
+        text-align: center;
+    }
+    
+    
+    #resend{
+        width: 80%;
+        height: 35%;
+        max-width: 20.75rem;
+        max-height: 1.375rem;
+        text-align: center;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.775rem;
+        line-height: 1rem;
+        color: #9B9B9B;
+        flex-wrap: wrap;
+        margin-top: 2rem; 
+    }
+    
+    .otpBtn{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 3% 4%;
+        gap: 10px;
+        background: #0E9BE1;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.125rem;
+        /* identical to box height */
+        
+        
+        color: #FFFFFF;
+    }
+    
 }
 
 
@@ -280,5 +410,126 @@
         height: 100%;
         max-width: 23.75rem;
     
+    }
+
+    #otpText{
+        text-align: center;
+        margin-top: 13%;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.175rem;
+        line-height: 1.388rem;
+        color: #DFDFDF; 
+        margin-top: 3rem;
+    }
+    
+    #otpDesc{
+        width: 80%;
+        height: 35%;
+        max-width: 20.75rem;
+        max-height: 1.375rem;
+        text-align: center;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.775rem;
+        line-height: 1rem;
+        color: #9B9B9B;
+        flex-wrap: wrap;
+        margin-top: 1.5rem;   
+    }
+    
+    #changeNumber{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.775rem;
+        line-height: 1rem;
+        /* identical to box height */
+        
+        text-align: center;
+        
+        /* new blue */
+        
+        color: #0E9BE1;
+        text-decoration: none;
+        margin-top: .5rem;
+    }
+    
+    .otpNumberContainer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+        height: 3.063rem;
+        gap: .2rem;
+        max-width: 20.475rem;
+        max-height: 3.063rem;
+        min-height: 3rem;
+        max-height: 3rem;
+        margin-top: 2.5rem;
+    }
+    
+    .otpInput{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35%;
+        height: 100%;
+        background: #111111;
+        box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.16);
+        border-radius: 6px;
+        border: none;
+        outline: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.063rem;
+        /* identical to box height */
+        
+        color: #9B9B9B;
+        text-align: center;
+    }
+    
+    
+    #resend{
+        width: 80%;
+        height: 35%;
+        max-width: 20.75rem;
+        max-height: 1.375rem;
+        text-align: center;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.775rem;
+        line-height: 1rem;
+        color: #9B9B9B;
+        flex-wrap: wrap;
+        margin-top: 2rem; 
+    }
+    
+    .otpBtn{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 3% 4%;
+        gap: 10px;
+        background: #0E9BE1;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.125rem;
+        /* identical to box height */
+        
+        
+        color: #FFFFFF;
     }
 }

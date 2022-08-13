@@ -77,7 +77,7 @@ const Otp = () => {
                 value="3"
               />
             </div>
-            <p id='resend'>Didn’t recieve the OTP? <a href="" style={{textDecoration:"none"}}>Resend OTP</a></p>
+            <p id='resend'>Didn’t recieve the OTP? <a href="" style={{textDecoration:"none", color:"#0E9BE1"}}>Resend OTP</a></p>
             <button type="submit" className='otpBtn'> 
                   <a href="#" style={{textDecoration:"none",color:"#fff"}}>Confirm</a>
             </button>
