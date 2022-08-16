@@ -211,9 +211,9 @@ const Navbar = () => {
     
         
         {/* logo */}
-        <a href="">
+        <Link to="/">
           <img src={Logo} alt="" className="navbarLogo" />
-        </a>
+        </Link>
 
 
 
