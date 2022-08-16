@@ -18,7 +18,7 @@ const Otp = () => {
           </div>
           <div className="otpDetails">
             <p id="otpText">Enter OTP</p>
-            <p id="otpDesc">Enter OTP code sent to +91 8369421326 </p>
+            <p id="otpDesc">Enter OTP code sent to <span>+91 8369421326</span></p>
             <a href="" id="changeNumber">Change Number</a>
             <div className="otpNumberContainer">
               <input

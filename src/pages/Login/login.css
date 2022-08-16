@@ -5,7 +5,7 @@
     width: 100vw;
     height: 50vh;
     min-height: 25rem;
-    max-height: 27.25rem;
+    max-height: 25rem;
     margin-top: 14%;
 }
 
@@ -79,7 +79,6 @@
     font-size: 0.875rem;
     line-height: 1.063rem;
     color: #9B9B9B;
-    margin-top: 1.5rem;
 }
 
 .mobileNumber{
@@ -91,7 +90,7 @@
     height: 40%;
     max-width: 25.625rem;
     max-height: 10.938rem;
-    margin-top: 2.5rem;
+    margin-top: 1rem;
     margin-bottom: 4rem;
 
 }
