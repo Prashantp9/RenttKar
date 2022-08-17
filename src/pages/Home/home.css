@@ -1754,6 +1754,10 @@
     
 }
 
+.qualityContent:last-child {
+  display: flex;
+}
+
 
 .qualityHeading{
     display: flex;
