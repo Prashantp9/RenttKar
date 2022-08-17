@@ -1,0 +1,266 @@
+.catogery-navigation-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 3.938rem;
+    max-height: 3.938rem;
+    margin-top: 4.125rem;
+}
+
+.catogery-navigation-content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 64.375rem;
+    width: 90%;
+    height: 100%;
+}
+
+.catogery-navigation-content p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 0.938rem;
+    /* identical to box height */
+    
+    
+    /* text1 */
+    
+    color: #DFDFDF;
+}
+
+.catogery-navigation-content a{
+    text-decoration: none;
+    color: #DFDFDF;
+}
+
+
+
+/* catogery Card */
+.catogery-card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 9rem;
+}
+
+.catogery-card-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    max-width: 64.375rem;
+    height: 100%;
+}
+
+.catogeryCard{
+    width: 7.25rem;
+    height: 7.25rem;
+    background: linear-gradient(44.64deg, #1B1B1B -9.77%, #141414 48.47%, #0C0C0C 118.77%);
+    border: 0.315818px solid rgba(25, 25, 25, 0.5);
+    box-shadow: 1.89491px 2.52654px 3.15818px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2.52654px);
+    /* Note: backdrop-filter has minimal browser support */
+    
+    border-radius: 12px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+
+
+/* subcatogery section */
+.subcatogery-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 3rem;
+    background: linear-gradient(92.67deg, #070707 18.68%, #0A0A0A 52.23%);
+}
+
+.subcatogery-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    max-width: 49.938rem;
+}
+
+.subcatogery-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 1.5rem;
+    border-right:  2.10038px solid #1D1D1D;
+}
+
+.end{
+    border: none;
+}
+
+.subcatogery-links a{
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.063rem;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #DFDFDF;
+}
+
+
+
+/* sorting filter */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* iPads, Tablets */
+@media only screen and (max-width: 768px) {
+    .catogery-navigation-container{
+        display: none;
+    }
+
+
+    /* catogery Card */
+    .catogery-card-container{
+        margin-top: 5.375rem;
+    }
+
+    /* subCatogery */
+
+    .subcatogery-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 6rem;
+        background: linear-gradient(92.67deg, #070707 18.68%, #0A0A0A 52.23%);
+    }
+    
+    .subcatogery-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        height: 100%;
+        max-width: 49.938rem;
+    }
+
+    .subcatogery-links{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 3.25rem;
+        padding-right: 0;
+        background: #191919;
+        border-radius: 6px;
+        object-fit: contain;
+    }
+    
+    
+    .subcatogery-links a{
+        text-decoration: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.063rem;
+        /* identical to box height */
+        
+        text-align: center;
+        
+        color: #DFDFDF;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile devices */
+@media only screen and (max-width: 500px) {
+    .catogery-navigation-container{
+        display: none;
+    }
+
+     /* subCatogery */
+
+     .subcatogery-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 6rem;
+        background: linear-gradient(92.67deg, #070707 18.68%, #0A0A0A 52.23%);
+    }
+    
+    .subcatogery-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        height: 100%;
+        max-width: 49.938rem;
+    }
+
+    .subcatogery-links{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 3.25rem;
+        padding-right: 0;
+        background: #191919;
+        border-radius: 6px;
+        object-fit: contain;
+    }
+    
+    
+    .subcatogery-links a{
+        text-decoration: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.063rem;
+        /* identical to box height */
+        
+        text-align: center;
+        
+        color: #DFDFDF;
+    }
+
+}

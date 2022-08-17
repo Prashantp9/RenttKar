@@ -6,7 +6,7 @@ import "./navbar.css";
 
 // images
 import {
-  Logo,
+  HeaderLogo,
   Location,
   Search,
   MobileSearch,
@@ -212,7 +212,7 @@ const Navbar = () => {
         
         {/* logo */}
         <Link to="/">
-          <img src={Logo} alt="" className="navbarLogo" />
+          <img src={HeaderLogo} alt="" className="navbarLogo" />
         </Link>
 
 
@@ -280,6 +280,7 @@ const Navbar = () => {
               </button>
             </div>
             <Searchsuggestion />
+            
           </>
         ) : (
           <div className="beforeSearch">

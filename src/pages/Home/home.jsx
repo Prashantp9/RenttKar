@@ -8,10 +8,11 @@ import "swiper/css/autoplay";
 import "./home.css";  
 
 // components
-import { Navbar, Footer, Card } from "../../components";
+import { Navbar, Footer, Card, Catogerycard } from "../../components";
 
 // images
-import {Console, HeaderImg, ExcludeLeft, ExcludeRight, Left, Right, Playstation, Pc, Playstn, Laptop, Artwork, BigEllipse,  Union,  Delivery, Deposit, Light,  Esport,  Times,  Tech,  Lbb,  Learn,  Aadil,  Renuka,  Ammy,  Music,  Camera,  Apple,  Computers,  Show,  Head,  Scroll,UpArrow,GoTop} from "../../assets";
+import {Console,PhoneContainer, InstagramContainer, headfoneCircle, headfoneInstagram, headfoneWhatsapp,headfoneCross, headfonePhone, HeaderImg, ExcludeLeft, ExcludeRight, Left, Right, Playstation, Pc, Playstn, Laptop, Artwork,  Union,  Delivery, Deposit, Light,  Esport,  Times,  Tech,  Lbb,  Learn,  Aadil,  Renuka,  Ammy,  Music,  Camera,  Apple,  Computers,  Show,  Head,  Scroll,UpArrow,GoTop} from "../../assets";
+import { Link } from "react-router-dom";
 
 
 
@@ -31,34 +32,38 @@ const CatogeriesCard = () =>{
           loopFillGroupWithBlank={false}
       >
       <SwiperSlide style={{maxWidth:"8rem", maxHeight: "8rem"}}>
-      <div className="catogeryCard">
-        <img src={Console} className="catImg" alt="Console" />
-        <p className="catText">Gaming</p>
-      </div>
+        <Catogerycard
+          imgSrc = {Console}
+          className="catImg"
+          name = "Gaming"
+        />
       </SwiperSlide>
 
       {/* 2 */}
       <SwiperSlide style={{maxWidth:"8rem", maxHeight: "8rem"}}>
-      <div className="catogeryCard">
-        <img src={Camera} className="catImg" alt="Console" />
-        <p className="catText">Camera</p>
-      </div>
+      <Catogerycard
+          imgSrc = {Music}
+          className="catImg"
+          name = "Music"
+        />
       </SwiperSlide>
 
       {/* 3 */}
       <SwiperSlide style={{maxWidth:"8rem", maxHeight: "8rem"}}>
-      <div className="catogeryCard" >
-        <img src={Computers} className="catImg" alt="Console" />
-        <p className="catText">Computers</p>
-      </div>
+      <Catogerycard
+          imgSrc = {Camera}
+          className="catImg"
+          name = "Camera"
+        />
       </SwiperSlide>
 
       {/* 4 */}
       <SwiperSlide style={{maxWidth:"8rem", maxHeight: "8rem"}}>
-      <div className="catogeryCard Apple">
-        <img src={Apple} className="catImg apple" alt="Console"/>
-        <p className="catText">Apple</p>
-      </div>
+      <Catogerycard
+          imgSrc = {Apple}
+          className="catImg"
+          name = "Apple"
+        />
       </SwiperSlide>
     </Swiper>
     </div>
@@ -69,40 +74,46 @@ const CatogeriesCard = () =>{
       <div className="catogeriesContainer">
       <div className="catogeriesContent">
       {/* 1 */}
-      <div className="catogeryCard">
-        <img src={Console} className="catImg" alt="Console" />
-        <p className="catText">Gaming</p>
-      </div>
+      <Catogerycard
+          imgSrc = {Console}
+          className="catImg"
+          name = "Gaming"
+        />
 
       {/* 2 */}
-      <div className="catogeryCard">
-        <img src={Music} className="catImg" alt="Console" />
-        <p className="catText">Music</p>
-      </div>
+      <Catogerycard
+          imgSrc = {Music}
+          className="catImg"
+          name = "Music"
+        />
 
       {/* 3 */}
-      <div className="catogeryCard">
-        <img src={Camera} className="catImg" alt="Console" />
-        <p className="catText">Camera</p>
-      </div>
+      <Catogerycard
+          imgSrc = {Camera}
+          className="catImg"
+          name = "Camera"
+        />
 
       {/* 4 */}
-      <div className="catogeryCard Apple">
-        <img src={Apple} className="catImg apple" alt="Console"/>
-        <p className="catText">Apple</p>
-      </div>
+      <Catogerycard
+          imgSrc = {Apple}
+          className="catImg"
+          name = "Apple"
+        />
 
       {/* 5 */}
-      <div className="catogeryCard" >
-        <img src={Computers} className="catImg" alt="Console" />
-        <p className="catText">Computers</p>
-      </div>
+      <Catogerycard
+          imgSrc = {Computers}
+          className="catImg"
+          name = "Computers"
+        />
 
       {/* 6 */}
-      <div className="catogeryCard showCard" >
-        <img src={Show} className="catImg showImg" alt="Console" />
-        <p className="showText">ShowAll</p>
-      </div>
+      <Catogerycard
+          imgSrc = {Show}
+          className="showAll"
+          name = "ShowAll"
+        />
       </div>
     </div>
     )
@@ -282,6 +293,8 @@ const Home = () => {
       behavior: "smooth",
     });
   };
+
+  const [showPopUp, setShowPopUp] = useState(false);  
   
 
 
@@ -327,7 +340,7 @@ const Home = () => {
                 <img
                   style={{ borderRadius: "15px" }}
                   src={HeaderImg}
-                  className="d-block w-100 headerImg"
+                  className=" w-100 headerImg"
                   alt="..."
                 />
               </div>
@@ -385,9 +398,45 @@ const Home = () => {
         </div>
       )}
 
-      <div className="headPhone">
-        <img src={Head} alt="" className="headImg" />
-      </div>
+
+      {showPopUp ?(
+        <div className="headfoneSocials">
+          <div className="headfoneSocialsContent">
+              <div className="instagramContainer">
+                <img src={InstagramContainer} id="instaContainer" alt="" />
+                <a href="https://www.instagram.com/rentkar_app/">@rentkar</a>
+              </div>
+              <img src={headfoneInstagram} className="headfoneInstagram" style={{width:"3.151rem", height: "3.151rem"}} alt="" />              
+          </div>
+          <div className="headfoneSocialsContent">
+              <div className="phoneContainer1">
+                <img src={PhoneContainer} id="phoneContainer" alt="" />
+                <a href="https://faq.whatsapp.com/563219570998715/?helpref=uf_share">+91 912648357</a>
+              </div>
+              <img src={headfoneWhatsapp} className="headfoneWhatsapp" style={{width:"3.151rem", height: "3.151rem"}} alt=""/>
+          </div>
+          <div className="headfoneSocialsContent">
+              <div className="phoneContainer2">
+                <img src={PhoneContainer} id="phoneContainer" alt="" />
+                <a href="tel:91912648357">+91 912648357</a>
+              </div>
+              <img src={headfonePhone} className="headfonePhone" style={{width:"3.151rem", height: "3.151rem"}} alt=""/>
+          </div>
+
+          <img src={headfoneCircle} style={{width:"3.151rem", height: "3.151rem"}} alt="" className="headfoneCircleImg"  onClick={(e) => setShowPopUp(!showPopUp)}/>
+          <img src={headfoneCross} alt="" id="headfoneCross" onClick={(e) => setShowPopUp(!showPopUp)}/>
+        </div>
+        ): (
+          <div className="headPhone" >
+            <img src={Head} style={{width:"3.151rem", height: "3.151rem"}}  alt="" className="headImg" onClick={(e) => setShowPopUp(!showPopUp)}/>
+          </div>
+        )
+
+      }
+
+      
+
+
 
       {/* Trending Now section */}
       <div className="trendingContainer">
@@ -436,7 +485,6 @@ const Home = () => {
 
           <div className="qualityContainer">
             <div className="qualityContent">
-              <img src={BigEllipse} alt="Ellipse" className="ellipse3" />
               <img src={Union} alt="union" className="deposit" />
               <h1 className="qualityHeading">Quality Products</h1>
               <p className="qualityDetails">
@@ -446,7 +494,6 @@ const Home = () => {
             </div>
 
             <div className="qualityContent">
-              <img src={BigEllipse} alt="Ellipse" className="ellipse2" />
               <img src={Delivery} alt="union" className="delivery" />
               <h1 className="qualityHeading">Instant Delivery</h1>
               <p className="qualityDetails">
@@ -455,7 +502,6 @@ const Home = () => {
             </div>
 
             <div className="qualityContent">
-              <img src={BigEllipse} alt="Ellipse" className="ellipse3" />
               <img src={Deposit} alt="union" className="deposit" />
               <h1 className="qualityHeading">Zero Deposit</h1>
               <p className="qualityDetails">
@@ -464,7 +510,6 @@ const Home = () => {
             </div>
 
             <div className="qualityContent liveLighter">
-              <img src={BigEllipse} alt="Ellipse" className="ellipse4" />
               <img src={Light} alt="union" className="light" />
               <h1 className="qualityHeading">Live Light</h1>
               <p className="qualityDetails">

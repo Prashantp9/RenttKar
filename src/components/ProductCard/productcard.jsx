@@ -16,7 +16,7 @@ function ProductCard(props){
       <p className="day">{props.day}</p>
       <img src={Gaadi} alt="" className="gaadi" />
       <p className="start">Starts at</p>
-      <p className="price"><img src={Rupees} alt="" style={{width: "1rem", height: "1rem"}}/>{props.price}</p>
+      <p className="price"><img src={Rupees} alt=""/>{props.price}</p>
       <button className="btn" data="Rent Now"></button>
     </div>
   );

@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fc6782ba.css",
+    "main.js": "/static/js/main.939e4f70.js",
+    "static/media/headerImage.png": "/static/media/headerImage.2b394e04bf6ade8517d0.png",
+    "static/media/Pc.png": "/static/media/Pc.93ebda10a80f23e88b0b.png",
+    "static/media/Playstation.png": "/static/media/Playstation.6fff0271b070c64a94ae.png",
+    "static/media/learnArtwork.png": "/static/media/learnArtwork.a5a8280d26516ce083af.png",
+    "static/media/laptop.png": "/static/media/laptop.ad9659ad4aa42251aec7.png",
+    "static/media/Playstation2.png": "/static/media/Playstation2.f01ec78ad7d6fba07d56.png",
+    "static/media/mumbai.png": "/static/media/mumbai.98989b839b6780640a89.png",
+    "static/media/Artwork.png": "/static/media/Artwork.06595cec37fbf228dacb.png",
+    "static/media/pune.png": "/static/media/pune.bc05c53d5c4399535e7d.png",
+    "static/media/banglore.png": "/static/media/banglore.14ad6e59790563257010.png",
+    "static/media/delhi.png": "/static/media/delhi.c9fe34429c919bca3e4d.png",
+    "static/media/loginImg.png": "/static/media/loginImg.7c84cc7622910fc1aa68.png",
+    "static/media/aadil.png": "/static/media/aadil.4460c65c1cee7c588097.png",
+    "static/media/renuka.png": "/static/media/renuka.3df23b3e89fa5e367e90.png",
+    "static/media/ammy.png": "/static/media/ammy.bad18b0a9ecb65ec19d9.png",
+    "index.html": "/index.html",
+    "main.fc6782ba.css.map": "/static/css/main.fc6782ba.css.map",
+    "main.939e4f70.js.map": "/static/js/main.939e4f70.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fc6782ba.css",
+    "static/js/main.939e4f70.js"
+  ]
+}

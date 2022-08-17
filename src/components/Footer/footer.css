@@ -28,9 +28,8 @@
         min-width: 7.059rem;
         min-height: 1.123rem;
         width: 7.059rem;
-        height: 1.123rem;
         margin-top: 4.682rem;
-        background: url("../../assets/Images/tabletLogo.png");
+        background: url("../../assets/Images/footerLogo.svg");
         background-repeat: no-repeat;
         margin-top: 2.676rem;
         margin-bottom: 1rem;
@@ -240,7 +239,7 @@
         justify-content: flex-start;
         width: 7.059rem;
         height: 1.123rem;
-        background: url("../../assets/Images/tabletLogo.png");
+        background: url("../../assets/Images/footerLogo.svg");
         background-repeat: no-repeat;
 
     }
@@ -495,7 +494,7 @@
         height: 1.5rem;
         top: 0.501rem;
         margin-top: 0.501rem;
-        background: url("../../assets/Images/mobileLogo.png");
+        background: url("../../assets/Images/footerLogo.svg");
         background-repeat: no-repeat;
     }
     
