@@ -4,7 +4,7 @@ import {Gaadi, Hot, Rupees} from '../../assets';
 
  
 
-function ProductCard(props){
+function Productcard(props){
   return (
     <div className="card">
       <img src={props.imgSrc} alt="Playstation" className="cardImg" />
@@ -22,4 +22,4 @@ function ProductCard(props){
   );
 };
 
-export default ProductCard;
+export default Productcard;

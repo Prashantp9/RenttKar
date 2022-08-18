@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -8,11 +8,10 @@ import "swiper/css/autoplay";
 import "./home.css";  
 
 // components
-import { Navbar, Footer, Card, Catogerycard } from "../../components";
+import { Navbar, Footer, Catogerycard, Sliderproductcard } from "../../components";
 
 // images
-import {Console,PhoneContainer, InstagramContainer, headfoneCircle, headfoneInstagram, headfoneWhatsapp,headfoneCross, headfonePhone, HeaderImg, ExcludeLeft, ExcludeRight, Left, Right, Playstation, Pc, Playstn, Laptop, Artwork,  Union,  Delivery, Deposit, Light,  Esport,  Times,  Tech,  Lbb,  Learn,  Aadil,  Renuka,  Ammy,  Music,  Camera,  Apple,  Computers,  Show,  Head,  Scroll,UpArrow,GoTop} from "../../assets";
-import { Link } from "react-router-dom";
+import {Console,PhoneContainer, InstagramContainer, headfoneCircle, headfoneInstagram, headfoneWhatsapp,headfoneCross, headfonePhone, HeaderImg,  Artwork,  Union,  Delivery, Deposit, Light,  Esport,  Times,  Tech,  Lbb,  Learn,  Aadil,  Renuka,  Ammy,  Music,  Camera,  Apple,  Computers,  Show,  Head,  Scroll,UpArrow,GoTop} from "../../assets";
 
 
 
@@ -122,161 +121,10 @@ const CatogeriesCard = () =>{
 
 
 
-const ProductCard = () =>{
-  if(window.innerWidth < 500){
-          return(
-            <Swiper
-            width={800}
-            slidesPerView={3}
-            centeredSlides={false}
-            slidesPerGroup={2}
-            grabCursor={true}
-            loop={true}
-            loopFillGroupWithBlank={true}
-            pagination={{
-              clickable: true,
-            }}
-            navigation={{
-              prevEl: ".leftButton",
-              nextEl: ".rightButton",
-            }}
-            modules={[Navigation]}
-            className="mySwiper"
-          >
-            <SwiperSlide className="prodCard">
-              <Card
-                imgSrc={Playstation}
-                name="Playstation 5"
-                day="1 day"
-                price="500/Month"
-              />
-            </SwiperSlide>
-  
-            <SwiperSlide className="prodCard" >
-              <Card
-                imgSrc={Pc}
-                name="Playstation 5"
-                day="1 day"
-                price="500/Month"
-              />
-            </SwiperSlide>
-  
-            <SwiperSlide className="prodCard">
-              <Card
-                imgSrc={Laptop}
-                name="Playstation 5"
-                day="1 day"
-                price="500/Month"
-              />
-            </SwiperSlide>
-  
-            <SwiperSlide className="prodCard">
-              <Card
-                imgSrc={Playstn}
-                name="Playstation 5"
-                day="1 day"
-                price="500/Month"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="prodCard">
-              <Card
-                imgSrc={Pc}
-                name="Playstation 5"
-                day="1 day"
-                price="500/Month"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="prodCard">
-              <Card
-                imgSrc={Playstn}
-                name="Playstation 5"
-                day="1 day"
-                price="500/Month"
-              />
-            </SwiperSlide>
-            </Swiper>
-          )
-  }else{
-      return(
-        <Swiper
-        width={900}
-        slidesPerView={3}
-        centeredSlides={false}
-        spaceBetween={10}
-        slidesPerGroup={3}
-        grabCursor={true}
-        loop={true}
-        loopFillGroupWithBlank={true}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={{
-          prevEl: ".leftButton",
-          nextEl: ".rightButton",
-        }}
-        modules={[Navigation]}
-        className="mySwiper"
-      >
-        <SwiperSlide className="prodCard">
-          <Card
-            imgSrc={Playstation}
-            name="Playstation 5"
-            day="1 day"
-            price="500/Month"
-          />
-        </SwiperSlide>
 
-        <SwiperSlide className="prodCard" >
-          <Card
-            imgSrc={Pc}
-            name="Playstation 5"
-            day="1 day"
-            price="500/Month"
-          />
-        </SwiperSlide>
-
-        <SwiperSlide className="prodCard">
-          <Card
-            imgSrc={Laptop}
-            name="Playstation 5"
-            day="1 day"
-            price="500/Month"
-          />
-        </SwiperSlide>
-
-        <SwiperSlide className="prodCard">
-          <Card
-            imgSrc={Playstn}
-            name="Playstation 5"
-            day="1 day"
-            price="500/Month"
-          />
-        </SwiperSlide>
-        <SwiperSlide className="prodCard">
-          <Card
-            imgSrc={Pc}
-            name="Playstation 5"
-            day="1 day"
-            price="500/Month"
-          />
-        </SwiperSlide>
-        <SwiperSlide className="prodCard">
-          <Card
-            imgSrc={Playstn}
-            name="Playstation 5"
-            day="1 day"
-            price="500/Month"
-          />
-        </SwiperSlide>
-        </Swiper>
-      )
-  }
-}
 
 
 const Home = () => {
-
-  const swiper = useSwiper();
   const [showTopBtn, setShowTopBtn] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -438,26 +286,15 @@ const Home = () => {
 
 
 
+
       {/* Trending Now section */}
-      <div className="trendingContainer">
-        <div className="trendingContent">
-          <h1 className="trendText">Trending Now!</h1>
-          <div className="trendButton">
-            <div className="leftButton" onClick={() => swiper.slidePrev()}>
-            <img src={Left} onMouseOver={e => (e.currentTarget.src = ExcludeLeft)} onMouseOut={e => (e.currentTarget.src = Left)}  className="leftVector" />
-            </div>
-            <div className="rightButton" onClick={() => swiper.slideNext()}>
-            <img src={Right} onMouseOver={e => (e.currentTarget.src = ExcludeRight)} onMouseOut={e => (e.currentTarget.src = Right)}  className="rightVector" />
-            </div>
-          </div>
+      <div className="cardContainer">
+        <div className="cardContainerContent">
+            <Sliderproductcard  text="Trending Now!"/>
         </div>
       </div>
 
-      <div className="cardContainer">
-        <div className="cardContainerContent">
-          <ProductCard />
-        </div>
-      </div>
+
 
       {/* Working */}
       <div className="explainedContainer">

@@ -64,6 +64,22 @@ const Searchsuggestion = () => (
 const Dropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [city, setCity] = useState("Mumbai");
+  const [cityState, changeCityState] = useState({
+    activeObject: null,
+    objects: [{id: 1},{id: 2},{id: 3},{id: 4}]
+  });
+
+  const toggleActive = (index) => {
+      changeCityState({ ...cityState, activeObject: cityState.objects[index]})
+  }
+
+  function toggleActiveStyles(index){
+      if(cityState.objects[index] === cityState.activeObject){
+          return "city active"
+      }else{
+        return "city "
+      }
+  }
   
 
   if(window.innerWidth <= 768){
@@ -92,19 +108,19 @@ const Dropdown = () => {
                 <h1 className='selectCity'>Select your City</h1>
                 <img src={Cross} alt="close" className='close' onClick={() => setIsOpen(!isOpen)}/>
                 <div className="cityContainer">
-                    <div className="city banglore" onClick={function(){setCity("Banglore"); setIsOpen(!isOpen)}}>
+                <div className={toggleActiveStyles(0)}   onClick={function(){setCity("Banglore");toggleActive(0)}}>
                         <img src={Banglore} alt="" className='cityImg'/>
                         <p className='cityName bangloreCity'>Banglore</p>
                     </div>
-                    <div className="city mumbai" onClick={function(){setCity("Mumbai"); setIsOpen(!isOpen)}}>
+                    <div className={toggleActiveStyles(1)}  onClick={function(){setCity("Mumbai");toggleActive(1)}}>
                         <img src={Mumbai} alt="" className='cityImg'/>
                         <p className='cityName mumbaiCity'>Mumbai</p>
                     </div>
-                    <div className="city pune" onClick={function(){setCity("Pune"); setIsOpen(!isOpen)}}>
+                    <div className={toggleActiveStyles(2)}  onClick={function(){setCity("Pune");toggleActive(2)}}>
                         <img src={Pune} alt="" className='cityImg'/>
                         <p className='cityName puneCity'>Pune</p>
                     </div>
-                    <div className="city delhi" onClick={function(){setCity("Delhi"); setIsOpen(!isOpen)}}>
+                    <div className={toggleActiveStyles(3)}  onClick={function(){setCity("Delhi");toggleActive(3)}}>
                         <img src={Delhi} alt="" className='cityImg'/>
                         <p className='cityName delhiCity'>Delhi</p>
                     </div>
@@ -203,7 +219,22 @@ const Navbar = () => {
   const [isClicked, setIsClicked] = useState(false);
   const [isMobileSearch, setMobileSearch] = useState(false);
   const [city, setCity] = useState("Mumbai");
+  const [cityState, changeCityState] = useState({
+    activeObject: null,
+    objects: [{id: 1},{id: 2},{id: 3},{id: 4}]
+  });
 
+  const toggleActive = (index) => {
+      changeCityState({ ...cityState, activeObject: cityState.objects[index]})
+  }
+
+  function toggleActiveStyles(index){
+      if(cityState.objects[index] === cityState.activeObject){
+          return "city active"
+      }else{
+        return "city "
+      }
+  }
 
   return (
     <div className="navbarContainer">
@@ -236,19 +267,19 @@ const Navbar = () => {
                 <h1 className='selectCity'>Select your City</h1>
                 <img src={Cross} alt="close" className='close' onClick={() => setIsOpen(!isOpen)}/>
                 <div className="cityContainer">
-                    <div className="city banglore"  onClick={function(){setCity("Banglore"); setIsOpen(!isOpen);}}>
+                    <div className={toggleActiveStyles(0)}   onClick={function(){setCity("Banglore");toggleActive(0)}}>
                         <img src={Banglore} alt="" className='cityImg'/>
                         <p className='cityName bangloreCity'>Banglore</p>
                     </div>
-                    <div className="city mumbai" onClick={function(){setCity("Mumbai"); setIsOpen(!isOpen)}}>
+                    <div className={toggleActiveStyles(1)}  onClick={function(){setCity("Mumbai");toggleActive(1)}}>
                         <img src={Mumbai} alt="" className='cityImg'/>
                         <p className='cityName mumbaiCity'>Mumbai</p>
                     </div>
-                    <div className="city pune" onClick={function(){setCity("Pune"); setIsOpen(!isOpen)}}>
+                    <div className={toggleActiveStyles(2)}  onClick={function(){setCity("Pune");toggleActive(2)}}>
                         <img src={Pune} alt="" className='cityImg'/>
                         <p className='cityName puneCity'>Pune</p>
                     </div>
-                    <div className="city delhi" onClick={function(){setCity("Delhi"); setIsOpen(!isOpen)}}>
+                    <div className={toggleActiveStyles(3)}  onClick={function(){setCity("Delhi");toggleActive(3)}}>
                         <img src={Delhi} alt="" className='cityImg'/>
                         <p className='cityName delhiCity'>Delhi</p>
                     </div>

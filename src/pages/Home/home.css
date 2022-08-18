@@ -83,6 +83,7 @@
 
 
 
+
 /************************headfone container******************************/
 
 .reScroll{
@@ -212,87 +213,24 @@
 }
 
 
+
+
+
 /************************************trendingSection*******************************/
-
-.trendingContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 3.75rem;
-  margin-top: 9rem;
-}
-
-.trendingContent {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 64.375rem;
-  width: 90%;
-  height: 100%;
-}
-
-.trendText {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 1.375rem;
-  line-height: 1.688rem;
-  color: #dfdfdf;
-}
-
-.trendButton {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 6.75rem;
-  height: 2.625rem;
-  cursor: pointer;
-}
-
-.leftButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 2.626rem;
-  height: 2.626rem;
-  border-radius: 50%;
-  filter: drop-shadow(0px 1.40035px 5.60141px rgba(0, 0, 0, 0.2));
-  transform: matrix(1, 0, 0, -1, 0, 0);
-}
-.rightButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 2.626rem;
-  height: 2.626rem;
-  border-radius: 50%;
-  filter: drop-shadow(0px 1.40035px 5.60141px rgba(0, 0, 0, 0.2));
-  transform: matrix(1, 0, 0, -1, 0, 0);
-}
-
-.leftVector:hover,
-.rightVector:hover{
-  width: 3.826rem;
-  height: 3.826rem;
-}
-
-
-
-
 
 .cardContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 23.063rem;
+  height: 34rem;
   margin-top: 4.438rem;
   margin-bottom: 4rem;
 }
 
 .cardContainerContent {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
@@ -302,7 +240,7 @@
   margin: 0 auto;
 }
 
-.cardContainer .cardContainerContent .mySwiper {
+.cardContainer .cardContainerContent .card-container .mySwiper {
   overflow: visible;
 }
 
@@ -1038,27 +976,16 @@
     top: 50vh;
   }
   /***********************************trendingSection***************************/
-  .trendingContainer {
-    margin-top: 4rem;
-  }
-
-  .trendingContent {
-    max-width: 48.125rem;
-  }
-
-
-  .trendButton {
-    display: none;
-  }
+  
 
 
   .cardContainer {
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+    margin-top: 6rem;
   }
 
   .cardContainerContent {
-    max-width: 40rem;
+    width: 90%;
+    max-width: 48.125rem;
     margin: 0 auto;
   }
 
@@ -1567,36 +1494,6 @@
 
 
   /************************************trendingSection*****************************/
-  .trendingContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 10vw;
-    margin-top: 3.5rem;
-  }
-
-  .trendingContent {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 95%;
-    height: 100%;
-  }
-
-  .trendText {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.375rem;
-    line-height: 1.688rem;
-    color: #dfdfdf;
-  }
-
-  .trendButton {
-    display: none;
-  }
-
 
 
   .cardContainer {
@@ -1605,7 +1502,7 @@
     align-items: center;
     width: 100vw;
     height: 23.063rem;
-    margin-top: .8rem;
+    margin-top: 3.5rem;
   }
 
   .cardContainerContent {

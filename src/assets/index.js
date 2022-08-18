@@ -78,3 +78,4 @@ export {default as Entertainment} from "./Images/entertainment.svg";
 export {default as Boxes} from "./Images/boxes.svg"
 export {default as Sort} from "./Images/Sort.svg";
 export {default as Filter} from "./Images/filter.svg"
+export {default as MobileFilter} from "./Images/mobileFilter.svg"

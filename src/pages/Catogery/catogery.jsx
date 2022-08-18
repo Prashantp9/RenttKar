@@ -1,11 +1,16 @@
-import React from 'react'
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import React, {useState, useEffect} from 'react'
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "swiper/css/autoplay";
 
 import './catogery.css'
-import { Navbar, Catogerycard } from '../../components'
+import { Navbar, Catogerycard,Productcard, Sliderproductcard, Footer} from '../../components'
 import { Link } from 'react-router-dom'
 
-import { RightArrow, Console, Music, Apple, Camera, Computers, Entertainment, Boxes, Sort, Filter} from '../../assets'
+import {GoTop, UpArrow, Learn, Playstation, Pc, Playstn, Laptop, RightArrow, Console, Music, Apple, Camera, Computers, Entertainment, Boxes, Sort, Filter} from '../../assets'
+
 
 
 const Catogeriespagecard = () => {
@@ -16,9 +21,9 @@ const Catogeriespagecard = () => {
           <Swiper
           width={700}
           slidesPerView={4}
-          spaceBetween={25}
+          spaceBetween={10}
           centeredSlides={true}
-          slidesPerGroup={2}
+          slidesPerGroup={3}
           grabCursor={true}
           loop={true}
           loopFillGroupWithBlank={false}
@@ -92,7 +97,7 @@ const Catogeriespagecard = () => {
     return(
       <div className="catogery-card-container">
       <div className="catogery-card-content">
-          {/* 1 */}
+      {/* 1 */}
       <Catogerycard
           imgSrc = {Console}
           className="catImg"
@@ -150,17 +155,18 @@ const Catogeriespagecard = () => {
 
 
 
+
 const Subcatogery = () => {
   if(window.innerWidth < 769){
     return(
       <div className="subcatogery-container">
         <div className="subcatogery-content">
         <Swiper
-          width={700}
-          slidesPerView={4}
+          width={800}
+          slidesPerView={5}
           spaceBetween={20}
           centeredSlides={true}
-          slidesPerGroup={2}
+          slidesPerGroup={3}
           grabCursor={true}
           loop={true}
           loopFillGroupWithBlank={false}
@@ -249,7 +255,30 @@ const Subcatogery = () => {
 
 
 
+
+
+
+
 const Catogery = () => {
+
+  const [showTopBtn, setShowTopBtn] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 400) {
+        setShowTopBtn(true);
+      } else {
+        setShowTopBtn(false);
+      }
+    });
+  }, []);
+  const goToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+
   return (
     <>
       <Navbar />
@@ -261,6 +290,124 @@ const Catogery = () => {
 
       <Catogeriespagecard />
       <Subcatogery />
+
+      <div className="filter-container">
+        <div className="filter-content">
+            <img src={Sort} alt="sort" />
+            <p id='sort'>   Sort:</p>
+          <div className="filter-types">
+            <div className="filter-price">
+              <p>By Price</p>
+              <img src={Filter} alt="filter" />
+            </div>
+            <div className="filter-offer">
+              <p>By Offer</p>
+              <img src={Filter} alt="filter" />
+            </div>
+            <div className="filter-popularity">
+              <p>Popularity</p>
+              <img src={Filter} alt="filter" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="price-filter-container">
+        <div className="price-filter-content">
+          <div className="price-filtering">
+          <div className="low-to-high">
+            <input type="radio" name="lowtohigh" id="ltoh" />
+            <label htmlFor="ltoh"> Low to high</label>
+          </div>
+          <div className="high-to-low">
+            <input type="radio" name="hightolow" id="htol" />
+            <label htmlFor="htol"> Low to high</label>
+          </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div className="catogery-result-container">
+        <div className="catogery-result-content">
+
+              <Productcard
+                imgSrc={Playstation}
+                name="Playstation 5"
+                day="1 day"
+                price="500/Month"
+              />
+
+              <Productcard
+                imgSrc={Pc}
+                name="Playstation 5"
+                day="1 day"
+                price="500/Month"
+              />
+
+              <Productcard
+                imgSrc={Laptop}
+                name="Playstation 5"
+                day="1 day"
+                price="500/Month"
+              />
+
+              <Productcard
+                imgSrc={Playstn}
+                name="Playstation 5"
+                day="1 day"
+                price="500/Month"
+              />
+
+
+              <Productcard
+                imgSrc={Pc}
+                name="Playstation 5"
+                day="1 day"
+                price="500/Month"
+              />
+
+              <Productcard
+                imgSrc={Playstn}
+                name="Playstation 5"
+                day="1 day"
+                price="500/Month"
+              />
+
+        </div>
+      </div>
+
+
+
+      {/* suggestion card slider */}
+      <div className="suggestion-card-slider-container">
+        <div className="suggestion-card-slider-content">
+            <Sliderproductcard text="Suggestion"/>
+        </div>
+      </div>
+
+
+      
+      <div className="suggest-item-container">
+          <div className="suggest-item-content">
+              <img src={Learn} alt="" />
+              <p>Didn't find what you are looking for? Let us know!</p>
+              <div className="submit-suggestion">
+                  <input type="text" name="suggestion" id=""  placeholder='Suggest Items'/>
+                  <button type="submit">Submit Suggestion</button>
+              </div>
+          </div>
+        </div>
+
+
+        <div className="mobileGoTopContainer">
+        <div className="mobileGoTopContent" onClick={goToTop}>
+          <img src={GoTop} alt="goTop" className="goTop" />
+          <img src={UpArrow} alt="upArrow" className="upArrow" />
+        </div>
+      </div>
+
+        <Footer />
+
     </>
   )
 }
