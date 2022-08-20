@@ -26,7 +26,7 @@ const Searchsuggestion = () => (
         <li className="item1" style={{borderBottom: "1px solid #242424"}}>
           {" "}
           <img src={Recent} alt="" className="recentImg" />
-          <span className="itemText">Playstation</span>
+          <span className="itemText"><Link to="/search" style={{textDecoration:"none"}}>Playstation</Link></span>
         </li>
         <li className="item2" style={{borderBottom: "1px solid #242424"}}>
           {" "}
@@ -242,7 +242,7 @@ const Navbar = () => {
     
         
         {/* logo */}
-        <Link to="/">
+        <Link to="/" className="headerLogo">
           <img src={HeaderLogo} alt="" className="navbarLogo" />
         </Link>
 

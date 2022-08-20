@@ -24,9 +24,14 @@
     /* overflow: hidden; */
   }
 
-  .navbarLogo{
-    object-fit: contain;
-    width: 7.013rem;
+  .headerLogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-repeat: no-repeat;
+    height: 100%;
+
   }
   
   
@@ -242,6 +247,18 @@
   .itemText{
       margin-left: 0.75rem;
   }
+
+  .itemText a{
+    color: #DFDFDF;
+  }
+
+  .itemText a:hover{
+    transition: all .2s ease-in-out;
+    background: var(--btn-border-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
   
   
   .item1{
@@ -323,8 +340,6 @@
     margin-bottom: 0.563rem;
     border: none;
     background: transparent;
-    -webkit-animation: scale-up-center 400ms cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-              animation: scale-up-center 400ms cubic-bezier(0.390, 0.575, 0.565, 1.000) both; 
   }
 
 
@@ -439,34 +454,6 @@
     0% { opacity: 0; }
     100% { opacity: 1; }
   }
-
-
-  /* animation scale up */
-@-webkit-keyframes scale-up-center {
-  0% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
- 
-/* animation scale down */
- @-webkit-keyframes scale-down-center {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  100% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-  }
-}
-
-
 
 
 /* change location */

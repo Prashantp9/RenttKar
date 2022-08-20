@@ -6,253 +6,12 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
 
-import './catogery.css'
-import { Navbar, Catogerycard,Productcard, Sliderproductcard,Scrollerbutton, Contactbutton, Footer, Mobileproductcard} from '../../components'
+import './searchfound.css'
+import { Navbar,Productcard, Sliderproductcard,Scrollerbutton, Contactbutton, Footer, Mobileproductcard} from '../../components'
 import { Link } from 'react-router-dom'
 
 import {Left, Right, ExcludeLeft, ExcludeRight,MobileFilterCloseBtn, Learn, Playstation, Pc, Playstn, Laptop, RightArrow, Console, Music, Apple, Camera, Computers, Entertainment, Boxes, Sort, Filter, MobileFilter} from '../../assets'
 
-
-
-const Catogeriespagecard = () => {
-  if(window.innerWidth < 769){
-    return(
-      <div className="catogery-card-container">
-      <div className="catogery-card-content">
-          <Swiper
-          width={700}
-          slidesPerView={4}
-          spaceBetween={10}
-          centeredSlides={true}
-          slidesPerGroup={3}
-          grabCursor={true}
-          loop={true}
-          loopFillGroupWithBlank={false}
-      >
-      <SwiperSlide style={{maxWidth:"7.25rem", maxHeight: "7.25rem"}}>
-        <Catogerycard
-          imgSrc = {Console}
-          className="catImg"
-          name = "Gaming"
-        />
-      </SwiperSlide>
-
-      {/* 2 */}
-      <SwiperSlide style={{maxWidth:"7.25rem", maxHeight: "7.25rem"}}>
-      <Catogerycard
-          imgSrc = {Music}
-          className="catImg"
-          name = "Music"
-        />
-      </SwiperSlide>
-
-      {/* 3 */}
-      <SwiperSlide style={{maxWidth:"7.25rem", maxHeight: "7.25rem"}}>
-      <Catogerycard
-          imgSrc = {Camera}
-          className="catImg"
-          name = "Camera"
-        />
-      </SwiperSlide>
-
-      {/* 4 */}
-      <SwiperSlide style={{maxWidth:"7.25rem", maxHeight: "7.25rem"}}>
-      <Catogerycard
-          imgSrc = {Apple}
-          className="catImg"
-          name = "Apple"
-        />
-      </SwiperSlide>
-
-      {/* 5 */}
-      <SwiperSlide style={{maxWidth:"7.25rem", maxHeight: "7.25rem"}}>
-      <Catogerycard
-          imgSrc = {Entertainment}
-          className="catImg"
-          name = "Entertainment"
-        />
-      </SwiperSlide>
-
-      {/* 6 */}
-      <SwiperSlide style={{maxWidth:"7.25rem", maxHeight: "7.25rem"}}>
-      <Catogerycard
-          imgSrc = {Computers}
-          className="catImg"
-          name = "Computers"
-        />
-      </SwiperSlide>
-
-      {/* 7 */}
-      <SwiperSlide style={{maxWidth:"7.25rem", maxHeight: "7.25rem"}}>
-      <Catogerycard
-          imgSrc = {Boxes}
-          className="catImg"
-          name = "Boxes"
-        />
-      </SwiperSlide>
-    </Swiper>
-    </div>
-    </div>
-    )
-} else {
-    return(
-      <div className="catogery-card-container">
-      <div className="catogery-card-content">
-      {/* 1 */}
-      <Catogerycard
-          imgSrc = {Console}
-          className="catImg"
-          name = "Gaming"
-        />
-
-      {/* 2 */}
-      <Catogerycard
-          imgSrc = {Music}
-          className="catImg"
-          name = "Music"
-        />
-
-      {/* 3 */}
-      <Catogerycard
-          imgSrc = {Camera}
-          className="catImg"
-          name = "Camera"
-        />
-
-      {/* 4 */}
-      <Catogerycard
-          imgSrc = {Apple}
-          className="catImg"
-          name = "Apple"
-        />
-
-      {/* 5 */}
-      <Catogerycard
-          imgSrc = {Entertainment}
-          className="catImg"
-          name = "Entetainment"
-        />
-
-      {/* 6 */}
-      <Catogerycard
-          imgSrc = {Computers}
-          className="catImg"
-          name = "Computers"
-        />
-
-       {/* 7 */}
-       <Catogerycard
-          imgSrc = {Boxes}
-          className="catImg"
-          name = "Boxes"
-        />
-      </div>
-    </div>
-
-    )
-}
-}
-
-
-
-
-
-const Subcatogery = () => {
-  if(window.innerWidth < 769){
-    return(
-      <div className="subcatogery-container">
-        <div className="subcatogery-content">
-        <Swiper
-          width={800}
-          slidesPerView={5}
-          spaceBetween={20}
-          centeredSlides={true}
-          slidesPerGroup={3}
-          grabCursor={true}
-          loop={true}
-          loopFillGroupWithBlank={false}
-        >
-        <SwiperSlide>
-          <div className="subcatogery-links">
-            <a href="">PlayStation & More</a>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="subcatogery-links">
-            <a href="">Laptops</a>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="subcatogery-links">
-            <a href="">Displays</a>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="subcatogery-links">
-            <a href="">Games</a>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="subcatogery-links">
-            <a href="">Accessories</a>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="subcatogery-links">
-            <a href="">Phones</a>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="subcatogery-links">
-            <a href="">Furniture</a>
-          </div>
-        </SwiperSlide>
-        </Swiper> 
-        </div>
-      </div>
-    )
-  } else {
-    return(
-    <div className="subcatogery-container">
-      <div className="subcatogery-content">
-            <div className="subcatogery-links">
-                <a href="">PlayStation & More</a>
-            </div>
-            
-            <div className="subcatogery-links">
-                <a href="">Laptops</a>
-            </div>
-            
-            <div className="subcatogery-links">
-                <a href="">Displays</a>
-            </div>
-            
-            <div className="subcatogery-links">
-                <a href="">Games</a>
-            </div>
-
-            <div className="subcatogery-links">
-                <a href="">Accessories</a>
-            </div>
-
-            <div className="subcatogery-links">
-                <a href="">Phones</a>
-            </div>
-
-            <div className="subcatogery-links end">
-                <a href="">Furniture</a>
-            </div>    
-      </div>
-    </div>
-    )
-  }
-}
 
 
 
@@ -379,7 +138,7 @@ const Filterproduct = () => {
   if (window.innerWidth <= 500){
     return(
       <>
-        <div className="mobile-subcatogery-container">
+        <div className="search-mobile-subcatogery-container">
         <div className="mobile-subcatogery-content">
           <div className="filter-btn" onClick={() => setShowPriceFilter(!showPriceFilter)}>
               <img src={MobileFilter} alt="mobile filter" />
@@ -446,65 +205,10 @@ const Filterproduct = () => {
                             </div>
                           </div>
                     </div>
-                </div>
+                </div>  
             </div>
           )}
           
-
-        <div className="mobile-subcatogery">
-        <Swiper
-          width={800}
-          slidesPerView={5}
-          spaceBetween={20}
-          centeredSlides={true}
-          slidesPerGroup={3}
-          grabCursor={true}
-          loop={true}
-          loopFillGroupWithBlank={false}
-        >
-        <SwiperSlide>
-          <div className="mobile-subcatogery-links">
-            <a href="">PlayStation & More</a>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="mobile-subcatogery-links">
-            <a href="">Laptops</a>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="mobile-subcatogery-links">
-            <a href="">Displays</a>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="mobile-subcatogery-links">
-            <a href="">Games</a>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="mobile-subcatogery-links">
-            <a href="">Accessories</a>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="mobile-subcatogery-links">
-            <a href="">Phones</a>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="mobile-subcatogery-links">
-            <a href="">Furniture</a>
-          </div>
-        </SwiperSlide>
-        </Swiper>     
-        </div>
         </div>
       </div>
       </>
@@ -703,23 +407,28 @@ const Productcardslider = () => {
 
 
 
-const Catogery = () => {
+const Searchfound = () => {
 
 
   return (
     <>
       <Navbar />
-      <div className="catogery-navigation-container">
-        <div className='catogery-navigation-content'>
-          <p><Link to="/" >Homepage</Link>  <img src={RightArrow} alt="rigthArrow" style={{marginLeft:"0.594rem", marginRight:"0.594rem"}}/> <Link to="/catogeries">Catogeries</Link> </p>
+      <div className="search-result-container">
+        <div className="search-result-content">
+            <p id='search-result'>Search Results <span>"PlayStation"</span></p>
+            <div className="also-try">
+                    <p>Also try :</p>
+                    <p>Laptop </p>
+                    <p>Ps4 </p>
+                    <p>Piano </p>
+                    <p>Guitar </p>
+                    <p>Sitar </p>
+            </div>
         </div>
       </div>
-
-      <Catogeriespagecard />
-      <Subcatogery />
       <Filterproduct />
 
-      <div className="catogery-result-container">
+      <div className="found-result-container">
         <div className="catogery-result-content">
               <ProductCard />
         </div>
@@ -757,4 +466,4 @@ const Catogery = () => {
   )
 }
 
-export default Catogery
+export default Searchfound

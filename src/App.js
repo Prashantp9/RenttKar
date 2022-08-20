@@ -9,6 +9,7 @@ import Login from '../src/pages/Login/login';
 import Otp from './pages/Otp/otp';
 import Registeration from './pages/Registeration/registeration';
 import Catogery from './pages/Catogery/catogery';
+import Searchfound from './pages/Searchfound/searchfound';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path='/otp' element={<Otp />} />
           <Route path='/registeration' element={<Registeration />} />
           <Route path='/catogeries' element={<Catogery />} />
+          <Route path='/search' element={<Searchfound />} />
       </Routes>
     </Router>
   )

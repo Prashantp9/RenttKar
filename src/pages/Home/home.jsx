@@ -11,7 +11,7 @@ import "./home.css";
 import { Navbar, Footer, Catogerycard, Sliderproductcard, Scrollerbutton, Contactbutton} from "../../components";
 
 // images
-import {Console,HeaderImg,  Artwork,  Union,  Delivery, Deposit, Light,  Esport,  Times,  Tech,  Lbb,  Learn,  Aadil,  Renuka,  Ammy,  Music,  Camera,  Apple,  Computers,  Show} from "../../assets";
+import {Console,HeaderImg,  Artwork,  Union,  Delivery, Deposit, Light,  Esport,  Times,  Tech,  Lbb,  Learn,  Aadil,  Renuka,  Ammy,  Music,  Camera,  Apple,  Computers,  Show, Boxes} from "../../assets";
 
 
 
@@ -109,6 +109,13 @@ const CatogeriesCard = () =>{
 
       {/* 6 */}
       <Catogerycard
+          imgSrc = {Boxes}
+          className="catImg"
+          name = "Boxes"
+        />
+
+        {/* 7 */}
+        <Catogerycard
           imgSrc = {Show}
           className="showAll"
           name = "ShowAll"
