@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import { Swiper, SwiperSlide, useSwiper} from "swiper/react";
 import { Navigation } from "swiper";
 import "swiper/css";
@@ -7,10 +7,10 @@ import "swiper/css/navigation";
 import "swiper/css/autoplay";
 
 import './catogery.css'
-import { Navbar, Catogerycard,Productcard, Sliderproductcard, Footer, Mobileproductcard} from '../../components'
+import { Navbar, Catogerycard,Productcard, Sliderproductcard,Scrollerbutton, Contactbutton, Footer, Mobileproductcard} from '../../components'
 import { Link } from 'react-router-dom'
 
-import {GoTop,Left, Right, ExcludeLeft, ExcludeRight, UpArrow,MobileFilterCloseBtn, Learn, Playstation, Pc, Playstn, Laptop, RightArrow, Console, Music, Apple, Camera, Computers, Entertainment, Boxes, Sort, Filter, MobileFilter} from '../../assets'
+import {Left, Right, ExcludeLeft, ExcludeRight,MobileFilterCloseBtn, Learn, Playstation, Pc, Playstn, Laptop, RightArrow, Console, Music, Apple, Camera, Computers, Entertainment, Boxes, Sort, Filter, MobileFilter} from '../../assets'
 
 
 
@@ -662,23 +662,6 @@ const Productcardslider = () => {
 
 const Catogery = () => {
 
-  const [showTopBtn, setShowTopBtn] = useState(false);
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 400) {
-        setShowTopBtn(true);
-      } else {
-        setShowTopBtn(false);
-      }
-    });
-  }, []);
-  const goToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
 
   return (
     <>
@@ -698,6 +681,8 @@ const Catogery = () => {
               <ProductCard />
         </div>
       </div>
+
+      <Contactbutton />
 
 
 
@@ -721,13 +706,7 @@ const Catogery = () => {
           </div>
         </div>
 
-
-        <div className="catogerymobileGoTopContainer">
-        <div className="catogerymobileGoTopContent" onClick={goToTop}>
-          <img src={GoTop} alt="goTop" className="catogerygoTop" />
-          <img src={UpArrow} alt="upArrow" className="upArrow" />
-        </div>
-      </div>
+        <Scrollerbutton class="catogeryMobileGoTopContainer"/>
 
         <Footer />
 

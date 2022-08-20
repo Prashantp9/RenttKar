@@ -1,0 +1,60 @@
+.reScroll{
+    position: fixed;
+    display: flex;
+    align-items: flex-end;
+    width: 3.151rem;
+    height: 3.5rem;
+    z-index: 10;
+    top: 70vh;
+    left: 5vw;
+  }
+  
+  .reScroll img{
+    cursor: pointer;
+  }
+
+
+
+
+
+  
+/* iPads, Tablets */
+@media only screen and (max-width: 768px) {
+    .reScroll{
+        display: none;
+      }
+}
+
+
+
+
+/* Mobile phones */
+@media only screen and (max-width: 500px) {
+    .reScroll{
+        display: none;
+      }
+      
+      .mobileGoTopContent{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+      }
+      
+      .goTop{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      
+      
+      }
+      
+      .upArrow{
+        position: absolute;
+        margin-bottom: 1rem;
+      }
+}

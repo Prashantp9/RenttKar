@@ -5,3 +5,5 @@ export {default as Button} from "./GradientBorderButton/gradientborderbutton";
 export {default as Catogerycard} from "./CatogeryCard/catogerycard";
 export {default as Sliderproductcard} from "./Sliderforproductcard/sliderproductcard";
 export {default as Mobileproductcard} from "./MobileProductCard/mobileproductcard";
+export {default as Contactbutton} from "./Contactbutton/contactbutton";
+export {default as Scrollerbutton} from "./Scrollerbutton/scrollerbutton";

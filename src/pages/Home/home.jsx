@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper";
 import "swiper/css";
@@ -8,10 +8,10 @@ import "swiper/css/autoplay";
 import "./home.css";  
 
 // components
-import { Navbar, Footer, Catogerycard, Sliderproductcard } from "../../components";
+import { Navbar, Footer, Catogerycard, Sliderproductcard, Scrollerbutton, Contactbutton} from "../../components";
 
 // images
-import {Console,PhoneContainer, InstagramContainer, headfoneCircle, headfoneInstagram, headfoneWhatsapp,headfoneCross, headfonePhone, HeaderImg,  Artwork,  Union,  Delivery, Deposit, Light,  Esport,  Times,  Tech,  Lbb,  Learn,  Aadil,  Renuka,  Ammy,  Music,  Camera,  Apple,  Computers,  Show,  Head,  Scroll,UpArrow,GoTop} from "../../assets";
+import {Console,HeaderImg,  Artwork,  Union,  Delivery, Deposit, Light,  Esport,  Times,  Tech,  Lbb,  Learn,  Aadil,  Renuka,  Ammy,  Music,  Camera,  Apple,  Computers,  Show} from "../../assets";
 
 
 
@@ -125,27 +125,6 @@ const CatogeriesCard = () =>{
 
 
 const Home = () => {
-  const [showTopBtn, setShowTopBtn] = useState(false);
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 400) {
-        setShowTopBtn(true);
-      } else {
-        setShowTopBtn(false);
-      }
-    });
-  }, []);
-  const goToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
-  const [showPopUp, setShowPopUp] = useState(false);  
-  
-
-
 
   return (
     <>
@@ -239,53 +218,9 @@ const Home = () => {
       <CatogeriesCard />
 
       {/* head & Scroll Button */}
-
-      {showTopBtn && (
-        <div className="reScroll" onClick={goToTop}>
-          <img src={Scroll} alt="" className="scrollImg" />
-        </div>
-      )}
-
-
-      {showPopUp ?(
-        <div className="headfoneSocials">
-          <div className="headfoneSocialsContent">
-              <div className="instagramContainer">
-                <img src={InstagramContainer} id="instaContainer" alt="" />
-                <a href="https://www.instagram.com/rentkar_app/">@rentkar</a>
-              </div>
-              <img src={headfoneInstagram} className="headfoneInstagram" style={{width:"3.151rem", height: "3.151rem"}} alt="" />              
-          </div>
-          <div className="headfoneSocialsContent">
-              <div className="phoneContainer1">
-                <img src={PhoneContainer} id="phoneContainer" alt="" />
-                <a href="https://faq.whatsapp.com/563219570998715/?helpref=uf_share">+91 912648357</a>
-              </div>
-              <img src={headfoneWhatsapp} className="headfoneWhatsapp" style={{width:"3.151rem", height: "3.151rem"}} alt=""/>
-          </div>
-          <div className="headfoneSocialsContent">
-              <div className="phoneContainer2">
-                <img src={PhoneContainer} id="phoneContainer" alt="" />
-                <a href="tel:91912648357">+91 912648357</a>
-              </div>
-              <img src={headfonePhone} className="headfonePhone" style={{width:"3.151rem", height: "3.151rem"}} alt=""/>
-          </div>
-
-          <img src={headfoneCircle} style={{width:"3.151rem", height: "3.151rem"}} alt="" className="headfoneCircleImg"  onClick={(e) => setShowPopUp(!showPopUp)}/>
-          <img src={headfoneCross} alt="" id="headfoneCross" onClick={(e) => setShowPopUp(!showPopUp)}/>
-        </div>
-        ): (
-          <div className="headPhone" >
-            <img src={Head} style={{width:"3.151rem", height: "3.151rem"}}  alt="" className="headImg" onClick={(e) => setShowPopUp(!showPopUp)}/>
-          </div>
-        )
-
-      }
-
-      
-
-
-
+      <>
+        <Contactbutton />
+      </>
 
       {/* Trending Now section */}
       <div className="cardContainer">
@@ -494,13 +429,9 @@ const Home = () => {
           </div>
         </div>
       </div>
+      
+      <Scrollerbutton class="mobileGoTopContainer"/>
 
-      <div className="mobileGoTopContainer">
-        <div className="mobileGoTopContent" onClick={goToTop}>
-          <img src={GoTop} alt="goTop" className="goTop" />
-          <img src={UpArrow} alt="upArrow" className="upArrow" />
-        </div>
-      </div>
       <Footer />
     </>
   );
