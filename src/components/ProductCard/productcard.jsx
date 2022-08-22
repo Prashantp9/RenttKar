@@ -1,6 +1,9 @@
 import React from "react";
 import './productcard.css';
+
 import {Gaadi, Hot, Rupees} from '../../assets';
+
+import { Link } from 'react-router-dom'
 
  
 
@@ -17,7 +20,7 @@ function Productcard(props){
       <img src={Gaadi} alt="" className="gaadi" />
       <p className="start">Starts at</p>
       <p className="price"><img src={Rupees} alt=""/>{props.price}</p>
-      <button className="btn" data="Rent Now"></button>
+      <Link to="/productdetails" className="btn" data="Rent Now"></Link>
     </div>
   );
 };

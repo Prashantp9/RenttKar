@@ -10,6 +10,8 @@ import Otp from './pages/Otp/otp';
 import Registeration from './pages/Registeration/registeration';
 import Catogery from './pages/Catogery/catogery';
 import Searchfound from './pages/Searchfound/searchfound';
+import Searchnotfound from './pages/Searchnotfound/searchnotfound';
+import Productdetails from './pages/Productdetails/productdetails';
 
 const App = () => {
   return (
@@ -21,7 +23,9 @@ const App = () => {
           <Route path='/otp' element={<Otp />} />
           <Route path='/registeration' element={<Registeration />} />
           <Route path='/catogeries' element={<Catogery />} />
-          <Route path='/search' element={<Searchfound />} />
+          <Route path='/searchresultfound' element={<Searchfound />} />
+          <Route path='/searchresultnotfound' element={<Searchnotfound />} />
+          <Route path='/productdetails' element={<Productdetails />} />
       </Routes>
     </Router>
   )

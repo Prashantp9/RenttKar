@@ -1,7 +1,7 @@
 import React from 'react';
 import './gradientborderbutton.css';
 
-const gradientborderbutton = ({onClick, name, classname}) => {
+const Gradientborderbutton = ({onClick, name, classname}) => {
   return (
     <>
         <button className="listItem" onClick={onClick}>
@@ -13,4 +13,4 @@ const gradientborderbutton = ({onClick, name, classname}) => {
   )
 }
 
-export default gradientborderbutton;
+export default Gradientborderbutton;

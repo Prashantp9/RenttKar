@@ -8,9 +8,8 @@ import "swiper/css/autoplay";
 
 import './searchfound.css'
 import { Navbar,Productcard, Sliderproductcard,Scrollerbutton, Contactbutton, Footer, Mobileproductcard} from '../../components'
-import { Link } from 'react-router-dom'
 
-import {Left, Right, ExcludeLeft, ExcludeRight,MobileFilterCloseBtn, Learn, Playstation, Pc, Playstn, Laptop, RightArrow, Console, Music, Apple, Camera, Computers, Entertainment, Boxes, Sort, Filter, MobileFilter} from '../../assets'
+import {Left, Right, ExcludeLeft, ExcludeRight,MobileFilterCloseBtn, Learn, Playstation, Pc, Playstn, Laptop, Sort, Filter, MobileFilter} from '../../assets'
 
 
 
@@ -418,11 +417,11 @@ const Searchfound = () => {
             <p id='search-result'>Search Results <span>"PlayStation"</span></p>
             <div className="also-try">
                     <p>Also try :</p>
-                    <p>Laptop </p>
-                    <p>Ps4 </p>
-                    <p>Piano </p>
-                    <p>Guitar </p>
-                    <p>Sitar </p>
+                    <p id='also-try-p'>Laptop </p>
+                    <p id='also-try-p'>Ps4 </p>
+                    <p id='also-try-p'>Piano </p>
+                    <p id='also-try-p'>Guitar </p>
+                    <p id='also-try-p'>Sitar </p>
             </div>
         </div>
       </div>

@@ -7,3 +7,4 @@ export {default as Sliderproductcard} from "./Sliderforproductcard/sliderproduct
 export {default as Mobileproductcard} from "./MobileProductCard/mobileproductcard";
 export {default as Contactbutton} from "./Contactbutton/contactbutton";
 export {default as Scrollerbutton} from "./Scrollerbutton/scrollerbutton";
+export {default as Accessoriescard} from "./Accessoriescard/accessoriescard";

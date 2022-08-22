@@ -80,3 +80,12 @@ export {default as Sort} from "./Images/Sort.svg";
 export {default as Filter} from "./Images/filter.svg"
 export {default as MobileFilter} from "./Images/mobileFilter.svg"
 export {default as MobileFilterCloseBtn} from "./Images/mobileFilterCloseBtn.svg"
+export {default as ProductHeaderImage} from "./Images/productImage.svg"
+
+
+export {default as Controller1} from "./Images/controller1.svg"
+export {default as Controller2} from "./Images/controller2.svg"
+export {default as Controller3} from "./Images/controller3.svg"
+export {default as Controller4} from "./Images/controller4.svg"
+export {default as Ask} from "./Images/askQue.svg"
+

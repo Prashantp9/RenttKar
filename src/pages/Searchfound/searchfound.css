@@ -68,6 +68,21 @@
     color: #DFDFDF;
 }
 
+#also-try-p{
+    position: relative;
+}
+
+#also-try-p::before{
+        content: "";
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        left: 0;
+        height: 1px;
+        border-radius: 2px;
+        background: var(--btn-border-gradient);
+}
+
 .found-result-container{
     display: flex;
     justify-content: center;

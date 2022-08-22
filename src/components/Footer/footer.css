@@ -6,6 +6,7 @@
         width: 100vw;
         height: 22.063rem;
         background-color: #191919;
+        z-index: 10;
     }
     
     .footerContent{

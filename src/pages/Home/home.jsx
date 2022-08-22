@@ -138,12 +138,13 @@ const Home = () => {
       <Navbar />
 
       {/* header section  */}
-      <div className="headerContainer">
-        <div className="headerContent">
+      <div className="headerContainer" style={{ borderRadius: "15px"}}>
+        <div className="headerContent" style={{ borderRadius: "15px"}}>
           <div
             id="carouselExampleIndicators"
             className="carousel slide"
             data-bs-ride="carousel"
+            style={{ borderRadius: "15px"}}
           >
             <div className="carousel-indicators" style={{ marginTop: "70%" }}>
               <button
@@ -169,28 +170,28 @@ const Home = () => {
                 className="slideIndicator3"
               ></button>
             </div>
-            <div className="carousel-inner">
-              <div className="carousel-item active">
+            <div className="carousel-inner" style={{ borderRadius: "15px"}}>
+              <div className="carousel-item active" style={{ borderRadius: "15px"}}>
                 <img
-                  style={{ borderRadius: "15px" }}
+                  style={{ borderRadius: "15px",width:"100%", height:"100%" }}
                   src={HeaderImg}
-                  className=" w-100 headerImg"
+                  className=" w-100 h-100 headerImg"
                   alt="..."
                 />
               </div>
-              <div className="carousel-item">
+              <div className="carousel-item" style={{ borderRadius: "15px"}}>
                 <img
-                  style={{ borderRadius: "15px" }}
+                  style={{ borderRadius: "15px",width:"100%", height:"100%"  }}
                   src={HeaderImg}
-                  className="d-block w-100 headerImg"
+                  className="d-block w-100 h-100 headerImg"
                   alt="..."
                 />
               </div>
-              <div className="carousel-item">
+              <div className="carousel-item" style={{ borderRadius: "15px"}}>
                 <img
-                  style={{ borderRadius: "15px" }}
+                  style={{ borderRadius: "15px",width:"100%", height:"100%"  }}
                   src={HeaderImg}
-                  className="d-block w-100 headerImg"
+                  className="d-block w-100 h-100 headerImg"
                   alt="..."
                 />
               </div>
@@ -200,6 +201,7 @@ const Home = () => {
               type="button"
               data-bs-target="#carouselExampleIndicators"
               data-bs-slide="prev"
+              style={{ borderRadius: "15px"}}
             >
               <span className="visually-hidden">Previous</span>
             </button>
@@ -208,6 +210,7 @@ const Home = () => {
               type="button"
               data-bs-target="#carouselExampleIndicators"
               data-bs-slide="next"
+              style={{ borderRadius: "15px"}}
             >
               <span className="visually-hidden">Next</span>
             </button>

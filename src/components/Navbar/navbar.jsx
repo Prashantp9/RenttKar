@@ -26,7 +26,7 @@ const Searchsuggestion = () => (
         <li className="item1" style={{borderBottom: "1px solid #242424"}}>
           {" "}
           <img src={Recent} alt="" className="recentImg" />
-          <span className="itemText"><Link to="/search" style={{textDecoration:"none"}}>Playstation</Link></span>
+          <span className="itemText"><Link to="/searchresultfound" style={{textDecoration:"none"}}>Playstation</Link></span>
         </li>
         <li className="item2" style={{borderBottom: "1px solid #242424"}}>
           {" "}
@@ -36,7 +36,7 @@ const Searchsuggestion = () => (
         <li className="item3" style={{borderBottom: "1px solid #242424"}}>
           {" "}
           <img src={Recent} alt="" className="recentImg" />
-          <span className="itemText">Havells</span>
+          <span className="itemText"><Link to="/searchresultnotfound" style={{textDecoration:"none"}}>Havells</Link></span>
         </li>
         <li className="item4" style={{borderBottom: "1px solid #242424"}}>
           {" "}
