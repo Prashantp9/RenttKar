@@ -88,4 +88,16 @@ export {default as Controller2} from "./Images/controller2.svg"
 export {default as Controller3} from "./Images/controller3.svg"
 export {default as Controller4} from "./Images/controller4.svg"
 export {default as Ask} from "./Images/askQue.svg"
+export {default as Calender} from "./Images/calender.svg"
+
+
+export {default as AddAddons} from "./Images/addAddons.svg"
+export {default as BattelfieldCD} from "./Images/battelfieldcd.svg"
+export {default as Cuppon} from "./Images/cuppon.svg"
+
+
+export {default as PriceInfo} from "./Images/priceInfo.svg"
+export {default as Ps4cd} from "./Images/ps4cd.svg"
+export {default as WhiteCart} from "./Images/whiteCart.svg"
+
 

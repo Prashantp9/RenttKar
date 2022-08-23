@@ -1,11 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { Navigation } from "swiper";
+import DatePicker from "react-datepicker";   
+import "react-datepicker/dist/react-datepicker.css";  
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
-
 import "./productdetails.css";
 
 // components
@@ -31,10 +32,22 @@ import {
   DownArrow,
   UpArrow,
   Ask,
+  Rupees,
+  Calender,
+  PriceInfo,
+  Ps4cd,
+  BattelfieldCD,
+  AddAddons,
+  Cuppon,
+  WhiteCart,
 } from "../../assets";
 
 const Productdetails = () => {
   const swiper = useSwiper();
+  const [startDate, setStartDate] = useState(new Date());  
+  const [endDate, setEndDate] = useState(new Date());  
+  const [isHovering, setIsHovering] = useState(false);
+
   return (
     <>
       <Navbar />
@@ -381,6 +394,157 @@ const Productdetails = () => {
           {/* right container */}
           <div className="product-right-container">
             <div className="product-right-content">
+                  <p id="product-heading">Playstation 4</p>
+                  <p id="select-text">Select a Plan</p>
+                  <div className="select-plan-container">
+                    
+                    <div className="plan">
+                      <div className="plan-content">
+                        <p id="subscription-time">6 Month</p>
+                        <p id="subscription-price"><img src={Rupees} alt="rupees" />9,000/6Mn</p>
+                      </div>
+                    </div>   
+
+
+                    <div className="plan">
+                      <div className="plan-content">
+                      <p id="subscription-time">3 Month</p>
+                      <p id="subscription-price"><img src={Rupees} alt="rupees" />4,500/3Mn</p>
+                      </div>
+                    </div> 
+
+
+                    <div className="plan">
+                      <div className="plan-content">
+                      <p id="subscription-time">1 Month</p>
+                      <p id="subscription-price"><img src={Rupees} alt="rupees" />1500/Mn</p>
+                      </div> 
+                    </div> 
+
+
+                    <div className="plan">
+                      <div className="plan-content">
+                      <p id="subscription-time">1 Week</p>
+                      <p id="subscription-price"><img src={Rupees} alt="rupees" />450/wk</p>
+                      </div>                      
+                    </div> 
+
+
+                    <div className="plan">
+                      <div className="plan-content">
+                      <p id="subscription-time">2 Days</p>
+                      <p id="subscription-price"><img src={Rupees} alt="rupees" />100/2Days</p>
+                      </div>                      
+                    </div> 
+
+
+                    <div className="plan">
+                      <div className="plan-content">
+                      <p id="subscription-time">1 Day</p>
+                      <p id="subscription-price"><img src={Rupees} alt="rupees" />50/Day</p>
+                      </div>
+                    </div>  
+                  </div>
+
+                  <div className="calender-container">
+                      <div className="start-date-container">
+                        <p>Start date</p>
+                      <span>
+                        <DatePicker 
+                          selected={startDate} 
+                          onChange={(date) => setStartDate(date)}
+                          dateFormat="dd/MM/yyyy" 
+                        /> 
+                        <div className="start-img-container">
+                          <img src={Calender} alt="" />
+                        </div> 
+                        </span>
+                      </div>
+
+                      <div className="end-date-container">
+                        <p>End date</p>
+                        <span>
+                        <DatePicker 
+                          selected={endDate} 
+                          onChange={(date) => setEndDate(date)}
+                          dateFormat="dd/MM/yyyy" 
+                        />
+                        <div className="end-img-container">
+                          <img src={Calender} alt="" />
+                        </div> 
+                        </span>
+                      </div>
+                  </div>
+
+                    <div className="add-on-container">
+                      <p id="addons-text">Select AddOns</p>
+                      <div className="addons-type">
+                        <div className="free-addons">
+                          <p>Free AddOns</p>
+                          <div className="free-addons-box">
+                              <img src={Ps4cd} alt="ps4cd" />
+                              <img src={BattelfieldCD} alt="battelfield" />
+                          </div>
+                        </div>
+
+                        <div className="paid-addons">
+                          <p>Paid AddOns</p>
+                          <div className="paid-addons-box">
+                            <img src={AddAddons} alt="" />
+                            <p>Add Addons</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div className="cost-container">
+                      <p id="total-cost-heading">Total cost</p>
+                      <p id="price-text" onMouseOver={() => setIsHovering(isHovering)} onMouseOut={() => setIsHovering(!isHovering)}><img src={Rupees} alt="rupees" /> 750/Month</p>
+                      {isHovering && (
+                        <div className="price-breakdown-container">
+                            <div className="price-breakdown-heading">
+                                <p>Price Breakdown</p>
+                            </div>
+                            <div className="product-prices">
+                                    <p style={{marginTop:"1.5rem"}} id="product-name">PS4 <span><img src={Rupees} alt="rupees" />500/day</span></p>
+                                    <p id="product-name">Addons1 <span><img src={Rupees} alt="rupees" />500/day</span></p>
+                                    <p id="product-name">Addons2 <span><img src={Rupees} alt="rupees" />100/day</span></p>
+                                    <p id="product-name">Addons3 <span><img src={Rupees} alt="rupees" />100/day</span></p>
+                                    <p id="product-name">Addons4 <span><img src={Rupees} alt="rupees" />100/day</span></p>
+                                    <p id="product-name" style={{borderBottom:"1px solid #464646", paddingBottom:"1rem"}}>Addons5 <span><img src={Rupees} alt="rupees" />100/day</span></p>
+                            </div>
+
+                            <div className="no-of-days">
+                              <p style={{marginTop:".8rem"}}><span></span> <span><img src={Rupees} alt="rupees" />1000/day</span></p>
+                              <p style={{marginTop:".5rem"}}>No of days  <span>x 92 days</span></p>
+                            </div>
+
+
+                            <div className="total-price">
+                                <p style={{marginTop:".8rem"}}>Sub total <span><img src={Rupees} alt="rupees" />92000</span></p>
+                                <p style={{marginTop:".8rem"}}>GST <span>+ <img src={Rupees} alt="rupees" />4356</span></p>
+                                <p style={{marginTop:".8rem", marginBottom:"1rem"}}>Coupon discount <span>- <img src={Rupees} alt="rupees" />14356</span></p>
+                            </div>
+                        </div>
+                      )}
+
+                      <p id="price-details"><img src={PriceInfo} alt="" />  <span>(Pricing details)</span> </p>
+                    </div>
+
+
+                    <div className="button-container">
+                          <button type="submit" className="add-to-cart">
+                            <img src={WhiteCart} alt="cart" style={{marginRight:".5rem"}}/>
+                            Add to Cart
+                          </button>
+
+
+                          <button>
+                              <img src={Cuppon} alt="cuppon" style={{marginRight:"0.299rem"}}/>
+                              Apply Coupon
+                          </button>
+                    </div>
 
             </div>
           </div>
