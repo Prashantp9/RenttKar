@@ -101,3 +101,8 @@ export {default as Ps4cd} from "./Images/ps4cd.svg"
 export {default as WhiteCart} from "./Images/whiteCart.svg"
 
 
+export {default as CardCross} from "./Images/cardCross.svg"
+export {default as SmallCross} from "./Images/smallCross.svg"
+export {default as TabletCouppon} from "./Images/tabletCuppon.svg"
+
+
