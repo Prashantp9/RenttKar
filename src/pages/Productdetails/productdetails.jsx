@@ -8,9 +8,18 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
 import "./productdetails.css";
+import { question } from "./api";
 
 // components
-import { Navbar, Accessoriescard, Footer } from "../../components";
+import {
+  Navbar,
+  Accessoriescard,
+  Footer,
+  Scrollerbutton,
+  Contactbutton,
+  Accordian,
+  Mobileaddons,
+} from "../../components";
 import { Link } from "react-router-dom";
 
 // images
@@ -29,8 +38,6 @@ import {
   Left,
   ExcludeLeft,
   ExcludeRight,
-  DownArrow,
-  UpArrow,
   Ask,
   Rupees,
   Calender,
@@ -44,43 +51,36 @@ import {
   SmallCross,
   Search,
   TabletCouppon,
+  Cross,
 } from "../../assets";
 
-
-
 const Couppon = () => {
-  if(window.innerWidth <= 768){
-    return(
-        <>
-          <img src={TabletCouppon} alt="tabletCuppon"  className="tablet-cuppon"/>
-        </>
-    )
+  if (window.innerWidth <= 768) {
+    return (
+      <>
+        <img src={TabletCouppon} alt="tabletCuppon" className="tablet-cuppon" />
+      </>
+    );
   } else {
-    return(
+    return (
       <button>
-      <img
-        src={Cuppon}
-        alt="cuppon"
-        style={{ marginRight: "0.299rem" }}
-      />
-      Apply Coupon
-    </button>
-    )
+        <img src={Cuppon} alt="cuppon" style={{ marginRight: "0.299rem" }} />
+        Apply Coupon
+      </button>
+    );
   }
-}
-
-
-
-
+};
 
 const Productdetails = () => {
   const swiper = useSwiper();
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const [isHovering, setIsHovering] = useState(false);
-  const [isAddons, setIsAddons] = useState(false);
+  const [isFreeaddons, setIsFreeaddons] = useState(false);
+  const [isPaidaddons, setIsPaidaddons] = useState(false);
 
-  if(window.innerWidth <= 500){
+  const [data, setData] = useState(question);
+  if (window.innerWidth <= 500) {
     return (
       <>
         <Navbar />
@@ -96,7 +96,10 @@ const Productdetails = () => {
                     data-bs-ride="carousel"
                     style={{ zIndex: "-1" }}
                   >
-                    <div className="carousel-indicators" style={{ zIndex: "0" }}>
+                    <div
+                      className="carousel-indicators"
+                      style={{ zIndex: "0" }}
+                    >
                       <button
                         type="button"
                         data-bs-target="#carouselExampleIndicators"
@@ -180,27 +183,23 @@ const Productdetails = () => {
                   </div>
                 </div>
               </div>
-  
+
               <div className="product-company-features-container">
                 <div className="product-company-quality-content">
                   <img src={Deposit} alt="quality-img" />
                   <p>No Deposit Charge</p>
                 </div>
-  
+
                 <div className="product-company-quality-content">
                   <img src={Delivery} alt="quality-img" />
                   <p>Delivery within 2 Hour</p>
                 </div>
-  
+
                 <div className="product-company-quality-content">
                   <img src={Union} alt="quality-img" />
                   <p>Quality Assurance</p>
                 </div>
               </div>
-
-
-
-
 
               <div className="product-right-content">
                 <p id="product-heading">Playstation 4</p>
@@ -215,7 +214,7 @@ const Productdetails = () => {
                       </p>
                     </div>
                   </div>
-  
+
                   <div className="plan">
                     <div className="plan-content">
                       <p id="subscription-time">3 Month</p>
@@ -225,7 +224,7 @@ const Productdetails = () => {
                       </p>
                     </div>
                   </div>
-  
+
                   <div className="plan">
                     <div className="plan-content">
                       <p id="subscription-time">1 Month</p>
@@ -235,7 +234,7 @@ const Productdetails = () => {
                       </p>
                     </div>
                   </div>
-  
+
                   <div className="plan">
                     <div className="plan-content">
                       <p id="subscription-time">1 Week</p>
@@ -245,7 +244,7 @@ const Productdetails = () => {
                       </p>
                     </div>
                   </div>
-  
+
                   <div className="plan">
                     <div className="plan-content">
                       <p id="subscription-time">2 Days</p>
@@ -255,7 +254,7 @@ const Productdetails = () => {
                       </p>
                     </div>
                   </div>
-  
+
                   <div className="plan">
                     <div className="plan-content">
                       <p id="subscription-time">1 Day</p>
@@ -266,7 +265,7 @@ const Productdetails = () => {
                     </div>
                   </div>
                 </div>
-  
+
                 <div className="calender-container">
                   <div className="start-date-container">
                     <p>Start date</p>
@@ -281,7 +280,7 @@ const Productdetails = () => {
                       </div>
                     </span>
                   </div>
-  
+
                   <div className="end-date-container">
                     <p>End date</p>
                     <span>
@@ -296,373 +295,179 @@ const Productdetails = () => {
                     </span>
                   </div>
                 </div>
-  
+
                 <div className="add-on-container">
                   <p id="addons-text">Select AddOns</p>
                   <div className="addons-type">
                     <div className="free-addons">
                       <p id="free-addons-text">Free AddOns</p>
-                      <div
+                      <Link
+                        to="/freeaddons"
                         className="free-addons-box"
-                        onClick={() => setIsAddons(!isAddons)}
                       >
                         <img src={Ps4cd} alt="ps4cd" />
                         <img src={BattelfieldCD} alt="battelfield" />
-                      </div>
-  
-                      {isAddons && (
-                        <div className="addons-container">
-                          <div className="addons-content">
-                            <div className="addons-heading">
-                              <p id="addons-heading-text">
-                                Free Add Ons{" "}
-                                <span>
-                                  <img
-                                    src={SmallCross}
-                                    alt="cross"
-                                    id="heading-cross"
-                                    onClick={() => setIsAddons(!isAddons)}
-                                  />
-                                </span>
-                              </p>
-                            </div>
-                            <div className="cd-container">
-                              <div className="cd-left-container">
-                                <div className="selected-addons">
-                                  <p id="selected-text">
-                                    Selected <span>2</span>
-                                  </p>
-                                  <div className="addons-card">
-                                    <div className="addons-one-card">
-                                      <img
-                                        src={CardCross}
-                                        alt="cardcross"
-                                        id="card-cross-1"
-                                      />
-                                      <img
-                                        src={BattelfieldCD}
-                                        alt="battelfield"
-                                      />
-                                    </div>
-  
-                                    <div className="addons-two-card">
-                                      <img
-                                        src={CardCross}
-                                        alt="cardcross"
-                                        id="card-cross-2"
-                                      />
-                                      <img src={Ps4cd} alt="fifa20" />
-                                    </div>
-                                  </div>
-                                </div>
-  
-                                <div className="filter-sort-addons">
-                                  <p id="filter-sort-text">Filter & Sort</p>
-                                  <div className="filter-catogery">
-  
-                                      <p><input type="checkbox" name="adventure" id="adventure" /><label htmlFor="adventure"> Adventure</label></p>
-                                      <p><input type="checkbox" name="action" id="action" /><label htmlFor="action"> Action</label></p>
-                                      <p><input type="checkbox" name="sports" id="sports" /><label htmlFor="sports"> Sports</label></p>
-                                      <p><input type="checkbox" name="fantasy" id="fantasy" /><label htmlFor="fantasy"> Fantasy</label></p>
-  
-  
-                                      <p><input type="radio" name="adventure" id="adventure" /><label htmlFor="adventure"> Adventure</label></p>
-                                      <p><input type="radio" name="action" id="action" /><label htmlFor="action"> Action</label></p>
-                                      <p><input type="radio" name="sports" id="sports" /><label htmlFor="sports"> Sports</label></p>
-                                      <p><input type="radio" name="fantasy" id="fantasy" /><label htmlFor="fantasy"> Fantasy</label></p>
-  
-  
-                                      <p><input type="radio" name="adventure" id="adventure" /><label htmlFor="adventure"> Adventure</label></p>
-                                      <p><input type="radio" name="action" id="action" /><label htmlFor="action"> Action</label></p>
-                                      <p><input type="radio" name="sports" id="sports" /><label htmlFor="sports"> Sports</label></p>
-                                      <p><input type="radio" name="fantasy" id="fantasy" /><label htmlFor="fantasy"> Fantasy</label></p>
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="cd-right-container">
-                                    <div className="addons-search-container">
-                                      <div className="addons-search-content">
-                                        <input type="search" name="addonsSearch" id="addonsSearch" placeholder="Search add ons"/>
-                                        <img src={Search} alt="search" />
-                                        </div>
-                                    </div>
-  
-                                  <div className="cd-right-card-addons-container">
-                                    <div className="cd-right-card-addons">
-                                      <img src={Ps4cd} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={BattelfieldCD} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={Ps4cd} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={BattelfieldCD} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={Ps4cd} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-  
-  
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={Ps4cd} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={BattelfieldCD} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={Ps4cd} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={BattelfieldCD} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={Ps4cd} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-  
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={Ps4cd} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={BattelfieldCD} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={Ps4cd} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={BattelfieldCD} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={Ps4cd} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-  
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={Ps4cd} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={BattelfieldCD} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={Ps4cd} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={BattelfieldCD} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={Ps4cd} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-                                  </div>
-                              </div>
-                            </div>
-  
-                            <div className="note-container">
-                              <p>Note: Only 2 free Addons can be selected</p>
-                            </div>
-                          </div>
-                        </div>
-                      )}
+                      </Link>
                     </div>
-  
+
                     <div className="paid-addons">
                       <p id="paid-addons-text">Paid AddOns</p>
-                      <div className="paid-addons-box">
+                      <Link to="/paidaddons" className="paid-addons-box">
                         <img src={AddAddons} alt="" />
                         <p>Add Addons</p>
-                      </div>
+                      </Link>
                     </div>
                   </div>
                 </div>
-  
+
                 <div className="cost-container">
-                  <p id="total-cost-heading">Total cost</p>
-                  <p
-                    id="price-text"
-                    onMouseEnter={() => setIsHovering(isHovering)}
-                    onMouseLeave={() => setIsHovering(!isHovering)}
-                  >
-                    <img src={Rupees} alt="rupees" /> 750/Month
-                  </p>
-                  {isHovering && (
-                    <div className="price-breakdown-container">
-                      <div className="price-breakdown-heading">
-                        <p>Price Breakdown</p>
+                  <div className="cost-content">
+                    <p id="total-cost-heading">Total cost</p>
+                    <p id="price-text">
+                      <img src={Rupees} alt="rupees" /> 750/Month
+                    </p>
+
+                    <p
+                      id="price-details"
+                      style={{ cursor: "pointer" }}
+                      onClick={() => setIsHovering(!isHovering)}
+                    >
+                      <img src={PriceInfo} alt="" />{" "}
+                      <span>(Pricing details)</span>{" "}
+                    </p>
+                    {isHovering && (
+                      <div className="price-breakdown-container">
+                        <div className="price-breakdown-heading">
+                          <p>Price Breakdown</p>
+                        </div>
+                        <div className="product-prices">
+                          <p style={{ marginTop: "1.5rem" }} id="product-name">
+                            PS4{" "}
+                            <span>
+                              <img src={Rupees} alt="rupees" />
+                              500/day
+                            </span>
+                          </p>
+                          <p id="product-name">
+                            Addons1{" "}
+                            <span>
+                              <img src={Rupees} alt="rupees" />
+                              500/day
+                            </span>
+                          </p>
+                          <p id="product-name">
+                            Addons2{" "}
+                            <span>
+                              <img src={Rupees} alt="rupees" />
+                              100/day
+                            </span>
+                          </p>
+                          <p id="product-name">
+                            Addons3{" "}
+                            <span>
+                              <img src={Rupees} alt="rupees" />
+                              100/day
+                            </span>
+                          </p>
+                          <p id="product-name">
+                            Addons4{" "}
+                            <span>
+                              <img src={Rupees} alt="rupees" />
+                              100/day
+                            </span>
+                          </p>
+                          <p
+                            id="product-name"
+                            style={{
+                              borderBottom: "1px solid #464646",
+                              paddingBottom: "1rem",
+                            }}
+                          >
+                            Addons5{" "}
+                            <span>
+                              <img src={Rupees} alt="rupees" />
+                              100/day
+                            </span>
+                          </p>
+                        </div>
+
+                        <div className="no-of-days">
+                          <p style={{ marginTop: ".8rem" }}>
+                            <span></span>{" "}
+                            <span>
+                              <img src={Rupees} alt="rupees" />
+                              1000/day
+                            </span>
+                          </p>
+                          <p style={{ marginTop: ".8rem" }}>
+                            No of days <span>x 92 days</span>
+                          </p>
+                        </div>
+
+                        <div className="total-price">
+                          <p style={{ marginTop: ".8rem" }}>
+                            Sub total{" "}
+                            <span>
+                              <img src={Rupees} alt="rupees" />
+                              92000
+                            </span>
+                          </p>
+                          <p style={{ marginTop: ".8rem" }}>
+                            GST{" "}
+                            <span>
+                              + <img src={Rupees} alt="rupees" />
+                              4356
+                            </span>
+                          </p>
+                          <p
+                            style={{
+                              marginTop: ".8rem",
+                              marginBottom: "1rem",
+                              color: "#209132",
+                            }}
+                          >
+                            Coupon discount{" "}
+                            <span>
+                              -{" "}
+                              <img
+                                src={Rupees}
+                                alt="rupees"
+                                className="green"
+                              />
+                              14356
+                            </span>
+                          </p>
+                        </div>
+
+                        <div className="grand-total">
+                          <p>
+                            {" "}
+                            Grand Total{" "}
+                            <span>
+                              <img src={Rupees} alt="rupees" />
+                              82000
+                            </span>
+                          </p>
+                        </div>
                       </div>
-                      <div className="product-prices">
-                        <p style={{ marginTop: "1.5rem" }} id="product-name">
-                          PS4{" "}
-                          <span>
-                            <img src={Rupees} alt="rupees" />
-                            500/day
-                          </span>
-                        </p>
-                        <p id="product-name">
-                          Addons1{" "}
-                          <span>
-                            <img src={Rupees} alt="rupees" />
-                            500/day
-                          </span>
-                        </p>
-                        <p id="product-name">
-                          Addons2{" "}
-                          <span>
-                            <img src={Rupees} alt="rupees" />
-                            100/day
-                          </span>
-                        </p>
-                        <p id="product-name">
-                          Addons3{" "}
-                          <span>
-                            <img src={Rupees} alt="rupees" />
-                            100/day
-                          </span>
-                        </p>
-                        <p id="product-name">
-                          Addons4{" "}
-                          <span>
-                            <img src={Rupees} alt="rupees" />
-                            100/day
-                          </span>
-                        </p>
-                        <p
-                          id="product-name"
-                          style={{
-                            borderBottom: "1px solid #464646",
-                            paddingBottom: "1rem",
-                          }}
-                        >
-                          Addons5{" "}
-                          <span>
-                            <img src={Rupees} alt="rupees" />
-                            100/day
-                          </span>
-                        </p>
-                      </div>
-  
-                      <div className="no-of-days">
-                        <p style={{ marginTop: ".8rem" }}>
-                          <span></span>{" "}
-                          <span>
-                            <img src={Rupees} alt="rupees" />
-                            1000/day
-                          </span>
-                        </p>
-                        <p style={{ marginTop: ".8rem" }}>
-                          No of days <span>x 92 days</span>
-                        </p>
-                      </div>
-  
-                      <div className="total-price">
-                        <p style={{ marginTop: ".8rem" }}>
-                          Sub total{" "}
-                          <span>
-                            <img src={Rupees} alt="rupees" />
-                            92000
-                          </span>
-                        </p>
-                        <p style={{ marginTop: ".8rem" }}>
-                          GST{" "}
-                          <span>
-                            + <img src={Rupees} alt="rupees" />
-                            4356
-                          </span>
-                        </p>
-                        <p
-                          style={{
-                            marginTop: ".8rem",
-                            marginBottom: "1rem",
-                            color: "#209132",
-                          }}
-                        >
-                          Coupon discount{" "}
-                          <span>
-                            - <img src={Rupees} alt="rupees" className="green" />
-                            14356
-                          </span>
-                        </p>
-                      </div>
-  
-                      <div className="grand-total">
-                        <p>
-                          {" "}
-                          Grand Total{" "}
-                          <span>
-                            <img src={Rupees} alt="rupees" />
-                            82000
-                          </span>
-                        </p>
-                      </div>
-                    </div>
-                  )}
-  
-                  <p id="price-details">
-                    <img src={PriceInfo} alt="" /> <span>(Pricing details)</span>{" "}
-                  </p>
-                </div>
-  
-                <div className="button-container">
-                  <button type="submit" className="add-to-cart">
-                    <img
-                      src={WhiteCart}
-                      alt="cart"
-                      style={{ marginRight: ".5rem" }}
-                    />
-                    Add to Cart
-                  </button>
-  
-                  <Couppon />
-              
+                    )}
+                  </div>
+
+                  <div className="button-container">
+                    <Couppon />
+
+                    <button type="submit" className="add-to-cart">
+                      <img
+                        src={WhiteCart}
+                        alt="cart"
+                        style={{ marginRight: ".5rem" }}
+                      />
+                      Add to Cart
+                    </button>
+                  </div>
                 </div>
               </div>
 
-
-
-
-
-
-  
               <div className="about-item-container">
                 <div className="about-item-content">
                   <p>About Item</p>
@@ -675,7 +480,7 @@ const Productdetails = () => {
                   </p>
                 </div>
               </div>
-  
+
               <div className="product-specification-container">
                 <p id="specification-text">Specification</p>
                 <div className="brand-container">
@@ -698,50 +503,50 @@ const Productdetails = () => {
                   Set up time: <span>10 minutes</span>
                 </p>
               </div>
-  
+
               <div className="in-the-box-text">
                 <p>In The Box</p>
               </div>
-  
+
               <div className="box-content">
                 <div className="box">
                   <img src={Controller1} alt="controller" />
                   <p>PS4 Controller</p>
                 </div>
-  
+
                 <div className="box">
                   <img src={Controller2} alt="controller" />
                   <p>PS4 Device</p>
                 </div>
-  
+
                 <div className="box">
                   <img src={Controller3} alt="controller" />
                   <p>HDMI Cables</p>
                 </div>
-  
+
                 <div className="box">
                   <img src={Controller4} alt="controller" />
                   <p>USB Cables</p>
                 </div>
-  
+
                 <div className="box">
                   <img src={Controller1} alt="controller" />
                   <p>Power Cord</p>
                 </div>
-  
+
                 <div className="box">
                   <img src={Controller1} alt="controller" />
                   <p>Games</p>
                 </div>
-  
+
                 <div className="box">
                   <img src={Controller1} alt="controller" />
                   <p id="surprise-text">Surprise</p>
                 </div>
-  
+
                 <div className="box"></div>
               </div>
-  
+
               <div className="product-frequently-rented-together">
                 <div className="product-frequently-rented-together-text">
                   <p>Most Frequently Rented Together</p>
@@ -763,7 +568,9 @@ const Productdetails = () => {
                     >
                       <img
                         src={Right}
-                        onMouseOver={(e) => (e.currentTarget.src = ExcludeRight)}
+                        onMouseOver={(e) =>
+                          (e.currentTarget.src = ExcludeRight)
+                        }
                         onMouseOut={(e) => (e.currentTarget.src = Right)}
                         className="rightVector"
                       />
@@ -789,6 +596,7 @@ const Productdetails = () => {
                     }}
                     modules={[Navigation]}
                     className="mySwiper"
+                    style={{ zIndex: "-1" }}
                   >
                     <SwiperSlide style={{ marginRight: "2rem" }}>
                       <Accessoriescard
@@ -797,7 +605,7 @@ const Productdetails = () => {
                         price="500/Month"
                       />
                     </SwiperSlide>
-  
+
                     <SwiperSlide>
                       <Accessoriescard
                         imgSrc={Playstation}
@@ -805,7 +613,7 @@ const Productdetails = () => {
                         price="500/Month"
                       />
                     </SwiperSlide>
-  
+
                     <SwiperSlide>
                       <Accessoriescard
                         imgSrc={Playstation}
@@ -813,7 +621,7 @@ const Productdetails = () => {
                         price="500/Month"
                       />
                     </SwiperSlide>
-  
+
                     <SwiperSlide>
                       <Accessoriescard
                         imgSrc={Playstation}
@@ -821,7 +629,7 @@ const Productdetails = () => {
                         price="500/Month"
                       />
                     </SwiperSlide>
-  
+
                     <SwiperSlide>
                       <Accessoriescard
                         imgSrc={Playstation}
@@ -829,7 +637,7 @@ const Productdetails = () => {
                         price="500/Month"
                       />
                     </SwiperSlide>
-  
+
                     <SwiperSlide>
                       <Accessoriescard
                         imgSrc={Playstation}
@@ -840,47 +648,17 @@ const Productdetails = () => {
                   </Swiper>
                 </div>
               </div>
-  
+
               <div className="frequently-asked-container">
                 <p id="frequently-asked-text">Frequently Asked Question</p>
-                <div
-                  className="frequently-asked-question"
-                >
-                  <p id="p1">
-                    How many games come with the standard packages?{" "}
-                    <img src={UpArrow} alt="upArrow" />
-                  </p>
-                  <p id="p2">Two free games are included in your package.</p>
-                </div>
-  
-                <div
-                  className="frequently-asked-question"
-                >
-                  <p id="p1">
-                    Do the controllers come charged?{" "}
-                    <img src={DownArrow} alt="" />
-                  </p>
-                </div>
-  
-                <div
-                  className="frequently-asked-question"
-                >
-                  <p id="p1">
-                    Are the controllers sanitized? <img src={DownArrow} alt="" />
-                  </p>
-                </div>
-  
-                <div
-                  className="frequently-asked-question"
-                  style={{ border: "none" }}
-                >
-                  <p id="p1">
-                    Do we get to choose the games? <img src={DownArrow} alt="" />
-                  </p>
-                </div>
-  
+
+                {data.map((currentElement) => {
+                  const { id } = currentElement;
+                  return <Accordian key={id} {...currentElement} />;
+                })}
+
                 <p id="mind-question">Have a question in your mind? Ask us!</p>
-  
+
                 <div className="ask-question">
                   <span>
                     <input
@@ -895,15 +673,17 @@ const Productdetails = () => {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
-  
+
+        <Contactbutton />
+
+        <Scrollerbutton class="catogeryGoTopContainer" />
+
         <Footer />
       </>
     );
-  
-  } else{
+  } else {
     return (
       <>
         <Navbar />
@@ -918,19 +698,25 @@ const Productdetails = () => {
                     <img
                       src={RightArrow}
                       alt="rigthArrow"
-                      style={{ marginLeft: "0.594rem", marginRight: "0.594rem" }}
+                      style={{
+                        marginLeft: "0.594rem",
+                        marginRight: "0.594rem",
+                      }}
                     />{" "}
                     <Link to="/catogeries">Catogeries</Link>{" "}
                     <img
                       src={RightArrow}
                       alt="rigthArrow"
-                      style={{ marginLeft: "0.594rem", marginRight: "0.594rem" }}
+                      style={{
+                        marginLeft: "0.594rem",
+                        marginRight: "0.594rem",
+                      }}
                     />{" "}
                     <Link to="/productdetails">Product Details</Link>
                   </p>
                 </div>
               </div>
-  
+
               <div className="product-image-container" style={{ zIndex: "-1" }}>
                 <div className="product-image-content" style={{ zIndex: "-1" }}>
                   <div
@@ -939,7 +725,10 @@ const Productdetails = () => {
                     data-bs-ride="carousel"
                     style={{ zIndex: "-1" }}
                   >
-                    <div className="carousel-indicators" style={{ zIndex: "0" }}>
+                    <div
+                      className="carousel-indicators"
+                      style={{ zIndex: "0" }}
+                    >
                       <button
                         type="button"
                         data-bs-target="#carouselExampleIndicators"
@@ -1023,24 +812,24 @@ const Productdetails = () => {
                   </div>
                 </div>
               </div>
-  
+
               <div className="product-company-features-container">
                 <div className="product-company-quality-content">
                   <img src={Deposit} alt="quality-img" />
                   <p>No Deposit Charge</p>
                 </div>
-  
+
                 <div className="product-company-quality-content">
                   <img src={Delivery} alt="quality-img" />
                   <p>Delivery within 2 Hour</p>
                 </div>
-  
+
                 <div className="product-company-quality-content">
                   <img src={Union} alt="quality-img" />
                   <p>Quality Assurance</p>
                 </div>
               </div>
-  
+
               <div className="about-item-container">
                 <div className="about-item-content">
                   <p>About Item</p>
@@ -1053,7 +842,7 @@ const Productdetails = () => {
                   </p>
                 </div>
               </div>
-  
+
               <div className="product-specification-container">
                 <p id="specification-text">Specification</p>
                 <div className="brand-container">
@@ -1076,50 +865,50 @@ const Productdetails = () => {
                   Set up time: <span>10 minutes</span>
                 </p>
               </div>
-  
+
               <div className="in-the-box-text">
                 <p>In The Box</p>
               </div>
-  
+
               <div className="box-content">
                 <div className="box">
                   <img src={Controller1} alt="controller" />
                   <p>PS4 Controller</p>
                 </div>
-  
+
                 <div className="box">
                   <img src={Controller2} alt="controller" />
                   <p>PS4 Device</p>
                 </div>
-  
+
                 <div className="box">
                   <img src={Controller3} alt="controller" />
                   <p>HDMI Cables</p>
                 </div>
-  
+
                 <div className="box">
                   <img src={Controller4} alt="controller" />
                   <p>USB Cables</p>
                 </div>
-  
+
                 <div className="box">
                   <img src={Controller1} alt="controller" />
                   <p>Power Cord</p>
                 </div>
-  
+
                 <div className="box">
                   <img src={Controller1} alt="controller" />
                   <p>Games</p>
                 </div>
-  
+
                 <div className="box">
                   <img src={Controller1} alt="controller" />
                   <p id="surprise-text">Surprise</p>
                 </div>
-  
+
                 <div className="box"></div>
               </div>
-  
+
               <div className="product-frequently-rented-together">
                 <div className="product-frequently-rented-together-text">
                   <p>Most Frequently Rented Together</p>
@@ -1141,7 +930,9 @@ const Productdetails = () => {
                     >
                       <img
                         src={Right}
-                        onMouseOver={(e) => (e.currentTarget.src = ExcludeRight)}
+                        onMouseOver={(e) =>
+                          (e.currentTarget.src = ExcludeRight)
+                        }
                         onMouseOut={(e) => (e.currentTarget.src = Right)}
                         className="rightVector"
                       />
@@ -1167,6 +958,7 @@ const Productdetails = () => {
                     }}
                     modules={[Navigation]}
                     className="mySwiper"
+                    style={{ zIndex: "0" }}
                   >
                     <SwiperSlide style={{ marginRight: "2rem" }}>
                       <Accessoriescard
@@ -1175,7 +967,7 @@ const Productdetails = () => {
                         price="500/Month"
                       />
                     </SwiperSlide>
-  
+
                     <SwiperSlide>
                       <Accessoriescard
                         imgSrc={Playstation}
@@ -1183,7 +975,7 @@ const Productdetails = () => {
                         price="500/Month"
                       />
                     </SwiperSlide>
-  
+
                     <SwiperSlide>
                       <Accessoriescard
                         imgSrc={Playstation}
@@ -1191,7 +983,7 @@ const Productdetails = () => {
                         price="500/Month"
                       />
                     </SwiperSlide>
-  
+
                     <SwiperSlide>
                       <Accessoriescard
                         imgSrc={Playstation}
@@ -1199,7 +991,7 @@ const Productdetails = () => {
                         price="500/Month"
                       />
                     </SwiperSlide>
-  
+
                     <SwiperSlide>
                       <Accessoriescard
                         imgSrc={Playstation}
@@ -1207,7 +999,7 @@ const Productdetails = () => {
                         price="500/Month"
                       />
                     </SwiperSlide>
-  
+
                     <SwiperSlide>
                       <Accessoriescard
                         imgSrc={Playstation}
@@ -1218,47 +1010,17 @@ const Productdetails = () => {
                   </Swiper>
                 </div>
               </div>
-  
+
               <div className="frequently-asked-container">
                 <p id="frequently-asked-text">Frequently Asked Question</p>
-                <div
-                  className="frequently-asked-question"
-                >
-                  <p id="p1">
-                    How many games come with the standard packages?{" "}
-                    <img src={UpArrow} alt="upArrow" />
-                  </p>
-                  <p id="p2">Two free games are included in your package.</p>
-                </div>
-  
-                <div
-                  className="frequently-asked-question"
-                >
-                  <p id="p1">
-                    Do the controllers come charged?{" "}
-                    <img src={DownArrow} alt="" />
-                  </p>
-                </div>
-  
-                <div
-                  className="frequently-asked-question"
-                >
-                  <p id="p1">
-                    Are the controllers sanitized? <img src={DownArrow} alt="" />
-                  </p>
-                </div>
-  
-                <div
-                  className="frequently-asked-question"
-                  style={{ border: "none" }}
-                >
-                  <p id="p1">
-                    Do we get to choose the games? <img src={DownArrow} alt="" />
-                  </p>
-                </div>
-  
+
+                {data.map((currentElement) => {
+                  const { id } = currentElement;
+                  return <Accordian key={id} {...currentElement} />;
+                })}
+
                 <p id="mind-question">Have a question in your mind? Ask us!</p>
-  
+
                 <div className="ask-question">
                   <span>
                     <input
@@ -1273,7 +1035,7 @@ const Productdetails = () => {
                 </div>
               </div>
             </div>
-  
+
             {/* right container */}
             <div className="product-right-container">
               <div className="product-right-content">
@@ -1289,7 +1051,7 @@ const Productdetails = () => {
                       </p>
                     </div>
                   </div>
-  
+
                   <div className="plan">
                     <div className="plan-content">
                       <p id="subscription-time">3 Month</p>
@@ -1299,7 +1061,7 @@ const Productdetails = () => {
                       </p>
                     </div>
                   </div>
-  
+
                   <div className="plan">
                     <div className="plan-content">
                       <p id="subscription-time">1 Month</p>
@@ -1309,7 +1071,7 @@ const Productdetails = () => {
                       </p>
                     </div>
                   </div>
-  
+
                   <div className="plan">
                     <div className="plan-content">
                       <p id="subscription-time">1 Week</p>
@@ -1319,7 +1081,7 @@ const Productdetails = () => {
                       </p>
                     </div>
                   </div>
-  
+
                   <div className="plan">
                     <div className="plan-content">
                       <p id="subscription-time">2 Days</p>
@@ -1329,7 +1091,7 @@ const Productdetails = () => {
                       </p>
                     </div>
                   </div>
-  
+
                   <div className="plan">
                     <div className="plan-content">
                       <p id="subscription-time">1 Day</p>
@@ -1340,7 +1102,7 @@ const Productdetails = () => {
                     </div>
                   </div>
                 </div>
-  
+
                 <div className="calender-container">
                   <div className="start-date-container">
                     <p>Start date</p>
@@ -1355,7 +1117,7 @@ const Productdetails = () => {
                       </div>
                     </span>
                   </div>
-  
+
                   <div className="end-date-container">
                     <p>End date</p>
                     <span>
@@ -1370,7 +1132,7 @@ const Productdetails = () => {
                     </span>
                   </div>
                 </div>
-  
+
                 <div className="add-on-container">
                   <p id="addons-text">Select AddOns</p>
                   <div className="addons-type">
@@ -1378,13 +1140,13 @@ const Productdetails = () => {
                       <p id="free-addons-text">Free AddOns</p>
                       <div
                         className="free-addons-box"
-                        onClick={() => setIsAddons(!isAddons)}
+                        onClick={() => setIsFreeaddons(!isFreeaddons)}
                       >
                         <img src={Ps4cd} alt="ps4cd" />
                         <img src={BattelfieldCD} alt="battelfield" />
                       </div>
-  
-                      {isAddons && (
+
+                      {isFreeaddons && (
                         <div className="addons-container">
                           <div className="addons-content">
                             <div className="addons-heading">
@@ -1395,7 +1157,10 @@ const Productdetails = () => {
                                     src={SmallCross}
                                     alt="cross"
                                     id="heading-cross"
-                                    onClick={() => setIsAddons(!isAddons)}
+                                    onClick={() =>
+                                      setIsFreeaddons(!isFreeaddons)
+                                    }
+                                    style={{ cursor: "pointer" }}
                                   />
                                 </span>
                               </p>
@@ -1418,7 +1183,7 @@ const Productdetails = () => {
                                         alt="battelfield"
                                       />
                                     </div>
-  
+
                                     <div className="addons-two-card">
                                       <img
                                         src={CardCross}
@@ -1429,149 +1194,237 @@ const Productdetails = () => {
                                     </div>
                                   </div>
                                 </div>
-  
+
                                 <div className="filter-sort-addons">
                                   <p id="filter-sort-text">Filter & Sort</p>
                                   <div className="filter-catogery">
-  
-                                      <p><input type="checkbox" name="adventure" id="adventure" /><label htmlFor="adventure"> Adventure</label></p>
-                                      <p><input type="checkbox" name="action" id="action" /><label htmlFor="action"> Action</label></p>
-                                      <p><input type="checkbox" name="sports" id="sports" /><label htmlFor="sports"> Sports</label></p>
-                                      <p><input type="checkbox" name="fantasy" id="fantasy" /><label htmlFor="fantasy"> Fantasy</label></p>
-  
-  
-                                      <p><input type="radio" name="adventure" id="adventure" /><label htmlFor="adventure"> Adventure</label></p>
-                                      <p><input type="radio" name="action" id="action" /><label htmlFor="action"> Action</label></p>
-                                      <p><input type="radio" name="sports" id="sports" /><label htmlFor="sports"> Sports</label></p>
-                                      <p><input type="radio" name="fantasy" id="fantasy" /><label htmlFor="fantasy"> Fantasy</label></p>
-  
-  
-                                      <p><input type="radio" name="adventure" id="adventure" /><label htmlFor="adventure"> Adventure</label></p>
-                                      <p><input type="radio" name="action" id="action" /><label htmlFor="action"> Action</label></p>
-                                      <p><input type="radio" name="sports" id="sports" /><label htmlFor="sports"> Sports</label></p>
-                                      <p><input type="radio" name="fantasy" id="fantasy" /><label htmlFor="fantasy"> Fantasy</label></p>
+                                    <p>
+                                      <input
+                                        type="checkbox"
+                                        name="adventure"
+                                        id="adventure"
+                                      />
+                                      <label htmlFor="adventure">
+                                        {" "}
+                                        Adventure
+                                      </label>
+                                    </p>
+                                    <p>
+                                      <input
+                                        type="checkbox"
+                                        name="action"
+                                        id="action"
+                                      />
+                                      <label htmlFor="action"> Action</label>
+                                    </p>
+                                    <p>
+                                      <input
+                                        type="checkbox"
+                                        name="sports"
+                                        id="sports"
+                                      />
+                                      <label htmlFor="sports"> Sports</label>
+                                    </p>
+                                    <p>
+                                      <input
+                                        type="checkbox"
+                                        name="fantasy"
+                                        id="fantasy"
+                                      />
+                                      <label htmlFor="fantasy"> Fantasy</label>
+                                    </p>
+
+                                    <p>
+                                      <input
+                                        type="radio"
+                                        name="adventure"
+                                        id="adventure"
+                                      />
+                                      <label htmlFor="adventure">
+                                        {" "}
+                                        Adventure
+                                      </label>
+                                    </p>
+                                    <p>
+                                      <input
+                                        type="radio"
+                                        name="action"
+                                        id="action"
+                                      />
+                                      <label htmlFor="action"> Action</label>
+                                    </p>
+                                    <p>
+                                      <input
+                                        type="radio"
+                                        name="sports"
+                                        id="sports"
+                                      />
+                                      <label htmlFor="sports"> Sports</label>
+                                    </p>
+                                    <p>
+                                      <input
+                                        type="radio"
+                                        name="fantasy"
+                                        id="fantasy"
+                                      />
+                                      <label htmlFor="fantasy"> Fantasy</label>
+                                    </p>
+
+                                    <p>
+                                      <input
+                                        type="radio"
+                                        name="adventure"
+                                        id="adventure"
+                                      />
+                                      <label htmlFor="adventure">
+                                        {" "}
+                                        Adventure
+                                      </label>
+                                    </p>
+                                    <p>
+                                      <input
+                                        type="radio"
+                                        name="action"
+                                        id="action"
+                                      />
+                                      <label htmlFor="action"> Action</label>
+                                    </p>
+                                    <p>
+                                      <input
+                                        type="radio"
+                                        name="sports"
+                                        id="sports"
+                                      />
+                                      <label htmlFor="sports"> Sports</label>
+                                    </p>
+                                    <p>
+                                      <input
+                                        type="radio"
+                                        name="fantasy"
+                                        id="fantasy"
+                                      />
+                                      <label htmlFor="fantasy"> Fantasy</label>
+                                    </p>
                                   </div>
                                 </div>
                               </div>
                               <div className="cd-right-container">
-                                    <div className="addons-search-container">
-                                      <div className="addons-search-content">
-                                        <input type="search" name="addonsSearch" id="addonsSearch" placeholder="Search add ons"/>
-                                        <img src={Search} alt="search" />
-                                        </div>
-                                    </div>
-  
-                                  <div className="cd-right-card-addons-container">
-                                    <div className="cd-right-card-addons">
-                                      <img src={Ps4cd} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={BattelfieldCD} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={Ps4cd} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={BattelfieldCD} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={Ps4cd} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-  
-  
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={Ps4cd} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={BattelfieldCD} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={Ps4cd} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={BattelfieldCD} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={Ps4cd} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-  
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={Ps4cd} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={BattelfieldCD} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={Ps4cd} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={BattelfieldCD} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={Ps4cd} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-  
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={Ps4cd} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={BattelfieldCD} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={Ps4cd} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={BattelfieldCD} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
-  
-                                    <div className="cd-right-card-addons">
-                                      <img src={Ps4cd} alt="ps4cd" />
-                                      <button type="submit">Add</button>
-                                    </div>
+                                <div className="addons-search-container">
+                                  <div className="addons-search-content">
+                                    <input
+                                      type="search"
+                                      name="addonsSearch"
+                                      id="addonsSearch"
+                                      placeholder="Search add ons"
+                                    />
+                                    <img src={Search} alt="search" />
                                   </div>
+                                </div>
+
+                                <div className="cd-right-card-addons-container">
+                                  <div className="cd-right-card-addons">
+                                    <img src={Ps4cd} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={BattelfieldCD} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={Ps4cd} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={BattelfieldCD} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={Ps4cd} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={Ps4cd} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={BattelfieldCD} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={Ps4cd} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={BattelfieldCD} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={Ps4cd} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={Ps4cd} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={BattelfieldCD} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={Ps4cd} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={BattelfieldCD} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={Ps4cd} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={Ps4cd} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={BattelfieldCD} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={Ps4cd} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={BattelfieldCD} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={Ps4cd} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+                                </div>
                               </div>
                             </div>
-  
+
                             <div className="note-container">
                               <p>Note: Only 2 free Addons can be selected</p>
                             </div>
@@ -1579,25 +1432,392 @@ const Productdetails = () => {
                         </div>
                       )}
                     </div>
-  
+
                     <div className="paid-addons">
                       <p id="paid-addons-text">Paid AddOns</p>
-                      <div className="paid-addons-box">
+                      <div
+                        className="paid-addons-box"
+                        onClick={() => setIsPaidaddons(!isPaidaddons)}
+                      >
                         <img src={AddAddons} alt="" />
-                        <p>Add Addons</p>
+                        <p id="paid-add-addons">Add Addons</p>
                       </div>
+
+                      {isPaidaddons && (
+                        <div className="addons-container">
+                          <div className="addons-content">
+                            <div className="addons-heading">
+                              <p id="addons-heading-text">
+                                Paid Add Ons{" "}
+                                <span>
+                                  <img
+                                    src={SmallCross}
+                                    alt="cross"
+                                    id="heading-cross"
+                                    onClick={() =>
+                                      setIsPaidaddons(!isPaidaddons)
+                                    }
+                                    style={{ cursor: "pointer" }}
+                                  />
+                                </span>
+                              </p>
+                            </div>
+                            <div className="cd-container">
+                              <div className="cd-left-container">
+                                <div className="selected-addons">
+                                  <p id="selected-text">
+                                    Selected <span>2</span>
+                                  </p>
+                                  <div className="addons-card">
+                                    <Swiper
+                                      width={100}
+                                      slidesPerView={1}
+                                      centeredSlides={false}
+                                      spaceBetween={10}
+                                      slidesPerGroup={1}
+                                      grabCursor={true}
+                                      loop={true}
+                                      loopFillGroupWithBlank={true}
+                                      pagination={{
+                                        clickable: true,
+                                      }}
+                                      navigation={{
+                                        prevEl: ".rented-together-left-button",
+                                        nextEl: ".rented-together-right-button",
+                                      }}
+                                      modules={[Navigation]}
+                                      className="mySwiper"
+                                      style={{ zIndex: "0" ,height:"100%"}}
+                                    >
+                                      <SwiperSlide>
+                                        <div className="paid-addons-one-card">
+                                          <img
+                                            src={CardCross}
+                                            alt="cardcross"
+                                            id="paid-card-cross-1"
+                                          />
+                                          <img
+                                            src={BattelfieldCD}
+                                            alt="battelfield"
+                                          />
+                                        </div>
+                                      </SwiperSlide>
+
+                                      <SwiperSlide>
+                                        <div className="paid-addons-two-card">
+                                          <img
+                                            src={CardCross}
+                                            alt="cardcross"
+                                            id="paid-card-cross-2"
+                                          />
+                                          <img src={Ps4cd} alt="fifa20" />
+                                        </div>
+                                      </SwiperSlide>
+
+
+                                      <SwiperSlide>
+                                        <div className="paid-addons-one-card">
+                                          <img
+                                            src={CardCross}
+                                            alt="cardcross"
+                                            id="paid-card-cross-1"
+                                          />
+                                          <img
+                                            src={BattelfieldCD}
+                                            alt="battelfield"
+                                          />
+                                        </div>
+                                      </SwiperSlide>
+
+                                      <SwiperSlide>
+                                        <div className="paid-addons-two-card">
+                                          <img
+                                            src={CardCross}
+                                            alt="cardcross"
+                                            id="paid-card-cross-2"
+                                          />
+                                          <img src={Ps4cd} alt="fifa20" />
+                                        </div>
+                                      </SwiperSlide>
+
+
+                                      <SwiperSlide>
+                                        <div className="paid-addons-one-card">
+                                          <img
+                                            src={CardCross}
+                                            alt="cardcross"
+                                            id="paid-card-cross-1"
+                                          />
+                                          <img
+                                            src={BattelfieldCD}
+                                            alt="battelfield"
+                                          />
+                                        </div>
+                                      </SwiperSlide>
+
+                                      <SwiperSlide>
+                                        <div className="paid-addons-two-card">
+                                          <img
+                                            src={CardCross}
+                                            alt="cardcross"
+                                            id="paid-card-cross-2"
+                                          />
+                                          <img src={Ps4cd} alt="fifa20" />
+                                        </div>
+                                      </SwiperSlide>
+                                    </Swiper>
+                                  </div>
+                                </div>
+
+                                <div className="filter-sort-addons">
+                                  <p id="filter-sort-text">Filter & Sort</p>
+                                  <div className="filter-catogery">
+                                    <p>
+                                      <input
+                                        type="checkbox"
+                                        name="adventure"
+                                        id="adventure"
+                                      />
+                                      <label htmlFor="adventure">
+                                        {" "}
+                                        Adventure
+                                      </label>
+                                    </p>
+                                    <p>
+                                      <input
+                                        type="checkbox"
+                                        name="action"
+                                        id="action"
+                                      />
+                                      <label htmlFor="action"> Action</label>
+                                    </p>
+                                    <p>
+                                      <input
+                                        type="checkbox"
+                                        name="sports"
+                                        id="sports"
+                                      />
+                                      <label htmlFor="sports"> Sports</label>
+                                    </p>
+                                    <p>
+                                      <input
+                                        type="checkbox"
+                                        name="fantasy"
+                                        id="fantasy"
+                                      />
+                                      <label htmlFor="fantasy"> Fantasy</label>
+                                    </p>
+
+                                    <p>
+                                      <input
+                                        type="radio"
+                                        name="adventure"
+                                        id="adventure"
+                                      />
+                                      <label htmlFor="adventure">
+                                        {" "}
+                                        Adventure
+                                      </label>
+                                    </p>
+                                    <p>
+                                      <input
+                                        type="radio"
+                                        name="action"
+                                        id="action"
+                                      />
+                                      <label htmlFor="action"> Action</label>
+                                    </p>
+                                    <p>
+                                      <input
+                                        type="radio"
+                                        name="sports"
+                                        id="sports"
+                                      />
+                                      <label htmlFor="sports"> Sports</label>
+                                    </p>
+                                    <p>
+                                      <input
+                                        type="radio"
+                                        name="fantasy"
+                                        id="fantasy"
+                                      />
+                                      <label htmlFor="fantasy"> Fantasy</label>
+                                    </p>
+
+                                    <p>
+                                      <input
+                                        type="radio"
+                                        name="adventure"
+                                        id="adventure"
+                                      />
+                                      <label htmlFor="adventure">
+                                        {" "}
+                                        Adventure
+                                      </label>
+                                    </p>
+                                    <p>
+                                      <input
+                                        type="radio"
+                                        name="action"
+                                        id="action"
+                                      />
+                                      <label htmlFor="action"> Action</label>
+                                    </p>
+                                    <p>
+                                      <input
+                                        type="radio"
+                                        name="sports"
+                                        id="sports"
+                                      />
+                                      <label htmlFor="sports"> Sports</label>
+                                    </p>
+                                    <p>
+                                      <input
+                                        type="radio"
+                                        name="fantasy"
+                                        id="fantasy"
+                                      />
+                                      <label htmlFor="fantasy"> Fantasy</label>
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="cd-right-container">
+                                <div className="addons-search-container">
+                                  <div className="addons-search-content">
+                                    <input
+                                      type="search"
+                                      name="addonsSearch"
+                                      id="addonsSearch"
+                                      placeholder="Search add ons"
+                                    />
+                                    <img src={Search} alt="search" />
+                                  </div>
+                                </div>
+
+                                <div className="cd-right-card-addons-container">
+                                  <div className="cd-right-card-addons">
+                                    <img src={Ps4cd} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={BattelfieldCD} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={Ps4cd} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={BattelfieldCD} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={Ps4cd} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={Ps4cd} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={BattelfieldCD} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={Ps4cd} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={BattelfieldCD} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={Ps4cd} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={Ps4cd} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={BattelfieldCD} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={Ps4cd} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={BattelfieldCD} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={Ps4cd} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={Ps4cd} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={BattelfieldCD} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={Ps4cd} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={BattelfieldCD} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+
+                                  <div className="cd-right-card-addons">
+                                    <img src={Ps4cd} alt="ps4cd" />
+                                    <button type="submit">Add</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
-  
+
                 <div className="cost-container">
                   <p id="total-cost-heading">Total cost</p>
-                  <p
-                    id="price-text"
-                    onMouseEnter={() => setIsHovering(isHovering)}
-                    onMouseLeave={() => setIsHovering(!isHovering)}
-                  >
+                  <p id="price-text">
                     <img src={Rupees} alt="rupees" /> 750/Month
+                  </p>
+
+                  <p
+                    id="price-details"
+                    style={{ cursor: "pointer" }}
+                    onClick={() => setIsHovering(!isHovering)}
+                  >
+                    <img src={PriceInfo} alt="" />{" "}
+                    <span>(Pricing details)</span>{" "}
                   </p>
                   {isHovering && (
                     <div className="price-breakdown-container">
@@ -1654,7 +1874,7 @@ const Productdetails = () => {
                           </span>
                         </p>
                       </div>
-  
+
                       <div className="no-of-days">
                         <p style={{ marginTop: ".8rem" }}>
                           <span></span>{" "}
@@ -1667,7 +1887,7 @@ const Productdetails = () => {
                           No of days <span>x 92 days</span>
                         </p>
                       </div>
-  
+
                       <div className="total-price">
                         <p style={{ marginTop: ".8rem" }}>
                           Sub total{" "}
@@ -1692,12 +1912,13 @@ const Productdetails = () => {
                         >
                           Coupon discount{" "}
                           <span>
-                            - <img src={Rupees} alt="rupees" className="green" />
+                            -{" "}
+                            <img src={Rupees} alt="rupees" className="green" />
                             14356
                           </span>
                         </p>
                       </div>
-  
+
                       <div className="grand-total">
                         <p>
                           {" "}
@@ -1710,12 +1931,8 @@ const Productdetails = () => {
                       </div>
                     </div>
                   )}
-  
-                  <p id="price-details">
-                    <img src={PriceInfo} alt="" /> <span>(Pricing details)</span>{" "}
-                  </p>
                 </div>
-  
+
                 <div className="button-container">
                   <button type="submit" className="add-to-cart">
                     <img
@@ -1725,22 +1942,22 @@ const Productdetails = () => {
                     />
                     Add to Cart
                   </button>
-  
+
+                  <Contactbutton />
+
+                  <Scrollerbutton class="catogeryGoTopContainer" />
+
                   <Couppon />
-              
                 </div>
               </div>
             </div>
           </div>
         </div>
-  
+
         <Footer />
       </>
     );
   }
-
-
-  
 };
 
 export default Productdetails;

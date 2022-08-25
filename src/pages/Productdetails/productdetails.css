@@ -361,6 +361,7 @@
 }
 
 .frequently-asked-question{
+    padding-top: 1.5rem;
     border-bottom: 1px solid #191919;
 }
 
@@ -489,11 +490,12 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    height: 44.813rem;
+    height: 100%;
+    max-height: 44.813rem;
     width: 33%;
     max-width: 25.25rem;
     background: #141414;
-    top: 4.925rem;
+    top: 4.625rem;
     padding-left: 1rem;
 }
 
@@ -675,7 +677,7 @@
     justify-content: center;
     align-items: center;
     left: 6.3rem;
-    top: 1.425rem;
+    top: 1.375rem;
     width: 2.125rem;
     height: 2.188rem;
     border-radius: 4px;
@@ -718,9 +720,9 @@
 .free-addons{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 6.063rem;
+    width: 6rem;
     height: 7.5rem;
 }
 
@@ -729,7 +731,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 6.063rem;
+    width: 6rem;
     height: 7.5rem;
 }
 
@@ -746,6 +748,7 @@
     text-align: center;
     
     color: #FFFFFF;
+    margin-bottom: 0rem;
 }
 
 .free-addons-box, .paid-addons-box{
@@ -753,11 +756,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 6.063rem;
-    height: 6.063rem;
+    width: 6rem;
+    height: 6rem;
     background: #1E1E1E;
     box-shadow: 0px 2.09993px 5.59981px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    margin-top: .5rem;
 }
 
 .free-addons-box img:first-child{
@@ -785,6 +789,17 @@
 
 .paid-addons-box p{
     margin-top: 1rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 0.938rem;
+    text-align: center;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
 } 
 
 
@@ -792,7 +807,7 @@
 .addons-container{
     position: absolute;
     width: 300%;
-    height: 80vh;
+    height: 90%;
     max-width: 50rem;
     max-height: 41.625rem;
     top: 0%;
@@ -809,9 +824,8 @@
 
 .addons-heading{
     padding-left: 2rem;
-    padding-top: 2rem;
+    padding-top: 1rem;
     padding-right: 2rem;
-    padding-bottom: 1rem;
 }
 
 
@@ -937,12 +951,27 @@
     height: 100%;
 }
 
+
+.paid-addons-one-card{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
 #card-cross-1{
     position: absolute;
     top: .2rem;
     left: 5rem;
 }
 
+#paid-card-cross-1{
+    position: absolute;
+    top: .2rem;
+    left: 5rem;
+}
 
 .addons-two-card{
     position: relative;
@@ -953,7 +982,24 @@
     height: 100%;
 }
 
+
+.paid-addons-two-card{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
 #card-cross-2{
+    position: absolute;
+    top: .2rem;
+    left: 5rem;
+}
+
+
+#paid-card-cross-2{
     position: absolute;
     top: .2rem;
     left: 5rem;
@@ -1154,6 +1200,7 @@
     width: 100%;
     max-width: 19.125rem;
     height: 2.688rem;
+    margin-bottom: 2rem;
 }
 
 .button-container button:first-child{
@@ -1893,7 +1940,8 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        height: 54.813rem;
+        height: 90%;
+        max-height: 54.813rem;
         width: 38%;
         max-width: 25.25rem;
         background: #141414;
@@ -2211,18 +2259,18 @@
     
     .addons-container{
         position: absolute;
-        width: 300%;
+        width: 230%;
         height: 80vh;
-        max-width: 50rem;
-        max-height: 41.625rem;
-        top: 0%;
-        right: 50%;
+        max-width: 40.75rem;
+        max-height: 42.938rem;
+        top: 10%;
+        right: 20%;
         margin: 0 auto;
         z-index: 10;
         background: #191919;
         border-radius: 14px;
-        padding-left: .5rem;
-        padding-right: .5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     
     }
     
@@ -2259,7 +2307,7 @@
         width: 100%;
         max-width: 50rem;
         height: 100%;
-        max-height: 35rem;
+        max-height: 36.125rem;
     }
     
     .cd-left-container{
@@ -2267,16 +2315,17 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        width: 35%;
-        max-width: 18.5rem;
-        height: 32rem;
+        width: 17.75rem;
+        max-width: 17.75rem;
+        height: 36.125rem;
+        max-height: 46.125rem;
         padding-left: .5rem;
         padding-right: .5rem;
     }
     
     .selected-addons{
         width: 16.5rem;
-        height: 10rem;
+        height: 10.625rem;
         background: #141414;
         border-radius: 7px;
         padding-left: 1rem;
@@ -2286,7 +2335,7 @@
     
     .filter-sort-addons{
         width: 16.5rem;
-        height: 21.5rem;
+        height: 24rem;
         background: #141414;
         border-radius: 7px;
         padding-left: 1rem;
@@ -2294,21 +2343,16 @@
     }
     
     .cd-right-container{
-        width: 32rem;
-        height: 32rem;
+        width: 20.5rem;
+        max-width: 20.5rem;
+        height: 36.125rem;
+        max-height: 36.125rem;
         background: #141414;
         border-radius: 11px;
     }
     
     .note-container{
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        width: 100%;
-        height: 4rem;
-        padding-left: 2rem;
-        padding-top: 2rem;
-        padding-bottom: 1rem;
+        display: none;
     }
     
     .note-container p{
@@ -2346,6 +2390,7 @@
         align-items: center;
         width: 100%;
         height: 6rem;
+        margin-top: 1rem;
     }
     
     .addons-one-card{
@@ -2356,11 +2401,27 @@
         width: 50%;
         height: 100%;
     }
+
+    .paid-addons-one-card{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
     
     #card-cross-1{
         position: absolute;
         top: .2rem;
         left: 5rem;
+    }
+
+
+    #paid-card-cross-1{
+        position: absolute;
+        top: .2rem;
+        left: 4.5rem;
     }
     
     
@@ -2372,11 +2433,29 @@
         width: 50%;
         height: 100%;
     }
+
+
+    .paid-addons-two-card{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+    }
     
     #card-cross-2{
         position: absolute;
         top: .2rem;
         left: 5rem;
+    }
+
+    #paid-card-cross-2{
+        position: absolute;
+        top: .2rem;
+        left: 4.5rem;
+        overflow: visible;
     }
     
     
@@ -2401,7 +2480,8 @@
         justify-content: space-between;
         align-items: flex-start;
         width: 100%;
-        height: 18.3rem;
+        height: 20rem;
+        margin-top: 1rem;
         overflow-y: scroll;
     
     }
@@ -2423,6 +2503,7 @@
         text-align: center;
         
         color: #FFFFFF;
+        margin-top: 1rem;
     }
     
     
@@ -2470,7 +2551,7 @@
         align-items: center;
         flex-wrap: wrap;
         width: 100%;
-        height: 28rem;
+        height: 32rem;
         padding: 1rem;
         row-gap: 2rem;
         overflow-y: scroll;
@@ -2628,13 +2709,13 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 22rem;
+        width: 20rem;
         height: 35rem;
         background: #191919;
         box-shadow: 0px 4px 15px 1px rgba(0, 0, 0, 0.5);
         border-radius: 9px;
         position: absolute;
-        top: 4%;
+        top: 19%;
         right: 80%;
         z-index: 10000;
     }
@@ -2985,7 +3066,7 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
-        padding-left: 1.75rem;
+        padding-left: 1rem;
         padding-top: 2rem;
         width: 100%;
         height: 16.563rem;
@@ -3056,7 +3137,7 @@
         align-items: center;
         width: 100%;
         margin-top: 2.5rem;
-        padding-left: 1.75rem;
+        padding-left: 1rem;
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 500;
@@ -3078,8 +3159,9 @@
         width: 100%;
         height: 24.75rem;
         margin-top: 2.5rem;
-        gap: 1.25rem;
-        padding-left: 1.75rem;
+        gap: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
     
     
@@ -3129,6 +3211,7 @@
         width: 100%;
         height: 23.188rem;
         margin-top: 6rem;
+        padding-left: 1rem;
     }
     
     .product-frequently-rented-together-text{
@@ -3172,6 +3255,8 @@
         height: 44.5rem;
         margin-top: 3rem;
         margin-bottom: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
     
     #frequently-asked-text{
@@ -3250,18 +3335,20 @@
         width: 100%;
         height: 7.188rem;
         margin-bottom: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
     
     .ask-question span{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 22.938rem;
+        width: 18.938rem;
         height: 2.188rem;
         background: var(--font-color);
         border-radius: 4px;
-        padding-left: 0.75rem;
-        padding-right: 0.75rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
     
     .ask-question input{
@@ -3313,11 +3400,12 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        height: 54.813rem;
+        height: 42.813rem;
         width: 100%;
         max-width: 25.25rem;
         background: #141414;
-        padding-left: .8rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
         margin-top: 1rem;
         border-radius: 7px;
         z-index: 0;
@@ -3505,8 +3593,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        left: 7.9rem;
-        top: 1.655rem;
+        left: 7.3rem;
+        top: 1.65rem;
         width: 2.125rem;
         height: 2.188rem;
         border-radius: 4px;
@@ -3629,22 +3717,45 @@
         color: #FFFFFF;
     } 
     
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     .addons-container{
         position: absolute;
-        width: 300%;
-        height: 80vh;
-        max-width: 50rem;
-        max-height: 41.625rem;
+        width: 95%;
+        height: 100vh;
+        max-width: 100vw;
+        max-height: 100vh;
         top: 0%;
-        right: 50%;
+        right: 0rem;
         margin: 0 auto;
         z-index: 10;
         background: #191919;
         border-radius: 14px;
-        padding-left: .5rem;
-        padding-right: .5rem;
     
     }
     
@@ -3934,9 +4045,23 @@
     
     
     .cost-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         margin-top: 2.063rem;
-        width: 100%;
-        max-width: 8.625rem;
+        width: 100vw;
+        max-width: 100%;
+        margin-left: 0rem;
+        margin-right: 0rem;
+
+    }
+
+    .cost-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 3.3rem;
     }
     
     .cost-container p{
@@ -3956,12 +4081,12 @@
     }
     
     #price-text{
-        margin-top: 0.25rem;
+        margin-top: 0rem;
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 500;
-        font-size: 1.375rem;
-        line-height: 1.688rem;
+        font-size: 1.175rem;
+        line-height: 1.188rem;
         /* identical to box height */
         
         
@@ -3969,10 +4094,10 @@
     }
     
     .cost-container p:last-child{
-        margin-top: 0.25rem;
+        margin-top: 0rem;
     }
     
-    #price-details span{
+    #price-details{
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 500;
@@ -3989,16 +4114,17 @@
     
     
     .button-container{
-        margin-top: 2.188rem;
+        margin-top: 0rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
         max-width: 12.125rem;
-        height: 2.688rem;
+        height: 3rem;
+        margin-bottom: 0rem;
     }
     
-    .button-container button:first-child{
+    .button-container button:last-child{
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -4019,7 +4145,7 @@
     }
     
     
-    .button-container button:last-child{
+    .button-container button:first-child{
         display: flex;
         justify-content: space-between;
         align-items: center;

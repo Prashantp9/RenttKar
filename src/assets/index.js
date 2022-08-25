@@ -105,4 +105,10 @@ export {default as CardCross} from "./Images/cardCross.svg"
 export {default as SmallCross} from "./Images/smallCross.svg"
 export {default as TabletCouppon} from "./Images/tabletCuppon.svg"
 
+export {default as AddonsSearch} from "./Images/addonsSearch.svg"
+
+export {default as AddonsPs4} from "./Images/addonsPs4.svg"
+export {default as AddonsBattelfield} from "./Images/addonsBattel.svg"
+
+
 

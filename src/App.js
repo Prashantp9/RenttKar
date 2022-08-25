@@ -12,6 +12,8 @@ import Catogery from './pages/Catogery/catogery';
 import Searchfound from './pages/Searchfound/searchfound';
 import Searchnotfound from './pages/Searchnotfound/searchnotfound';
 import Productdetails from './pages/Productdetails/productdetails';
+import Mobileaddons from './pages/Mobileaddons/mobileaddons';
+import Mobilepaidaddons from './pages/Mobilepaidaddons/mobilepaidaddons';
 
 const App = () => {
   return (
@@ -26,6 +28,8 @@ const App = () => {
           <Route path='/searchresultfound' element={<Searchfound />} />
           <Route path='/searchresultnotfound' element={<Searchnotfound />} />
           <Route path='/productdetails' element={<Productdetails />} />
+          <Route path='/freeaddons' element={<Mobileaddons />} />
+          <Route path='/paidaddons' element={<Mobilepaidaddons />} />
       </Routes>
     </Router>
   )

@@ -8,3 +8,4 @@ export {default as Mobileproductcard} from "./MobileProductCard/mobileproductcar
 export {default as Contactbutton} from "./Contactbutton/contactbutton";
 export {default as Scrollerbutton} from "./Scrollerbutton/scrollerbutton";
 export {default as Accessoriescard} from "./Accessoriescard/accessoriescard";
+export {default as Accordian} from "./Accordian/accordian";
