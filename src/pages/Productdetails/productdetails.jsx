@@ -266,8 +266,8 @@ const Productdetails = () => {
                   </div>
                 </div>
 
-                <div className="calender-container">
-                  <div className="start-date-container">
+                  <div className="calender-container">
+                    <div className="start-date-container">
                     <p>Start date</p>
                     <span>
                       <DatePicker
@@ -293,12 +293,12 @@ const Productdetails = () => {
                         <img src={Calender} alt="" />
                       </div>
                     </span>
+                    </div>
                   </div>
-                </div>
 
-                <div className="add-on-container">
-                  <p id="addons-text">Select AddOns</p>
-                  <div className="addons-type">
+                  <div className="add-on-container">
+                    <p id="addons-text">Select AddOns</p>
+                    <div className="addons-type">
                     <div className="free-addons">
                       <p id="free-addons-text">Free AddOns</p>
                       <Link
@@ -336,12 +336,14 @@ const Productdetails = () => {
                       <span>(Pricing details)</span>{" "}
                     </p>
                     {isHovering && (
+                    <div className="mobile-price-breakdown-container">
                       <div className="price-breakdown-container">
                         <div className="price-breakdown-heading">
                           <p>Price Breakdown</p>
+                          <img src={SmallCross} alt="cross" onClick={() => setIsHovering(!isHovering)}/>
                         </div>
-                        <div className="product-prices">
-                          <p style={{ marginTop: "1.5rem" }} id="product-name">
+                        <div className="product-prices" style={{ borderBottom: "1px solid #464646"}}>
+                          <p style={{ marginTop: "2rem" }} id="product-name">
                             PS4{" "}
                             <span>
                               <img src={Rupees} alt="rupees" />
@@ -379,8 +381,7 @@ const Productdetails = () => {
                           <p
                             id="product-name"
                             style={{
-                              borderBottom: "1px solid #464646",
-                              paddingBottom: "1rem",
+                              paddingBottom: "1.5rem",
                             }}
                           >
                             Addons5{" "}
@@ -449,6 +450,7 @@ const Productdetails = () => {
                             </span>
                           </p>
                         </div>
+                      </div>
                       </div>
                     )}
                   </div>
