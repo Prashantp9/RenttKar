@@ -4503,8 +4503,9 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        max-width: 12.125rem;
+        max-width: 12.225rem;
         height: 3rem;
+        gap: .3rem;
         margin-bottom: 0rem;
     }
     
@@ -4521,7 +4522,7 @@
         font-style: normal;
         font-weight: 600;
         font-size: 0.75rem;
-        line-height: 0.938rem;
+        line-height: 0.8758rem;
         /* identical to box height */
         
         
@@ -4540,9 +4541,9 @@
         background: transparent;
         font-family: 'Montserrat';
         font-style: normal;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 0.75rem;
-        line-height: 0.938rem;
+        line-height: 0.875rem;
         /* identical to box height */
         
         

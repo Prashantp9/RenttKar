@@ -565,8 +565,7 @@ const Productdetails = () => {
                   </div>
 
                   <div className="button-container">
-                  
-                  <Link to="/redeemcoupon" style={{height:"100%"}}>
+                  <Link to="/redeemcoupon" style={{height:"100%", width:"3.5rem"}}>
                     <img src={TabletCouppon} alt="tabletCuppon" className="tablet-cuppon" />
                   </Link>
 
