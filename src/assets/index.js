@@ -110,5 +110,7 @@ export {default as AddonsSearch} from "./Images/addonsSearch.svg"
 export {default as AddonsPs4} from "./Images/addonsPs4.svg"
 export {default as AddonsBattelfield} from "./Images/addonsBattel.svg"
 
+export {default as Gradientcouppon} from "./Images/gradientCuppon.svg"
+
 
 

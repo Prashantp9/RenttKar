@@ -52,21 +52,132 @@ import {
   Search,
   TabletCouppon,
   Cross,
+  Gradientcouppon,
 } from "../../assets";
 
-const Couppon = () => {
-  if (window.innerWidth <= 768) {
+
+const Coupponbtn = () => {
+
+  const [isCuppon, setIsCuppon] = useState(false);
+
+  if (window.innerWidth > 500 && window.innerWidth <= 768) {
     return (
       <>
-        <img src={TabletCouppon} alt="tabletCuppon" className="tablet-cuppon" />
+        <img src={TabletCouppon} alt="tabletCuppon" className="tablet-cuppon" onClick={() => setIsCuppon(!isCuppon)}/>
+        {isCuppon && (
+          <>
+          <div className="coupon-popup-full-container">
+          <div className="coupon-popup-main-container">
+              <div className="coupon-popup-heading-content">
+                <p><img src={Gradientcouppon} alt="couppon" style={{marginRight:"2px"}}/> Coupons</p>
+                <img src={SmallCross} alt="cross" onClick={() => setIsCuppon(!isCuppon)}/>
+              </div>
+
+              <div className="enter-coupon-code-container">
+                  <input type="text" value="" placeholder="Enter coupon code"/>
+                  <button type="submit" className="enter-coupon-btn" style={{marginLeft:"2rem"}}>Apply Code</button>
+              </div>
+
+              <div className="redeem-coupon-container">
+
+              <Swiper
+                    width={600}
+                    slidesPerView={2}
+                    centeredSlides={false}
+                    spaceBetween={15}
+                    slidesPerGroup={1}
+                    grabCursor={true}
+                    loop={true}
+                    loopFillGroupWithBlank={true}
+                    pagination={{
+                      clickable: true,
+                    }}
+                    navigation={{
+                      prevEl: ".rented-together-left-button",
+                      nextEl: ".rented-together-right-button",
+                    }}
+                    modules={[Navigation]}
+                    className="mySwiper"
+                  >
+                    
+                    <SwiperSlide>
+                    <div className="coupon-main-content-one">
+                          <h3 className="coupon-main-content-heading">Welcome Coupon</h3>
+                          <p className="coupon-main-content-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                          <button type="submit" className="coupon-main-content-btn">Redeem</button>
+                    </div>
+                    </SwiperSlide>
+
+                    
+                    <SwiperSlide>
+                    <div className="coupon-main-content-two">
+                          <h3 className="coupon-main-content-heading">Welcome Coupon</h3>
+                          <p className="coupon-main-content-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                          <button type="submit" className="coupon-main-content-btn">Redeem</button>
+                    </div>                      
+                    </SwiperSlide>
+
+
+                    <SwiperSlide>
+                    <div className="coupon-main-content-three">
+                          <h3 className="coupon-main-content-heading">Welcome Coupon</h3>
+                          <p className="coupon-main-content-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                          <button type="submit" className="coupon-main-content-btn">Redeem</button>
+                    </div>                      
+                    </SwiperSlide>
+                  </Swiper>
+              </div>
+          </div>
+      </div>
+    </>
+    )}
       </>
     );
   } else {
     return (
-      <button>
+      <>
+      <button onClick={() => setIsCuppon(!isCuppon)} className="apply-coupon-btn">
         <img src={Cuppon} alt="cuppon" style={{ marginRight: "0.299rem" }} />
         Apply Coupon
       </button>
+      {isCuppon && (
+                  <>
+                  <div className="coupon-popup-full-container">
+                      <div className="coupon-popup-main-container">
+                          <div className="coupon-popup-heading-content">
+                            <p><img src={Gradientcouppon} alt="couppon" style={{marginRight:"2px"}}/> Coupons</p>
+                            <img src={SmallCross} alt="cross" />
+                          </div>
+            
+                          <div className="enter-coupon-code-container">
+                              <input type="text" value="" placeholder="Enter coupon code"/>
+                              <button type="submit" className="enter-coupon-btn" style={{marginLeft:"2rem"}}>Apply Code</button>
+                          </div>
+            
+                          <div className="redeem-coupon-container">
+                                <div className="coupon-main-content-one">
+                                      <h3 className="coupon-main-content-heading">Welcome Coupon</h3>
+                                      <p className="coupon-main-content-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                      <button type="submit" className="coupon-main-content-btn">Redeem</button>
+                                </div>
+            
+                                <div className="coupon-main-content-two">
+                                      <h3 className="coupon-main-content-heading">Welcome Coupon</h3>
+                                      <p className="coupon-main-content-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                      <button type="submit" className="coupon-main-content-btn">Redeem</button>
+                                </div>
+                                
+                                <div className="coupon-main-content-three">
+                                      <h3 className="coupon-main-content-heading">Welcome Coupon</h3>
+                                      <p className="coupon-main-content-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                      <button type="submit" className="coupon-main-content-btn">Redeem</button>
+                                </div>
+                          </div>
+                      </div>
+                  </div>
+                </>
+      )}  
+      </>
     );
   }
 };
@@ -78,16 +189,11 @@ const Productdetails = () => {
   const [isHovering, setIsHovering] = useState(false);
   const [isFreeaddons, setIsFreeaddons] = useState(false);
   const [isPaidaddons, setIsPaidaddons] = useState(false);
-
   const [data, setData] = useState(question);
   if (window.innerWidth <= 500) {
     return (
       <>
         <Navbar />
-        <div className="product-container">
-          <div className="product-content">
-            {/* left-container */}
-            <div className="product-left-container">
               <div className="product-image-container" style={{ zIndex: "-1" }}>
                 <div className="product-image-content" style={{ zIndex: "-1" }}>
                   <div
@@ -185,6 +291,7 @@ const Productdetails = () => {
               </div>
 
               <div className="product-company-features-container">
+                <div className="product-company-features-main-container">
                 <div className="product-company-quality-content">
                   <img src={Deposit} alt="quality-img" />
                   <p>No Deposit Charge</p>
@@ -199,8 +306,11 @@ const Productdetails = () => {
                   <img src={Union} alt="quality-img" />
                   <p>Quality Assurance</p>
                 </div>
+                </div>
               </div>
 
+
+              <div className="product-right-container">
               <div className="product-right-content">
                 <p id="product-heading">Playstation 4</p>
                 <p id="select-text">Select a Plan</p>
@@ -329,11 +439,10 @@ const Productdetails = () => {
 
                     <p
                       id="price-details"
-                      style={{ cursor: "pointer" }}
+                      style={{ cursor: "pointer", marginTop:".2rem" }}
                       onClick={() => setIsHovering(!isHovering)}
                     >
-                      <img src={PriceInfo} alt="" />{" "}
-                      <span>(Pricing details)</span>{" "}
+                      <span>View details</span>{" "}
                     </p>
                     {isHovering && (
                     <div className="mobile-price-breakdown-container">
@@ -456,7 +565,10 @@ const Productdetails = () => {
                   </div>
 
                   <div className="button-container">
-                    <Couppon />
+                  
+                  <Link to="/redeemcoupon" style={{height:"100%"}}>
+                    <img src={TabletCouppon} alt="tabletCuppon" className="tablet-cuppon" />
+                  </Link>
 
                     <button type="submit" className="add-to-cart">
                       <img
@@ -467,6 +579,7 @@ const Productdetails = () => {
                       Add to Cart
                     </button>
                   </div>
+                </div>
                 </div>
               </div>
 
@@ -674,9 +787,6 @@ const Productdetails = () => {
                   <button type="submit">Submit Question</button>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
 
         <Contactbutton />
 
@@ -1037,6 +1147,8 @@ const Productdetails = () => {
                 </div>
               </div>
             </div>
+
+
 
             {/* right container */}
             <div className="product-right-container">
@@ -1944,13 +2056,12 @@ const Productdetails = () => {
                     />
                     Add to Cart
                   </button>
+                  <Coupponbtn />
+                </div>
 
                   <Contactbutton />
 
                   <Scrollerbutton class="catogeryGoTopContainer" />
-
-                  <Couppon />
-                </div>
               </div>
             </div>
           </div>

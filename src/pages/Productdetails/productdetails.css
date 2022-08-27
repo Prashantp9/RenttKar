@@ -530,8 +530,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 98%;
-    max-width: 21.375rem;
+    width: 100%;
+    max-width: 22.375rem;
     height: 7.25rem;
     flex-wrap: wrap;
     gap: 0.75rem;
@@ -542,12 +542,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 30%;
+    width: 35%;
     max-width: 6.625rem;
     height: 3.25rem;
     padding: 1px;
     border-radius: 4px;
-
+    background: var(--btn-border-gradient);
 
 }
 
@@ -563,8 +563,8 @@
     width: 100%;
     height: 100%;
     gap: 0.375rem;
-    background: var(--container-background);
     border-radius: 4px;
+    background: var(--container-background);
 
 }
 
@@ -1224,7 +1224,7 @@
 }
 
 
-.button-container button:last-child{
+.apply-coupon-btn{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1397,6 +1397,212 @@
     
     color: #FFFFFF;
 }
+
+
+
+.coupon-popup-full-container{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px);
+}
+
+.coupon-popup-main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    height: 85%;
+    max-width: 45.5rem;
+    max-height: 34.563rem;
+    background: var(--container-background);
+    border-radius: 14px;
+    margin-top: 3.5rem;
+    padding: 2rem 2rem;
+}
+
+.coupon-popup-heading-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    width: 100%;
+}
+
+.coupon-popup-heading-content p{
+    margin-bottom: 0rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    
+    color: #FFFFFF;
+}
+
+.enter-coupon-code-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    max-height: 2.6rem;
+    margin-top: 2rem;
+}
+
+.enter-coupon-code-container input{
+    width: 20rem;
+    height: 100%;
+    padding-left: 1.5rem;
+    border: none;
+    outline: none;
+    background: #FFFFFF;
+    border-radius: 5px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    /* identical to box height */
+    
+    
+    color: rgba(14, 14, 14, 0.5);
+}
+
+.enter-coupon-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 15px 24px;
+    background: #0E9BE1;
+    border-radius: 5px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    /* identical to box height */
+    border: none;
+    
+    color: #FFFFFF;
+}
+
+.redeem-coupon-container{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    width: 100%;
+    height: 20rem;
+    margin-top: 2rem;
+}
+
+.coupon-main-content-one, .coupon-main-content-two, .coupon-main-content-three{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 48%;
+    max-width: 20.25rem;
+    height: 9.5rem;
+    background: #1E1E1E;
+    border-radius: 7px;
+    padding: 1rem;
+} 
+
+.coupon-main-content-heading{
+    width: 100%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    
+    color: #FFFFFF;
+}
+
+
+.coupon-main-content-desc{
+    width: 100%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    
+    color: #AAAAAA;
+    text-align: center; 
+}
+
+.coupon-main-content-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;   
+    border: 1px solid #0E9BE1;
+    border-radius: 2.7999px;
+    background: transparent;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 0.938rem;
+    /* identical to box height */
+    
+    
+    /* new blue */
+    
+    color: #0E9BE1;
+}
+
+
+.react-datepicker-popper div{
+    border-radius: 16px;
+}
+
+
+.react-datepicker{
+    width: 18.125rem;
+    height: 20.875rem;
+    background: var(--container-background);
+    box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+    border: none;
+}
+
+.react-datepicker__triangle{
+    display: none;
+}
+
+.react-datepicker__navigation{
+    border: 2.08575px solid #DFDFDF;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    border: none;
+    border-radius: 16px;
+}
+
+.react-datepicker__month-container{
+    width: 100%;
+    background: var(--container-background);
+    border-radius: 16px;
+}
+
+.react-datepicker__header{
+    background: var(--container-background);
+    border-radius: 16px;
+    border: none;
+}
+
+
+
 
 
 
@@ -2680,7 +2886,7 @@
     }
     
     
-    .button-container button:last-child{
+    .apply-coupon-btn{
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -2856,6 +3062,175 @@
         color: #FFFFFF;
     }
 
+
+
+    .coupon-popup-full-container{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(2px);
+    }
+    
+    .coupon-popup-main-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 85%;
+        max-width: 40.125rem;
+        max-height: 25.063rem;
+        background: var(--container-background);
+        border-radius: 14px;
+        margin-top: 3.5rem;
+        padding: 2rem 2rem;
+    }
+    
+    .coupon-popup-heading-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 3rem;
+        width: 100%;
+    }
+    
+    .coupon-popup-heading-content p{
+        margin-bottom: 0rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        
+        color: #FFFFFF;
+    }
+    
+    .enter-coupon-code-container{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 2.5rem;
+        max-height: 2.6rem;
+        margin-top: 2rem;
+    }
+    
+    .enter-coupon-code-container input{
+        width: 20rem;
+        height: 100%;
+        padding-left: 1.5rem;
+        border: none;
+        outline: none;
+        background: #FFFFFF;
+        border-radius: 5px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.125rem;
+        /* identical to box height */
+        
+        
+        color: rgba(14, 14, 14, 0.5);
+    }
+    
+    .enter-coupon-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding: 15px 24px;
+        background: #0E9BE1;
+        border-radius: 5px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+        /* identical to box height */
+        border: none;
+        
+        color: #FFFFFF;
+    }
+    
+    .redeem-coupon-container{
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        overflow: hidden;
+        row-gap: 1rem;
+        width: 100%;
+        height: 12.875rem;
+        margin-top: 2rem;
+        background: #141414;
+        border-radius: 11px;
+        padding: 1.5rem .5rem 1.5rem 1rem;
+    }
+    
+    .coupon-main-content-one, .coupon-main-content-two, .coupon-main-content-three{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 9.5rem;
+        background: #1E1E1E;
+        border-radius: 7px;
+        padding: 1rem;
+    } 
+    
+    .coupon-main-content-heading{
+        width: 100%;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        
+        color: #FFFFFF;
+        text-align: center;
+    }
+    
+    
+    .coupon-main-content-desc{
+        width: 100%;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        
+        color: #AAAAAA;
+        text-align: center; 
+    }
+    
+    .coupon-main-content-btn{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;   
+        border: 1px solid #0E9BE1;
+        border-radius: 2.7999px;
+        background: transparent;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 0.75rem;
+        line-height: 0.938rem;
+        /* identical to box height */
+        
+        
+        /* new blue */
+        
+        color: #0E9BE1;
+    }
+    
+
 }
 
 
@@ -2932,38 +3307,8 @@
 
 /* Mobile phones*/
 @media only screen and (max-width: 500px) {
-    .product-container{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100vw;
-        height: auto;
-        margin-top: 4.125rem;
-    }
-    
-    .product-content{
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        width: 95%;
-        margin: 0 auto;
-
-    }
     
     
-    
-    /* product left container */
-    .product-left-container{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        width: 100%;
-        max-width: 24.75rem;
-        margin-top: 1rem;
-    
-    }
     
     
     .product-navigation-container{
@@ -2971,18 +3316,46 @@
     }
     
     
+    .product-image-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 10.464rem;
+        margin-top: 5rem;
+    }
+
+    .product-image-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        max-width: 24.763rem;
+        height: 100%;
+
+    }
+
 
     
     
     .product-company-features-container{
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
-        width: 100%;
-        height: 8rem;
+        width: 100vw;
+        height: 7rem;
         background: var(--container-background);
-        border-radius: 6px;
-        margin-top: .5rem;
+        border-radius: 0px;
+        margin-top: 1rem;
+    }
+
+    .product-company-features-main-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+        height: 100%;
+        
     }
     
     .product-company-quality-content{
@@ -3070,10 +3443,10 @@
         align-items: flex-start;
         padding-left: 1rem;
         padding-top: 2rem;
-        width: 100%;
+        width: 100vw;
         height: 16.563rem;
         background: var(--container-background);
-        border-radius: 4.19985px;
+        border-radius: 0px;
         margin-top: 2.5rem;
         gap: 1rem;
     }
@@ -3396,6 +3769,16 @@
     /* product right container */
     
     
+    .product-right-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 42.813rem;
+        margin-top: 1rem;
+
+    }
+
     .product-right-content{
         position: static;
         display: flex;
@@ -3403,12 +3786,11 @@
         justify-content: flex-start;
         align-items: flex-start;
         height: 42.813rem;
-        width: 100%;
+        width: 95%;
         max-width: 25.25rem;
         background: #141414;
         padding-left: 1rem;
         padding-right: 1rem;
-        margin-top: 1rem;
         border-radius: 7px;
         z-index: 0;
 

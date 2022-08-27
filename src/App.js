@@ -14,6 +14,7 @@ import Searchnotfound from './pages/Searchnotfound/searchnotfound';
 import Productdetails from './pages/Productdetails/productdetails';
 import Mobileaddons from './pages/Mobileaddons/mobileaddons';
 import Mobilepaidaddons from './pages/Mobilepaidaddons/mobilepaidaddons';
+import Mobileredeemcoupon from './pages/Mobileredeemcoupon/mobileredeemcoupon';
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
           <Route path='/productdetails' element={<Productdetails />} />
           <Route path='/freeaddons' element={<Mobileaddons />} />
           <Route path='/paidaddons' element={<Mobilepaidaddons />} />
+          <Route path='/redeemcoupon' element={<Mobileredeemcoupon />} />
       </Routes>
     </Router>
   )
