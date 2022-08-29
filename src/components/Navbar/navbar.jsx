@@ -131,9 +131,9 @@ const Dropdown = () => {
           </li>
 
           <li>
-            <a href="" className="menu8">
+            <Link to="/mycart" className="menu8">
               My Cart
-            </a>
+            </Link>
           </li>
 
           <li>
@@ -357,14 +357,14 @@ const Navbar = () => {
         
         {/* cart button */}
         <button className="cartButton">
-          <div className="buttonContent">
+          <Link to="/mycart" className="buttonContent" style={{textDecorartion:"none", textDecorationLine:"none"}}>
             <span className="locationLogo">
               <img src={Cart} alt="" />
             </span>
-            <span className="place" style={{ marginLeft: "0.5rem" }}>
+            <span className="place" style={{ marginLeft: "0.5rem"}}>
               MyCart
             </span>
-          </div>
+          </Link>
         </button>
 
         

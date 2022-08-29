@@ -15,6 +15,7 @@ import Productdetails from './pages/Productdetails/productdetails';
 import Mobileaddons from './pages/Mobileaddons/mobileaddons';
 import Mobilepaidaddons from './pages/Mobilepaidaddons/mobilepaidaddons';
 import Mobileredeemcoupon from './pages/Mobileredeemcoupon/mobileredeemcoupon';
+import Mycart from './pages/Mycart/mycart';
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
           <Route path='/freeaddons' element={<Mobileaddons />} />
           <Route path='/paidaddons' element={<Mobilepaidaddons />} />
           <Route path='/redeemcoupon' element={<Mobileredeemcoupon />} />
+          <Route path='/mycart' element={<Mycart />} />
       </Routes>
     </Router>
   )
