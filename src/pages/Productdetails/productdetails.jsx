@@ -53,6 +53,7 @@ import {
   TabletCouppon,
   Cross,
   Gradientcouppon,
+  AddCart,
 } from "../../assets";
 
 
@@ -70,7 +71,7 @@ const Coupponbtn = () => {
           <div className="coupon-popup-main-container">
               <div className="coupon-popup-heading-content">
                 <p><img src={Gradientcouppon} alt="couppon" style={{marginRight:"2px"}}/> Coupons</p>
-                <img src={SmallCross} alt="cross" onClick={() => setIsCuppon(!isCuppon)}/>
+                <img src={SmallCross} alt="cross" style={{cursor:"pointer"}} onClick={() => setIsCuppon(!isCuppon)}/>
               </div>
 
               <div className="enter-coupon-code-container">
@@ -146,7 +147,7 @@ const Coupponbtn = () => {
                       <div className="coupon-popup-main-container">
                           <div className="coupon-popup-heading-content">
                             <p><img src={Gradientcouppon} alt="couppon" style={{marginRight:"2px"}}/> Coupons</p>
-                            <img src={SmallCross} alt="cross" />
+                            <img src={SmallCross} alt="cross" style={{cursor:'pointer'}} onClick={() => setIsCuppon(!isCuppon)}/>
                           </div>
             
                           <div className="enter-coupon-code-container">
@@ -190,6 +191,8 @@ const Productdetails = () => {
   const [isFreeaddons, setIsFreeaddons] = useState(false);
   const [isPaidaddons, setIsPaidaddons] = useState(false);
   const [data, setData] = useState(question);
+  const [addCart, setAddCart] = useState(false);
+
   if (window.innerWidth <= 500) {
     return (
       <>
@@ -1160,7 +1163,7 @@ const Productdetails = () => {
                       <p id="subscription-time">6 Month</p>
                       <p id="subscription-price">
                         <img src={Rupees} alt="rupees" />
-                        9,000/6Mn
+                        9k/6Mn
                       </p>
                     </div>
                   </div>
@@ -1170,7 +1173,7 @@ const Productdetails = () => {
                       <p id="subscription-time">3 Month</p>
                       <p id="subscription-price">
                         <img src={Rupees} alt="rupees" />
-                        4,500/3Mn
+                        4.5k/3Mn
                       </p>
                     </div>
                   </div>
@@ -1180,7 +1183,7 @@ const Productdetails = () => {
                       <p id="subscription-time">1 Month</p>
                       <p id="subscription-price">
                         <img src={Rupees} alt="rupees" />
-                        1500/Mn
+                        1.5k/Mn
                       </p>
                     </div>
                   </div>
@@ -2047,14 +2050,26 @@ const Productdetails = () => {
                 </div>
 
                 <div className="button-container">
-                  <button type="submit" className="add-to-cart">
+                  <div className="addCart-button" onClick={()=> setAddCart(!addCart)}>
+                    {addCart ? <button type="submit" className="added-to-cart">
+                    <img
+                      src={AddCart}
+                      alt="cart"
+                      style={{ marginRight: ".5rem" }}
+                    />
+                    Add to Cart
+                  </button> : 
+
+                  <button type="submit" className="add-to-cart" >
                     <img
                       src={WhiteCart}
                       alt="cart"
                       style={{ marginRight: ".5rem" }}
                     />
                     Add to Cart
-                  </button>
+                  </button>}
+                  
+                  </div>
                   <Coupponbtn />
                 </div>
 

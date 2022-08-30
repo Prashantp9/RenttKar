@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 import "swiper/css/autoplay";
 
 import "./mycart.css";
+import { Link } from "react-router-dom";
 
 // components
 import {
@@ -833,9 +834,9 @@ const Mycart = () => {
                       <img
                         src={PriceInfo}
                         alt="priceInfo"
-                        style={{ marginRight: ".5rem" }}
+                        style={{ marginRight: ".5rem", width:"0.938rem", height:"0.938rem"}}
                       />
-                      (Orders details)
+                      Orders details
                     </span>
                   </p>
 
@@ -869,7 +870,9 @@ const Mycart = () => {
                 </div>
 
                 <div className="mycart-checkout-btn">
-                  <button>checkout →</button>
+                  <button>
+                    <Link to="/deliveryaddress">checkout →</Link>
+                  </button>
                 </div>
               </div>
             </div>
@@ -900,9 +903,9 @@ const Mycart = () => {
                       <img
                         src={PriceInfo}
                         alt="priceInfo"
-                        style={{ marginRight: ".5rem" }}
+                        style={{ marginRight: ".5rem", width:"0.938rem", height:"0.938rem"}}
                       />
-                      (Package details)
+                      Package details
                     </span>
                   </p>
 
@@ -936,7 +939,7 @@ const Mycart = () => {
                 </div>
 
                 <div className="mycart-checkout-btn">
-                  <button>checkout →</button>
+                  <button> <Link to="/deliveryaddress">checkout →</Link></button>
                 </div>
               </div>
             </div>
@@ -967,9 +970,9 @@ const Mycart = () => {
                       <img
                         src={PriceInfo}
                         alt="priceInfo"
-                        style={{ marginRight: ".5rem" }}
+                        style={{ marginRight: ".5rem", width:"0.938rem", height:"0.938rem"}}
                       />
-                      (Package details)
+                      Package details
                     </span>
                   </p>
 
@@ -1003,7 +1006,9 @@ const Mycart = () => {
                 </div>
 
                 <div className="mycart-checkout-btn">
-                  <button>checkout →</button>
+                  <button>
+                  <Link to="/deliveryaddress">checkout →</Link>
+                  </button>
                 </div>
               </div>
             </div>
@@ -1034,9 +1039,9 @@ const Mycart = () => {
                       <img
                         src={PriceInfo}
                         alt="priceInfo"
-                        style={{ marginRight: ".5rem" }}
+                        style={{ marginRight: ".5rem", width:"0.938rem", height:"0.938rem"}}
                       />
-                      (Order details)
+                      Order details
                     </span>
                   </p>
 
@@ -1070,7 +1075,7 @@ const Mycart = () => {
                 </div>
 
                 <div className="mycart-checkout-btn">
-                  <button>checkout →</button>
+                  <button> <Link to="/deliveryaddress">checkout →</Link></button>
                 </div>
               </div>
             </div>

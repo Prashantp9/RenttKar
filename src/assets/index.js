@@ -115,5 +115,13 @@ export {default as Edit} from "./Images/edit.svg"
 
 export {default as Delete} from "./Images/delete.svg"
 
+export {default as AddCart} from "./Images/addCart.svg"
+
+export {default as RightNavigation} from "./Images/rightNavigation.svg"
+
+export {default as PickupLocation} from "./Images/pickupLocation.svg"
+
+export {default as ShowinMap} from "./Images/showInMap.svg"
+
 
 
