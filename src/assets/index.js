@@ -123,5 +123,17 @@ export {default as PickupLocation} from "./Images/pickupLocation.svg"
 
 export {default as ShowinMap} from "./Images/showInMap.svg"
 
+export {default as Note} from "./Images/note.svg"
+
+export {default as TabletStep1gradient} from "./Images/tabletStep1gradient.svg"
+export {default as TabletStep2} from "./Images/tabletStep2.svg"
+export {default as TabletStep3} from "./Images/tabletStep3.svg"
+
+export {default as TabletEdit} from "./Images/tabletEdit.svg"
+export {default as TabletDelete} from "./Images/tabletDelete.svg"
+
+export {default as MobilePriceinfo} from "./Images/mobilePriceinfo.svg"
+
+
 
 
