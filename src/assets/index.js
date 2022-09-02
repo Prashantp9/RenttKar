@@ -133,6 +133,7 @@ export {default as TabletEdit} from "./Images/tabletEdit.svg"
 export {default as TabletDelete} from "./Images/tabletDelete.svg"
 
 export {default as MobilePriceinfo} from "./Images/mobilePriceinfo.svg"
+export {default as LeftArrow} from "./Images/leftArrow.svg"
 
 
 
