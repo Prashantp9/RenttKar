@@ -1,18 +1,29 @@
 import React from "react";
 import "./deliveryaddress.css";
 
-import { Navbar, Pricebreakdown } from "../../components";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "swiper/css/autoplay";
+
+import { Navbar } from "../../components";
 import {
   Delete,
   Edit,
+  Gradientcouppon,
   LeftArrow,
+  Location,
   MobilePriceinfo,
+  MobileSearch,
   Note,
   Pc,
   PickupLocation,
   PriceInfo,
   RightNavigation,
   ShowinMap,
+  SmallCross,
   TabletDelete,
   TabletEdit,
   TabletStep1gradient,
@@ -25,6 +36,13 @@ import { Link } from "react-router-dom";
 const Deliveryaddress = () => {
   const [showAddpage, setShowaddpage] = useState(false);
   const [viewDetails, setViewdetails] = useState(false);
+  const [isAddone, setIsAddone] = useState(false);
+  const [isAddtwo, setIsAddtwo] = useState(false);
+  const [isSelfpickup, setIsSelfpickup] = useState(false);
+  const [isProductdetails, setIsProductdetails] = useState(false);
+  const [isAddaddress, setIsAddaddress] = useState(false);
+  const [isGstdetails, setIsGstdetails] = useState(false);
+  const [isCoupon, setIsCoupon] = useState(false);
 
   if (window.innerWidth <= 500) {
     return (
@@ -67,7 +85,15 @@ const Deliveryaddress = () => {
               </p>
             </div>
             <p style={{ marginTop: "1.5rem", marginBottom: "1.5rem" }}>
-              <span>Total Payment <img src={MobilePriceinfo} alt="priceinfo" style={{ marginLeft:".5rem"}}/></span> <span>₹917</span>
+              <span>
+                Total Payment{" "}
+                <img
+                  src={MobilePriceinfo}
+                  alt="priceinfo"
+                  style={{ marginLeft: ".5rem" }}
+                />
+              </span>{" "}
+              <span>₹917</span>
             </p>
           </div>
         </div>
@@ -83,7 +109,15 @@ const Deliveryaddress = () => {
               </p>
             </div>
             <p style={{ marginTop: "1.5rem", marginBottom: "1.5rem" }}>
-            <span>Total Payment <img src={MobilePriceinfo} alt="priceinfo" style={{ marginLeft:".5rem"}}/></span> <span>₹917</span>
+              <span>
+                Total Payment{" "}
+                <img
+                  src={MobilePriceinfo}
+                  alt="priceinfo"
+                  style={{ marginLeft: ".5rem" }}
+                />
+              </span>{" "}
+              <span>₹917</span>
             </p>
           </div>
         </div>
@@ -126,11 +160,323 @@ const Deliveryaddress = () => {
             <div className="mobile-price-to-pay-left-part">
               <p id="to-pay">To Pay</p>
               <p id="to-pay-price">₹750.00</p>
-              <p id="to-pay-details" onClick={() => setViewdetails(!viewDetails)} style={{cursor:'pointer'}}>view details</p>
+              <p
+                id="to-pay-details"
+                onClick={() => setViewdetails(!viewDetails)}
+                style={{ cursor: "pointer" }}
+              >
+                view details
+              </p>
               {viewDetails && (
-                <div className="mobile-delivery-priceinfo-container">
-                  <Pricebreakdown onclick={() => setViewdetails(!viewDetails)}/>
-                </div>
+                <>
+                  <div className="mobile-delivery-productdetails-page">
+                    <div className="mobile-delivery-proddetails-heading-container">
+                      <div className="mobile-delivery-proddetails-heading-content">
+                        <p>
+                          Product Details{" "}
+                          <img
+                            src={SmallCross}
+                            alt="cross"
+                            onClick={() => setViewdetails(!viewDetails)}
+                            style={{
+                              cursor: "pointer",
+                              width: "1.875rem",
+                              height: "1.5rem",
+                            }}
+                          />
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="mobile-delivery-pricedetails-container">
+                      <div className="mobile-delivery-pricedetails-content">
+                        <p id="prod-details-text">Playstation 4</p>
+
+                        <div className="mobile-delivery-tennure-container">
+                          <p>
+                            Delivery By <span>21/09/2022</span>
+                          </p>
+                          <p>
+                            Tennure <span>3 Months</span>
+                          </p>
+                        </div>
+
+                        <div className="mobile-delivery-product-list">
+                          <p>
+                            Ps4 <span>₹500/day</span>
+                          </p>
+                          <p>
+                            Addons1 <span>₹100/day</span>
+                          </p>
+                          <p>
+                            Addons1 <span>₹100/day</span>
+                          </p>
+                          <p>
+                            Addons1 <span>₹100/day</span>
+                          </p>
+                          <p>
+                            Addons1 <span>₹100/day</span>
+                          </p>
+                          <p>
+                            Addons1 <span>₹100/day</span>
+                          </p>
+                        </div>
+
+                        <div className="mobile-delivery-subscription-days">
+                          <p>
+                            {" "}
+                            <span></span> ₹1000/day
+                          </p>
+                          <p>
+                            No of days <span>x 92 days</span>
+                          </p>
+                        </div>
+
+                        <div className="mobile-delivery-subtotal-container">
+                          <p>
+                            Sub total <span>₹92000</span>
+                          </p>
+                          <p>
+                            <span id="mobile-gst-span">
+                              Gst
+                              <button
+                                onClick={() => setIsGstdetails(!isGstdetails)}
+                                type="submit"
+                                id="mobile-delivery-gst-btn"
+                              >
+                                <p>Add +</p>
+                              </button>
+                              {isGstdetails && (
+                                <>
+                                  <div className="mobile-delivery-gst-details-container">
+                                    <div className="mobile-delivery-gst-details-content">
+                                      <p>
+                                        GST Details{" "}
+                                        <img
+                                          src={SmallCross}
+                                          alt="cross"
+                                          style={{
+                                            cursor: "pointer",
+                                            width: "1.531rem",
+                                            height: "2rem",
+                                          }}
+                                          onClick={() =>
+                                            setIsGstdetails(!isGstdetails)
+                                          }
+                                        />
+                                      </p>
+
+                                      <input
+                                        type="text"
+                                        name="cname"
+                                        id=""
+                                        placeholder="Company name"
+                                      />
+
+                                      <input
+                                        type="text"
+                                        name="gstnumber"
+                                        id=""
+                                        placeholder="GST number"
+                                      />
+
+                                      <input
+                                        type="text"
+                                        name="gstaddress"
+                                        id=""
+                                        placeholder="GST address"
+                                      />
+
+                                      <button type="submit">Claim GST</button>
+                                    </div>
+                                  </div>
+                                </>
+                              )}
+                            </span>
+
+                            <span>+ ₹4356</span>
+                          </p>
+
+                          <p>
+                            <span id="mobile-coupon-span">
+                              Coupon
+                              <button
+                                onClick={() => setIsCoupon(!isCoupon())}
+                                type="submit"
+                                id="mobile-delivery-edit-btn"
+                              >
+                                <p>Edit</p>
+                              </button>
+                              {!isCoupon && (
+                                <>
+                                  <div className="mobile-coupon-container">
+                                    <div className="mobile-coupon-content">
+                                      <p id="mobile-coupon-heading">
+                                        <span>
+                                          <img
+                                            src={Gradientcouppon}
+                                            alt="couppon"
+                                            style={{
+                                              width: "1.531rem",
+                                              height: "1.531rem",
+                                              marginRight: ".5rem",
+                                            }}
+                                          />{" "}
+                                          Coupon
+                                        </span>{" "}
+                                        <img
+                                          onClick={() => setIsCoupon(!isCoupon)}
+                                          src={SmallCross}
+                                          alt="cross"
+                                          style={{
+                                            width: "1.531rem",
+                                            height: "2rem",
+                                            cursor:"pointer"
+                                          }}
+                                        />
+                                      </p>
+
+                                      <input
+                                        type="text"
+                                        name="couponcode"
+                                        id=""
+                                        placeholder="Enter coupon code"
+                                      />
+
+                                      <p id="mobile-available">3 Available</p>
+
+                                      <div className="mobile-coupon-slider-container">
+                                        <Swiper
+                                          width={500}
+                                          slidesPerView={2}
+                                          centeredSlides={false}
+                                          spaceBetween={15}
+                                          slidesPerGroup={1}
+                                          grabCursor={true}
+                                          loop={true}
+                                          loopFillGroupWithBlank={true}
+                                          pagination={{
+                                            clickable: true,
+                                          }}
+                                          navigation={{
+                                            prevEl:
+                                              ".rented-together-left-button",
+                                            nextEl:
+                                              ".rented-together-right-button",
+                                          }}
+                                          modules={[Navigation]}
+                                          className="mySwiper"
+                                        >
+                                          <SwiperSlide>
+                                            <div className="mobile-coupon-slider-one">
+                                              <p id="mobile-coupon-slider-heading">
+                                                Welcome Coupon
+                                              </p>
+                                              <p id="mobile-coupon-slider-desc">
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit.
+                                              </p>
+                                              <button type="submit">
+                                                Redeem
+                                              </button>
+                                            </div>
+                                          </SwiperSlide>
+
+                                          <SwiperSlide>
+                                            <div className="mobile-coupon-slider-one">
+                                              <p id="mobile-coupon-slider-heading">
+                                                Welcome Coupon
+                                              </p>
+                                              <p id="mobile-coupon-slider-desc">
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit.
+                                              </p>
+                                              <button type="submit">
+                                                Redeem
+                                              </button>
+                                            </div>
+                                          </SwiperSlide>
+
+                                          <SwiperSlide>
+                                            <div className="mobile-coupon-slider-one">
+                                              <p id="mobile-coupon-slider-heading">
+                                                Welcome Coupon
+                                              </p>
+                                              <p id="mobile-coupon-slider-desc">
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit.
+                                              </p>
+                                              <button type="submit">
+                                                Redeem
+                                              </button>
+                                            </div>
+                                          </SwiperSlide>
+
+                                          <SwiperSlide>
+                                            <div className="mobile-coupon-slider-one">
+                                              <p id="mobile-coupon-slider-heading">
+                                                Welcome Coupon
+                                              </p>
+                                              <p id="mobile-coupon-slider-desc">
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit.
+                                              </p>
+                                              <button type="submit">
+                                                Redeem
+                                              </button>
+                                            </div>
+                                          </SwiperSlide>
+
+                                          <SwiperSlide>
+                                            <div className="mobile-coupon-slider-one">
+                                              <p id="mobile-coupon-slider-heading">
+                                                Welcome Coupon
+                                              </p>
+                                              <p id="mobile-coupon-slider-desc">
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit.
+                                              </p>
+                                              <button type="submit">
+                                                Redeem
+                                              </button>
+                                            </div>
+                                          </SwiperSlide>
+
+                                          <SwiperSlide>
+                                            <div className="mobile-coupon-slider-one">
+                                              <p id="mobile-coupon-slider-heading">
+                                                Welcome Coupon
+                                              </p>
+                                              <p id="mobile-coupon-slider-desc">
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit.
+                                              </p>
+                                              <button type="submit">
+                                                Redeem
+                                              </button>
+                                            </div>
+                                          </SwiperSlide>
+                                        </Swiper>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </>
+                              )}
+                            </span>
+
+                            <span>- ₹14356</span>
+                          </p>
+                        </div>
+
+                        <div className="mobile-delivery-grandtotal-container">
+                          <p>
+                            Grand Total <span>₹7200</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </>
               )}
             </div>
             <div className="mobile-price-to-pay-right-part">
@@ -146,7 +492,10 @@ const Deliveryaddress = () => {
                   <div className="mobile-delivery-page-container">
                     <div className="mobile-delivery-checkout-container">
                       <div className="mobile-delivery-checkout-content">
-                        <Link to="" onClick={() => setShowaddpage(!showAddpage)}>
+                        <Link
+                          to=""
+                          onClick={() => setShowaddpage(!showAddpage)}
+                        >
                           <p>
                             {" "}
                             <img
@@ -180,122 +529,726 @@ const Deliveryaddress = () => {
 
                     <div className="mobile-delivery-select-address-container">
                       <div className="mobile-delivery-select-address-content">
-                        <button
-                          type="submit"
-                          className="mobile-delivery-add-addr-btn"
-                        >
-                          Add Address +
-                        </button>
+                        <div className="mobile-delivery-address-btn-container">
+                          <button
+                            onClick={() => setIsAddaddress(!isAddaddress)}
+                            type="submit"
+                            className="mobile-delivery-add-addr-btn"
+                          >
+                            <p>Add Address +</p>
+                          </button>
+                          {isAddaddress && (
+                            <>
+                              <div className="mobile-delivery-addaddress-container">
+                                <div className="mobile-new-address-text-container">
+                                  <div className="mobile-new-address-text-content">
+                                    <p>
+                                      New Address{" "}
+                                      <img
+                                        src={SmallCross}
+                                        alt="cross"
+                                        style={{
+                                          cursor: "pointer",
+                                          width: "1.875rem",
+                                          height: "1.5rem",
+                                        }}
+                                        onClick={() =>
+                                          setIsAddaddress(!isAddaddress)
+                                        }
+                                      />
+                                    </p>
+                                  </div>
+                                </div>
 
-                        <div className="mobile-delivery-address-one-container">
-                          <div className="mobile-delivery-upper-part">
-                            <label htmlFor="address1">
-                              <input
-                                type="radio"
-                                name="address1"
-                                id="address1"
-                              />
-                              <span style={{ marginLeft: "1rem" }}>
-                                Delivery Address 1
-                              </span>
-                            </label>
+                                <div className="mobile-new-address-container">
+                                  <div className="mobile-new-address-content">
+                                    <div className="mobile-new-address-location-container">
+                                      <img src={Location} alt="location" />
+                                      <p style={{ marginLeft: ".5rem" }}>
+                                        Mumbai
+                                      </p>
+                                    </div>
 
-                            <p
-                              style={{
-                                marginLeft: "1.8rem",
-                                marginTop: "1.5rem",
-                              }}
-                            >
-                              Ronak Kumar | 8369648935
-                            </p>
-                            <p
-                              style={{
-                                marginLeft: "1.8rem",
-                                marginTop: "1.25rem",
-                                lineHeight: "1.5rem",
-                              }}
-                            >
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Aliquet et lorem imperdiet fringilla egestas
-                              quis at. Urna aliquam, neque, mauris neque,
-                              mauris, est.
-                            </p>
-                          </div>
-                          <div className="mobile-delivery-add-edit-delete-btn">
-                            <div className="mobile-delivery-delete-btn">
-                              <button type="submit">
-                                <img src={Delete} alt="delete" /> Delete
-                              </button>
-                            </div>
+                                    <input
+                                      type="text"
+                                      name="pincode"
+                                      id=""
+                                      placeholder="400017"
+                                    />
 
-                            <div className="mobile-delivery-edit-btn">
-                              <button type="submit">
-                                <img src={Edit} alt="edit" /> Edit
-                              </button>
-                            </div>
-                          </div>
+                                    <div className="mobile-search-address">
+                                      <img
+                                        src={MobileSearch}
+                                        alt="search"
+                                        style={{
+                                          width: "0.875rem",
+                                          height: "0.875rem",
+                                        }}
+                                      />
+                                      <input
+                                        type="search"
+                                        name="searchAddress"
+                                        id=""
+                                        placeholder="Search your Address"
+                                      />
+                                    </div>
+
+                                    <input
+                                      type="text"
+                                      name="address"
+                                      id=""
+                                      placeholder="Room no, building name, street name.."
+                                    />
+
+                                    <input
+                                      type="tel"
+                                      name="phone"
+                                      id=""
+                                      minLength={10}
+                                      maxLength={10}
+                                      placeholder="Mobile number"
+                                    />
+
+                                    <input
+                                      type="tel"
+                                      name="telephone"
+                                      id=""
+                                      placeholder="Telephone number"
+                                    />
+
+                                    <button type="submit">Add Address</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </>
+                          )}
                         </div>
 
-                        <div className="mobile-delivery-address-one-container">
-                          <div className="mobile-delivery-upper-part">
-                            <label htmlFor="address1">
-                              <input
-                                type="radio"
-                                name="address1"
-                                id="address1"
-                              />
-                              <span style={{ marginLeft: "1rem" }}>
-                                Delivery Address 1
-                              </span>
-                            </label>
+                        {isAddone ? (
+                          <div className="mobile-delivery-address-container">
+                            <div className="mobile-delivery-address-active-one-container">
+                              <div className="mobile-delivery-upper-part">
+                                <p>Delivery Address 1</p>
 
-                            <p
-                              style={{
-                                marginLeft: "1.8rem",
-                                marginTop: "1.5rem",
-                              }}
-                            >
-                              Ronak Kumar | 8369648935
-                            </p>
-                            <p
-                              style={{
-                                marginLeft: "1.8rem",
-                                marginTop: "1.25rem",
-                                lineHeight: "1.5rem",
-                              }}
-                            >
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Aliquet et lorem imperdiet fringilla egestas
-                              quis at. Urna aliquam, neque, mauris neque,
-                              mauris, est.
-                            </p>
+                                <p
+                                  style={{
+                                    marginTop: "1.5rem",
+                                  }}
+                                >
+                                  Ronak Kumar | 8369648935
+                                </p>
+                                <p
+                                  style={{
+                                    marginTop: "1.25rem",
+                                  }}
+                                >
+                                  Lorem ipsum dolor sit amet, consectetur
+                                  adipiscing elit. Aliquet et lorem imperdiet
+                                  fringilla egestas quis at. Urna aliquam,
+                                  neque, mauris neque, mauris, est.
+                                </p>
+                              </div>
+                              <div className="mobile-delivery-add-edit-delete-btn">
+                                <div className="mobile-delivery-btn-left-part">
+                                  <button
+                                    type="submit"
+                                    className="mobile-delivery-delete-btn"
+                                  >
+                                    <img src={TabletDelete} alt="delete" />
+                                  </button>
+
+                                  <button
+                                    type="submit"
+                                    className="mobile-delivery-edit-btn"
+                                  >
+                                    <img src={TabletEdit} alt="edit" />
+                                  </button>
+                                </div>
+
+                                <div className="mobile-delivery-btn-right-active-part">
+                                  <button
+                                    type="submit"
+                                    className="mobile-delivery-select-active-btn"
+                                    onClick={() => setIsAddone(!isAddone)}
+                                  >
+                                    <p>Selected</p>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                          <div className="mobile-delivery-add-edit-delete-btn">
-                            <div className="mobile-delivery-delete-btn">
-                              <button type="submit">
-                                <img src={Delete} alt="delete" /> Delete
+                        ) : (
+                          <div className="mobile-delivery-address-one-container">
+                            <div className="mobile-delivery-upper-part">
+                              <p>Delivery Address 1</p>
+
+                              <p
+                                style={{
+                                  marginTop: "1.5rem",
+                                }}
+                              >
+                                Ronak Kumar | 8369648935
+                              </p>
+                              <p
+                                style={{
+                                  marginTop: "1.25rem",
+                                }}
+                              >
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Aliquet et lorem imperdiet
+                                fringilla egestas quis at. Urna aliquam, neque,
+                                mauris neque, mauris, est.
+                              </p>
+                            </div>
+                            <div className="mobile-delivery-add-edit-delete-btn">
+                              <div className="mobile-delivery-btn-left-part">
+                                <button
+                                  type="submit"
+                                  className="mobile-delivery-delete-btn"
+                                >
+                                  <img src={TabletDelete} alt="delete" />
+                                </button>
+
+                                <button
+                                  type="submit"
+                                  className="mobile-delivery-edit-btn"
+                                >
+                                  <img src={TabletEdit} alt="edit" />
+                                </button>
+                              </div>
+
+                              <div className="mobile-delivery-btn-right-part">
+                                <button
+                                  type="submit"
+                                  className="mobile-delivery-select-btn"
+                                  onClick={() => setIsAddone(!isAddone)}
+                                >
+                                  SelectAddress
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        )}
+
+                        {isAddtwo ? (
+                          <div className="mobile-delivery-address-container">
+                            <div className="mobile-delivery-address-active-one-container">
+                              <div className="mobile-delivery-upper-part">
+                                <p>Delivery Address 1</p>
+
+                                <p
+                                  style={{
+                                    marginTop: "1.5rem",
+                                  }}
+                                >
+                                  Ronak Kumar | 8369648935
+                                </p>
+                                <p
+                                  style={{
+                                    marginTop: "1.25rem",
+                                  }}
+                                >
+                                  Lorem ipsum dolor sit amet, consectetur
+                                  adipiscing elit. Aliquet et lorem imperdiet
+                                  fringilla egestas quis at. Urna aliquam,
+                                  neque, mauris neque, mauris, est.
+                                </p>
+                              </div>
+                              <div className="mobile-delivery-add-edit-delete-btn">
+                                <div className="mobile-delivery-btn-left-part">
+                                  <button
+                                    type="submit"
+                                    className="mobile-delivery-delete-btn"
+                                  >
+                                    <img src={TabletDelete} alt="delete" />
+                                  </button>
+
+                                  <button
+                                    type="submit"
+                                    className="mobile-delivery-edit-btn"
+                                  >
+                                    <img src={TabletEdit} alt="edit" />
+                                  </button>
+                                </div>
+
+                                <div className="mobile-delivery-btn-right-active-part">
+                                  <button
+                                    type="submit"
+                                    className="mobile-delivery-select-active-btn"
+                                    onClick={() => setIsAddtwo(!isAddtwo)}
+                                  >
+                                    <p>Selected</p>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        ) : (
+                          <div className="mobile-delivery-address-one-container">
+                            <div className="mobile-delivery-upper-part">
+                              <p>Delivery Address 1</p>
+
+                              <p
+                                style={{
+                                  marginTop: "1.5rem",
+                                }}
+                              >
+                                Ronak Kumar | 8369648935
+                              </p>
+                              <p
+                                style={{
+                                  marginTop: "1.25rem",
+                                }}
+                              >
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Aliquet et lorem imperdiet
+                                fringilla egestas quis at. Urna aliquam, neque,
+                                mauris neque, mauris, est.
+                              </p>
+                            </div>
+                            <div className="mobile-delivery-add-edit-delete-btn">
+                              <div className="mobile-delivery-btn-left-part">
+                                <button
+                                  type="submit"
+                                  className="mobile-delivery-delete-btn"
+                                >
+                                  <img src={TabletDelete} alt="delete" />
+                                </button>
+
+                                <button
+                                  type="submit"
+                                  className="mobile-delivery-edit-btn"
+                                >
+                                  <img src={TabletEdit} alt="edit" />
+                                </button>
+                              </div>
+
+                              <div className="mobile-delivery-btn-right-part">
+                                <button
+                                  type="submit"
+                                  className="mobile-delivery-select-btn"
+                                  onClick={() => setIsAddtwo(!isAddtwo)}
+                                >
+                                  SelectAddress
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        )}
+
+                        {isSelfpickup ? (
+                          <div className="mobile-delivery-active-pickup-location-container">
+                            <div className="mobile-delivery-active-pickup-location-content">
+                              <p id="mobile-self-pickup-text">
+                                <img src={PickupLocation} alt="pickup" /> Self
+                                pickup Location
+                              </p>
+                              <p
+                                id="mobile-self-pickup-address"
+                                style={{
+                                  marginTop: "1rem",
+                                }}
+                              >
+                                303, 304 Royal Enclave Parsi Panchayat Road, Old
+                                Nagardas Rd, Mumbai 400069
+                              </p>
+
+                              <button
+                                type="submit"
+                                id="mobile-active-self-pickup-btn"
+                                onClick={() => setIsSelfpickup(!isSelfpickup)}
+                              >
+                                <p>Self Picked</p>
                               </button>
                             </div>
-
-                            <div className="mobile-delivery-edit-btn">
-                              <button type="submit">
-                                <img src={Edit} alt="edit" /> Edit
-                              </button>
-                            </div>
                           </div>
-                        </div>
+                        ) : (
+                          <div className="mobile-delivery-pickup-location-container">
+                            <p id="mobile-self-pickup-text">
+                              <img src={PickupLocation} alt="pickup" /> Self
+                              pickup Location
+                            </p>
+                            <p
+                              id="mobile-self-pickup-address"
+                              style={{
+                                marginTop: "1rem",
+                              }}
+                            >
+                              303, 304 Royal Enclave Parsi Panchayat Road, Old
+                              Nagardas Rd, Mumbai 400069
+                            </p>
+
+                            <button
+                              type="submit"
+                              id="mobile-self-pickup-btn"
+                              onClick={() => setIsSelfpickup(!isSelfpickup)}
+                            >
+                              Self Pickup
+                            </button>
+                          </div>
+                        )}
                       </div>
                     </div>
-                    
+
                     <div className="mobile-delivery-view-details-container">
                       <div className="mobile-delivery-view-details-content">
                         <div className="mobile-delivery-viewdetails-leftpart">
-                              <p id="mobile-to-pay">To Pay</p>
-                              <p id="mobile-to-pay-price">₹917 <img src={MobilePriceinfo} alt="priceinfo" style={{marginLeft:".5rem"}}/></p>
+                          <p id="mobile-to-pay">To Pay</p>
+                          <p id="mobile-to-pay-price">₹917</p>
+                          <p
+                            id="mobile-to-pay-view"
+                            style={{ cursor: "pointer" }}
+                            onClick={() =>
+                              setIsProductdetails(!isProductdetails)
+                            }
+                          >
+                            view details
+                          </p>
+                          {isProductdetails && (
+                            <>
+                              <div className="mobile-delivery-productdetails-page">
+                                <div className="mobile-delivery-proddetails-heading-container">
+                                  <div className="mobile-delivery-proddetails-heading-content">
+                                    <p>
+                                      Product Details{" "}
+                                      <img
+                                        src={SmallCross}
+                                        alt="cross"
+                                        onClick={() =>
+                                          setIsProductdetails(!isProductdetails)
+                                        }
+                                        style={{
+                                          cursor: "pointer",
+                                          width: "1.875rem",
+                                          height: "1.5rem",
+                                        }}
+                                      />
+                                    </p>
+                                  </div>
+                                </div>
+
+                                <div className="mobile-delivery-pricedetails-container">
+                                  <div className="mobile-delivery-pricedetails-content">
+                                    <p id="prod-details-text">Playstation 4</p>
+
+                                    <div className="mobile-delivery-tennure-container">
+                                      <p>
+                                        Delivery By <span>21/09/2022</span>
+                                      </p>
+                                      <p>
+                                        Tennure <span>3 Months</span>
+                                      </p>
+                                    </div>
+
+                                    <div className="mobile-delivery-product-list">
+                                      <p>
+                                        Ps4 <span>₹500/day</span>
+                                      </p>
+                                      <p>
+                                        Addons1 <span>₹100/day</span>
+                                      </p>
+                                      <p>
+                                        Addons1 <span>₹100/day</span>
+                                      </p>
+                                      <p>
+                                        Addons1 <span>₹100/day</span>
+                                      </p>
+                                      <p>
+                                        Addons1 <span>₹100/day</span>
+                                      </p>
+                                      <p>
+                                        Addons1 <span>₹100/day</span>
+                                      </p>
+                                    </div>
+
+                                    <div className="mobile-delivery-subscription-days">
+                                      <p>
+                                        {" "}
+                                        <span></span> ₹1000/day
+                                      </p>
+                                      <p>
+                                        No of days <span>x 92 days</span>
+                                      </p>
+                                    </div>
+
+                                    <div className="mobile-delivery-subtotal-container">
+                                      <p>
+                                        Sub total <span>₹92000</span>
+                                      </p>
+                                      <p>
+                                        <span id="mobile-gst-span">
+                                          Gst
+                                          <button
+                                            onClick={() =>
+                                              setIsGstdetails(!isGstdetails)
+                                            }
+                                            type="submit"
+                                            id="mobile-delivery-gst-btn"
+                                          >
+                                            <p>Add +</p>
+                                          </button>
+                                          {isGstdetails && (
+                                            <>
+                                              <div className="mobile-delivery-gst-details-container">
+                                                <div className="mobile-delivery-gst-details-content">
+                                                  <p>
+                                                    GST Details{" "}
+                                                    <img
+                                                      src={SmallCross}
+                                                      alt="cross"
+                                                      style={{
+                                                        cursor: "pointer",
+                                                        width: "1.531rem",
+                                                        height: "2rem",
+                                                      }}
+                                                      onClick={() =>
+                                                        setIsGstdetails(
+                                                          !isGstdetails
+                                                        )
+                                                      }
+                                                    />
+                                                  </p>
+
+                                                  <input
+                                                    type="text"
+                                                    name="cname"
+                                                    id=""
+                                                    placeholder="Company name"
+                                                  />
+
+                                                  <input
+                                                    type="text"
+                                                    name="gstnumber"
+                                                    id=""
+                                                    placeholder="GST number"
+                                                  />
+
+                                                  <input
+                                                    type="text"
+                                                    name="gstaddress"
+                                                    id=""
+                                                    placeholder="GST address"
+                                                  />
+
+                                                  <button type="submit">
+                                                    Claim GST
+                                                  </button>
+                                                </div>
+                                              </div>
+                                            </>
+                                          )}
+                                        </span>
+
+                                        <span>+ ₹4356</span>
+                                      </p>
+
+                                      <p>
+                                        <span id="mobile-coupon-span">
+                                          Coupon
+                                          <button
+                                            onClick={() =>
+                                              setIsCoupon(!isCoupon)
+                                            }
+                                            type="submit"
+                                            id="mobile-delivery-edit-btn"
+                                          >
+                                            <p>Edit</p>
+                                          </button>
+                                          {!isCoupon && (
+                                            <>
+                                              <div className="mobile-coupon-container">
+                                                <div className="mobile-coupon-content">
+                                                  <p id="mobile-coupon-heading">
+                                                    <span>
+                                                      <img
+                                                        src={Gradientcouppon}
+                                                        alt="couppon"
+                                                        style={{
+                                                          width: "1.531rem",
+                                                          height: "1.531rem",
+                                                          marginRight: ".5rem",
+                                                        }}
+                                                      />{" "}
+                                                      Coupon
+                                                    </span>{" "}
+                                                    <img
+                                                      onClick={() =>
+                                                        setIsCoupon(!isCoupon)
+                                                      }
+                                                      src={SmallCross}
+                                                      alt="cross"
+                                                      style={{
+                                                        width: "1.531rem",
+                                                        height: "2rem",
+                                                        cursor:"pointer"
+                                                      }}
+                                                    />
+                                                  </p>
+
+                                                  <input
+                                                    type="text"
+                                                    name="couponcode"
+                                                    id=""
+                                                    placeholder="Enter coupon code"
+                                                  />
+
+                                                  <p id="mobile-available">
+                                                    3 Available
+                                                  </p>
+
+                                                  <div className="mobile-coupon-slider-container">
+                                                    <Swiper
+                                                      width={500}
+                                                      slidesPerView={2}
+                                                      centeredSlides={false}
+                                                      spaceBetween={15}
+                                                      slidesPerGroup={1}
+                                                      grabCursor={true}
+                                                      loop={true}
+                                                      loopFillGroupWithBlank={
+                                                        true
+                                                      }
+                                                      pagination={{
+                                                        clickable: true,
+                                                      }}
+                                                      navigation={{
+                                                        prevEl:
+                                                          ".rented-together-left-button",
+                                                        nextEl:
+                                                          ".rented-together-right-button",
+                                                      }}
+                                                      modules={[Navigation]}
+                                                      className="mySwiper"
+                                                    >
+                                                      <SwiperSlide>
+                                                        <div className="mobile-coupon-slider-one">
+                                                          <p id="mobile-coupon-slider-heading">
+                                                            Welcome Coupon
+                                                          </p>
+                                                          <p id="mobile-coupon-slider-desc">
+                                                            Lorem ipsum dolor
+                                                            sit amet,
+                                                            consectetur
+                                                            adipiscing elit.
+                                                          </p>
+                                                          <button type="submit">
+                                                            Redeem
+                                                          </button>
+                                                        </div>
+                                                      </SwiperSlide>
+
+                                                      <SwiperSlide>
+                                                        <div className="mobile-coupon-slider-one">
+                                                          <p id="mobile-coupon-slider-heading">
+                                                            Welcome Coupon
+                                                          </p>
+                                                          <p id="mobile-coupon-slider-desc">
+                                                            Lorem ipsum dolor
+                                                            sit amet,
+                                                            consectetur
+                                                            adipiscing elit.
+                                                          </p>
+                                                          <button type="submit">
+                                                            Redeem
+                                                          </button>
+                                                        </div>
+                                                      </SwiperSlide>
+
+                                                      <SwiperSlide>
+                                                        <div className="mobile-coupon-slider-one">
+                                                          <p id="mobile-coupon-slider-heading">
+                                                            Welcome Coupon
+                                                          </p>
+                                                          <p id="mobile-coupon-slider-desc">
+                                                            Lorem ipsum dolor
+                                                            sit amet,
+                                                            consectetur
+                                                            adipiscing elit.
+                                                          </p>
+                                                          <button type="submit">
+                                                            Redeem
+                                                          </button>
+                                                        </div>
+                                                      </SwiperSlide>
+
+                                                      <SwiperSlide>
+                                                        <div className="mobile-coupon-slider-one">
+                                                          <p id="mobile-coupon-slider-heading">
+                                                            Welcome Coupon
+                                                          </p>
+                                                          <p id="mobile-coupon-slider-desc">
+                                                            Lorem ipsum dolor
+                                                            sit amet,
+                                                            consectetur
+                                                            adipiscing elit.
+                                                          </p>
+                                                          <button type="submit">
+                                                            Redeem
+                                                          </button>
+                                                        </div>
+                                                      </SwiperSlide>
+
+                                                      <SwiperSlide>
+                                                        <div className="mobile-coupon-slider-one">
+                                                          <p id="mobile-coupon-slider-heading">
+                                                            Welcome Coupon
+                                                          </p>
+                                                          <p id="mobile-coupon-slider-desc">
+                                                            Lorem ipsum dolor
+                                                            sit amet,
+                                                            consectetur
+                                                            adipiscing elit.
+                                                          </p>
+                                                          <button type="submit">
+                                                            Redeem
+                                                          </button>
+                                                        </div>
+                                                      </SwiperSlide>
+
+                                                      <SwiperSlide>
+                                                        <div className="mobile-coupon-slider-one">
+                                                          <p id="mobile-coupon-slider-heading">
+                                                            Welcome Coupon
+                                                          </p>
+                                                          <p id="mobile-coupon-slider-desc">
+                                                            Lorem ipsum dolor
+                                                            sit amet,
+                                                            consectetur
+                                                            adipiscing elit.
+                                                          </p>
+                                                          <button type="submit">
+                                                            Redeem
+                                                          </button>
+                                                        </div>
+                                                      </SwiperSlide>
+                                                    </Swiper>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </>
+                                          )}
+                                        </span>
+
+                                        <span>- ₹14356</span>
+                                      </p>
+                                    </div>
+
+                                    <div className="mobile-delivery-grandtotal-container">
+                                      <p>
+                                        Grand Total <span>₹7200</span>
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </>
+                          )}
                         </div>
                         <div className="mobile-delivery-viewdetails-rightpart">
-                              <button type="submit" id="mobile-proceed-btn" >Proceed</button>
-                        </div>  
+                          <button type="submit" id="mobile-proceed-btn">
+                            Proceed
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>

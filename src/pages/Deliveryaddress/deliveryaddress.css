@@ -1619,7 +1619,7 @@
         justify-content: flex-start;
         align-items: flex-start;
         width: 100%;
-        height: 70rem;
+        height: 78rem;
         background: #050505;
         z-index: 11;
     }
@@ -1683,7 +1683,7 @@
         align-items: center;
         width: 10.563rem;
         height: 100%;
-        background: #141414;
+        background: #0F0F0F;
         border-radius: 6px 6px 0px 0px;
     }
 
@@ -1693,7 +1693,7 @@
         align-items: center;
         width: 6.563rem;
         height: 100%;
-        background: var(--container-background);
+        background: rgba(5, 5, 5, 0.5);
         border-radius: 6px 6px 0px 0px;
     }
 
@@ -1714,7 +1714,7 @@
         justify-content: center;
         align-items: center;
         width: 100vw;
-        height: 54rem;
+        height: 63rem;
     }
 
     .mobile-delivery-select-address-content{
@@ -1724,10 +1724,22 @@
         align-items: flex-start;
         width: 95%;
         height: 100%;
-        background: #141414;
+        background: #0F0F0F;
         border-radius: 0px 0px 6px 6px;
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+
+    .mobile-delivery-address-btn-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 9.875rem;
+        height: 3rem;
+        padding: 1px;
+        margin-top: 2.5rem;
+        background: var(--btn-border-gradient);
+        border-radius: 5px;
     }
 
     .mobile-delivery-add-addr-btn{
@@ -1740,22 +1752,23 @@
         align-items: center;
         padding: 12px 20px;
         gap: 10px;
-        border: 1.5px solid #0E9BE1;
+        border: none;
         border-radius: 5px;
-        margin-top: 2.5rem;
+        background: #0F0F0F;
+        width: 100%;
+        height: 100%;
+    }
 
-        background: transparent;
+    .mobile-delivery-add-addr-btn p{
         font-family: 'Montserrat';
         font-style: normal;
-        font-weight: 500;
+        font-weight: 600;
         font-size: 0.875rem;
         line-height: 1.125rem;
-        /* identical to box height */
-        
-        
-        /* btn blue */
-        
-        color: #0E9BE1;
+        background: var(--btn-border-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
     }
 
     .mobile-delivery-address-one-container{
@@ -1764,11 +1777,14 @@
         justify-content: flex-start;
         align-items: flex-start;
         width: 100%;
-        height: 20.5rem;
-        border: 1px solid #646464;
+        height: 17rem;
         border-radius: 6px;
         margin-top: 2rem;
+        padding: 1rem;
+        background:#141414;
     }
+
+
 
     .mobile-delivery-upper-part{
         display: flex;
@@ -1777,10 +1793,6 @@
         align-items: flex-start;
         width: 100%;
         height: 17rem;
-        border-bottom: 1px solid #646464;
-        padding-top: 1.5rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
     }
 
     .mobile-delivery-upper-part p, .mobile-delivery-upper-part span{
@@ -1805,27 +1817,134 @@
         height: 3.5rem;
     }
 
-    .mobile-delivery-delete-btn,  .mobile-delivery-edit-btn{
+    .mobile-delivery-btn-left-part{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 35%;
+        height: 100%;
+    }
+
+    .mobile-delivery-delete-btn, .mobile-delivery-edit-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2.563rem;
+        height: 2.563rem;
+        background: #191919;
+        border-radius: 3px;
+        border: none;
+    }
+
+    .mobile-delivery-btn-right-part{
         display: flex;
         justify-content: center;
         align-items: center;
         width: 50%;
         height: 100%;
-        background: transparent;
     }
 
-    .mobile-delivery-delete-btn{
-        border-right: 1px solid #646464;
+    .mobile-delivery-btn-right-part button{
+        width: 9.938rem;
+        height: 2.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 6px 16px;     
+        background: #1AA9F0;
+        border-radius: 5px;
+        border: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        /* identical to box height */
+        color: #FFFFFF;
     }
 
-    .mobile-delivery-edit-btn button, .mobile-delivery-delete-btn button{
+    .mobile-delivery-address-container{
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 1px;
+        background: var(--btn-border-gradient);
+        width: 100%;
+        height: 17rem;
+        margin-top: 2rem;
+        border-radius: 6px;
+    }
+
+
+    .mobile-delivery-address-active-one-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
         width: 100%;
         height: 100%;
-        background: transparent;
+        background: #141414;
+        border-radius: 6px;
+        padding: 1rem;
+    }
+
+    .mobile-delivery-select-active-btn{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 13px 24px;
+        gap: 4px;
+        background: #0F0F0F;
+        border-radius: 5px;
         border: none;
+    }
+
+    .mobile-delivery-select-active-btn p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1.125rem;
+        /* identical to box height */
+        
+        
+        /* gradient */
+        
+        background: var(--btn-border-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+
+    .mobile-delivery-pickup-location-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 1rem;
+        background: #141414;
+        width: 100%;
+        height: 12.125rem;
+        border-radius: 6px;
+        margin-top: 2rem;
+    }
+
+    #mobile-self-pickup-text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        /* identical to box height */
+        
+        
+        color: #DFDFDF;
+    }
+
+    #mobile-self-pickup-address{
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 500;
@@ -1834,11 +1953,96 @@
         /* identical to box height */
         
         
-        /* btn blue */
-        
         color: #DFDFDF;
-        gap: .5rem;
     }
+
+    #mobile-self-pickup-btn{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-self: flex-end;
+        padding: 12px 24px;
+        gap: 10px;
+        margin-top: 2rem;
+        border: none;        
+        background: #1AA9F0;
+        border-radius: 5px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        /* identical to box height */
+        
+        
+        color: #FFFFFF;
+    }
+
+    .mobile-delivery-active-pickup-location-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1px;
+        background: var(--btn-border-gradient);
+        width: 100%;
+        height: 12.125rem;
+        border-radius: 6px;
+        margin-top: 2rem;
+
+    }
+
+
+    .mobile-delivery-active-pickup-location-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 1rem;
+        background: #141414;
+        width: 100%;
+        height: 100%;
+        border-radius: 6px;
+    }
+
+    #mobile-active-self-pickup-btn{
+        display: flex;
+        align-self: flex-end;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+        padding: 13px 24px;
+        gap: 4px;   
+        
+        background: #0F0F0F;
+        border-radius: 5px;
+        border: none;
+    }
+
+    #mobile-active-self-pickup-btn p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1.125rem;
+        /* identical to box height */
+        
+        
+        /* gradient */
+        
+        background: linear-gradient(91deg, #1BACF4 0%, #19EEB5 100.16%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+
+
+    
+
+
+
 
     .mobile-delivery-view-details-container{
         display: flex;
@@ -1931,6 +2135,719 @@
         flex-grow: 0;
 
     }
+
+
+    #mobile-to-pay-view{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.5;
+        line-height: 0.75rem;
+        /* identical to box height */
+        
+        
+        /* gradient */
+        
+        background: var(--btn-border-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .mobile-delivery-productdetails-page{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background: #050505;
+        width: 100%;
+        height: 100%;
+    }
+
+    .mobile-delivery-proddetails-heading-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 4rem;
+        background: var(--navbar-background);
+    }
+
+    .mobile-delivery-proddetails-heading-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+        height: 100%;
+    }
+
+    .mobile-delivery-proddetails-heading-content p{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        /* identical to box height */
+        
+        
+        color: #DFDFDF;
+    }
+
+    .mobile-delivery-pricedetails-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 48.875rem;
+        margin-top: 1.5rem;
+    }
+
+    .mobile-delivery-pricedetails-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 95%;
+        height: 100%;
+        background: #191919;
+        border-radius: 6px;
+        padding: 1.5rem;
+    }
+
+    #prod-details-text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        
+        color: #DFDFDF;
+    }
+
+    .mobile-delivery-tennure-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 5rem;
+        background: #141414;
+        border-radius: 6px;
+        margin-top: 2rem;
+
+    }
+
+    .mobile-delivery-tennure-container p{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        /* identical to box height */
+        
+        
+        color: #9B9B9B;
+        gap: .2rem;
+    }
+
+    .mobile-delivery-tennure-container span{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        /* identical to box height */
+        
+        
+        color: #DFDFDF;
+    }
+
+    .mobile-delivery-product-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.75rem;
+        width: 100%;
+        height: 14.75rem;
+        padding-top: 2rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid #464646;
+        
+    }
+
+    .mobile-delivery-product-list p{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        /* identical to box height */
+        
+        
+        color: #DFDFDF;
+
+    }
+
+    .mobile-delivery-subscription-days{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 0.75rem;
+        width: 100%;
+        height: 6.25rem;
+        border-bottom: 1px solid #464646;
+    }
+
+    .mobile-delivery-subscription-days p{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        /* identical to box height */
+        
+        
+        color: #DFDFDF;
+
+    }
+
+
+    .mobile-delivery-subtotal-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 9.25rem;
+        padding-top: 2rem;
+        padding-bottom: 1.5rem;
+        gap: 1rem;
+        border-bottom: 1px solid #464646;
+    }
+
+    .mobile-delivery-subtotal-container p{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;        
+        width: 100%;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        /* identical to box height */
+        color: #DFDFDF;
+
+    }
+
+    #mobile-gst-span, #mobile-coupon-span{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 50%;
+        gap: 1rem;
+
+    }
+
+    #mobile-delivery-gst-btn, #mobile-delivery-edit-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4.5rem;
+        height: 1.5rem;
+        border: none;
+        background: #1E1E1E;
+        border-radius: 3px;
+    }
+
+  
+    #mobile-delivery-gst-btn p, #mobile-delivery-edit-btn p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+    }  
+
+    .mobile-delivery-grandtotal-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 4.688rem;
+        border-bottom: 1px solid #464646;
+    }
+
+    .mobile-delivery-grandtotal-container p{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        /* identical to box height */
+        color: #DFDFDF;
+    }
+
+
+
+
+
+
+
+    .mobile-delivery-addaddress-container{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        height: 100%;
+        background: #050505;
+    }
+
+    .mobile-new-address-text-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 4.125rem;
+        background: var(--navbar-background);
+    }
+
+    .mobile-new-address-text-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        height: 100%; 
+    }
+
+    .mobile-new-address-text-content p{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        /* identical to box height */
+        
+        
+        color: #DFDFDF;
+    }
+
+    .mobile-new-address-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 33.875rem;
+        margin-top: 1.5rem;
+    }
+
+    .mobile-new-address-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 95%;
+        height: 100%;
+        background: #191919;
+        border-radius: 6px;
+        padding: 2rem 1.5rem 2rem 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .mobile-new-address-location-container{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 1rem 1.125rem 1rem 1.125rem;
+        width: 100%;
+        height: 3rem;
+        background: #111111;
+        border-radius: 6px;
+    }
+
+    .mobile-new-address-location-container p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        /* identical to box height */
+        
+        
+        /* gradient */
+        
+        background: var(--btn-border-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .mobile-new-address-content input{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 3rem;
+        background: #111111;
+        border-radius: 6px;
+        border: none;
+        outline: none;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.125rem;
+        /* identical to box height */
+        
+        
+        /* text2 */
+        
+        color: #9B9B9B;
+    }
+
+    .mobile-search-address{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 3rem;
+        background: #111111;
+        border-radius: 6px;
+        padding-left: 1rem;
+    }
+
+    .mobile-search-address input{
+        padding-left: .5rem;
+    }
+
+    
+    .mobile-new-address-content button{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 13px 24px;
+        gap: 8px;
+        background: var(--btn-border-gradient);
+        border-radius: 5px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        color: #FFFFFF;
+        border: none;
+        align-self: center;
+        justify-self: flex-end;
+    }
+
+
+
+
+
+    /* Gst details */
+    .mobile-delivery-gst-details-container{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        backdrop-filter: blur(2px);
+    }
+
+    .mobile-delivery-gst-details-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 95%;
+        height: 25.688rem;
+        background: var(--navbar-background);
+        border-radius: 6px;
+        padding: 2rem 1.5rem 2rem 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .mobile-delivery-gst-details-content p{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        /* identical to box height */
+        
+        
+        color: #FFFFFF;
+        margin-bottom: 2rem;
+
+    }
+
+    .mobile-delivery-gst-details-content input{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 3rem;
+        background: #111111;
+        border-radius: 6px;
+        padding-left: 1rem;
+        border: none;
+        outline: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        /* identical to box height */
+        
+        
+        /* text2 */
+        
+        color: #9B9B9B;
+    }
+
+    .mobile-delivery-gst-details-content button{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        padding: 10px 20px;
+        gap: 8px;
+        background: var(--btn-border-gradient);
+        border-radius: 5px;
+        border: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        /* identical to box height */
+        
+        
+        /* text2 */
+        
+        color: #FFFFFF;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    /* coupon container */
+    .mobile-coupon-container{
+        position: fixed;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        backdrop-filter: blur(2px);
+        scroll-behavior: unset;
+    }
+
+    .mobile-coupon-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 95%;
+        height: 27.875rem;
+        background: var(--navbar-background);
+        border-radius: 6px;
+        padding: 2rem 1rem 2rem 1rem;
+    }
+
+    #mobile-coupon-heading{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        /* identical to box height */
+        
+        
+        color: #FFFFFF;
+    }
+
+    
+    .mobile-coupon-content input{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 2.5rem;
+        border: none;
+        outline: none;
+        margin-top: 2rem;
+        background: #FFFFFF;
+        border-radius: 5px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        padding-left: 1rem;
+        color: rgba(14, 14, 14, 0.5);
+    }
+
+    #mobile-available{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        color: #DFDFDF;
+        margin-top: 1.5rem;
+    }
+
+    .mobile-coupon-slider-container{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        height: 12.75rem;
+        margin-top: 2rem;
+    }
+
+    .mobile-coupon-slider-container .swiper{
+        height: 100%;
+        margin-left: 0rem;
+    }
+
+
+    .mobile-coupon-slider-one{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 1.5rem 1rem 1.5rem 1rem;
+        width: 14.938rem;
+        height: 100%;
+        background: #141414;
+        border-radius: 7px;
+    }
+
+    #mobile-coupon-slider-heading{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.375rem;
+        
+        color: #FFFFFF;
+    }
+
+    #mobile-coupon-slider-desc{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        text-align: center;
+        
+        color: #FFFFFF;
+        margin-top: 1rem;
+    }
+
+    .mobile-coupon-slider-one button{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 13px 24px;
+        gap: 10px;
+        background: #1AA9F0;
+        border-radius: 5px;
+        margin-top: 1.5rem;
+        outline: none;
+        border: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        /* identical to box height */
+        
+        
+        color: #FFFFFF;
+    }
+
 
 
 
