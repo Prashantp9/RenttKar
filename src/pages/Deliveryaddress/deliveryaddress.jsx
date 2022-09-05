@@ -10,6 +10,7 @@ import "swiper/css/autoplay";
 
 import { Navbar } from "../../components";
 import {
+  Cuppon,
   Delete,
   Edit,
   Gradientcouppon,
@@ -22,6 +23,7 @@ import {
   PickupLocation,
   PriceInfo,
   RightNavigation,
+  Search,
   ShowinMap,
   SmallCross,
   TabletDelete,
@@ -29,6 +31,7 @@ import {
   TabletStep1gradient,
   TabletStep2,
   TabletStep3,
+  TabletCouppon,
 } from "../../assets";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -43,6 +46,7 @@ const Deliveryaddress = () => {
   const [isAddaddress, setIsAddaddress] = useState(false);
   const [isGstdetails, setIsGstdetails] = useState(false);
   const [isCoupon, setIsCoupon] = useState(false);
+  const [isNewaddress, setIsNewaddress] = useState(false);
 
   if (window.innerWidth <= 500) {
     return (
@@ -301,13 +305,13 @@ const Deliveryaddress = () => {
                             <span id="mobile-coupon-span">
                               Coupon
                               <button
-                                onClick={() => setIsCoupon(!isCoupon())}
+                                onClick={() => setIsCoupon(!isCoupon)}
                                 type="submit"
                                 id="mobile-delivery-edit-btn"
                               >
                                 <p>Edit</p>
                               </button>
-                              {!isCoupon && (
+                              {isCoupon && (
                                 <>
                                   <div className="mobile-coupon-container">
                                     <div className="mobile-coupon-content">
@@ -331,7 +335,7 @@ const Deliveryaddress = () => {
                                           style={{
                                             width: "1.531rem",
                                             height: "2rem",
-                                            cursor:"pointer"
+                                            cursor: "pointer",
                                           }}
                                         />
                                       </p>
@@ -1080,7 +1084,7 @@ const Deliveryaddress = () => {
                                                       style={{
                                                         width: "1.531rem",
                                                         height: "2rem",
-                                                        cursor:"pointer"
+                                                        cursor: "pointer",
                                                       }}
                                                     />
                                                   </p>
@@ -1294,10 +1298,87 @@ const Deliveryaddress = () => {
               </div>
 
               <div className="delivery-add-container">
-                <button className="delivery-add-address-btn">
+                <button
+                  className="delivery-add-address-btn"
+                  onClick={() => setIsNewaddress(!isNewaddress)}
+                >
                   Add Address +
                 </button>
+                {isNewaddress && (
+                  <>
+                    <div className="tablet-new-address-container">
+                      <div className="tablet-new-address-content">
+                        <p>
+                          New Address{" "}
+                          <img
+                            src={SmallCross}
+                            alt="cross"
+                            style={{
+                              width: "1.75rem",
+                              height: "1.75rem",
+                              cursor: "pointer",
+                            }}
+                            onClick={() => setIsNewaddress(!isNewaddress)}
+                          />
+                        </p>
 
+                        <div className="tablet-newaddress-city-container">
+                          <div className="tablet-city-container">
+                            <img src={Location} alt="location" />
+                            <p style={{ marginLeft: "1rem" }}>Mumbai</p>
+                          </div>
+                          <input
+                            type="text"
+                            name="pincode"
+                            id=""
+                            placeholder="400017"
+                          />
+                        </div>
+
+                        <div className="tablet-search-address">
+                          <img
+                            src={MobileSearch}
+                            alt="search"
+                            style={{ width: "1.25rem", height: "1.25rem" }}
+                          />
+                          <input
+                            type="search"
+                            name="searchaddress"
+                            id=""
+                            placeholder="Search your address"
+                          />
+                        </div>
+
+                        <input
+                          className="tablet-address-input"
+                          type="text"
+                          name="address"
+                          id=""
+                          placeholder="Room no, building name, street name, landmark, etc."
+                        />
+
+                        <div className="tablet-newaddress-phoneno-container">
+                          <input
+                            type="tel"
+                            name="mobileno"
+                            id=""
+                            minLength={10}
+                            maxLength={10}
+                            placeholder="Mobile number"
+                          />
+                          <input
+                            type="tel"
+                            name="telno"
+                            id=""
+                            placeholder="Telephone number"
+                          />
+                        </div>
+
+                        <button type="submit">Add Address</button>
+                      </div>
+                    </div>
+                  </>
+                )}
                 <div className="delivery-address-one-container">
                   <div className="delivery-address-one-container-left-part">
                     <p id="address-one-heading">Delivery Address 1</p>
@@ -1423,20 +1504,181 @@ const Deliveryaddress = () => {
                   <span>Sub total</span> ₹92000
                 </p>
                 <p>
-                  <span>
+                  <span id="tablet-gst-span">
                     Gst{" "}
-                    <button>
+                    <button
+                      id="tablet-add-gst-btn"
+                      onClick={() => setIsGstdetails(!isGstdetails)}
+                    >
                       <p>Add +</p>
                     </button>
+                    {isGstdetails && (
+                      <>
+                        <div className="tablet-gst-details-container">
+                          <div className="tablet-gst-details-content">
+                            <p>
+                              GST Details{" "}
+                              <img
+                                src={SmallCross}
+                                alt="cross"
+                                style={{
+                                  width: "1.75rem",
+                                  height: "1.75rem",
+                                  cursor: "pointer",
+                                }}
+                                onClick={() => setIsGstdetails(!isGstdetails)}
+                              />
+                            </p>
+
+                            <input
+                              type="text"
+                              name="cname"
+                              id=""
+                              placeholder="Company name"
+                            />
+
+                            <input
+                              type="text"
+                              name="gstnumber"
+                              id=""
+                              placeholder="GST number"
+                            />
+
+                            <button type="submit">Claim GST</button>
+                          </div>
+                        </div>
+                      </>
+                    )}
                   </span>{" "}
                   + ₹4356
                 </p>
                 <p>
-                  <span>
+                  <span id="tablet-gst-span">
                     Coupon{" "}
-                    <button>
+                    <button
+                      id="tablet-add-gst-btn"
+                      onClick={() => setIsCoupon(!isCoupon)}
+                    >
                       <p>Edit</p>
                     </button>
+                    {isCoupon && (
+                      <>
+                        <div className="coupon-popup-full-container">
+                          <div className="coupon-popup-main-container">
+                            <div className="coupon-popup-heading-content">
+                              <p>
+                                <span>
+                                <img
+                                  src={Gradientcouppon}
+                                  alt="couppon"
+                                  style={{ marginRight: "2px" }}
+                                />{" "}
+                                Coupons
+                                </span>
+                                <img
+                                src={SmallCross}
+                                alt="cross"
+                                style={{ cursor: "pointer" }}
+                                onClick={() => setIsCoupon(!isCoupon)}
+                              />
+                              </p>
+                          
+                            </div>
+
+                            <div className="enter-coupon-code-container">
+                              <input
+                                type="text"
+                                value=""
+                                placeholder="Enter coupon code"
+                              />
+                              <button
+                                type="submit"
+                                className="enter-coupon-btn"
+                                style={{ marginLeft: "2rem" }}
+                              >
+                                Apply Code
+                              </button>
+                            </div>
+
+                            <div className="redeem-coupon-container">
+                              <Swiper
+                                width={600}
+                                slidesPerView={2}
+                                centeredSlides={false}
+                                spaceBetween={15}
+                                slidesPerGroup={1}
+                                grabCursor={true}
+                                loop={true}
+                                loopFillGroupWithBlank={true}
+                                pagination={{
+                                  clickable: true,
+                                }}
+                                navigation={{
+                                  prevEl: ".rented-together-left-button",
+                                  nextEl: ".rented-together-right-button",
+                                }}
+                                modules={[Navigation]}
+                                className="mySwiper"
+                              >
+                                <SwiperSlide>
+                                  <div className="coupon-main-content-one">
+                                    <h3 className="coupon-main-content-heading">
+                                      Welcome Coupon
+                                    </h3>
+                                    <p className="coupon-main-content-desc">
+                                      Lorem ipsum dolor sit amet, consectetur
+                                      adipiscing elit.
+                                    </p>
+                                    <button
+                                      type="submit"
+                                      className="coupon-main-content-btn"
+                                    >
+                                      Redeem
+                                    </button>
+                                  </div>
+                                </SwiperSlide>
+
+                                <SwiperSlide>
+                                  <div className="coupon-main-content-two">
+                                    <h3 className="coupon-main-content-heading">
+                                      Welcome Coupon
+                                    </h3>
+                                    <p className="coupon-main-content-desc">
+                                      Lorem ipsum dolor sit amet, consectetur
+                                      adipiscing elit.
+                                    </p>
+                                    <button
+                                      type="submit"
+                                      className="coupon-main-content-btn"
+                                    >
+                                      Redeem
+                                    </button>
+                                  </div>
+                                </SwiperSlide>
+
+                                <SwiperSlide>
+                                  <div className="coupon-main-content-three">
+                                    <h3 className="coupon-main-content-heading">
+                                      Welcome Coupon
+                                    </h3>
+                                    <p className="coupon-main-content-desc">
+                                      Lorem ipsum dolor sit amet, consectetur
+                                      adipiscing elit.
+                                    </p>
+                                    <button
+                                      type="submit"
+                                      className="coupon-main-content-btn"
+                                    >
+                                      Redeem
+                                    </button>
+                                  </div>
+                                </SwiperSlide>
+                              </Swiper>
+                            </div>
+                          </div>
+                        </div>
+                      </>
+                    )}
                   </span>{" "}
                   + ₹4356
                 </p>
@@ -1482,9 +1724,86 @@ const Deliveryaddress = () => {
               </div>
 
               <div className="delivery-add-container">
-                <button className="delivery-add-address-btn">
+                <button
+                  className="delivery-add-address-btn"
+                  onClick={() => setIsNewaddress(!isNewaddress)}
+                >
                   Add Address +
                 </button>
+                {isNewaddress && (
+                  <>
+                    <div className="delivery-new-address-container">
+                      <div className="delivery-new-address-content">
+                        <p>
+                          New Address{" "}
+                          <img
+                            src={SmallCross}
+                            alt="cross"
+                            style={{
+                              width: "2rem",
+                              height: "2rem",
+                              cursor: "pointer",
+                            }}
+                            onClick={() => setIsNewaddress(!isNewaddress)}
+                          />
+                        </p>
+
+                        <div className="delivery-addr-city-container">
+                          <div className="delivery-city-input">
+                            <img src={Location} alt="location" />
+                            <p>Mumbai</p>
+                          </div>
+
+                          <input
+                            type="text"
+                            name="pincode"
+                            id=""
+                            placeholder="400017"
+                          />
+                        </div>
+
+                        <div className="delivery-search-address-container">
+                          <img
+                            src={MobileSearch}
+                            alt="search"
+                            style={{ width: "1.625rem", height: "1.625rem" }}
+                          />
+                          <input
+                            type="search"
+                            name="addrsearch"
+                            id=""
+                            placeholder="Search your address"
+                          />
+                        </div>
+
+                        <input
+                          className="delivery-address-input"
+                          type="text"
+                          name="address"
+                          id=""
+                          placeholder="Room no, building name, street name, landmark, etc."
+                        />
+
+                        <div className="delivery-mobileno-container">
+                          <input
+                            type="tel"
+                            name="mobileno"
+                            id=""
+                            placeholder="Mobile Number"
+                          />
+                          <input
+                            type="tel"
+                            name="telno"
+                            id=""
+                            placeholder="Telephone no"
+                          />
+                        </div>
+
+                        <button type="submit">Add Address</button>
+                      </div>
+                    </div>
+                  </>
+                )}
 
                 <div className="delivery-address-one-container">
                   <div className="delivery-address-one-container-left-part">
@@ -1602,8 +1921,150 @@ const Deliveryaddress = () => {
 
               <div className="delivery-gst-btn-container">
                 <div className="gst-btn">
-                  <button type="submit">Claim GST +</button>
-                  <button type="submit">Apply Coupon</button>
+                  <button
+                    type="submit"
+                    onClick={() => setIsGstdetails(!isGstdetails)}
+                  >
+                    Claim GST +
+                  </button>
+                  {isGstdetails && (
+                    <>
+                      <div className="delivery-gst-details-container">
+                        <div className="delivery-gst-details-content">
+                          <p>
+                            GST Details{" "}
+                            <img
+                              src={SmallCross}
+                              alt="cross"
+                              style={{
+                                width: "2rem",
+                                height: "2rem",
+                                cursor: "pointer",
+                              }}
+                              onClick={() => setIsGstdetails(!isGstdetails)}
+                            />
+                          </p>
+
+                          <div className="delivery-gst-no-container">
+                            <input
+                              type="text"
+                              name="cname"
+                              id=""
+                              placeholder="Company name"
+                            />
+                            <input
+                              type="text"
+                              name="gno"
+                              id=""
+                              placeholder="GST number"
+                            />
+                          </div>
+
+                          <input
+                            className="gstadd-input"
+                            type="text"
+                            name="gadd"
+                            id="gadd"
+                            placeholder="GST Address"
+                          />
+
+                          <button type="submit">Claim GST</button>
+                        </div>
+                      </div>
+                    </>
+                  )}
+                  <button type="submit" onClick={() => setIsCoupon(!isCoupon)}>
+                    Apply Coupon
+                  </button>
+                  {isCoupon && (
+                    <>
+                      <div className="coupon-popup-full-container">
+                        <div className="coupon-popup-main-container">
+                          <div className="coupon-popup-heading-content">
+                            <p>
+                              <img
+                                src={Gradientcouppon}
+                                alt="couppon"
+                                style={{ marginRight: "2px" }}
+                              />{" "}
+                              Coupons
+                            </p>
+                            <img
+                              src={SmallCross}
+                              alt="cross"
+                              style={{ cursor: "pointer" }}
+                              onClick={() => setIsCoupon(!isCoupon)}
+                            />
+                          </div>
+
+                          <div className="enter-coupon-code-container">
+                            <input
+                              type="text"
+                              value=""
+                              placeholder="Enter coupon code"
+                            />
+                            <button
+                              type="submit"
+                              className="enter-coupon-btn"
+                              style={{ marginLeft: "2rem" }}
+                            >
+                              Apply Code
+                            </button>
+                          </div>
+
+                          <div className="redeem-coupon-container">
+                            <div className="coupon-main-content-one">
+                              <h3 className="coupon-main-content-heading">
+                                Welcome Coupon
+                              </h3>
+                              <p className="coupon-main-content-desc">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit.
+                              </p>
+                              <button
+                                type="submit"
+                                className="coupon-main-content-btn"
+                              >
+                                Redeem
+                              </button>
+                            </div>
+
+                            <div className="coupon-main-content-two">
+                              <h3 className="coupon-main-content-heading">
+                                Welcome Coupon
+                              </h3>
+                              <p className="coupon-main-content-desc">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit.
+                              </p>
+                              <button
+                                type="submit"
+                                className="coupon-main-content-btn"
+                              >
+                                Redeem
+                              </button>
+                            </div>
+
+                            <div className="coupon-main-content-three">
+                              <h3 className="coupon-main-content-heading">
+                                Welcome Coupon
+                              </h3>
+                              <p className="coupon-main-content-desc">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit.
+                              </p>
+                              <button
+                                type="submit"
+                                className="coupon-main-content-btn"
+                              >
+                                Redeem
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  )}
                 </div>
                 <label htmlFor="damage">
                   <input type="checkbox" name="damage" id="damage" />

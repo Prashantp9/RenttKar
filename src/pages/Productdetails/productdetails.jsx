@@ -64,7 +64,7 @@ const Coupponbtn = () => {
   if (window.innerWidth > 500 && window.innerWidth <= 768) {
     return (
       <>
-        <img src={TabletCouppon} alt="tabletCuppon" className="tablet-cuppon" onClick={() => setIsCuppon(!isCuppon)}/>
+        <img src={TabletCouppon} alt="tabletCuppon" className="tablet-cuppon" style={{cursor:"pointer"}} onClick={() => setIsCuppon(!isCuppon)}/>
         {isCuppon && (
           <>
           <div className="coupon-popup-full-container">
@@ -1257,6 +1257,7 @@ const Productdetails = () => {
                       <div
                         className="free-addons-box"
                         onClick={() => setIsFreeaddons(!isFreeaddons)}
+                        style={{cursor:"pointer"}}
                       >
                         <img src={Ps4cd} alt="ps4cd" />
                         <img src={BattelfieldCD} alt="battelfield" />
@@ -1554,6 +1555,7 @@ const Productdetails = () => {
                       <div
                         className="paid-addons-box"
                         onClick={() => setIsPaidaddons(!isPaidaddons)}
+                        style={{cursor:"pointer"}}
                       >
                         <img src={AddAddons} alt="" />
                         <p id="paid-add-addons">Add Addons</p>
