@@ -134,6 +134,17 @@ export {default as TabletDelete} from "./Images/tabletDelete.svg"
 
 export {default as MobilePriceinfo} from "./Images/mobilePriceinfo.svg"
 export {default as LeftArrow} from "./Images/leftArrow.svg"
+export {default as SearchResult} from "./Images/searchResulticon.svg"
+
+export {default as GradientDone} from "./Images/gradientDone.svg"
+
+export {default as PaymentCard} from "./Images/paymentCard.svg"
+export {default as Upi} from "./Images/upi.svg"
+export {default as Wallet} from "./Images/wallet.svg"
+
+export {default as Amex} from "./Images/amex.svg"
+export {default as Mastercard} from "./Images/masterCard.svg"
+
 
 
 

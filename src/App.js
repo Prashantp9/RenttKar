@@ -17,6 +17,7 @@ import Mobilepaidaddons from './pages/Mobilepaidaddons/mobilepaidaddons';
 import Mobileredeemcoupon from './pages/Mobileredeemcoupon/mobileredeemcoupon';
 import Mycart from './pages/Mycart/mycart';
 import Deliveryaddress from './pages/Deliveryaddress/deliveryaddress';
+import Payment from './pages/Payment/payment';
 
 const App = () => {
   return (
@@ -36,6 +37,7 @@ const App = () => {
           <Route path='/redeemcoupon' element={<Mobileredeemcoupon />} />
           <Route path='/mycart' element={<Mycart />} />
           <Route path='/deliveryaddress' element={<Deliveryaddress />} />
+          <Route path='/payment' element={<Payment />} />
       </Routes>
     </Router>
   )

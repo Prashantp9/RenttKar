@@ -32,6 +32,7 @@ import {
   TabletStep2,
   TabletStep3,
   TabletCouppon,
+  SearchResult,
 } from "../../assets";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -47,6 +48,7 @@ const Deliveryaddress = () => {
   const [isGstdetails, setIsGstdetails] = useState(false);
   const [isCoupon, setIsCoupon] = useState(false);
   const [isNewaddress, setIsNewaddress] = useState(false);
+  const [searchAdd, setSearchadd] = useState(false);
 
   if (window.innerWidth <= 500) {
     return (
@@ -580,7 +582,10 @@ const Deliveryaddress = () => {
                                       placeholder="400017"
                                     />
 
-                                    <div className="mobile-search-address">
+                                    <div
+                                      className="mobile-search-address"
+                                      onClick={() => setSearchadd(!searchAdd)}
+                                    >
                                       <img
                                         src={MobileSearch}
                                         alt="search"
@@ -596,6 +601,105 @@ const Deliveryaddress = () => {
                                         placeholder="Search your Address"
                                       />
                                     </div>
+                                    {searchAdd && (
+                                      <>
+                                        <div className="delivery-searched-address-container">
+                                          <div className="delivery-searched-address-input">
+                                            <input
+                                              type="search"
+                                              name="addrsearch"
+                                              id=""
+                                            />
+                                            <img
+                                              src={SmallCross}
+                                              alt="cross"
+                                              style={{
+                                                marginRight: ".5rem",
+                                                width: "1.5rem",
+                                                height: "1.5rem",
+                                                cursor: "pointer",
+                                              }}
+                                              onClick={() =>
+                                                setSearchadd(!searchAdd)
+                                              }
+                                            />
+                                          </div>
+
+                                          <div className="delivery-searched-address-result-container">
+                                            <p>
+                                              {" "}
+                                              <img
+                                                src={SearchResult}
+                                                alt="searchresult"
+                                                style={{
+                                                  width: "1rem",
+                                                  height: "1rem",
+                                                  marginRight: ".5rem",
+                                                }}
+                                              />{" "}
+                                              Lorem Ipsum dolor sit amet,
+                                              consec..
+                                            </p>
+                                            <p>
+                                              {" "}
+                                              <img
+                                                src={SearchResult}
+                                                alt="searchresult"
+                                                style={{
+                                                  width: "1rem",
+                                                  height: "1rem",
+                                                  marginRight: ".5rem",
+                                                }}
+                                              />{" "}
+                                              Lorem Ipsum dolor sit amet,
+                                              consec..
+                                            </p>
+                                            <p>
+                                              {" "}
+                                              <img
+                                                src={SearchResult}
+                                                alt="searchresult"
+                                                style={{
+                                                  width: "1rem",
+                                                  height: "1rem",
+                                                  marginRight: ".5rem",
+                                                }}
+                                              />{" "}
+                                              Lorem Ipsum dolor sit amet,
+                                              consec..
+                                            </p>
+                                            <p>
+                                              {" "}
+                                              <img
+                                                src={SearchResult}
+                                                alt="searchresult"
+                                                style={{
+                                                  width: "1rem",
+                                                  height: "1rem",
+                                                  marginRight: ".5rem",
+                                                }}
+                                              />{" "}
+                                              Lorem Ipsum dolor sit amet,
+                                              consec..
+                                            </p>
+                                            <p style={{ border: "none" }}>
+                                              {" "}
+                                              <img
+                                                src={SearchResult}
+                                                alt="searchresult"
+                                                style={{
+                                                  width: "1rem",
+                                                  height: "1rem",
+                                                  marginRight: ".5rem",
+                                                }}
+                                              />
+                                              Lorem Ipsum dolor sit amet,
+                                              consec..
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </>
+                                    )}
 
                                     <input
                                       type="text"
@@ -1250,7 +1354,15 @@ const Deliveryaddress = () => {
                         </div>
                         <div className="mobile-delivery-viewdetails-rightpart">
                           <button type="submit" id="mobile-proceed-btn">
-                            Proceed
+                            <Link
+                              to="/payment"
+                              style={{
+                                textDecoration: "none",
+                                color: "#FFFFFF",
+                              }}
+                            >
+                              Proceed
+                            </Link>
                           </button>
                         </div>
                       </div>
@@ -1289,7 +1401,7 @@ const Deliveryaddress = () => {
                 </div>
                 <img src={RightNavigation} alt="navigation" />
                 <div className="payment">
-                  <p>Paym..</p>
+                  <p ><Link to="/payment" style={{textDecoration:"none",color:"#FFFFFF"}}>Paym..</Link></p>
                 </div>
                 <img src={RightNavigation} alt="navigation" />
                 <div className="agreement">
@@ -1335,7 +1447,10 @@ const Deliveryaddress = () => {
                           />
                         </div>
 
-                        <div className="tablet-search-address">
+                        <div
+                          className="tablet-search-address"
+                          onClick={() => setSearchadd(!searchAdd)}
+                        >
                           <img
                             src={MobileSearch}
                             alt="search"
@@ -1348,6 +1463,99 @@ const Deliveryaddress = () => {
                             placeholder="Search your address"
                           />
                         </div>
+                        {searchAdd && (
+                          <>
+                            <div className="delivery-searched-address-container">
+                              <div className="delivery-searched-address-input">
+                                <input type="search" name="addrsearch" id="" />
+                                <img
+                                  src={SmallCross}
+                                  alt="cross"
+                                  style={{
+                                    marginLeft: "2rem",
+                                    width: "1.5rem",
+                                    height: "1.5rem",
+                                    cursor: "pointer",
+                                  }}
+                                  onClick={() => setSearchadd(!searchAdd)}
+                                />
+                              </div>
+
+                              <div className="delivery-searched-address-result-container">
+                                <p>
+                                  {" "}
+                                  <img
+                                    src={SearchResult}
+                                    alt="searchresult"
+                                    style={{
+                                      width: "1rem",
+                                      height: "1rem",
+                                      marginRight: "1rem",
+                                    }}
+                                  />{" "}
+                                  Lorem ipsum dolor sit amet, consectetur
+                                  adipiscing elit.
+                                </p>
+                                <p>
+                                  {" "}
+                                  <img
+                                    src={SearchResult}
+                                    alt="searchresult"
+                                    style={{
+                                      width: "1rem",
+                                      height: "1rem",
+                                      marginRight: "1rem",
+                                    }}
+                                  />{" "}
+                                  Lorem ipsum dolor sit amet, consectetur
+                                  adipiscing elit.
+                                </p>
+                                <p>
+                                  {" "}
+                                  <img
+                                    src={SearchResult}
+                                    alt="searchresult"
+                                    style={{
+                                      width: "1rem",
+                                      height: "1rem",
+                                      marginRight: "1rem",
+                                    }}
+                                  />{" "}
+                                  Lorem ipsum dolor sit amet, consectetur
+                                  adipiscing elit.
+                                </p>
+                                <p>
+                                  {" "}
+                                  <img
+                                    src={SearchResult}
+                                    alt="searchresult"
+                                    style={{
+                                      width: "1rem",
+                                      height: "1rem",
+                                      marginRight: "1rem",
+                                    }}
+                                  />{" "}
+                                  Lorem ipsum dolor sit amet, consectetur
+                                  adipiscing elit.
+                                </p>
+                                <p style={{ border: "none" }}>
+                                  {" "}
+                                  <img
+                                    src={SearchResult}
+                                    alt="searchresult"
+                                    style={{
+                                      width: "1rem",
+                                      height: "1rem",
+                                      marginRight: "1rem",
+                                    }}
+                                  />{" "}
+                                  Lorem ipsum dolor sit amet, consectetur
+                                  adipiscing elit.
+                                </p>
+                              </div>
+                            </div>
+                          </>
+                        )}
 
                         <input
                           className="tablet-address-input"
@@ -1399,7 +1607,15 @@ const Deliveryaddress = () => {
                         <img src={TabletDelete} alt="delete" />
                       </span>
                     </p>{" "}
-                    <button id="delivery-select-btn">Select Address</button>
+                    <button id="delivery-select-btn">
+                      <Link
+                        to="/payment"
+                        style={{ textDecoration: "none", color: "#FFFFFF" }}
+                      >
+                        {" "}
+                        Select Address
+                      </Link>
+                    </button>
                   </div>
                 </div>
 
@@ -1423,7 +1639,15 @@ const Deliveryaddress = () => {
                         <img src={TabletDelete} alt="delete" />
                       </span>
                     </p>
-                    <button id="delivery-select-btn">Select Address</button>
+                    <button id="delivery-select-btn">
+                      <Link
+                        to="/payment"
+                        style={{ textDecoration: "none", color: "#FFFFFF" }}
+                      >
+                        {" "}
+                        Select Address
+                      </Link>
+                    </button>
                   </div>
                 </div>
 
@@ -1451,7 +1675,14 @@ const Deliveryaddress = () => {
                     </a>
                   </div>
                   <div className="delivery-self-location-right-part">
-                    <button id="proceed-btn">Proceed</button>
+                    <button id="proceed-btn">
+                      <Link
+                        to="/payment"
+                        style={{ textDecoration: "none", color: "#FFFFFF" }}
+                      >
+                        Proceed
+                      </Link>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -1568,21 +1799,20 @@ const Deliveryaddress = () => {
                             <div className="coupon-popup-heading-content">
                               <p>
                                 <span>
-                                <img
-                                  src={Gradientcouppon}
-                                  alt="couppon"
-                                  style={{ marginRight: "2px" }}
-                                />{" "}
-                                Coupons
+                                  <img
+                                    src={Gradientcouppon}
+                                    alt="couppon"
+                                    style={{ marginRight: "2px" }}
+                                  />{" "}
+                                  Coupons
                                 </span>
                                 <img
-                                src={SmallCross}
-                                alt="cross"
-                                style={{ cursor: "pointer" }}
-                                onClick={() => setIsCoupon(!isCoupon)}
-                              />
+                                  src={SmallCross}
+                                  alt="cross"
+                                  style={{ cursor: "pointer" }}
+                                  onClick={() => setIsCoupon(!isCoupon)}
+                                />
                               </p>
-                          
                             </div>
 
                             <div className="enter-coupon-code-container">
@@ -1715,7 +1945,14 @@ const Deliveryaddress = () => {
                 </div>
                 <img src={RightNavigation} alt="navigation" />
                 <div className="payment">
-                  <p>Payment</p>
+                  <p>
+                    <Link
+                      to="/payment"
+                      style={{ textDecoration: "none", color: "#9B9B9B" }}
+                    >
+                      Payment
+                    </Link>
+                  </p>
                 </div>
                 <img src={RightNavigation} alt="navigation" />
                 <div className="agreement">
@@ -1762,7 +1999,10 @@ const Deliveryaddress = () => {
                           />
                         </div>
 
-                        <div className="delivery-search-address-container">
+                        <div
+                          className="delivery-search-address-container"
+                          onClick={() => setSearchadd(!searchAdd)}
+                        >
                           <img
                             src={MobileSearch}
                             alt="search"
@@ -1775,6 +2015,99 @@ const Deliveryaddress = () => {
                             placeholder="Search your address"
                           />
                         </div>
+                        {searchAdd && (
+                          <>
+                            <div className="delivery-searched-address-container">
+                              <div className="delivery-searched-address-input">
+                                <input type="search" name="addrsearch" id="" />
+                                <img
+                                  src={SmallCross}
+                                  alt="cross"
+                                  style={{
+                                    marginLeft: "2rem",
+                                    width: "1.5rem",
+                                    height: "1.5rem",
+                                    cursor: "pointer",
+                                  }}
+                                  onClick={() => setSearchadd(!searchAdd)}
+                                />
+                              </div>
+
+                              <div className="delivery-searched-address-result-container">
+                                <p>
+                                  {" "}
+                                  <img
+                                    src={SearchResult}
+                                    alt="searchresult"
+                                    style={{
+                                      width: "1rem",
+                                      height: "1rem",
+                                      marginRight: "1rem",
+                                    }}
+                                  />{" "}
+                                  Lorem ipsum dolor sit amet, consectetur
+                                  adipiscing elit.
+                                </p>
+                                <p>
+                                  {" "}
+                                  <img
+                                    src={SearchResult}
+                                    alt="searchresult"
+                                    style={{
+                                      width: "1rem",
+                                      height: "1rem",
+                                      marginRight: "1rem",
+                                    }}
+                                  />{" "}
+                                  Lorem ipsum dolor sit amet, consectetur
+                                  adipiscing elit.
+                                </p>
+                                <p>
+                                  {" "}
+                                  <img
+                                    src={SearchResult}
+                                    alt="searchresult"
+                                    style={{
+                                      width: "1rem",
+                                      height: "1rem",
+                                      marginRight: "1rem",
+                                    }}
+                                  />{" "}
+                                  Lorem ipsum dolor sit amet, consectetur
+                                  adipiscing elit.
+                                </p>
+                                <p>
+                                  {" "}
+                                  <img
+                                    src={SearchResult}
+                                    alt="searchresult"
+                                    style={{
+                                      width: "1rem",
+                                      height: "1rem",
+                                      marginRight: "1rem",
+                                    }}
+                                  />{" "}
+                                  Lorem ipsum dolor sit amet, consectetur
+                                  adipiscing elit.
+                                </p>
+                                <p style={{ border: "none" }}>
+                                  {" "}
+                                  <img
+                                    src={SearchResult}
+                                    alt="searchresult"
+                                    style={{
+                                      width: "1rem",
+                                      height: "1rem",
+                                      marginRight: "1rem",
+                                    }}
+                                  />{" "}
+                                  Lorem ipsum dolor sit amet, consectetur
+                                  adipiscing elit.
+                                </p>
+                              </div>
+                            </div>
+                          </>
+                        )}
 
                         <input
                           className="delivery-address-input"
@@ -1821,7 +2154,15 @@ const Deliveryaddress = () => {
                       <img src={Edit} alt="edit" />{" "}
                       <img src={Delete} alt="delete" />
                     </p>
-                    <button id="delivery-select-btn">Select Address</button>
+                    <button id="delivery-select-btn">
+                      <Link
+                        to="/payment"
+                        style={{ textDecoration: "none", color: "#FFFFFF" }}
+                      >
+                        {" "}
+                        Select Address
+                      </Link>
+                    </button>
                   </div>
                 </div>
 
@@ -1841,7 +2182,9 @@ const Deliveryaddress = () => {
                       <img src={Edit} alt="edit" />{" "}
                       <img src={Delete} alt="delete" />
                     </p>
-                    <button id="delivery-select-btn">Select Address</button>
+                    <button id="delivery-select-btn">
+                      <Link to="/payment"> Select Address</Link>
+                    </button>
                   </div>
                 </div>
 
@@ -1869,7 +2212,14 @@ const Deliveryaddress = () => {
                     </a>
                   </div>
                   <div className="delivery-self-location-right-part">
-                    <button id="proceed-btn">Proceed</button>
+                    <button id="proceed-btn">
+                      <Link
+                        to="/payment"
+                        style={{ textDecoration: "none", color: "#FFFFFF" }}
+                      >
+                        Proceed
+                      </Link>
+                    </button>
                   </div>
                 </div>
               </div>
