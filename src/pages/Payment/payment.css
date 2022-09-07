@@ -95,7 +95,7 @@
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16);
     border-radius: 0px 0px 6px 6px;
     margin-top: 0rem;
-    padding: 2rem 4rem 2rem 4rem;
+    padding: 1rem 2rem 1rem 2rem;
 }
 
 #saved-text{
@@ -317,6 +317,10 @@
         padding-bottom: 4rem;
     }
 
+    .delivery-left-container{
+        height: 85rem;
+    }
+
     .tablet-payment-delivery-add{
         display: flex;
         justify-content: center;
@@ -362,7 +366,6 @@
         align-items: flex-start;
         padding: 2rem 1rem 2rem 1rem;
         width: 100%;
-        gap: 1.5rem;
         margin-top: 2.5rem;
         padding-bottom: 2rem;
     }
@@ -397,9 +400,204 @@
         margin-bottom: 0rem;
     }
 
-    .delivery-left-container{
-        height: 66rem;
+    .cards-payment{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        height: 26rem;
+        background: #191919;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16);
+        border-radius: 0px 0px 6px 6px;
+        margin-top: 0rem;
+        padding: 1rem 2rem 1rem 2rem;
     }
+    
+    #saved-text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        color: #DFDFDF;
+    }
+    
+    .saved-card-container{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        height: 4rem;
+    }
+    
+    .saved-card-one-container,.saved-card-two-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 14rem;
+        height: 100%;
+        background: #1E1E1E;
+        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.16);
+        border-radius: 6px;
+        padding: 1rem;
+    }
+    
+    .saved-card-one-container p, .saved-card-two-container p{
+        margin-bottom: 0rem;
+    }
+    
+    .saved-card-one-container img, .saved-card-two-container img{
+        width: 2rem;
+        height: 1.5rem;
+        border: 1px solid #646464;
+        border-radius: 6px;
+    }
+    
+    #card-ending-text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        /* identical to box height */
+        
+        
+        color: #DFDFDF;    
+    }
+    
+    
+    #card-last-used-text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        /* identical to box height */
+        
+        
+        color: #646464;    
+    }
+    
+    .payment-card-number{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 3rem;
+        background: #111111;
+        border-radius: 6px;
+        margin-top: 1rem;
+        padding-left: 1.5rem;
+    }
+    
+    .payment-card-number img{
+        margin-right: 1rem;
+    }
+    
+    .payment-card-number input{
+        width: 90%;
+        height: 100%;
+        background: #111111;
+        border: none;
+        outline: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        /* identical to box height */
+        
+        
+        color: #9B9B9B;
+    
+    }
+    
+    .payment-cards-name{
+        width: 100%;
+        height: 3rem;
+        margin-top: 1rem;
+        background: #111111;
+        border-radius: 6px;
+        outline: none;
+        border: none;
+        padding-left: 1.5rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        /* identical to box height */
+        
+        
+        color: #9B9B9B;
+    
+    }
+    
+    .payment-card-cvv-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 3rem;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    
+    .payment-card-expiry-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        gap: .5rem;
+    }
+    
+    .payment-card-cvv-container input{
+        height: 100%;
+        background: #111111;
+        border-radius: 6px;
+        padding-left: 1rem;
+        outline: none;
+        border: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        /* identical to box height */
+        
+        
+        color: #9B9B9B;
+    
+    }
+    
+    .payment-cvv-input{
+        width: 50%;
+        height: 100%;
+    }
+    
+    .cards-payment button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 3rem;
+        margin-top: 1rem;
+        background: #0E9BE1;
+        border-radius: 5px;
+        border: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        /* identical to box height */
+        
+        
+        color: #FFFFFF;
+    }
+    
 }
 
 

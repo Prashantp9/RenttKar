@@ -41,51 +41,132 @@ const Payment = () => {
   if (window.innerWidth <= 500) {
     return (
       <>
-          <Navbar />
-          <div className="mobile-payment-tab-container">
-            <div className="mobile-payment-tab-content">
-              <div className="mobile-payment-delivery-tab">
-                <p><img src={GradientDone} alt="gradientdone" /> Delivery..</p>
-              </div>
+        <Navbar />
+        <div className="mobile-payment-tab-container">
+          <div className="mobile-payment-tab-content">
+            <div className="mobile-payment-delivery-tab">
+              <p>
+                <img src={GradientDone} alt="gradientdone" /> Delivery..
+              </p>
+            </div>
 
-              <div className="mobile-payment-tab">
-                <p>Payment</p>
-              </div>
+            <div className="mobile-payment-tab">
+              <p>Payment</p>
+            </div>
 
-              <div className="mobile-payment-agreement-tab">
-                <p>Agreemen..</p>
-              </div>
+            <div className="mobile-payment-agreement-tab">
+              <p>Agreemen..</p>
             </div>
           </div>
+        </div>
 
-          <div className="mobile-types-of-payments-container">
+        <div className="mobile-types-of-payments-container">
           <div className="payment-types-container">
-                  <div className="payment-cards-type-container">
-                    <p><span><img src={PaymentCard} alt="paymentcard" style={{marginRight:"2rem"}}/> Credit/Debit Cards</span> <img src={RightArrow} alt="RightArrow" style={{width:".5rem", height:"1rem"}}/></p>
-                  </div>
+            <div className="payment-cards-type-container">
+              <p>
+                <span>
+                  <img
+                    src={PaymentCard}
+                    alt="paymentcard"
+                    style={{ marginRight: "2rem" }}
+                  />{" "}
+                  Credit/Debit Cards
+                </span>{" "}
+                <img
+                  src={RightArrow}
+                  alt="RightArrow"
+                  style={{ width: ".5rem", height: "1rem" }}
+                />
+              </p>
+            </div>
 
-                  
-                  <div className="payment-cards-type-container">
-                  <p><span><img src={Upi} alt="upi" style={{marginRight:"2rem"}}/> UPI / QR</span> <img src={RightArrow} alt="RightArrow" style={{width:".5rem", height:"1rem"}}/></p>
-                  </div>
+            <div className="payment-cards-type-container">
+              <p>
+                <span>
+                  <img src={Upi} alt="upi" style={{ marginRight: "2rem" }} />{" "}
+                  UPI / QR
+                </span>{" "}
+                <img
+                  src={RightArrow}
+                  alt="RightArrow"
+                  style={{ width: ".5rem", height: "1rem" }}
+                />
+              </p>
+            </div>
 
-                  <div className="payment-cards-type-container">
-                  <p><span><img src={PaymentCard} alt="netbanking" style={{marginRight:"2rem"}}/> NetBanking</span> <img src={RightArrow} alt="RightArrow" style={{width:".5rem", height:"1rem"}}/></p>
-                  </div>
+            <div className="payment-cards-type-container">
+              <p>
+                <span>
+                  <img
+                    src={PaymentCard}
+                    alt="netbanking"
+                    style={{ marginRight: "2rem" }}
+                  />{" "}
+                  NetBanking
+                </span>{" "}
+                <img
+                  src={RightArrow}
+                  alt="RightArrow"
+                  style={{ width: ".5rem", height: "1rem" }}
+                />
+              </p>
+            </div>
 
-                  <div className="payment-cards-type-container">
-                  <p><span><img src={Wallet} alt="wallet" style={{marginRight:"2rem"}}/> Wallet</span> <img src={RightArrow} alt="RightArrow" style={{width:".5rem", height:"1rem"}}/></p>
-                  </div>
+            <div className="payment-cards-type-container">
+              <p>
+                <span>
+                  <img
+                    src={Wallet}
+                    alt="wallet"
+                    style={{ marginRight: "2rem" }}
+                  />{" "}
+                  Wallet
+                </span>{" "}
+                <img
+                  src={RightArrow}
+                  alt="RightArrow"
+                  style={{ width: ".5rem", height: "1rem" }}
+                />
+              </p>
+            </div>
 
-                  <div className="payment-cards-type-container">
-                  <p><span><img src={PaymentCard} alt="emi" style={{marginRight:"2rem"}}/> EMI</span> <img src={RightArrow} alt="RightArrow" style={{width:".5rem", height:"1rem"}}/></p>
-                  </div>
+            <div className="payment-cards-type-container">
+              <p>
+                <span>
+                  <img
+                    src={PaymentCard}
+                    alt="emi"
+                    style={{ marginRight: "2rem" }}
+                  />{" "}
+                  EMI
+                </span>{" "}
+                <img
+                  src={RightArrow}
+                  alt="RightArrow"
+                  style={{ width: ".5rem", height: "1rem" }}
+                />
+              </p>
+            </div>
 
-                  <div className="payment-cards-type-container">
-                  <p><span><img src={PaymentCard} alt="paylater" style={{marginRight:"2rem"}}/> Pay Later</span> <img src={RightArrow} alt="RightArrow" style={{width:".5rem", height:"1rem"}}/></p>
-                  </div>
-                  </div>
-              </div>
+            <div className="payment-cards-type-container">
+              <p>
+                <span>
+                  <img
+                    src={PaymentCard}
+                    alt="paylater"
+                    style={{ marginRight: "2rem" }}
+                  />{" "}
+                  Pay Later
+                </span>{" "}
+                <img
+                  src={RightArrow}
+                  alt="RightArrow"
+                  style={{ width: ".5rem", height: "1rem" }}
+                />
+              </p>
+            </div>
+          </div>
+        </div>
       </>
     );
   }
@@ -136,31 +217,210 @@ const Payment = () => {
                 </div>
               </div>
 
-
               <div className="payment-types-container">
-                  <div className="payment-cards-type-container">
-                    <p><span><img src={PaymentCard} alt="paymentcard" style={{marginRight:"2rem"}}/> Card</span> <img src={RightArrow} alt="RightArrow" style={{width:".5rem", height:"1rem"}}/></p>
-                  </div>
-                  
-                  <div className="payment-cards-type-container">
-                  <p><span><img src={Upi} alt="upi" style={{marginRight:"2rem"}}/> UPI/QR</span> <img src={RightArrow} alt="RightArrow" style={{width:".5rem", height:"1rem"}}/></p>
-                  </div>
+                <div
+                  className="payment-cards-type-container"
+                  onClick={() => setIsCardpayment(!iscardPayment)}
+                >
+                  <p>
+                    <span>
+                      <img
+                        src={PaymentCard}
+                        alt="paymentcard"
+                        style={{ marginRight: "2rem" }}
+                      />{" "}
+                      Credit/Debit Card
+                    </span>{" "}
+                    {iscardPayment ? (
+                      <img
+                        src={UpArrow}
+                        alt="UpArrow"
+                        style={{ width: "1rem", height: ".5rem" }}
+                      />
+                    ) : (
+                      <img
+                        src={RightArrow}
+                        alt="RightArrow"
+                        style={{ width: ".5rem", height: "1rem" }}
+                      />
+                    )}
+                  </p>
+                </div>
 
-                  <div className="payment-cards-type-container">
-                  <p><span><img src={PaymentCard} alt="netbanking" style={{marginRight:"2rem"}}/> Netbanking</span> <img src={RightArrow} alt="RightArrow" style={{width:".5rem", height:"1rem"}}/></p>
-                  </div>
+                {iscardPayment && (
+                  <>
+                    <div className="cards-payment">
+                      <p id="saved-text">Saved:</p>
+                      <div className="saved-card-container">
+                        <div className="saved-card-one-container">
+                          <div
+                            className="saved-card-details"
+                            style={{ marginRight: ".5rem" }}
+                          >
+                            <p id="card-ending-text">Ending in: ...4562</p>
+                            <p id="card-last-used-text">
+                              Last used: Mar 18 2021
+                            </p>
+                          </div>
+                          <img src={Mastercard} alt="mastercard" />
+                        </div>
 
-                  <div className="payment-cards-type-container">
-                  <p><span><img src={Wallet} alt="wallet" style={{marginRight:"2rem"}}/> Wallet</span> <img src={RightArrow} alt="RightArrow" style={{width:".5rem", height:"1rem"}}/></p>
-                  </div>
+                        <div
+                          className="saved-card-two-container"
+                          style={{ marginLeft: "1rem" }}
+                        >
+                          <div
+                            className="saved-card-details"
+                            style={{ marginRight: ".5rem" }}
+                          >
+                            <p id="card-ending-text">Ending in: ...4562</p>
+                            <p id="card-last-used-text">
+                              Last used: Mar 18 2021
+                            </p>
+                          </div>
+                          <div className="saved-card-img">
+                            <img src={Amex} alt="mastercard" />
+                          </div>
+                        </div>
+                      </div>
 
-                  <div className="payment-cards-type-container">
-                  <p><span><img src={PaymentCard} alt="emi" style={{marginRight:"2rem"}}/> EMI</span> <img src={RightArrow} alt="RightArrow" style={{width:".5rem", height:"1rem"}}/></p>
-                  </div>
+                      <div className="payment-card-number">
+                        <img src={Mastercard} alt="mastercard" />
+                        <input
+                          type="text"
+                          name="cardnumber"
+                          id=""
+                          placeholder="Enter 16-digit card number"
+                        />
+                      </div>
 
-                  <div className="payment-cards-type-container">
-                  <p><span><img src={PaymentCard} alt="paylater" style={{marginRight:"2rem"}}/> Pay Later</span> <img src={RightArrow} alt="RightArrow" style={{width:".5rem", height:"1rem"}}/></p>
-                  </div>
+                      <input
+                        className="payment-cards-name"
+                        type="text"
+                        name=""
+                        id=""
+                        placeholder="Card Holder's Name"
+                      />
+
+                      <div className="payment-card-cvv-container">
+                        <div className="payment-card-expiry-container">
+                          <input
+                            type="date"
+                            name="expirydate"
+                            id=""
+                            placeholder="Expiry date"
+                          />
+                          /
+                          <input
+                            type="date"
+                            name="expiryyear"
+                            id=""
+                            placeholder="Expiry year"
+                          />
+                        </div>
+                        <input
+                          className="payment-cvv-input"
+                          type="text"
+                          name="cvvnumber"
+                          id=""
+                          placeholder="CVV number"
+                        />
+                      </div>
+
+                      <button type="submit">Make Payment</button>
+                    </div>
+                  </>
+                )}
+
+                <div className="payment-cards-type-container">
+                  <p>
+                    <span>
+                      <img
+                        src={Upi}
+                        alt="upi"
+                        style={{ marginRight: "2rem" }}
+                      />{" "}
+                      UPI/QR
+                    </span>{" "}
+                    <img
+                      src={RightArrow}
+                      alt="RightArrow"
+                      style={{ width: ".5rem", height: "1rem" }}
+                    />
+                  </p>
+                </div>
+
+                <div className="payment-cards-type-container">
+                  <p>
+                    <span>
+                      <img
+                        src={PaymentCard}
+                        alt="netbanking"
+                        style={{ marginRight: "2rem" }}
+                      />{" "}
+                      Netbanking
+                    </span>{" "}
+                    <img
+                      src={RightArrow}
+                      alt="RightArrow"
+                      style={{ width: ".5rem", height: "1rem" }}
+                    />
+                  </p>
+                </div>
+
+                <div className="payment-cards-type-container">
+                  <p>
+                    <span>
+                      <img
+                        src={Wallet}
+                        alt="wallet"
+                        style={{ marginRight: "2rem" }}
+                      />{" "}
+                      Wallet
+                    </span>{" "}
+                    <img
+                      src={RightArrow}
+                      alt="RightArrow"
+                      style={{ width: ".5rem", height: "1rem" }}
+                    />
+                  </p>
+                </div>
+
+                <div className="payment-cards-type-container">
+                  <p>
+                    <span>
+                      <img
+                        src={PaymentCard}
+                        alt="emi"
+                        style={{ marginRight: "2rem" }}
+                      />{" "}
+                      EMI
+                    </span>{" "}
+                    <img
+                      src={RightArrow}
+                      alt="RightArrow"
+                      style={{ width: ".5rem", height: "1rem" }}
+                    />
+                  </p>
+                </div>
+
+                <div className="payment-cards-type-container">
+                  <p>
+                    <span>
+                      <img
+                        src={PaymentCard}
+                        alt="paylater"
+                        style={{ marginRight: "2rem" }}
+                      />{" "}
+                      Pay Later
+                    </span>{" "}
+                    <img
+                      src={RightArrow}
+                      alt="RightArrow"
+                      style={{ width: ".5rem", height: "1rem" }}
+                    />
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -438,82 +698,210 @@ const Payment = () => {
               </div>
 
               <div className="payment-types-container">
-                  <div className="payment-cards-type-container" onClick={() => setIsCardpayment(!iscardPayment)}>
-                    <p><span><img src={PaymentCard} alt="paymentcard" style={{marginRight:"2rem"}}/> Credit/Debit Card</span> {iscardPayment ? <img src={UpArrow} alt="UpArrow" style={{width:"1rem", height:".5rem"}}/>: <img src={RightArrow} alt="RightArrow" style={{width:".5rem", height:"1rem"}}/>}</p>
-                  </div>
-                  {iscardPayment && (
-                    <>
-                      <div className="cards-payment">
-                        <p id="saved-text">Saved:</p>
-                        <div className="saved-card-container">
-                            <div className="saved-card-one-container">
-                                <div className="saved-card-details" style={{marginRight:".5rem"}}>
-                                  <p id="card-ending-text">Ending in: ...4562</p>
-                                  <p id="card-last-used-text">Last used: Mar 18 2021</p>
-                                </div>
-                                  <img src={Mastercard} alt="mastercard" />
-                            </div>
-
-                            <div className="saved-card-two-container" style={{marginLeft:"1rem"}}>
-                              <div className="saved-card-details" style={{marginRight:".5rem"}}>
-                                  <p id="card-ending-text">Ending in: ...4562</p>
-                                  <p id="card-last-used-text">Last used: Mar 18 2021</p>
-                                </div>
-                                <div className="saved-card-img">
-                                  <img src={Amex} alt="mastercard" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="payment-card-number">
-                          <img src={Mastercard} alt="mastercard" />
-                          <input type="text" name="cardnumber" id="" placeholder="Enter 16-digit card number"/>
-                        </div>
-
-                        <input className="payment-cards-name" type="text" name="" id="" placeholder="Card Holder's Name"/>
-
-                        <div className="payment-card-cvv-container">
-                          <div className="payment-card-expiry-container">
-                            <input type="date" name="expirydate" id="" placeholder="Expiry date"/>
-                              /
-                            <input type="date" name="expiryyear" id="" placeholder="Expiry year"/>
+                <div
+                  className="payment-cards-type-container"
+                  onClick={() => setIsCardpayment(!iscardPayment)}
+                >
+                  <p>
+                    <span>
+                      <img
+                        src={PaymentCard}
+                        alt="paymentcard"
+                        style={{ marginRight: "2rem" }}
+                      />{" "}
+                      Credit/Debit Card
+                    </span>{" "}
+                    {iscardPayment ? (
+                      <img
+                        src={UpArrow}
+                        alt="UpArrow"
+                        style={{ width: "1rem", height: ".5rem" }}
+                      />
+                    ) : (
+                      <img
+                        src={RightArrow}
+                        alt="RightArrow"
+                        style={{ width: ".5rem", height: "1rem" }}
+                      />
+                    )}
+                  </p>
+                </div>
+                {iscardPayment && (
+                  <>
+                    <div className="cards-payment">
+                      <p id="saved-text">Saved:</p>
+                      <div className="saved-card-container">
+                        <div className="saved-card-one-container">
+                          <div
+                            className="saved-card-details"
+                            style={{ marginRight: ".5rem" }}
+                          >
+                            <p id="card-ending-text">Ending in: ...4562</p>
+                            <p id="card-last-used-text">
+                              Last used: Mar 18 2021
+                            </p>
                           </div>
-                          <input className="payment-cvv-input" type="text" name="cvvnumber" id="" placeholder="CVV number"/>
+                          <img src={Mastercard} alt="mastercard" />
                         </div>
 
-                        <button type="submit">Make Payment</button>
-
+                        <div
+                          className="saved-card-two-container"
+                          style={{ marginLeft: "1rem" }}
+                        >
+                          <div
+                            className="saved-card-details"
+                            style={{ marginRight: ".5rem" }}
+                          >
+                            <p id="card-ending-text">Ending in: ...4562</p>
+                            <p id="card-last-used-text">
+                              Last used: Mar 18 2021
+                            </p>
+                          </div>
+                          <div className="saved-card-img">
+                            <img src={Amex} alt="mastercard" />
+                          </div>
+                        </div>
                       </div>
-                    </>
-                  )}
-                  
-                  <div className="payment-cards-type-container" >
-                  <p><span><img src={Upi} alt="upi" style={{marginRight:"2rem"}}/> UPI/QR</span> <img src={RightArrow} alt="RightArrow" style={{width:".5rem", height:"1rem"}}/></p>
-                  </div>
 
-                  <div className="payment-cards-type-container">
-                  <p><span><img src={PaymentCard} alt="netbanking" style={{marginRight:"2rem"}}/> Netbanking</span> <img src={RightArrow} alt="RightArrow" style={{width:".5rem", height:"1rem"}}/></p>
-                  </div>
+                      <div className="payment-card-number">
+                        <img src={Mastercard} alt="mastercard" />
+                        <input
+                          type="text"
+                          name="cardnumber"
+                          id=""
+                          placeholder="Enter 16-digit card number"
+                        />
+                      </div>
 
-                  <div className="payment-cards-type-container">
-                  <p><span><img src={Wallet} alt="wallet" style={{marginRight:"2rem"}}/> Wallet</span> <img src={RightArrow} alt="RightArrow" style={{width:".5rem", height:"1rem"}}/></p>
-                  </div>
+                      <input
+                        className="payment-cards-name"
+                        type="text"
+                        name=""
+                        id=""
+                        placeholder="Card Holder's Name"
+                      />
 
-                  <div className="payment-cards-type-container">
-                  <p><span><img src={PaymentCard} alt="emi" style={{marginRight:"2rem"}}/> EMI</span> <img src={RightArrow} alt="RightArrow" style={{width:".5rem", height:"1rem"}}/></p>
-                  </div>
+                      <div className="payment-card-cvv-container">
+                        <div className="payment-card-expiry-container">
+                          <input
+                            type="date"
+                            name="expirydate"
+                            id=""
+                            placeholder="Expiry date"
+                          />
+                          /
+                          <input
+                            type="date"
+                            name="expiryyear"
+                            id=""
+                            placeholder="Expiry year"
+                          />
+                        </div>
+                        <input
+                          className="payment-cvv-input"
+                          type="text"
+                          name="cvvnumber"
+                          id=""
+                          placeholder="CVV number"
+                        />
+                      </div>
 
-                  <div className="payment-cards-type-container">
-                  <p><span><img src={PaymentCard} alt="paylater" style={{marginRight:"2rem"}}/> Pay Later</span> <img src={RightArrow} alt="RightArrow" style={{width:".5rem", height:"1rem"}}/></p>
-                  </div>
+                      <button type="submit">Make Payment</button>
+                    </div>
+                  </>
+                )}
+
+                <div className="payment-cards-type-container">
+                  <p>
+                    <span>
+                      <img
+                        src={Upi}
+                        alt="upi"
+                        style={{ marginRight: "2rem" }}
+                      />{" "}
+                      UPI/QR
+                    </span>{" "}
+                    <img
+                      src={RightArrow}
+                      alt="RightArrow"
+                      style={{ width: ".5rem", height: "1rem" }}
+                    />
+                  </p>
+                </div>
+
+                <div className="payment-cards-type-container">
+                  <p>
+                    <span>
+                      <img
+                        src={PaymentCard}
+                        alt="netbanking"
+                        style={{ marginRight: "2rem" }}
+                      />{" "}
+                      Netbanking
+                    </span>{" "}
+                    <img
+                      src={RightArrow}
+                      alt="RightArrow"
+                      style={{ width: ".5rem", height: "1rem" }}
+                    />
+                  </p>
+                </div>
+
+                <div className="payment-cards-type-container">
+                  <p>
+                    <span>
+                      <img
+                        src={Wallet}
+                        alt="wallet"
+                        style={{ marginRight: "2rem" }}
+                      />{" "}
+                      Wallet
+                    </span>{" "}
+                    <img
+                      src={RightArrow}
+                      alt="RightArrow"
+                      style={{ width: ".5rem", height: "1rem" }}
+                    />
+                  </p>
+                </div>
+
+                <div className="payment-cards-type-container">
+                  <p>
+                    <span>
+                      <img
+                        src={PaymentCard}
+                        alt="emi"
+                        style={{ marginRight: "2rem" }}
+                      />{" "}
+                      EMI
+                    </span>{" "}
+                    <img
+                      src={RightArrow}
+                      alt="RightArrow"
+                      style={{ width: ".5rem", height: "1rem" }}
+                    />
+                  </p>
+                </div>
+
+                <div className="payment-cards-type-container">
+                  <p>
+                    <span>
+                      <img
+                        src={PaymentCard}
+                        alt="paylater"
+                        style={{ marginRight: "2rem" }}
+                      />{" "}
+                      Pay Later
+                    </span>{" "}
+                    <img
+                      src={RightArrow}
+                      alt="RightArrow"
+                      style={{ width: ".5rem", height: "1rem" }}
+                    />
+                  </p>
+                </div>
               </div>
-
-
-
             </div>
-
-
-
 
             <div className="delivery-right-container">
               <div className="delivery-product-name-container">
@@ -755,7 +1143,7 @@ const Payment = () => {
               </div>
             </div>
           </div>
-          </div>
+        </div>
       </>
     );
   }
