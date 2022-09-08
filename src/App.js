@@ -18,6 +18,7 @@ import Mobileredeemcoupon from './pages/Mobileredeemcoupon/mobileredeemcoupon';
 import Mycart from './pages/Mycart/mycart';
 import Deliveryaddress from './pages/Deliveryaddress/deliveryaddress';
 import Payment from './pages/Payment/payment';
+import Agreement from './pages/Agreement/agreement';
 
 const App = () => {
   return (
@@ -38,6 +39,8 @@ const App = () => {
           <Route path='/mycart' element={<Mycart />} />
           <Route path='/deliveryaddress' element={<Deliveryaddress />} />
           <Route path='/payment' element={<Payment />} />
+          <Route path='/agreement' element={<Agreement />} />
+
       </Routes>
     </Router>
   )

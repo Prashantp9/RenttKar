@@ -62,7 +62,10 @@ const Payment = () => {
 
         <div className="mobile-types-of-payments-container">
           <div className="payment-types-container">
-            <div className="payment-cards-type-container">
+            <div
+              className="payment-cards-type-container"
+              onClick={() => setIsCardpayment(!iscardPayment)}
+            >
               <p>
                 <span>
                   <img
@@ -72,13 +75,147 @@ const Payment = () => {
                   />{" "}
                   Credit/Debit Cards
                 </span>{" "}
-                <img
-                  src={RightArrow}
-                  alt="RightArrow"
-                  style={{ width: ".5rem", height: "1rem" }}
-                />
+                {iscardPayment ? (
+                  <img
+                    src={UpArrow}
+                    alt="UpArrow"
+                    style={{ width: "1rem", height: ".5rem" }}
+                  />
+                ) : (
+                  <img
+                    src={RightArrow}
+                    alt="RightArrow"
+                    style={{ width: ".5rem", height: "1rem" }}
+                  />
+                )}
               </p>
             </div>
+            {iscardPayment && (
+              <>
+                <div className="cards-payment">
+                  <p id="saved-text">Saved:</p>
+                  <div className="saved-card-container">
+                    <Swiper
+                      width={460}
+                      slidesPerView={2}
+                      centeredSlides={false}
+                      spaceBetween={30}
+                      slidesPerGroup={1}
+                      grabCursor={true}
+                      loop={true}
+                      loopFillGroupWithBlank={true}
+                      pagination={{
+                        clickable: true,
+                      }}
+                      navigation={{
+                        prevEl: ".rented-together-left-button",
+                        nextEl: ".rented-together-right-button",
+                      }}
+                      modules={[Navigation]}
+                      className="mySwiper"
+                    >
+                      <SwiperSlide>
+                        <div className="saved-card-one-container">
+                          <div
+                            className="saved-card-details"
+                            style={{ marginRight: ".5rem" }}
+                          >
+                            <p id="card-ending-text">Ending in: ...4562</p>
+                            <p id="card-last-used-text">
+                              Last used: Mar 18 2021
+                            </p>
+                          </div>
+                          <img src={Mastercard} alt="mastercard" />
+                        </div>
+                      </SwiperSlide>
+
+                      <SwiperSlide>
+                        <div
+                          className="saved-card-two-container"
+                          style={{ marginLeft: "1rem" }}
+                        >
+                          <div
+                            className="saved-card-details"
+                            style={{ marginRight: ".5rem" }}
+                          >
+                            <p id="card-ending-text">Ending in: ...4562</p>
+                            <p id="card-last-used-text">
+                              Last used: Mar 18 2021
+                            </p>
+                          </div>
+                          <div className="saved-card-img">
+                            <img src={Amex} alt="mastercard" />
+                          </div>
+                        </div>
+                      </SwiperSlide>
+                    </Swiper>
+                  </div>
+                  <div className="payment-card-number">
+                    <img src={Mastercard} alt="mastercard" />
+                    <input
+                      type="text"
+                      name="cardnumber"
+                      maxLength="16"
+                      id=""
+                      placeholder="Enter 16-digit card number"
+                    />
+                  </div>
+
+                  <input
+                    className="payment-cards-name"
+                    type="text"
+                    name=""
+                    id=""
+                    placeholder="Card Holder's Name"
+                  />
+
+                  <div className="payment-card-cvv-container">
+                    <div className="payment-card-expiry-container">
+                      <select name="" id="" className="expiry-date">
+                        <option value="month" selected disabled>month</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
+                          /
+                      <select name="" id="" className="expiry-year">
+                        <option value="year" selected disabled>year</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                      </select>
+                    </div>
+                    <input
+                      className="payment-cvv-input"
+                      type="number"
+                      maxLength="3"
+                      name="cvvnumber"
+                      id=""
+                      placeholder="CVV number"
+                    />
+                  </div>
+
+                  <button type="submit">
+                    <Link to="/agreement" style={{textDecoration:"none",color:"#FFFFFF"}}>Make Payment</Link>
+                  </button>
+                </div>
+              </>
+            )}
 
             <div className="payment-cards-type-container">
               <p>
@@ -213,7 +350,10 @@ const Payment = () => {
                 </div>
                 <img src={RightNavigation} alt="navigation" />
                 <div className="agreement">
-                  <p>Agree..</p>
+                  <p>
+                  <Link to="/agreement" style={{textDecoration:"none", color:"#9B9B9B"}}>Agree..</Link>
+
+                  </p>
                 </div>
               </div>
 
@@ -304,30 +444,48 @@ const Payment = () => {
 
                       <div className="payment-card-cvv-container">
                         <div className="payment-card-expiry-container">
-                          <input
-                            type="date"
-                            name="expirydate"
-                            id=""
-                            placeholder="Expiry date"
-                          />
+                        <select name="" id="" className="expiry-date">
+                        <option value="month" selected disabled>month</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
                           /
-                          <input
-                            type="date"
-                            name="expiryyear"
-                            id=""
-                            placeholder="Expiry year"
-                          />
+                      <select name="" id="" className="expiry-year">
+                        <option value="year" selected disabled>year</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                      </select>
                         </div>
                         <input
                           className="payment-cvv-input"
-                          type="text"
+                          type="number"
+                          maxLength="3"
                           name="cvvnumber"
                           id=""
                           placeholder="CVV number"
                         />
                       </div>
 
-                      <button type="submit">Make Payment</button>
+                      <button type="submit">
+                        <Link to="/agreement" style={{textDecoration:"none",color:"#FFFFFF"}}>Make Payment</Link>
+                      </button>
                     </div>
                   </>
                 )}
@@ -693,7 +851,9 @@ const Payment = () => {
                 </div>
                 <img src={RightNavigation} alt="navigation" />
                 <div className="agreement">
-                  <p>Agreement</p>
+                  <p>
+                    <Link to="/agreement" style={{textDecoration:"none", color:"#9B9B9B"}}>Agreement</Link>
+                  </p>
                 </div>
               </div>
 
@@ -783,30 +943,48 @@ const Payment = () => {
 
                       <div className="payment-card-cvv-container">
                         <div className="payment-card-expiry-container">
-                          <input
-                            type="date"
-                            name="expirydate"
-                            id=""
-                            placeholder="Expiry date"
-                          />
+                        <select name="" id="" className="expiry-date">
+                        <option value="month" selected disabled>month</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
                           /
-                          <input
-                            type="date"
-                            name="expiryyear"
-                            id=""
-                            placeholder="Expiry year"
-                          />
+                      <select name="" id="" className="expiry-year">
+                        <option value="year" selected disabled>year</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                      </select>
                         </div>
                         <input
                           className="payment-cvv-input"
-                          type="text"
+                          maxLength="3"
+                          type="number"
                           name="cvvnumber"
                           id=""
                           placeholder="CVV number"
                         />
                       </div>
 
-                      <button type="submit">Make Payment</button>
+                      <button type="submit">
+                        <Link to="/agreement" style={{textDecoration:"none",color:"#FFFFFF"}}>Make Payment</Link>
+                      </button>
                     </div>
                   </>
                 )}

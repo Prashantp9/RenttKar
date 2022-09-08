@@ -1956,7 +1956,9 @@ const Deliveryaddress = () => {
                 </div>
                 <img src={RightNavigation} alt="navigation" />
                 <div className="agreement">
-                  <p>Agreement</p>
+                  <p>
+                  <Link to="/agreement" style={{textDecoration:"none", color:"#9B9B9B"}}>Agreement</Link>
+                  </p>
                 </div>
               </div>
 

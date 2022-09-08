@@ -145,6 +145,8 @@ export {default as Wallet} from "./Images/wallet.svg"
 export {default as Amex} from "./Images/amex.svg"
 export {default as Mastercard} from "./Images/masterCard.svg"
 
+export {default as TabletStep3gradient} from "./Images/tabletStep3gradient.svg"
+
 
 
 

@@ -1,0 +1,168 @@
+.agreement-delivery-add, .agreement-payment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+}
+
+.agreement-delivery-add p, .agreement-payment p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    margin-bottom: 0rem;
+    background: var(--btn-border-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.agreement-agreement{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+}
+
+
+.agreement-agreement p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    margin-bottom: 0rem;
+    color: #FFFFFF;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width:768px){
+    .tablet-agreement-delivery-add, .tablet-agreement-payment{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        height: 100%;
+        margin-left: .5rem;
+    }
+    .tablet-agreement-delivery-add p, .tablet-agreement-payment p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        margin-bottom: 0rem;
+        background: var(--btn-border-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .tablet-agreement-agreement{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45%;
+        height: 100%;
+    }
+
+    .tablet-agreement-agreement p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        color: #DFDFDF;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width:500px){
+    .mobile-agreement-delivery-tab, .mobile-agreement-payment-tab{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(5, 5, 5, 0.5);
+        border-radius: 6px 6px 0px 0px;
+        width: 8.25rem;
+        height: 100%;
+    }
+
+    .mobile-agreement-delivery-tab p, .mobile-agreement-payment-tab p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        /* identical to box height */
+        
+        
+        /* gradient */
+        
+        background: var(--btn-border-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .mobile-agreement-tab{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #0F0F0F;
+        border-radius: 6px 6px 0px 0px;
+        width: 7.25rem;
+        height: 100%;
+    }
+
+    .mobile-agreement-tab p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        color: #DFDFDF;
+    }
+}
