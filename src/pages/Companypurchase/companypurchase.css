@@ -1,0 +1,485 @@
+.delivery-content{
+    max-width: 80rem;
+
+}
+.delivery-left-container{
+    height: 82rem;
+    max-width: 50.125rem;
+}
+#company-text{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    margin-top: 2rem;
+    color: #DFDFDF;
+}
+
+#company-text a{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    margin-top: 2rem;
+    color: rgba(14, 155, 225, 1);
+}
+
+.company-verification-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 90rem;
+    margin-top: 1rem;
+    padding: 0rem 2rem 0rem 2rem;
+
+}
+
+.company-photo-verification-container, .company-identity-verification-container, .company-address-verification-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 6.875rem;
+    gap: 2rem;  
+    margin-top: 3.5rem;
+}
+
+.company-selfie-upload{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7.5rem;
+    height: 100%;   
+    background: #1E1E1E;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.16);
+    border-radius: 6px;
+}
+
+.company-identity-upload, .company-address-upload{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 7.5rem;
+    height: 100%;   
+    background: #1E1E1E;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.16);
+    border-radius: 6px;
+}
+
+.company-selfie-desc, .company-address-desc, .company-identity-desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 80%;
+    height: 100%;
+}
+
+#company-upload-text{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: #DFDFDF;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+}
+
+#upload-selfie-text, #upload-identity-text, #upload-address-text{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    margin-bottom: 0rem;
+    color: #DFDFDF;
+}
+
+#upload-selfie-desc, #upload-identity-desc, #upload-address-desc{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    margin-bottom: 0rem;
+    color: #9B9B9B;
+    margin-top: 1rem;
+}
+
+
+.company-termscondition-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 25rem;
+    background: #070707;
+    margin-top: 4rem;
+    padding: 2rem;
+}
+
+#company-termscondition-text{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+    margin-bottom: 0rem;
+}
+
+.company-termscondition-desc-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15rem;
+    margin-top: 2rem;
+    overflow-y: scroll;
+    padding-top: 2rem;
+    padding-right: 1rem;
+}
+
+#company-termscondition-desc{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: #DFDFDF;
+}
+
+.company-selfie-upload input{
+    display: none;
+}
+
+
+
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #222222;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #171717;
+}
+
+.company-accept-terms-and-condition{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.company-accept-terms-and-condition span{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    
+    color: #DFDFDF;
+}
+
+.company-agree-button{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 14px 40px;
+    gap: 10px;
+    background: #0E9BE1;
+    border-radius: 5px;
+    align-self: center;
+    border: none;
+    margin-top: 4rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    /* identical to box height */
+    
+    
+    color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width:768px){
+    .delivery-container{
+        height: 100rem;
+    }
+    .delivery-content{
+        max-width: 50rem;
+    
+    }
+    .delivery-left-container{
+        height: 95rem;
+        max-width: 29.125rem;
+    }
+    #company-text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.125rem;
+        margin-top: 2rem;
+        color: #DFDFDF;
+    }
+    
+    #company-text a{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.125rem;
+        margin-top: 2rem;
+        text-decoration: none;
+        background: var(--btn-border-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    .company-verification-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        height: 90rem;
+        margin-top: 1rem;
+        padding: 0rem 2rem 0rem 2rem;
+    
+    }
+    
+    .company-photo-verification-container, .company-identity-verification-container, .company-address-verification-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 6.875rem;
+        gap: 1rem;  
+        margin-top: 3.5rem;
+    }
+    
+    .company-selfie-upload{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 7.5rem;
+        height: 100%;   
+        background: #1E1E1E;
+        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.16);
+        border-radius: 6px;
+    }
+    
+    .company-identity-upload, .company-address-upload{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 7.5rem;
+        height: 100%;   
+        background: #1E1E1E;
+        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.16);
+        border-radius: 6px;
+    }
+    
+    .company-selfie-desc, .company-address-desc, .company-identity-desc{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 80%;
+        height: 100%;
+    }
+    
+    #company-upload-text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        color: #DFDFDF;
+        margin-top: 1rem;
+        margin-bottom: 0rem;
+    }
+    
+    #upload-selfie-text, #upload-identity-text, #upload-address-text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.125rem;
+        margin-bottom: 0rem;
+        color: #DFDFDF;
+    }
+    
+    #upload-selfie-desc, #upload-identity-desc, #upload-address-desc{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        margin-bottom: 0rem;
+        color: #9B9B9B;
+        margin-top: 1rem;
+    }
+
+    #upload-address-desc a{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        background: var(--btn-border-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    
+    .company-termscondition-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 25rem;
+        background: #070707;
+        margin-top: 4rem;
+        padding: 2rem 2rem 1rem 2rem;
+    }
+    
+    #company-termscondition-text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        /* identical to box height */
+        
+        text-align: center;
+        
+        color: #FFFFFF;
+        margin-bottom: 0rem;
+    }
+    
+    .company-termscondition-desc-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 18rem;
+        margin-top: 2rem;
+        overflow-y: scroll;
+        padding-top: 10rem;
+        padding-right: 1rem;
+    }
+    
+    #company-termscondition-desc{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        color: #DFDFDF;
+    }
+    
+    .company-selfie-upload input{
+        display: none;
+    }
+    
+    
+    
+    
+    ::-webkit-scrollbar {
+        width: 2px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: #222222;
+        border-radius: 2px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background-color: #171717;
+    }
+    
+    .company-accept-terms-and-condition{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 2rem;
+    }
+    
+    .company-accept-terms-and-condition span{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.125rem;
+        
+        color: #DFDFDF;
+    }
+    
+    .company-agree-button{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 14px 40px;
+        gap: 10px;
+        background: #0E9BE1;
+        border-radius: 5px;
+        align-self: center;
+        border: none;
+        margin-top: 4rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        /* identical to box height */
+        
+        
+        color: #FFFFFF;
+    }
+}

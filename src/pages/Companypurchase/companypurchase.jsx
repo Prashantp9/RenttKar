@@ -1,7 +1,6 @@
 import React, { useState } from "react";
+import "./companypurchase.css";
 import { Navbar } from "../../components";
-import "./agreement.css";
-
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { Navigation } from "swiper";
 import "swiper/css";
@@ -9,23 +8,23 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
 
-// image
+// images
 import {
   GradientDone,
-  RightNavigation,
-  PriceInfo,
-  SmallCross,
-  Gradientcouppon,
-  Note,
   TabletStep1gradient,
   TabletStep3gradient,
-  Individualpurchase,
-  Companypurchase,
+  RightNavigation,
+  Gradientcouppon,
+  SmallCross,
+  PriceInfo,
+  Note,
+  UploadFile,
+  UploadSelfie,
   TabletRightNavigation,
 } from "../../assets";
 import { Link } from "react-router-dom";
 
-const Agreement = () => {
+const Companypurchase = () => {
   const [isGstdetails, setIsGstdetails] = useState(false);
   const [isCoupon, setIsCoupon] = useState(false);
 
@@ -51,36 +50,6 @@ const Agreement = () => {
             <div className="mobile-agreement-tab">
               <p>Agreement</p>
             </div>
-          </div>
-        </div>
-        
-        <div className="agreement-purchase-container">
-        <div className="agreement-purchase-type-container">
-          <div className="agreement-individual-purchase">
-          <Link to="/individualpurchase">
-            <img src={Individualpurchase} alt="individualpurchase" style={{width:"2.313rem", height:"3.025rem"}}/>
-            <div className="agreement-purchase-container-info">
-              <p id="agreement-individual-text">Individual Purchase</p>
-              <p id="agreement-individual-desc">
-                For Individual purchases, please select this.
-              </p>
-            </div>
-            </Link>
-          </div>
-
-          <p id="agreement-or">Or</p>
-
-          <div className="agreement-company-purchase">
-          <Link to="/companypurchase">
-            <img src={Companypurchase} alt="companypurchase" style={{width:"2.313rem", height:"2.302rem"}}/>
-            <div className="agreement-purchase-container-info">
-            <p id="agreement-company-text">Company Purchase</p>
-            <p id="agreement-company-desc">
-              For company purchases, please select this.
-            </p>
-            </div>
-          </Link>
-          </div>
           </div>
         </div>
       </>
@@ -132,38 +101,111 @@ const Agreement = () => {
                     </Link>
                   </p>
                 </div>
-                <img src={TabletRightNavigation} alt="navigation" />
+                <img src={TabletRightNavigation} alt="navigation"/>
                 <div className="tablet-agreement-agreement">
                   <p>Agreement</p>
                 </div>
               </div>
+              <p id="company-text">
+                Not an company purchase?{" "}
+                <Link to="/individualpurchase">Individual Purchase</Link>
+              </p>
 
-              <p id="agreement-select-text">Select Lorem Ipsum lorem Ipsum </p>
-
-
-              <div className="agreement-purchase-type-container">
-                <div className="agreement-individual-purchase">
-                  <Link to="/individualpurchase">
-                  <img src={Individualpurchase} alt="individualpurchase" />
-                  <p id="agreement-individual-text">Individual Purchase</p>
-                  <p id="agreement-individual-desc">
-                    For Individual purchases, please select this.
-                  </p>
-                  </Link>
+              <div className="company-verification-container">
+                <div className="company-photo-verification-container">
+                  <div className="company-selfie-upload">
+                    <input type="file" name="selfie" id="" />
+                    <img src={UploadSelfie} alt="uploadselfie" />
+                  </div>
+                  <div className="company-selfie-desc">
+                    <p id="upload-selfie-text">Upload a Selfie</p>
+                    <p id="upload-selfie-desc">
+                      Please upload a real-time selfie. This step is very
+                      important to us so that no documents are misused.
+                    </p>
+                  </div>
                 </div>
 
-                <p id="agreement-or">or</p>
-
-                <div className="agreement-company-purchase">
-                  <Link to="/companypurchase">
-                  <img src={Companypurchase} alt="companypurchase" />
-                  <p id="agreement-company-text">Company Purchase</p>
-                  <p id="agreement-company-desc">
-                    For company purchases, please select this.
-                  </p>
-                  </Link>
+                <div className="company-identity-verification-container">
+                  <div className="company-identity-upload">
+                    <img src={UploadFile} alt="uploaddocs" />
+                    <p id="company-upload-text">Upload</p>
+                  </div>
+                  <div className="company-identity-desc">
+                    <p id="upload-identity-text">Enterprise Verification</p>
+                    <p id="upload-identity-desc">
+                      You can upload documents like GST certificate,
+                      Incorporation certificate.
+                    </p>
+                  </div>
                 </div>
-              </div>         
+
+                <div className="company-address-verification-container">
+                  <div className="company-address-upload">
+                    <img src={UploadFile} alt="uploaddocs" />
+                    <p id="company-upload-text">Upload</p>
+                  </div>
+                  <div className="company-address-desc">
+                    <p id="upload-address-text">Identity Verification</p>
+                    <p id="upload-address-desc">
+                      You can upload directors/Approved Signatorys Aadhar
+                      card/Passport/Driving license. In the context of approval,
+                      you need to write us a mail from your enterprise mail id
+                      to enterprise@rentkar.com
+                    </p>
+                  </div>
+                </div>
+
+                <div className="company-termscondition-container">
+                  <p id="company-termscondition-text">Terms & Conditions</p>
+                  <div className="company-termscondition-desc-container">
+                    <p id="company-termscondition-desc">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      At diam ut sagittis nunc sodales id cursus nisl integer.
+                      Laoreet tortor, nunc, vestibulum id non est a id.
+                      Imperdiet ante donec et semper nisi, ut rutrum ut viverra.
+                      Tellus a non amet sit nisl lacus laoreet. Donec eu viverra
+                      nibh elementum nunc non scelerisque. In turpis a sed
+                      volutpat. Eget facilisis condimentum lorem scelerisque.
+                      Est egestas condimentum elit blandit libero, sed amet,
+                      vel, maecenas. Cras bibendum gravida at quam est praesent
+                      turpis a. Consequat purus, eget tellus elit sagittis. Cras
+                      dignissim lectus vestibulum quis. Sed massa volutpat
+                      volutpat scelerisque lacus, aenean sed. Porttitor auctor
+                      consectetur quam pretium ut non, purus. Arcu vitae tortor,
+                      feugiat facilisis laoreet praesent. Varius fringilla
+                      dictum amet sit fames. In porttitor ullamcorper nibh hac
+                      risus. Risus urna aliquam nascetur amet varius nunc. Cras
+                      dignissim lectus vestibulum quis. Sed
+                    </p>
+                  </div>
+                </div>
+
+                <label
+                  htmlFor="terms"
+                  className="company-accept-terms-and-condition"
+                >
+                  <input
+                    type="checkbox"
+                    name="terms"
+                    id=""
+                    style={{
+                      marginLeft: "1rem",
+                      border: "2px solid #FFFFFF",
+                      background: "#141414",
+                      borderRadius: "1px",
+                    }}
+                  />
+                  <span style={{ marginLeft: "1rem" }}>
+                    By agreeing to this checked box, I agree to the terms and
+                    conditions.
+                  </span>
+                </label>
+
+                <button type="submit" className="company-agree-button">
+                  I Agree
+                </button>
+              </div>
             </div>
 
             <div className="delivery-right-container">
@@ -448,28 +490,110 @@ const Agreement = () => {
                 </div>
               </div>
 
-              <div className="agreement-purchase-type-container">
-                <div className="agreement-individual-purchase">
-                  <Link to="/individualpurchase">
-                  <img src={Individualpurchase} alt="individualpurchase" />
-                  <p id="agreement-individual-text">Individual Purchase</p>
-                  <p id="agreement-individual-desc">
-                    For Individual purchases, please select this.
-                  </p>
-                  </Link>
+              <p id="company-text">
+                Not an company purchase?{" "}
+                <Link to="/individualpurchase">Individual Purchase</Link>
+              </p>
+
+              <div className="company-verification-container">
+                <div className="company-photo-verification-container">
+                  <div className="company-selfie-upload">
+                    <input type="file" name="selfie" id="" />
+                    <img src={UploadSelfie} alt="uploadselfie" />
+                  </div>
+                  <div className="company-selfie-desc">
+                    <p id="upload-selfie-text">Upload a Selfie</p>
+                    <p id="upload-selfie-desc">
+                      Please upload a real-time selfie. This step is very
+                      important to us so that no documents are misused.
+                    </p>
+                  </div>
                 </div>
 
-                <p id="agreement-or">Or</p>
-
-                <div className="agreement-company-purchase">
-                  <Link to="/companypurchase">
-                  <img src={Companypurchase} alt="companypurchase" />
-                  <p id="agreement-company-text">Company Purchase</p>
-                  <p id="agreement-company-desc">
-                    For company purchases, please select this.
-                  </p>
-                  </Link>
+                <div className="company-identity-verification-container">
+                  <div className="company-identity-upload">
+                    <img src={UploadFile} alt="uploaddocs" />
+                    <p id="company-upload-text">Upload</p>
+                  </div>
+                  <div className="company-identity-desc">
+                    <p id="upload-identity-text">Enterprise Verification</p>
+                    <p id="upload-identity-desc">
+                      You can upload documents like GST certificate,
+                      Incorporation certificate.
+                    </p>
+                  </div>
                 </div>
+
+                <div className="company-address-verification-container">
+                  <div className="company-address-upload">
+                    <img src={UploadFile} alt="uploaddocs" />
+                    <p id="company-upload-text">Upload</p>
+                  </div>
+                  <div className="company-address-desc">
+                    <p id="upload-address-text">Identity Verification</p>
+                    <p id="upload-address-desc">
+                      You can upload directors/Approved Signatorys Aadhar
+                      card/Passport/Driving license. In the context of approval,
+                      you need to write us a mail from your enterprise mail id
+                      to enterprise@rentkar.com
+                    </p>
+                  </div>
+                </div>
+
+                <div className="company-termscondition-container">
+                  <p id="company-termscondition-text">Terms & Conditions</p>
+                  <div className="company-termscondition-desc-container">
+                    <p id="company-termscondition-desc">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      At diam ut sagittis nunc sodales id cursus nisl integer.
+                      Laoreet tortor, nunc, vestibulum id non est a id.
+                      Imperdiet ante donec et semper nisi, ut rutrum ut viverra.
+                      Tellus a non amet sit nisl lacus laoreet. Donec eu viverra
+                      nibh elementum nunc non scelerisque. In turpis a sed
+                      volutpat. Eget facilisis condimentum lorem scelerisque.
+                      Est egestas condimentum elit blandit libero, sed amet,
+                      vel, maecenas. Cras bibendum gravida at quam est praesent
+                      turpis a. Consequat purus, eget tellus elit sagittis. Cras
+                      dignissim lectus vestibulum quis. Sed massa volutpat
+                      volutpat scelerisque lacus, aenean sed. Porttitor auctor
+                      consectetur quam pretium ut non, purus. Arcu vitae tortor,
+                      feugiat facilisis laoreet praesent. Varius fringilla Eget
+                      facilisis condimentum lorem scelerisque. Est egestas
+                      condimentum elit blandit libero Laoreet tortor, nunc,
+                      vestibulum id non est a id. Imperdiet ansa. get facilisis
+                      condimentum lorem scelerisque. Est egestas condimentum
+                      elit blandit libero, sed amet, vel, maecenas. eget tellus
+                      elit sagittis. Cras dignissim lectus vestibulum quis. Sed
+                      massa volutpat volutpat scelerisque lacus, aenean sed.
+                      Porttitor auctor consectetur quam pretium ut non, .
+                    </p>
+                  </div>
+                </div>
+
+                <label
+                  htmlFor="terms"
+                  className="company-accept-terms-and-condition"
+                >
+                  <input
+                    type="checkbox"
+                    name="terms"
+                    id=""
+                    style={{
+                      marginLeft: "1rem",
+                      border: "2px solid #FFFFFF",
+                      background: "#141414",
+                      borderRadius: "1px",
+                    }}
+                  />
+                  <span style={{ marginLeft: "1rem" }}>
+                    By agreeing to this checked box, I agree to the terms and
+                    conditions.
+                  </span>
+                </label>
+
+                <button type="submit" className="company-agree-button">
+                  I Agree
+                </button>
               </div>
             </div>
 
@@ -719,4 +843,4 @@ const Agreement = () => {
   }
 };
 
-export default Agreement;
+export default Companypurchase;

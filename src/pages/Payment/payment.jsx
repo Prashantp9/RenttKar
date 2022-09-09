@@ -31,6 +31,7 @@ import {
   UpArrow,
   Mastercard,
   Amex,
+  TabletRightNavigation,
 } from "../../assets";
 
 const Payment = () => {
@@ -344,11 +345,11 @@ const Payment = () => {
                     </Link>
                   </p>
                 </div>
-                <img src={RightNavigation} alt="navigation" />
+                <img src={TabletRightNavigation} alt="navigation" />
                 <div className="tablet-payment">
                   <p>Payment</p>
                 </div>
-                <img src={RightNavigation} alt="navigation" />
+                <img src={TabletRightNavigation} alt="navigation" />
                 <div className="agreement">
                   <p>
                   <Link to="/agreement" style={{textDecoration:"none", color:"#9B9B9B"}}>Agree..</Link>

@@ -19,6 +19,10 @@ import Mycart from './pages/Mycart/mycart';
 import Deliveryaddress from './pages/Deliveryaddress/deliveryaddress';
 import Payment from './pages/Payment/payment';
 import Agreement from './pages/Agreement/agreement';
+import Individualpurchase from './pages/Individualpurchase/individualpurchase';
+import Companypurchase from './pages/Companypurchase/companypurchase';
+
+
 
 const App = () => {
   return (
@@ -40,6 +44,8 @@ const App = () => {
           <Route path='/deliveryaddress' element={<Deliveryaddress />} />
           <Route path='/payment' element={<Payment />} />
           <Route path='/agreement' element={<Agreement />} />
+          <Route path='/individualpurchase' element={<Individualpurchase />} />
+          <Route path='/companypurchase' element={<Companypurchase />} />
 
       </Routes>
     </Router>

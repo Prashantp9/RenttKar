@@ -118,6 +118,7 @@ export {default as Delete} from "./Images/delete.svg"
 export {default as AddCart} from "./Images/addCart.svg"
 
 export {default as RightNavigation} from "./Images/rightNavigation.svg"
+export {default as TabletRightNavigation} from "./Images/tabletRightnavigation.svg"
 
 export {default as PickupLocation} from "./Images/pickupLocation.svg"
 
@@ -148,6 +149,8 @@ export {default as Mastercard} from "./Images/masterCard.svg"
 export {default as TabletStep3gradient} from "./Images/tabletStep3gradient.svg"
 export {default as Individualpurchase} from "./Images/individualPurchase.svg"
 export {default as Companypurchase} from "./Images/companyPurchase.svg"
+export {default as UploadSelfie} from "./Images/uploadSelfie.svg"
+export {default as UploadFile} from "./Images/uploadFile.svg"
 
 
 

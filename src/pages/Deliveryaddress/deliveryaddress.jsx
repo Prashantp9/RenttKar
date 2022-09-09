@@ -33,6 +33,7 @@ import {
   TabletStep3,
   TabletCouppon,
   SearchResult,
+  TabletRightNavigation,
 } from "../../assets";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -1399,11 +1400,11 @@ const Deliveryaddress = () => {
                 <div className="delivery-add">
                   <p>Delivery Address</p>
                 </div>
-                <img src={RightNavigation} alt="navigation" />
+                <img src={TabletRightNavigation} alt="navigation" />
                 <div className="payment">
                   <p ><Link to="/payment" style={{textDecoration:"none",color:"#FFFFFF"}}>Paym..</Link></p>
                 </div>
-                <img src={RightNavigation} alt="navigation" />
+                <img src={TabletRightNavigation} alt="navigation" />
                 <div className="agreement">
                   <p>Agree..</p>
                 </div>
@@ -2434,7 +2435,7 @@ const Deliveryaddress = () => {
                   </span>
                 </label>
 
-                <label htmlFor="credit" style={{ marginTop: "1rem" }}>
+                <label htmlFor="credit" style={{ marginTop: ".5rem" }}>
                   <input type="checkbox" name="credit" id="credit" />
                   <span style={{ marginLeft: ".5rem" }}>
                     Use Credit{" "}
