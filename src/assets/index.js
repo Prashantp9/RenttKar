@@ -146,6 +146,8 @@ export {default as Amex} from "./Images/amex.svg"
 export {default as Mastercard} from "./Images/masterCard.svg"
 
 export {default as TabletStep3gradient} from "./Images/tabletStep3gradient.svg"
+export {default as Individualpurchase} from "./Images/individualPurchase.svg"
+export {default as Companypurchase} from "./Images/companyPurchase.svg"
 
 
 

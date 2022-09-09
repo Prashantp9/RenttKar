@@ -39,6 +39,68 @@
 
 }
 
+.agreement-purchase-type-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 14.375rem;
+    margin-top: 4rem;
+    padding: 0 3rem 0 3rem;
+}
+
+.agreement-individual-purchase,.agreement-company-purchase{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 16.125rem;
+    height: 100%;
+    background: #191919;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16);
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+#agreement-individual-text,#agreement-company-text{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: #DFDFDF;
+    margin-top: 2rem;
+}
+
+#agreement-individual-desc, #agreement-company-desc{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.063rem;
+    margin-top: 1.5rem;
+    
+    text-align: center;
+    
+    color: #9B9B9B;
+}
+
+
+#agreement-or{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    /* identical to box height, or 161% */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+}
+
+
+
 
 
 
@@ -59,6 +121,9 @@
 
 
 @media only screen and (max-width:768px){
+    .delivery-left-container {
+        height: 65rem;
+      }
     .tablet-agreement-delivery-add, .tablet-agreement-payment{
         display: flex;
         justify-content: center;
@@ -95,6 +160,80 @@
         font-size: 1rem;
         line-height: 1.25rem;
         color: #DFDFDF;
+    }
+
+    .agreement-purchase-type-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 45.938rem;
+        margin-top: 0rem;
+        padding: 0 3rem 0 3rem;
+        padding: 4rem;
+    }
+    
+    .agreement-individual-purchase,.agreement-company-purchase{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 16.125rem;
+        height: 14.563rem;
+        background: #191919;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16);
+        border-radius: 6px;
+        padding: 1rem;
+    }
+    
+    #agreement-individual-text,#agreement-company-text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        color: #DFDFDF;
+        margin-top: 2rem;
+    }
+    
+    #agreement-individual-desc, #agreement-company-desc{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.063rem;
+        margin-top: 1.5rem;
+        
+        text-align: center;
+        
+        color: #9B9B9B;
+    }
+    
+    
+    #agreement-or{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        /* identical to box height, or 161% */
+        
+        text-align: center;
+        
+        color: #FFFFFF;
+    }
+
+
+    #agreement-select-text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        color: #DFDFDF;
+        margin-bottom: 0rem;
+        margin-top: 3rem;
     }
     
 }
@@ -164,5 +303,91 @@
         font-size: 1rem;
         line-height: 1.25rem;
         color: #DFDFDF;
+    }
+
+    .agreement-purchase-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 45.938rem;
+    }
+
+    .agreement-purchase-type-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 95%;
+        height: 100%;
+        margin-top: 0rem;
+        padding: 3rem 1rem 3rem 1rem;
+        background: #0F0F0F;
+        border-radius: 0px 0px 6px 6px;
+        gap: 2rem;
+    }
+    
+    .agreement-individual-purchase,.agreement-company-purchase{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 8.125rem;
+        background: #191919;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16);
+        border-radius: 6px;
+        padding: 1.5rem 1rem 1.5rem 1rem;
+        gap: 1.5rem;
+    }
+    
+    #agreement-individual-text,#agreement-company-text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        color: #DFDFDF;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+    
+    #agreement-individual-desc, #agreement-company-desc{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        margin-top: .5rem;
+        
+        text-align: start;
+        
+        color: #9B9B9B;
+    }
+    
+    
+    #agreement-or{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        /* identical to box height, or 161% */
+        
+        text-align: center;
+        
+        color: #FFFFFF;
+    }
+
+
+    #agreement-select-text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        color: #DFDFDF;
+        margin-bottom: 0rem;
+        margin-top: 3rem;
     }
 }
