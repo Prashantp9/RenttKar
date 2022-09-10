@@ -22,12 +22,14 @@ import {
   UploadSelfie,
   TabletRightNavigation,
   UploadFileGradient,
+  OrderAccepted
 } from "../../assets";
 import { Link } from "react-router-dom";
 
 const Companypurchase = () => {
   const [isGstdetails, setIsGstdetails] = useState(false);
   const [isCoupon, setIsCoupon] = useState(false);
+  const [isorderConfirm, setIsOrderconfirm] = useState(false);
 
   if (window.innerWidth <= 500) {
     return (
@@ -179,7 +181,23 @@ const Companypurchase = () => {
             </div>
 
             <div className="mobile-company-agreebtn-container">
-              <button type="submit">I Agree</button>
+              <button type="submit" onClick={()=> setIsOrderconfirm(!isorderConfirm)}>I Agree</button>
+                {isorderConfirm && (
+                  <div className="order-confirm-container">
+                    <div className="order-confirm-content">
+                      <img src={OrderAccepted} alt="orderaccepted"  style={{marginTop:"1rem"}}/>
+                      <p id="order-text">Order Accepted</p>
+                      <p id="credit-text">Woohoo! 65 Credits Earned</p>
+                      <p id="order-desc">
+                        Sit back and relax! Your order has been accepted by us.
+                        You can check out your order details in <Link to="">My Orders</Link>.
+                      </p>
+                      <button type="submit">
+                        <Link to="/">Done</Link>
+                      </button>
+                    </div>
+                  </div>
+                )}
             </div>
           </div>
         </div>
@@ -239,14 +257,14 @@ const Companypurchase = () => {
               </div>
               <p id="company-text">
                 Not an company purchase?{" "}
-                <Link to="/companypurchase">company Purchase</Link>
+                <Link to="/individualpurchase">Individual Purchase</Link>
               </p>
 
               <div className="company-verification-container">
                 <div className="company-photo-verification-container">
                   <div className="company-selfie-upload">
-                    <input type="file" name="selfie" id="" />
                     <img src={UploadSelfie} alt="uploadselfie" />
+                    <input type="file" name="selfie" id="" accept="image/*"/>
                   </div>
                   <div className="company-selfie-desc">
                     <p id="upload-selfie-text">Upload a Selfie</p>
@@ -333,9 +351,25 @@ const Companypurchase = () => {
                   </span>
                 </label>
 
-                <button type="submit" className="company-agree-button">
+                <button type="submit" className="company-agree-button" onClick={()=> setIsOrderconfirm(!isorderConfirm)}>
                   I Agree
                 </button>
+                {isorderConfirm && (
+                  <div className="order-confirm-container">
+                    <div className="order-confirm-content">
+                      <p id="order-text">Order Accepted</p>
+                      <img src={OrderAccepted} alt="orderaccepted"  style={{marginTop:"2rem"}}/>
+                      <p id="credit-text">Woohoo! 65 Credits Earned</p>
+                      <p id="order-desc">
+                        Sit back and relax! Your order has been accepted by us.
+                        You can check out your order details in <Link to="">My Orders</Link>.
+                      </p>
+                      <button type="submit">
+                        <Link to="/">Done</Link>
+                      </button>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
 
@@ -623,7 +657,7 @@ const Companypurchase = () => {
 
               <p id="company-text">
                 Not an company purchase?{" "}
-                <Link to="/companypurchase">company Purchase</Link>
+                <Link to="/individualpurchase">Individual Purchase</Link>
               </p>
 
               <div className="company-verification-container">
@@ -722,9 +756,25 @@ const Companypurchase = () => {
                   </span>
                 </label>
 
-                <button type="submit" className="company-agree-button">
+                <button type="submit" className="company-agree-button" onClick={()=> setIsOrderconfirm(!isorderConfirm)}>
                   I Agree
                 </button>
+                {isorderConfirm && (
+                  <div className="order-confirm-container">
+                    <div className="order-confirm-content">
+                      <p id="order-text">Order Accepted</p>
+                      <img src={OrderAccepted} alt="orderaccepted"  style={{marginTop:"1rem"}}/>
+                      <p id="credit-text">Woohoo! 65 Credits Earned</p>
+                      <p id="order-desc">
+                        Sit back and relax! Your order has been accepted by us.
+                        You can check out your order details in <Link to="">My Orders</Link>.
+                      </p>
+                      <button type="submit">
+                        <Link to="/">Done</Link>
+                      </button>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
 

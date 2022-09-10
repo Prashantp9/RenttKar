@@ -38,7 +38,7 @@
 
 }
 
-.individual-photo-verification-container, .individual-identity-verification-container, .individual-address-verification-container{
+.individual-upload-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,18 +48,8 @@
     margin-top: 3.5rem;
 }
 
-.individual-selfie-upload{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 7.5rem;
-    height: 100%;   
-    background: #1E1E1E;
-    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.16);
-    border-radius: 6px;
-}
 
-.individual-identity-upload, .individual-address-upload{
+.individual-upload{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -69,9 +59,19 @@
     background: #1E1E1E;
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.16);
     border-radius: 6px;
+    overflow: hidden;
+    position: relative;
 }
 
-.individual-selfie-desc, .individual-address-desc, .individual-identity-desc{
+.individual-upload input[type="file"]{
+    cursor: pointer;
+    position: absolute;
+    transform: scale(2);
+    opacity: 0;
+
+}
+
+.individual-upload-desc{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -91,7 +91,7 @@
     margin-bottom: 0rem;
 }
 
-#upload-selfie-text, #upload-identity-text, #upload-address-text{
+#upload-text{
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
@@ -101,7 +101,7 @@
     color: #DFDFDF;
 }
 
-#upload-selfie-desc, #upload-identity-desc, #upload-address-desc{
+#upload-desc{
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
@@ -111,6 +111,9 @@
     color: #9B9B9B;
     margin-top: 1rem;
 }
+
+
+
 
 
 .individual-termscondition-container{
@@ -160,9 +163,6 @@
     color: #DFDFDF;
 }
 
-.individual-selfie-upload input{
-    display: none;
-}
 
 
 
@@ -220,6 +220,114 @@
     color: #FFFFFF;
 }
 
+
+.order-confirm-container{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(2px);
+    z-index: 10;
+}
+
+.order-confirm-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 40.875rem;
+    height: 25.938rem;
+    background: #191919;
+    border-radius: 6px;
+    padding: 2rem 4rem 2rem 4rem;
+}
+
+#order-text{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #DFDFDF;
+}
+
+#credit-text{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #19EEB5;
+    margin-top: 2rem;
+}
+
+#order-desc{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    /* or 161% */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+    margin-top: 1rem;
+}
+
+#order-desc a{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    /* or 161% */
+    
+    text-align: center;
+    
+    color: #0E9BE1;
+    text-decoration: none;
+}
+
+.order-confirm-content button{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 15px 24px;
+    gap: 10px;
+    background: #0E9BE1;
+    border-radius: 5px;
+    border: none;
+    margin-top: 1rem;
+}
+
+.order-confirm-content button a{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    /* or 161% */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+    text-decoration: none;
+}
 
 
 
@@ -289,7 +397,7 @@
     
     }
     
-    .individual-photo-verification-container, .individual-identity-verification-container, .individual-address-verification-container{
+    .individual-upload-container{
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -299,7 +407,7 @@
         margin-top: 3.5rem;
     }
     
-    .individual-selfie-upload{
+    .individual-upload{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -310,19 +418,8 @@
         border-radius: 6px;
     }
     
-    .individual-identity-upload, .individual-address-upload{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 7.5rem;
-        height: 100%;   
-        background: #1E1E1E;
-        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.16);
-        border-radius: 6px;
-    }
     
-    .individual-selfie-desc, .individual-address-desc, .individual-identity-desc{
+    .individual-upload-desc{
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -342,7 +439,7 @@
         margin-bottom: 0rem;
     }
     
-    #upload-selfie-text, #upload-identity-text, #upload-address-text{
+    #upload-text{
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 500;
@@ -352,7 +449,7 @@
         color: #DFDFDF;
     }
     
-    #upload-selfie-desc, #upload-identity-desc, #upload-address-desc{
+    #upload-desc{
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 500;
@@ -363,7 +460,7 @@
         margin-top: 1rem;
     }
 
-    #upload-address-desc a{
+    #upload-desc a{
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 500;
@@ -373,6 +470,15 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+    }
+
+
+    .individual-upload input[type="file"]{
+        cursor: pointer;
+        position: absolute;
+        transform: scale(2);
+        opacity: 0;
+    
     }
     
     
@@ -481,6 +587,113 @@
         
         
         color: #FFFFFF;
+    }
+    .order-confirm-container{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        backdrop-filter: blur(2px);
+        z-index: 10;
+    }
+    
+    .order-confirm-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 20.875rem;
+        height: 25.938rem;
+        background: #191919;
+        border-radius: 6px;
+        padding: 2rem 4rem 2rem 4rem;
+    }
+    
+    #order-text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        /* identical to box height */
+        
+        text-align: center;
+        
+        color: #DFDFDF;
+    }
+    
+    #credit-text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        /* identical to box height */
+        
+        text-align: center;
+        
+        color: #19EEB5;
+        margin-top: 2rem;
+    }
+    
+    #order-desc{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.125rem;
+        /* or 161% */
+        
+        text-align: center;
+        
+        color: #FFFFFF;
+        margin-top: 1rem;
+    }
+    
+    #order-desc a{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.125rem;
+        /* or 161% */
+        
+        text-align: center;
+        
+        color: #0E9BE1;
+        text-decoration: none;
+    }
+    
+    .order-confirm-content button{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 15px 24px;
+        gap: 10px;
+        background: #0E9BE1;
+        border-radius: 5px;
+        border: none;
+        margin-top: 1rem;
+    }
+    
+    .order-confirm-content button a{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.125rem;
+        /* or 161% */
+        
+        text-align: center;
+        
+        color: #FFFFFF;
+        text-decoration: none;
     }
 }
 

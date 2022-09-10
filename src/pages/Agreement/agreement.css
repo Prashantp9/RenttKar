@@ -41,7 +41,7 @@
 
 .agreement-purchase-type-container{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     height: 14.375rem;
@@ -408,6 +408,7 @@
         color: #DFDFDF;
         margin-top: 0rem;
         margin-bottom: 0rem;
+        text-align: start;
     }
     
     #agreement-individual-desc, #agreement-company-desc{

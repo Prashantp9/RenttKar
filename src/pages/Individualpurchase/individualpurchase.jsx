@@ -22,12 +22,14 @@ import {
   UploadFile,
   TabletRightNavigation,
   UploadFileGradient,
+  OrderAccepted,
 } from "../../assets";
 import { Link } from "react-router-dom";
 
 const Individualpurchase = () => {
   const [isGstdetails, setIsGstdetails] = useState(false);
   const [isCoupon, setIsCoupon] = useState(false);
+  const [isorderConfirm, setIsOrderconfirm] = useState(false);
 
   if (window.innerWidth <= 500) {
     return (
@@ -141,38 +143,59 @@ const Individualpurchase = () => {
 
             <div className="mobile-individual-termsconditions-container">
               <div className="mobile-individual-termsconditions-content">
-              <p className="mobile-individual-termscondition-text">Terms & Conditions</p>
-              <div className="mobile-individual-termscondition">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. At diam
-                ut sagittis nunc sodales id cursus nisl integer. Laoreet tortor,
-                nunc, vestibulum id non est a id. Imperdiet ante donec et semper
-                nisi, ut rutrum ut viverra. Tellus a non amet sit nisl lacus
-                laoreet. Donec eu viverra nibh elementum nunc non scelerisque.
-                In turpis a sed volutpat. Eget facilisis condimentum lorem
-                scelerisque. Est egestas condimentum elit blandit libero, sed
-                amet, vel, maecenas. Cras bibendum gravida at quam est praesent
-                turpis a. Consequat purus, eget tellus elit sagittis. Cras
-                dignissim lectus vestibulum quis. Sed massa volutpat volutpat
-                scelerisque lacus, aenean sed. Porttitor auctor consectetur quam
-                pretium ut non, purus. Arcu vitae tortor, feugiat facilisis
-                laoreet praesent. Varius fringilla dictum amet sit
-              </p>
-              </div>
+                <p className="mobile-individual-termscondition-text">
+                  Terms & Conditions
+                </p>
+                <div className="mobile-individual-termscondition">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. At
+                    diam ut sagittis nunc sodales id cursus nisl integer.
+                    Laoreet tortor, nunc, vestibulum id non est a id. Imperdiet
+                    ante donec et semper nisi, ut rutrum ut viverra. Tellus a
+                    non amet sit nisl lacus laoreet. Donec eu viverra nibh
+                    elementum nunc non scelerisque. In turpis a sed volutpat.
+                    Eget facilisis condimentum lorem scelerisque. Est egestas
+                    condimentum elit blandit libero, sed amet, vel, maecenas.
+                    Cras bibendum gravida at quam est praesent turpis a.
+                    Consequat purus, eget tellus elit sagittis. Cras dignissim
+                    lectus vestibulum quis. Sed massa volutpat volutpat
+                    scelerisque lacus, aenean sed. Porttitor auctor consectetur
+                    quam pretium ut non, purus. Arcu vitae tortor, feugiat
+                    facilisis laoreet praesent. Varius fringilla dictum amet sit
+                  </p>
+                </div>
               </div>
             </div>
 
             <div className="mobile-individual-accept-termscondition">
               <label htmlFor="terms">
                 <input type="checkbox" name="terms" id="checkbox" />
-                <p>By agreeing to this checked box, I agree to the terms and conditions.</p>
+                <p>
+                  By agreeing to this checked box, I agree to the terms and
+                  conditions.
+                </p>
               </label>
             </div>
 
-
-           <div className="mobile-individual-agreebtn-container">
-            <button type="submit" >I Agree</button>
-           </div>
+            <div className="mobile-individual-agreebtn-container">
+              <button type="submit" onClick={() => setIsOrderconfirm(!isorderConfirm)}>I Agree</button>
+              {isorderConfirm && (
+                  <div className="order-confirm-container">
+                    <div className="order-confirm-content">
+                      <img src={OrderAccepted} alt="orderaccepted"  style={{marginTop:"1rem"}}/>
+                      <p id="order-text">Order Accepted</p>
+                      <p id="credit-text">Woohoo! 65 Credits Earned</p>
+                      <p id="order-desc">
+                        Sit back and relax! Your order has been accepted by us.
+                        You can check out your order details in <Link to="">My Orders</Link>.
+                      </p>
+                      <button type="submit">
+                        <Link to="/">Done</Link>
+                      </button>
+                    </div>
+                  </div>
+                )}
+            </div>
           </div>
         </div>
       </>
@@ -215,12 +238,7 @@ const Individualpurchase = () => {
                 <div className="tablet-agreement-payment">
                   <p>
                     <Link to="/payment" style={{ textDecoration: "none" }}>
-                      <img
-                        src={GradientDone}
-                        alt="gradientdone"
-                        style={{ marginRight: ".5rem" }}
-                      />
-                      Paym..
+                      <img src={GradientDone} alt="gradientdone" /> Paym..
                     </Link>
                   </p>
                 </div>
@@ -236,42 +254,59 @@ const Individualpurchase = () => {
               </p>
 
               <div className="individual-verification-container">
-                <div className="individual-photo-verification-container">
-                  <div className="individual-selfie-upload">
-                    <input type="file" name="selfie" id="" />
+                <div className="individual-upload-container">
+                  <div className="individual-upload">
+                    <input
+                      type="file"
+                      name="selfie"
+                      id="file"
+                      accept="image/*"
+                    />
                     <img src={UploadSelfie} alt="uploadselfie" />
                   </div>
-                  <div className="individual-selfie-desc">
-                    <p id="upload-selfie-text">Upload a Selfie</p>
-                    <p id="upload-selfie-desc">
+                  <div className="individual-upload-desc">
+                    <p id="upload-text">Upload a Selfie</p>
+                    <p id="upload-desc">
                       Please upload a real-time selfie. This step is very
                       important to us so that no documents are misused.
                     </p>
                   </div>
                 </div>
 
-                <div className="individual-identity-verification-container">
-                  <div className="individual-identity-upload">
+                <div className="individual-upload-container">
+                  <div className="individual-upload">
                     <img src={UploadFile} alt="uploaddocs" />
                     <p id="individual-upload-text">Upload</p>
+                    <input
+                      type="file"
+                      name="docs"
+                      id="file"
+                      accept=".jpg/*, .png/*, .doc/*"
+                    />
                   </div>
-                  <div className="individual-identity-desc">
-                    <p id="upload-identity-text">Identity Verification</p>
-                    <p id="upload-identity-desc">
+                  <div className="individual-upload-desc">
+                    <p id="upload-text">Identity Verification</p>
+                    <p id="upload-desc">
                       You can upload documents like Aadhar Card, Driving
                       Licenses, and Passport. College Ids do not work for us!
                     </p>
                   </div>
                 </div>
 
-                <div className="individual-address-verification-container">
-                  <div className="individual-address-upload">
+                <div className="individual-upload-container">
+                  <div className="individual-upload">
                     <img src={UploadFile} alt="uploaddocs" />
                     <p id="individual-upload-text">Upload</p>
+                    <input
+                      type="file"
+                      name="docs"
+                      id="file"
+                      accept=".jpg/*, .png/*, .doc/*"
+                    />
                   </div>
-                  <div className="individual-address-desc">
-                    <p id="upload-address-text">Address Verification</p>
-                    <p id="upload-address-desc">
+                  <div className="individual-upload-desc">
+                    <p id="upload-text">Address Verification</p>
+                    <p id="upload-desc">
                       Upload an address proof from your Aadhar card, broadband
                       bill, Electricity bill, and Rental agreement for your
                       Product delivery address.{" "}
@@ -331,9 +366,25 @@ const Individualpurchase = () => {
                   </span>
                 </label>
 
-                <button type="submit" className="individual-agree-button">
+                <button type="submit" className="individual-agree-button" onClick={() => setIsOrderconfirm(!isorderConfirm)}>
                   I Agree
                 </button>
+                {isorderConfirm && (
+                  <div className="order-confirm-container">
+                    <div className="order-confirm-content">
+                      <p id="order-text">Order Accepted</p>
+                      <img src={OrderAccepted} alt="orderaccepted"  style={{marginTop:"2rem"}}/>
+                      <p id="credit-text">Woohoo! 65 Credits Earned</p>
+                      <p id="order-desc">
+                        Sit back and relax! Your order has been accepted by us.
+                        You can check out your order details in <Link to="">My Orders</Link>.
+                      </p>
+                      <button type="submit">
+                        <Link to="/">Done</Link>
+                      </button>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
 
@@ -625,42 +676,59 @@ const Individualpurchase = () => {
               </p>
 
               <div className="individual-verification-container">
-                <div className="individual-photo-verification-container">
-                  <div className="individual-selfie-upload">
-                    <input type="file" name="selfie" id="" />
+                <div className="individual-upload-container">
+                  <div className="individual-upload">
                     <img src={UploadSelfie} alt="uploadselfie" />
+                    <input
+                      type="file"
+                      name="selfie"
+                      id="file"
+                      accept="image/*"
+                    />
                   </div>
-                  <div className="individual-selfie-desc">
-                    <p id="upload-selfie-text">Upload a Selfie</p>
-                    <p id="upload-selfie-desc">
+                  <div className="individual-upload-desc">
+                    <p id="upload-text">Upload a Selfie</p>
+                    <p id="upload-desc">
                       Please upload a real-time selfie. This step is very
                       important to us so that no documents are misused.
                     </p>
                   </div>
                 </div>
 
-                <div className="individual-identity-verification-container">
-                  <div className="individual-identity-upload">
+                <div className="individual-upload-container">
+                  <div className="individual-upload">
                     <img src={UploadFile} alt="uploaddocs" />
                     <p id="individual-upload-text">Upload</p>
+                    <input
+                      type="file"
+                      name="docs"
+                      id="file"
+                      accept=".jpg/*, .png/*, .doc/*"
+                    />
                   </div>
-                  <div className="individual-identity-desc">
-                    <p id="upload-identity-text">Identity Verification</p>
-                    <p id="upload-identity-desc">
+                  <div className="individual-upload-desc">
+                    <p id="upload-text">Identity Verification</p>
+                    <p id="upload-desc">
                       You can upload documents like Aadhar Card, Driving
                       Licenses, and Passport. College Ids do not work for us!
                     </p>
                   </div>
                 </div>
 
-                <div className="individual-address-verification-container">
-                  <div className="individual-address-upload">
+                <div className="individual-upload-container">
+                  <div className="individual-upload">
                     <img src={UploadFile} alt="uploaddocs" />
                     <p id="individual-upload-text">Upload</p>
+                    <input
+                      type="file"
+                      name="docs"
+                      id="file"
+                      accept=".jpg/*, .png/*, .doc/*"
+                    />
                   </div>
-                  <div className="individual-address-desc">
-                    <p id="upload-address-text">Address Verification</p>
-                    <p id="upload-address-desc">
+                  <div className="individual-upload-desc">
+                    <p id="upload-text">Address Verification</p>
+                    <p id="upload-desc">
                       Upload an address proof from your Aadhar card, broadband
                       bill, Electricity bill, and Rental agreement for your
                       Product delivery address.{" "}
@@ -725,9 +793,29 @@ const Individualpurchase = () => {
                   </span>
                 </label>
 
-                <button type="submit" className="individual-agree-button">
+                <button
+                  type="submit"
+                  className="individual-agree-button"
+                  onClick={() => setIsOrderconfirm(!isorderConfirm)}
+                >
                   I Agree
                 </button>
+                {isorderConfirm && (
+                  <div className="order-confirm-container">
+                    <div className="order-confirm-content">
+                      <p id="order-text">Order Accepted</p>
+                      <img src={OrderAccepted} alt="orderaccepted"  style={{marginTop:"1rem"}}/>
+                      <p id="credit-text">Woohoo! 65 Credits Earned</p>
+                      <p id="order-desc">
+                        Sit back and relax! Your order has been accepted by us.
+                        You can check out your order details in <Link to="">My Orders</Link>.
+                      </p>
+                      <button type="submit">
+                        <Link to="/">Done</Link>
+                      </button>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
 
