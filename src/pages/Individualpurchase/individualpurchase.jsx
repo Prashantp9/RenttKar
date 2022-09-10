@@ -21,6 +21,7 @@ import {
   UploadSelfie,
   UploadFile,
   TabletRightNavigation,
+  UploadFileGradient,
 } from "../../assets";
 import { Link } from "react-router-dom";
 
@@ -50,6 +51,128 @@ const Individualpurchase = () => {
             <div className="mobile-agreement-tab">
               <p>Agreement</p>
             </div>
+          </div>
+        </div>
+
+        <div className="mobile-individual-container">
+          <div className="mobile-individual-content">
+            <div className="mobile-company-link-container">
+              <p>Not an individual purchase?</p>
+              <Link to="/companypurchase">Company Purchase</Link>
+            </div>
+
+            <div className="mobile-individual-upload-container">
+              <div className="mobile-individual-upload">
+                <img
+                  src={UploadSelfie}
+                  alt="uploadselfie"
+                  style={{ cursor: "pointer" }}
+                />
+                <input type="file" name="selfie" id="file" accept="image/*" />
+              </div>
+
+              <div className="mobile-individual-upload-desc">
+                <p id="mobile-individual-upload-text">Upload a Selfie</p>
+                <p id="mobile-individual-upload-desc">
+                  Please upload a real-time selfie. This step is very important
+                  to us so that no documents are misused.
+                </p>
+                <p id="mobile-individual-selfie-reupload">
+                  <img
+                    src={UploadFileGradient}
+                    alt="uploadfile"
+                    style={{ marginRight: ".5rem" }}
+                  />
+                  <input type="file" name="selfie" id="file" accept="image/*" />
+                  Re-Upload file
+                </p>
+              </div>
+            </div>
+
+            <div className="mobile-individual-upload-container">
+              <div className="mobile-individual-upload">
+                <img
+                  src={UploadFile}
+                  alt="uploadidentity"
+                  style={{ cursor: "pointer" }}
+                />
+                <input
+                  type="file"
+                  name="identity"
+                  id="file"
+                  accept=".jpg/*,.png/*,.doc/*"
+                />
+              </div>
+
+              <div className="mobile-individual-upload-desc">
+                <p id="mobile-individual-upload-text">Identity Verification</p>
+                <p id="mobile-individual-upload-desc">
+                  You can upload documents like Aadhar Card, Driving Licenses,
+                  and Passport. College Ids do not work for us!
+                </p>
+              </div>
+            </div>
+
+            <div className="mobile-individual-upload-container">
+              <div className="mobile-individual-upload">
+                <img
+                  src={UploadFile}
+                  alt="uploadidentity"
+                  style={{ cursor: "pointer" }}
+                />
+                <input
+                  type="file"
+                  name="identity"
+                  id="file"
+                  accept=".jpg/*,.png/*,.doc/*"
+                />
+              </div>
+
+              <div className="mobile-individual-upload-desc">
+                <p id="mobile-individual-upload-text">Address Verification</p>
+                <p id="mobile-individual-upload-desc">
+                  Upload an address proof from your Aadhar card, broadband bill,
+                  Electricity bill, and Rental agreement for your Product
+                  delivery address.
+                </p>
+                <Link to="/deliveryaddress">Change Address</Link>
+              </div>
+            </div>
+
+            <div className="mobile-individual-termsconditions-container">
+              <div className="mobile-individual-termsconditions-content">
+              <p className="mobile-individual-termscondition-text">Terms & Conditions</p>
+              <div className="mobile-individual-termscondition">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. At diam
+                ut sagittis nunc sodales id cursus nisl integer. Laoreet tortor,
+                nunc, vestibulum id non est a id. Imperdiet ante donec et semper
+                nisi, ut rutrum ut viverra. Tellus a non amet sit nisl lacus
+                laoreet. Donec eu viverra nibh elementum nunc non scelerisque.
+                In turpis a sed volutpat. Eget facilisis condimentum lorem
+                scelerisque. Est egestas condimentum elit blandit libero, sed
+                amet, vel, maecenas. Cras bibendum gravida at quam est praesent
+                turpis a. Consequat purus, eget tellus elit sagittis. Cras
+                dignissim lectus vestibulum quis. Sed massa volutpat volutpat
+                scelerisque lacus, aenean sed. Porttitor auctor consectetur quam
+                pretium ut non, purus. Arcu vitae tortor, feugiat facilisis
+                laoreet praesent. Varius fringilla dictum amet sit
+              </p>
+              </div>
+              </div>
+            </div>
+
+            <div className="mobile-individual-accept-termscondition">
+              <label htmlFor="terms">
+                <input type="checkbox" name="terms" id="checkbox" />
+                <p>By agreeing to this checked box, I agree to the terms and conditions.</p>
+              </label>
+            </div>
+
+
+           <div className="mobile-individual-agreebtn-container">
+            <button type="submit" >I Agree</button>
+           </div>
           </div>
         </div>
       </>

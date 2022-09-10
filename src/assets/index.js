@@ -152,6 +152,8 @@ export {default as Companypurchase} from "./Images/companyPurchase.svg"
 export {default as UploadSelfie} from "./Images/uploadSelfie.svg"
 export {default as UploadFile} from "./Images/uploadFile.svg"
 
+export {default as UploadFileGradient} from "./Images/uploadFileGradient.svg"
+
 
 
 
