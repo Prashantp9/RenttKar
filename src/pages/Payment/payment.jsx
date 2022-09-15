@@ -831,6 +831,7 @@ const Payment = () => {
     return (
       <>
         <Navbar />
+        <div className="payment-container">
         <div className="delivery-container">
           <div className="delivery-content">
             <div className="delivery-left-container">
@@ -1322,6 +1323,7 @@ const Payment = () => {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </>
     );

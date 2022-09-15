@@ -414,6 +414,7 @@ const Agreement = () => {
     return (
       <>
         <Navbar />
+        <div className="agreement-container">
         <div className="delivery-container">
           <div className="delivery-content">
             <div className="delivery-left-container">
@@ -424,7 +425,7 @@ const Agreement = () => {
                       to="/deliveryaddress"
                       style={{ textDecoration: "none" }}
                     >
-                      <img src={GradientDone} alt="gradientdone" /> Delivery
+                      <img src={GradientDone} alt="gradientdone"  style={{ marginRight: ".5rem" }}/>Delivery
                       Address
                     </Link>
                   </p>
@@ -449,7 +450,7 @@ const Agreement = () => {
               </div>
 
               <div className="agreement-purchase-type-container">
-                <div className="agreement-individual-purchase">
+                <div className="agreement-individual-purchase" style={{marginRight:"2rem"}}>
                   <Link to="/individualpurchase">
                   <img src={Individualpurchase} alt="individualpurchase" />
                   <p id="agreement-individual-text">Individual Purchase</p>
@@ -461,7 +462,7 @@ const Agreement = () => {
 
                 <p id="agreement-or">Or</p>
 
-                <div className="agreement-company-purchase">
+                <div className="agreement-company-purchase" style={{marginLeft:"2rem"}}>
                   <Link to="/companypurchase">
                   <img src={Companypurchase} alt="companypurchase" />
                   <p id="agreement-company-text">Company Purchase</p>
@@ -714,6 +715,7 @@ const Agreement = () => {
             </div>
           </div>
         </div>
+      </div>
       </>
     );
   }

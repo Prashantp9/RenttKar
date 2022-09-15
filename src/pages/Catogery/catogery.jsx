@@ -222,7 +222,7 @@ const Subcatogery = () => {
     <div className="subcatogery-container">
       <div className="subcatogery-content">
             <div className="subcatogery-links">
-                <a href="">PlayStation & More</a>
+                <a href="" className='subcatogery-links-gradient'>PlayStation & More</a>
             </div>
             
             <div className="subcatogery-links">

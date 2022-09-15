@@ -154,7 +154,8 @@ export {default as UploadFile} from "./Images/uploadFile.svg"
 export {default as OrderAccepted} from "./Images/orderAccepted.svg"
 
 export {default as UploadFileGradient} from "./Images/uploadFileGradient.svg"
-
+export {default as DeliveryEdit} from "./Images/deliveryEdit.svg"
+export {default as DeliveryDelete} from "./Images/deliveryDelete.svg"
 
 
 

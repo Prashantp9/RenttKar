@@ -11,6 +11,8 @@ import './registeration.css';
 import { LoginImg, Frame, Person, Email, Referal, MobilePhone } from '../../assets';
 import { useState } from 'react';
 
+import { Link } from 'react-router-dom';
+
 const Registeration = () => {
 
     const [valid, setValidation] = useState(false);
@@ -53,7 +55,7 @@ const Registeration = () => {
                         </div>
                     </div>
                     <button type="submit" className='registerBtn'> 
-                        Submit
+                        <Link to="/" style={{textDecoration:"none",color:"#FFFFFF"}}>Submit</Link>
                     </button>
                 </div>
              </div>

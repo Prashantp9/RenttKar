@@ -11,8 +11,8 @@ import "swiper/css/autoplay";
 import { Navbar } from "../../components";
 import {
   Cuppon,
-  Delete,
-  Edit,
+  DeliveryEdit,
+  DeliveryDelete,
   Gradientcouppon,
   LeftArrow,
   Location,
@@ -737,12 +737,13 @@ const Deliveryaddress = () => {
                           <div className="mobile-delivery-address-container">
                             <div className="mobile-delivery-address-active-one-container">
                               <div className="mobile-delivery-upper-part">
-                                <p>Delivery Address 1</p>
+                                <p id="mobile-address-text">Delivery Address 1</p>
 
                                 <p
                                   style={{
                                     marginTop: "1.5rem",
                                   }}
+                                  id="mobile-delivery-phone"
                                 >
                                   Ronak Kumar | 8369648935
                                 </p>
@@ -750,6 +751,7 @@ const Deliveryaddress = () => {
                                   style={{
                                     marginTop: "1.25rem",
                                   }}
+                                  id="mobile-delivery-desc"
                                 >
                                   Lorem ipsum dolor sit amet, consectetur
                                   adipiscing elit. Aliquet et lorem imperdiet
@@ -789,12 +791,13 @@ const Deliveryaddress = () => {
                         ) : (
                           <div className="mobile-delivery-address-one-container">
                             <div className="mobile-delivery-upper-part">
-                              <p>Delivery Address 1</p>
+                              <p id="mobile-address-text">Delivery Address 1</p>
 
                               <p
                                 style={{
                                   marginTop: "1.5rem",
                                 }}
+                                id="mobile-delivery-phone"
                               >
                                 Ronak Kumar | 8369648935
                               </p>
@@ -802,6 +805,7 @@ const Deliveryaddress = () => {
                                 style={{
                                   marginTop: "1.25rem",
                                 }}
+                                id="mobile-delivery-desc"
                               >
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit. Aliquet et lorem imperdiet
@@ -843,12 +847,13 @@ const Deliveryaddress = () => {
                           <div className="mobile-delivery-address-container">
                             <div className="mobile-delivery-address-active-one-container">
                               <div className="mobile-delivery-upper-part">
-                                <p>Delivery Address 1</p>
+                                <p id="mobile-address-text">Delivery Address 1</p>
 
                                 <p
                                   style={{
                                     marginTop: "1.5rem",
                                   }}
+                                  id="mobile-delivery-phone"
                                 >
                                   Ronak Kumar | 8369648935
                                 </p>
@@ -856,6 +861,7 @@ const Deliveryaddress = () => {
                                   style={{
                                     marginTop: "1.25rem",
                                   }}
+                                  id="mobile-delivery-desc"
                                 >
                                   Lorem ipsum dolor sit amet, consectetur
                                   adipiscing elit. Aliquet et lorem imperdiet
@@ -895,12 +901,13 @@ const Deliveryaddress = () => {
                         ) : (
                           <div className="mobile-delivery-address-one-container">
                             <div className="mobile-delivery-upper-part">
-                              <p>Delivery Address 1</p>
+                              <p id="mobile-address-text">Delivery Address 1</p>
 
                               <p
                                 style={{
                                   marginTop: "1.5rem",
                                 }}
+                                id="mobile-delivery-phone"
                               >
                                 Ronak Kumar | 8369648935
                               </p>
@@ -908,6 +915,7 @@ const Deliveryaddress = () => {
                                 style={{
                                   marginTop: "1.25rem",
                                 }}
+                                id="mobile-delivery-desc"
                               >
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit. Aliquet et lorem imperdiet
@@ -1163,7 +1171,7 @@ const Deliveryaddress = () => {
                                           >
                                             <p>Edit</p>
                                           </button>
-                                          {!isCoupon && (
+                                          {isCoupon && (
                                             <>
                                               <div className="mobile-coupon-container">
                                                 <div className="mobile-coupon-content">
@@ -1937,6 +1945,7 @@ const Deliveryaddress = () => {
     return (
       <>
         <Navbar />
+
         <div className="delivery-container">
           <div className="delivery-content">
             <div className="delivery-left-container">
@@ -2154,8 +2163,8 @@ const Deliveryaddress = () => {
 
                   <div className="delivery-address-one-container-right-part">
                     <p>
-                      <img src={Edit} alt="edit" />{" "}
-                      <img src={Delete} alt="delete" />
+                      <img src={DeliveryEdit} alt="edit" />{" "}
+                      <img src={DeliveryDelete} alt="delete" />
                     </p>
                     <button id="delivery-select-btn">
                       <Link
@@ -2182,11 +2191,11 @@ const Deliveryaddress = () => {
 
                   <div className="delivery-address-one-container-right-part">
                     <p>
-                      <img src={Edit} alt="edit" />{" "}
-                      <img src={Delete} alt="delete" />
+                      <img src={DeliveryEdit} alt="edit" />{" "}
+                      <img src={DeliveryDelete} alt="delete" />
                     </p>
                     <button id="delivery-select-btn">
-                      <Link to="/payment"> Select Address</Link>
+                      <Link to="/payment" style={{ textDecoration: "none", color: "#FFFFFF" }}> Select Address</Link>
                     </button>
                   </div>
                 </div>

@@ -1,11 +1,36 @@
-.delivery-container{
+.payment-container{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100%;
-    margin-top: 5rem;
+    margin-top: 4.5rem;
     padding-bottom: 4rem;
+}
+.payment-container .delivery-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80rem;
+    margin-top: 0rem;
+    padding-bottom: 0rem;
+}
+
+.payment-container .delivery-container .delivery-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 98%;
+    max-width: 73rem;
+    height: 100%;
+    gap: 1rem;
+
+}
+.payment-container .delivery-container .delivery-content .delivery-left-container{
+    width: 70%;
+    height: 75rem;
+    max-width: 45.875rem;
 }
 .payment-delivery-add{
     display: flex;
@@ -15,9 +40,6 @@
     height: 100%;
 }
 
-.delivery-left-container{
-    height: 70rem;
-}
 .payment-delivery-add p{
     font-family: 'Montserrat';
     font-style: normal;
@@ -48,8 +70,7 @@
     align-items: flex-start;
     padding: 1rem 2rem 1rem 2rem;
     width: 100%;
-    height: 45rem;
-    padding-bottom: 2rem;
+    height: 80rem;
 }
 
 .payment-cards-type-container{
@@ -63,7 +84,7 @@
     border-radius: 6px;
     padding: 2rem;
     cursor: pointer;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
 }
 
 .payment-cards-type-container p{
@@ -94,8 +115,8 @@
     background: #191919;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16);
     border-radius: 0px 0px 6px 6px;
-    margin-top: 0rem;
-    padding: 1rem 2rem 1rem 2rem;
+    margin-top: -.5rem;
+    padding: 1rem 2rem 2rem 2rem;
 }
 
 #saved-text{
@@ -433,7 +454,7 @@ input[type=number]::-webkit-outer-spin-button {
         background: #191919;
         box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16);
         border-radius: 0px 0px 6px 6px;
-        margin-top: 0rem;
+        margin-top: -1rem;
         padding: 2rem 1rem 2rem 1rem;
     }
     
@@ -825,7 +846,7 @@ input[type=number]::-webkit-outer-spin-button {
         background: #191919;
         box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16);
         border-radius: 0px 0px 6px 6px;
-        margin-top: 0rem;
+        margin-top: -1rem;
         padding: 2rem 1rem 2rem 1rem;
     }
     

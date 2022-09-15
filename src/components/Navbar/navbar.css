@@ -491,7 +491,13 @@
   max-height: 32.5rem;
   top: 8rem;
   z-index: 100001;
-  animation: fadeIn 500m forwards;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  -webkit-transition: .2s,.3s cubic-bezier(.3,1.5,.7,1) transform;
+  -o-transition: .2s,.3s cubic-bezier(.3,1.5,.7,1) transform;
+  transition: .2s,.3s cubic-bezier(.3,1.5,.7,1) transform;
   
 }
 

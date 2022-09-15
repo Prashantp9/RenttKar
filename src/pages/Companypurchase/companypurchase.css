@@ -1,10 +1,34 @@
-.delivery-content{
+.company-purchase-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100%;
+    margin-top: 5rem; 
+}
+.company-purchase-container .delivery-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 0rem;
+    padding-bottom: 0rem;
+}
+
+.company-purchase-container .delivery-container .delivery-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 98%;
     max-width: 80rem;
+    height: 100%;
+    gap: 1rem;
 
 }
-.delivery-left-container{
+.company-purchase-container .delivery-container .delivery-content .delivery-left-container{
     height: 82rem;
-    max-width: 50.125rem;
+    max-width: 52.125rem;
 }
 #company-text{
     font-family: 'Montserrat';
@@ -46,6 +70,7 @@
     height: 6.875rem;
     gap: 2rem;  
     margin-top: 3.5rem;
+    position: relative;
 }
 
 .company-selfie-upload{
@@ -147,7 +172,7 @@
     height: 15rem;
     margin-top: 2rem;
     overflow-y: scroll;
-    padding-top: 2rem;
+    padding-top: 3rem;
     padding-right: 1rem;
 }
 
@@ -756,16 +781,15 @@
         width: 100%;
         height: 5rem;
         gap: .5rem;
+        padding-top: 2rem;
     }
 
     .mobile-company-link-container p{
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 500;
-        font-size: 0.75rem;
-        line-height: 1rem;
-        /* or 162% */
-        
+        font-size: 1rem;
+        line-height: 1.5rem;
         text-align: center;
         
         color: #DFDFDF;
@@ -775,8 +799,8 @@
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 500;
-        font-size: 0.75rem;
-        line-height: 1rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
         text-align: center;
         background: var(--btn-border-gradient);
         -webkit-background-clip: text;
