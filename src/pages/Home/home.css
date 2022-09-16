@@ -1279,8 +1279,8 @@
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
-    font-size: 1.375rem;
-    line-height: 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
     color: #dfdfdf;
     visibility: visible;
   }
@@ -1339,18 +1339,25 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 23.063rem;
+    height: 26.063rem;
     margin-top: 3.5rem;
   }
 
   .cardContainerContent {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     max-width: 30.75rem;
     width: 95%;
     height: 100%;
-    margin: 0 auto;
+  }
+
+  .cardContainer .cardContainerContent .trending-text-container{
+    height: 1.5rem;
+  }
+
+  .cardContainer .cardContainerContent .card-container{
+    margin-top: .5rem;
   }
 
   .cardContainer .cardContainerContent .mySwiper {
@@ -1372,7 +1379,7 @@
    /************************************working container*************************/
 
    .explainedContainer {
-    margin-top: 1rem;
+    margin-top: 4rem;
     height: 28.875rem;
   }
 
@@ -1383,31 +1390,33 @@
   .heading1 {
     font-family: "Montserrat";
     font-style: normal;
-    font-weight: 600;
-    font-size: 1.375rem;
-    line-height: 1.688rem;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
     color: #dfdfdf;
-    margin-top: 0rem;
+    margin-top: 3rem;
+    margin-bottom: 0rem;
   }
 
   .details1 {
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
-    font-size: 0.875rem;
-    line-height: 1.063rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
     text-align: center;
     color: #9b9b9b;
     margin-top: 1.5rem;
   }
 
   .artwork {
-    width: 60vw;
-    height: 40vw;
+    width: 80%;
+    height: 50%;
     max-width: 38rem;
     min-height: 2.375rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    max-height: 15rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
   }
 
 /******************************Company features styles**************************/
@@ -1416,8 +1425,8 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 38.813rem;
-    margin-top: 2rem;   
+    height: 42.813rem;
+    margin-top: 4rem;   
 
 }
 
@@ -1429,7 +1438,7 @@
     max-width: 24.75rem;
     width: 95%;
     height: 100%;
-    max-height:  38.813rem;
+    max-height: 42.813rem;
     margin-top: 0rem;
 }
 
@@ -1447,8 +1456,8 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 1.375rem;
-    line-height: 1.688rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
     text-align: center;
     color: #DFDFDF;
     margin-top: 0rem;
@@ -1460,11 +1469,12 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    font-size: 0.875rem;
-    line-height: 1.438rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
     text-align: center;
     color: #9B9B9B;
     width: 100%;
+    margin-top: 1rem;
 }
 
 
@@ -1474,19 +1484,32 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 21.625rem;
-   margin-top: 2rem;
+    height: 30.625rem;
+    margin-top: 2.5rem;
+    row-gap: 2.5rem;
 
 }
 
 .qualityContent{
     position: relative;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
+    height: 6rem;
+    column-gap: 1.25rem;
+    flex-direction: row;
 }
+
+.qualityContent-desc-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 80%;
+  height: 100%;
+}
+
 
 .qualityContent img{
   width: 4.5rem;
@@ -1500,38 +1523,33 @@
 
 .qualityHeading{
     display: flex;
-    position: absolute;
-    left: 5.5rem;
-    bottom: 2.5rem;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 0.75rem;
-    line-height: 1.313rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
     text-align: start;
-    
-    /* gradient */
-    
     background: var(--btn-border-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    margin-bottom: 0rem;
+    margin-top: 0rem;
 }
 
 .qualityDetails{
     display: flex;
-    position: absolute;
-    left: 5.5rem;
-    bottom: 1.8rem;
-    width: 60vw;
+    width: 100%;
     height: 1rem;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    font-size: 0.75rem;
-    line-height: 1.188rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
     text-align: start;
     color: #DFDFDF;
+    margin-bottom: 0rem;
+    margin-top: .75rem;
 }
 
 /*********************featured container*****************************/
@@ -1560,27 +1578,28 @@
 
 .featuredContent{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    width: 90%;
+    column-gap: 2.5rem;
+    width: 95%;
     height: 7.688rem;
     margin-bottom: 1rem;
 }
 .esport{
-    width: 3.125rem;
-    height: 4rem;
+    width: 3.063rem;
+    height: 3.25rem;
 }
 .times{
-    width: 4rem;
-    height: 3rem; 
+    width: 3.625rem;
+    height: 2.5rem; 
 }
 .tech{
-    width: 4rem;
-    height: 2rem;
+    width: 4.313rem;
+    height: 1.793rem;
 }
 .lbb{
-    width: 3rem;
-    height: 1.5rem;
+    width: 3.313rem;
+    height: 1rem;
 }
 
 
@@ -1608,8 +1627,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 27.563rem;
+    width: 95%;
+    max-width: 27.563rem;
     height: 23.438rem;
+    margin-top: 3rem;
 }
 
 .buttonPart{
@@ -1617,8 +1638,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-top: 3rem;
     gap: 1rem;
 }
 
@@ -1626,8 +1646,8 @@
     display: flex;
     width: 70%;
     height: 50%;
-    max-width: 15.625rem;
-    max-height: 15.625rem;
+    max-width: 12.688rem;
+    max-height: 12.688rem;
 }
 
 .learnArt{
@@ -1656,12 +1676,10 @@
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.25rem;
-    /* identical to box height */
-    
     text-align: center;
-    
     color: #DFDFDF;
     margin-top: 2.5rem;
+    margin-bottom: 0rem;
 }
 
 
@@ -1675,10 +1693,9 @@
     font-weight: 400;
     font-size: 0.75rem;
     line-height: 1rem;
-    /* or 194% */
     color: #DFDFDF;
     text-align: center;
-    margin-top: .5rem;
+    margin-top: 2rem;
 }
 
 .listItem{
@@ -1782,7 +1799,7 @@
     align-items: center;
     width: 100%;
     height: 8.625rem;
-    margin-top: 6rem;
+    margin-top: 3rem;
 }
 
 .peopleHeading{
@@ -1812,7 +1829,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 45rem;
+    height: 37rem;
     margin-top: -2rem;
 }
 
@@ -1836,7 +1853,7 @@
     align-items: center;
     align-self: center;
     width: 100%;
-    height: 30rem;
+    height: 25rem;
     
 }
 

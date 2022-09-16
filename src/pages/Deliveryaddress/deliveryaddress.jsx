@@ -54,21 +54,7 @@ const Deliveryaddress = () => {
   if (window.innerWidth <= 500) {
     return (
       <>
-        <div className="mobile-order-summary-container">
-          <div className="mobile-order-summary-content">
-            <Link to="/mycart">
-              <p>
-                {" "}
-                <img
-                  src={LeftArrow}
-                  alt=""
-                  style={{ marginRight: "1rem", marginLeft: ".5rem" }}
-                />{" "}
-                Order Summary
-              </p>
-            </Link>
-          </div>
-        </div>
+        <Navbar />
         <div className="delivery-mobile-product-name">
           <div className="delivery-mobile-product-name-content">
             <div className="delivery-mobile-product-img">
@@ -497,29 +483,7 @@ const Deliveryaddress = () => {
               {showAddpage && (
                 <>
                   <div className="mobile-delivery-page-container">
-                    <div className="mobile-delivery-checkout-container">
-                      <div className="mobile-delivery-checkout-content">
-                        <Link
-                          to=""
-                          onClick={() => setShowaddpage(!showAddpage)}
-                        >
-                          <p>
-                            {" "}
-                            <img
-                              src={LeftArrow}
-                              alt=""
-                              style={{
-                                marginRight: "1rem",
-                                marginLeft: ".5rem",
-                                marginBottom: ".2rem",
-                              }}
-                            />{" "}
-                            Checkout
-                          </p>
-                        </Link>
-                      </div>
-                    </div>
-
+                  <Navbar />
                     <div className="mobile-delivery-tab-container">
                       <div className="mobile-delivery-tab-content">
                         <div className="mobile-delivery-add-tab">

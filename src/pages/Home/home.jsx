@@ -268,35 +268,43 @@ const Home = () => {
           <div className="qualityContainer">
             <div className="qualityContent">
               <img src={Union} alt="union" className="deposit" />
+              <div className="qualityContent-desc-container">
               <h1 className="qualityHeading">Quality Products</h1>
               <p className="qualityDetails">
                 It's our habit to send each product through a 7-point
                 inspection.
               </p>
+              </div>
             </div>
 
             <div className="qualityContent">
               <img src={Delivery} alt="union" className="delivery" />
+              <div className="qualityContent-desc-container">
               <h1 className="qualityHeading">Instant Delivery</h1>
               <p className="qualityDetails">
                 Products delivered within 2-4 hours.{" "}
               </p>
+              </div>
             </div>
 
             <div className="qualityContent">
               <img src={Deposit} alt="union" className="deposit" />
+              <div className="qualityContent-desc-container">
               <h1 className="qualityHeading">Zero Deposit</h1>
               <p className="qualityDetails">
                 Experience the new world of renting without a fee.
               </p>
+              </div>
             </div>
 
             <div className="qualityContent liveLighter">
               <img src={Light} alt="union" className="light" />
+              <div className="qualityContent-desc-container">
               <h1 className="qualityHeading">Live Light</h1>
               <p className="qualityDetails">
                 Naked we came on Earth, Naked we need to go!{" "}
               </p>
+              </div>
             </div>
           </div>
         </div>

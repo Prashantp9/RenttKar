@@ -514,7 +514,7 @@ const Productdetails = () => {
               <div className="cost-content">
                 <p id="total-cost-heading">Total cost</p>
                 <p id="price-text">
-                  <img src={Rupees} alt="rupees" /> 750/Month
+                  <img src={Rupees} alt="rupees" /> 750/Mn
                 </p>
 
                 <p

@@ -3119,6 +3119,7 @@
         background: var(--container-background);
         border-radius: 0px;
         margin-top: 1rem;
+        padding: 0rem;
     }
 
     .product-company-features-main-container{
@@ -4275,7 +4276,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 100%;
+        width: 65%;
         max-width: 12.225rem;
         height: 3rem;
         gap: .3rem;

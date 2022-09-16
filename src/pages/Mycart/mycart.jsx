@@ -350,10 +350,10 @@ const Mycart = () => {
               <h1>You Might Also Like</h1>
             </div>
             <Swiper
-              width={500}
+              width={590}
               slidesPerView={3}
               centeredSlides={false}
-              spaceBetween={30}
+              spaceBetween={20}
               slidesPerGroup={3}
               grabCursor={true}
               loop={true}

@@ -72,7 +72,7 @@ const Payment = () => {
                   <img
                     src={PaymentCard}
                     alt="paymentcard"
-                    style={{ marginRight: "2rem" }}
+                    style={{ marginRight: "1.5rem" }}
                   />{" "}
                   Credit/Debit Cards
                 </span>{" "}
@@ -221,7 +221,7 @@ const Payment = () => {
             <div className="payment-cards-type-container">
               <p>
                 <span>
-                  <img src={Upi} alt="upi" style={{ marginRight: "2rem" }} />{" "}
+                  <img src={Upi} alt="upi" style={{ marginRight: "1.5rem" ,width:"0.938rem", height:"1.564rem"}} className="upi"/>{" "}
                   UPI / QR
                 </span>{" "}
                 <img
@@ -238,7 +238,7 @@ const Payment = () => {
                   <img
                     src={PaymentCard}
                     alt="netbanking"
-                    style={{ marginRight: "2rem" }}
+                    style={{ marginRight: "1.5rem" }}
                   />{" "}
                   NetBanking
                 </span>{" "}
@@ -256,7 +256,7 @@ const Payment = () => {
                   <img
                     src={Wallet}
                     alt="wallet"
-                    style={{ marginRight: "2rem" }}
+                    style={{ marginRight: "1.5rem" }}
                   />{" "}
                   Wallet
                 </span>{" "}
@@ -274,7 +274,7 @@ const Payment = () => {
                   <img
                     src={PaymentCard}
                     alt="emi"
-                    style={{ marginRight: "2rem" }}
+                    style={{ marginRight: "1.5rem" }}
                   />{" "}
                   EMI
                 </span>{" "}
@@ -292,7 +292,7 @@ const Payment = () => {
                   <img
                     src={PaymentCard}
                     alt="paylater"
-                    style={{ marginRight: "2rem" }}
+                    style={{ marginRight: "1.5rem" }}
                   />{" "}
                   Pay Later
                 </span>{" "}

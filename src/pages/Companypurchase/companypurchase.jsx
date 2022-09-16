@@ -116,7 +116,7 @@ const Companypurchase = () => {
               </div>
             </div>
 
-            <div className="mobile-company-upload-container">
+            <div className="mobile-company-upload-container" style={{borderBottom:"1px solid #323232"}}>
               <div className="mobile-company-upload">
                 <img
                   src={UploadFile}
@@ -131,7 +131,7 @@ const Companypurchase = () => {
                 />
               </div>
 
-              <div className="mobile-company-upload-desc">
+              <div className="mobile-company-upload-desc" >
                 <p id="mobile-company-upload-text">Identity Verification</p>
                 <p id="mobile-company-upload-desc">
                   You can upload directors/Approved Signatorys Aadhar

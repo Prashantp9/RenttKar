@@ -759,7 +759,7 @@
         justify-content: center;
         align-items: center;
         width: 100vw;
-        height: 75rem; 
+        height: 104rem; 
     }
 
     .mobile-company-content{
@@ -781,7 +781,6 @@
         width: 100%;
         height: 5rem;
         gap: .5rem;
-        padding-top: 2rem;
     }
 
     .mobile-company-link-container p{
@@ -790,6 +789,8 @@
         font-weight: 500;
         font-size: 1rem;
         line-height: 1.5rem;
+        /* or 162% */
+        
         text-align: center;
         
         color: #DFDFDF;
@@ -799,8 +800,8 @@
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 500;
-        font-size: 1rem;
-        line-height: 1.5rem;
+        font-size: 0.75rem;
+        line-height: 1rem;
         text-align: center;
         background: var(--btn-border-gradient);
         -webkit-background-clip: text;
@@ -814,10 +815,11 @@
         justify-content: space-between;
         align-items: flex-start;
         width: 100%;
-        height: 8.825rem;
+        height: 18.125rem;
         gap: 1rem;
-        padding: 0rem 1rem 0rem 1rem;
+        padding: 2rem 1rem 2rem 1rem;
         margin-top: 2rem;
+        border-top: 1px solid #323232;
     }
 
     .mobile-company-upload{
@@ -853,8 +855,8 @@
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 500;
-        font-size: 0.875rem;
-        line-height: 1.125rem;
+        font-size: 1.125rem;
+        line-height: 1.375rem;
         color: #DFDFDF;
         margin-bottom: none;
     }
@@ -863,8 +865,8 @@
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 500;
-        font-size: 0.75rem;
-        line-height: 1rem;
+        font-size: 0.875rem;
+        line-height: 1.5rem;
         color: #DFDFDF;
         margin-top: .5rem;
         margin-bottom: none;
@@ -879,8 +881,8 @@
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 500;
-        font-size: 0.75rem;
-        line-height: 1rem;
+        font-size: 0.875rem;
+        line-height: 1.5rem;
         margin-top: .5rem;
         margin-bottom: none;
         background: var(--btn-border-gradient);
@@ -900,8 +902,8 @@
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 500;
-        font-size: 0.75rem;
-        line-height: 1rem;
+        font-size: 0.875rem;
+        line-height: 1.5rem;
         background: var(--btn-border-gradient);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -918,7 +920,7 @@
         width: 100%;
         height: 25.875rem;
         padding: 0rem 1rem 0rem 1rem;
-        margin-top: 2.5rem;
+        margin-top: 2rem;
     }
 
     .mobile-company-termsconditions-content{
@@ -950,8 +952,8 @@
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 500;
-        font-size: 1rem;
-        line-height: 1.25rem;
+        font-size: 1.125rem;
+        line-height: 1.375rem;
         text-align: center;
         color: #FFFFFF;
     }
@@ -961,7 +963,7 @@
         font-style: normal;
         font-weight: 500;
         font-size: 0.875rem;
-        line-height: 1.125rem;
+        line-height: 1.375rem;
         text-align: start;
         color: #FFFFFF;
     }
@@ -1028,6 +1030,7 @@
     }
 
 
+
     .order-confirm-container{
         position: fixed;
         top: 0;
@@ -1059,12 +1062,9 @@
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 500;
-        font-size: 1.25rem;
-        line-height: 1.5rem;
-        /* identical to box height */
-        
+        font-size: 1.375rem;
+        line-height: 1.688rem;
         text-align: center;
-        
         color: #DFDFDF;
         margin-top: 4rem;
     }
@@ -1073,8 +1073,8 @@
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 500;
-        font-size: 1rem;
-        line-height: 1.25rem;
+        font-size: 1.125rem;
+        line-height: 1.375rem;
         /* identical to box height */
         
         text-align: center;
@@ -1087,8 +1087,8 @@
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 500;
-        font-size: 0.875rem;
-        line-height: 1.125rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
         /* or 161% */
         
         text-align: center;
@@ -1101,8 +1101,8 @@
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 500;
-        font-size: 0.875rem;
-        line-height: 1.125rem;
+        font-size: 1rem;
+        line-height: 1.25rem;
         /* or 161% */
         
         text-align: center;
@@ -1141,8 +1141,28 @@
         color: #FFFFFF;
         text-decoration: none;
     }
+    
 
 
 
 }
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
