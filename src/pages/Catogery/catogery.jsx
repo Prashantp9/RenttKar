@@ -15,7 +15,7 @@ import {Left, Right, ExcludeLeft, ExcludeRight,MobileFilterCloseBtn, Learn, Play
 
 
 const Catogeriespagecard = () => {
-  if(window.innerWidth < 769){
+  if(window.innerWidth < 1023){
     return(
       <div className="catogery-card-container">
       <div className="catogery-card-content">
@@ -158,19 +158,19 @@ const Catogeriespagecard = () => {
 
 
 const Subcatogery = () => {
-  if(window.innerWidth < 769){
+  if(window.innerWidth < 1023){
     return(
       <div className="subcatogery-container">
         <div className="subcatogery-content">
         <Swiper
-          width={800}
-          slidesPerView={5}
+          width={900}
+          slidesPerView={3}
           spaceBetween={20}
           centeredSlides={true}
           slidesPerGroup={3}
           grabCursor={true}
           loop={true}
-          loopFillGroupWithBlank={false}
+          loopFillGroupWithBlank={true}
         >
         <SwiperSlide>
           <div className="subcatogery-links">
@@ -257,7 +257,7 @@ const Subcatogery = () => {
 
 
 const ProductCard = () => {
-  if(window.innerWidth < 500){
+  if(window.innerWidth < 767){
     return(
       <>
         <Mobileproductcard 
@@ -376,7 +376,7 @@ const Filterproduct = () => {
   const [showPopularityFilter, setShowPopularityFilter] = useState(false);
 
 
-  if (window.innerWidth <= 500){
+  if (window.innerWidth <= 767){
     return(
       <>
         <div className="mobile-subcatogery-container">
@@ -596,7 +596,7 @@ const Filterproduct = () => {
 
 const Productcardslider = () => {
   const swiper = useSwiper();
-  if (window.innerWidth <= 500){
+  if (window.innerWidth <= 767){
     return(
       <>
         <div className="suggestion-text-container">

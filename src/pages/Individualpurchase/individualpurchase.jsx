@@ -31,6 +31,7 @@ const Individualpurchase = () => {
   const [isCoupon, setIsCoupon] = useState(false);
   const [isorderConfirm, setIsOrderconfirm] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
+  const [isProductdetails, setIsProductdetails] = useState(false);
 
   if (window.innerWidth <= 500) {
     return (
@@ -64,7 +65,7 @@ const Individualpurchase = () => {
               <Link to="/companypurchase">Company Purchase</Link>
             </div>
 
-            <div className="mobile-individual-upload-container">
+            <div className="mobile-individual-upload-container-selfie">
               <div className="mobile-individual-upload">
                 <img
                   src={UploadSelfie}
@@ -92,7 +93,7 @@ const Individualpurchase = () => {
               </div>
             </div>
 
-            <div className="mobile-individual-upload-container">
+            <div className="mobile-individual-upload-container-identity">
               <div className="mobile-individual-upload">
                 <img
                   src={UploadFile}
@@ -116,7 +117,7 @@ const Individualpurchase = () => {
               </div>
             </div>
 
-            <div className="mobile-individual-upload-container" style={{borderBottom: "1px solid #323232"}}>
+            <div className="mobile-individual-upload-container-address" style={{borderBottom: "1px solid #323232"}}>
               <div className="mobile-individual-upload">
                 <img
                   src={UploadFile}
@@ -184,6 +185,366 @@ const Individualpurchase = () => {
                 onClick={() => setIsOrderconfirm(!isorderConfirm)}
               >
                 I Agree
+              </button>
+              {isorderConfirm && (
+                <div className="order-confirm-container">
+                  <div className="order-confirm-content">
+                    <img
+                      src={OrderAccepted}
+                      alt="orderaccepted"
+                      style={{ marginTop: "1rem" }}
+                    />
+                    <p id="order-text">Order Accepted</p>
+                    <p id="credit-text">Woohoo! 65 Credits Earned</p>
+                    <p id="order-desc">
+                      Sit back and relax! Your order has been accepted by us.
+                      You can check out your order details in{" "}
+                      <Link to="">My Orders</Link>.
+                    </p>
+                    <button type="submit">
+                      <Link to="/">Done</Link>
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
+
+        <div className="mobile-delivery-view-details-container">
+          <div className="mobile-delivery-view-details-content">
+            <div className="mobile-delivery-viewdetails-leftpart">
+              <p id="mobile-to-pay">To Pay</p>
+              <p id="mobile-to-pay-price">₹917</p>
+              <p
+                id="mobile-to-pay-view"
+                style={{ cursor: "pointer" }}
+                onClick={() => setIsProductdetails(!isProductdetails)}
+              >
+                view details
+              </p>
+              {isProductdetails && (
+                <>
+                  <div className="mobile-delivery-productdetails-page">
+                    <div className="mobile-delivery-proddetails-heading-container">
+                      <div className="mobile-delivery-proddetails-heading-content">
+                        <p>
+                          Product Details{" "}
+                          <img
+                            src={SmallCross}
+                            alt="cross"
+                            onClick={() =>
+                              setIsProductdetails(!isProductdetails)
+                            }
+                            style={{
+                              cursor: "pointer",
+                              width: "1.875rem",
+                              height: "1.5rem",
+                            }}
+                          />
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="mobile-delivery-pricedetails-container">
+                      <div className="mobile-delivery-pricedetails-content">
+                        <p id="prod-details-text">Playstation 4</p>
+
+                        <div className="mobile-delivery-tennure-container">
+                          <p>
+                            Delivery By <span>21/09/2022</span>
+                          </p>
+                          <p>
+                            Tennure <span>3 Months</span>
+                          </p>
+                        </div>
+
+                        <div className="mobile-delivery-product-list">
+                          <p>
+                            Ps4 <span>₹500/day</span>
+                          </p>
+                          <p>
+                            Addons1 <span>₹100/day</span>
+                          </p>
+                          <p>
+                            Addons1 <span>₹100/day</span>
+                          </p>
+                          <p>
+                            Addons1 <span>₹100/day</span>
+                          </p>
+                          <p>
+                            Addons1 <span>₹100/day</span>
+                          </p>
+                          <p>
+                            Addons1 <span>₹100/day</span>
+                          </p>
+                        </div>
+
+                        <div className="mobile-delivery-subscription-days">
+                          <p>
+                            {" "}
+                            <span></span> ₹1000/day
+                          </p>
+                          <p>
+                            No of days <span>x 92 days</span>
+                          </p>
+                        </div>
+
+                        <div className="mobile-delivery-subtotal-container">
+                          <p>
+                            Sub total <span>₹92000</span>
+                          </p>
+                          <p>
+                            <span id="mobile-gst-span">
+                              Gst
+                              <button
+                                onClick={() => setIsGstdetails(!isGstdetails)}
+                                type="submit"
+                                id="mobile-delivery-gst-btn"
+                              >
+                                <p>Add +</p>
+                              </button>
+                              {isGstdetails && (
+                                <>
+                                  <div className="mobile-delivery-gst-details-container">
+                                    <div className="mobile-delivery-gst-details-content">
+                                      <p>
+                                        GST Details{" "}
+                                        <img
+                                          src={SmallCross}
+                                          alt="cross"
+                                          style={{
+                                            cursor: "pointer",
+                                            width: "1.531rem",
+                                            height: "2rem",
+                                          }}
+                                          onClick={() =>
+                                            setIsGstdetails(!isGstdetails)
+                                          }
+                                        />
+                                      </p>
+
+                                      <input
+                                        type="text"
+                                        name="cname"
+                                        id=""
+                                        placeholder="Company name"
+                                      />
+
+                                      <input
+                                        type="text"
+                                        name="gstnumber"
+                                        id=""
+                                        placeholder="GST number"
+                                      />
+
+                                      <input
+                                        type="text"
+                                        name="gstaddress"
+                                        id=""
+                                        placeholder="GST address"
+                                      />
+
+                                      <button type="submit">Claim GST</button>
+                                    </div>
+                                  </div>
+                                </>
+                              )}
+                            </span>
+
+                            <span>+ ₹4356</span>
+                          </p>
+
+                          <p>
+                            <span id="mobile-coupon-span">
+                              Coupon
+                              <button
+                                onClick={() => setIsCoupon(!isCoupon)}
+                                type="submit"
+                                id="mobile-delivery-edit-btn"
+                              >
+                                <p>Edit</p>
+                              </button>
+                              {isCoupon && (
+                                <>
+                                  <div className="mobile-coupon-container">
+                                    <div className="mobile-coupon-content">
+                                      <p id="mobile-coupon-heading">
+                                        <span>
+                                          <img
+                                            src={Gradientcouppon}
+                                            alt="couppon"
+                                            style={{
+                                              width: "1.531rem",
+                                              height: "1.531rem",
+                                              marginRight: ".5rem",
+                                            }}
+                                          />{" "}
+                                          Coupon
+                                        </span>{" "}
+                                        <img
+                                          onClick={() => setIsCoupon(!isCoupon)}
+                                          src={SmallCross}
+                                          alt="cross"
+                                          style={{
+                                            width: "1.531rem",
+                                            height: "2rem",
+                                            cursor: "pointer",
+                                          }}
+                                        />
+                                      </p>
+
+                                      <input
+                                        type="text"
+                                        name="couponcode"
+                                        id=""
+                                        placeholder="Enter coupon code"
+                                      />
+
+                                      <p id="mobile-available">3 Available</p>
+
+                                      <div className="mobile-coupon-slider-container">
+                                        <Swiper
+                                          width={500}
+                                          slidesPerView={2}
+                                          centeredSlides={false}
+                                          spaceBetween={15}
+                                          slidesPerGroup={1}
+                                          grabCursor={true}
+                                          loop={true}
+                                          loopFillGroupWithBlank={true}
+                                          pagination={{
+                                            clickable: true,
+                                          }}
+                                          navigation={{
+                                            prevEl:
+                                              ".rented-together-left-button",
+                                            nextEl:
+                                              ".rented-together-right-button",
+                                          }}
+                                          modules={[Navigation]}
+                                          className="mySwiper"
+                                        >
+                                          <SwiperSlide>
+                                            <div className="mobile-coupon-slider-one">
+                                              <p id="mobile-coupon-slider-heading">
+                                                Welcome Coupon
+                                              </p>
+                                              <p id="mobile-coupon-slider-desc">
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit.
+                                              </p>
+                                              <button type="submit">
+                                                Redeem
+                                              </button>
+                                            </div>
+                                          </SwiperSlide>
+
+                                          <SwiperSlide>
+                                            <div className="mobile-coupon-slider-one">
+                                              <p id="mobile-coupon-slider-heading">
+                                                Welcome Coupon
+                                              </p>
+                                              <p id="mobile-coupon-slider-desc">
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit.
+                                              </p>
+                                              <button type="submit">
+                                                Redeem
+                                              </button>
+                                            </div>
+                                          </SwiperSlide>
+
+                                          <SwiperSlide>
+                                            <div className="mobile-coupon-slider-one">
+                                              <p id="mobile-coupon-slider-heading">
+                                                Welcome Coupon
+                                              </p>
+                                              <p id="mobile-coupon-slider-desc">
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit.
+                                              </p>
+                                              <button type="submit">
+                                                Redeem
+                                              </button>
+                                            </div>
+                                          </SwiperSlide>
+
+                                          <SwiperSlide>
+                                            <div className="mobile-coupon-slider-one">
+                                              <p id="mobile-coupon-slider-heading">
+                                                Welcome Coupon
+                                              </p>
+                                              <p id="mobile-coupon-slider-desc">
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit.
+                                              </p>
+                                              <button type="submit">
+                                                Redeem
+                                              </button>
+                                            </div>
+                                          </SwiperSlide>
+
+                                          <SwiperSlide>
+                                            <div className="mobile-coupon-slider-one">
+                                              <p id="mobile-coupon-slider-heading">
+                                                Welcome Coupon
+                                              </p>
+                                              <p id="mobile-coupon-slider-desc">
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit.
+                                              </p>
+                                              <button type="submit">
+                                                Redeem
+                                              </button>
+                                            </div>
+                                          </SwiperSlide>
+
+                                          <SwiperSlide>
+                                            <div className="mobile-coupon-slider-one">
+                                              <p id="mobile-coupon-slider-heading">
+                                                Welcome Coupon
+                                              </p>
+                                              <p id="mobile-coupon-slider-desc">
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit.
+                                              </p>
+                                              <button type="submit">
+                                                Redeem
+                                              </button>
+                                            </div>
+                                          </SwiperSlide>
+                                        </Swiper>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </>
+                              )}
+                            </span>
+
+                            <span>- ₹14356</span>
+                          </p>
+                        </div>
+
+                        <div className="mobile-delivery-grandtotal-container">
+                          <p>
+                            Grand Total <span>₹7200</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              )}
+            </div>
+            <div className="mobile-delivery-viewdetails-rightpart">
+              <button
+                type="submit"
+                id="mobile-proceed-btn"
+                onClick={() => setIsOrderconfirm(!isorderConfirm)}
+              >
+                Confirm Order
               </button>
               {isorderConfirm && (
                 <div className="order-confirm-container">

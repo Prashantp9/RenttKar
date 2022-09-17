@@ -2838,6 +2838,8 @@
         height: 5rem;
         margin-top: 2rem;
         background: #141414;
+        position: fixed;
+        bottom: 0;
     }
 
     .mobile-delivery-view-details-content{

@@ -810,12 +810,38 @@
         text-decoration: none;
     }
 
-    .mobile-company-upload-container{
+    .mobile-company-upload-container-identity{
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
         width: 100%;
-        height: 18.125rem;
+        height: 20.125rem;
+        gap: 1rem;
+        padding: 2rem 1rem 2rem 1rem;
+        margin-top: 2rem;
+        border-top: 1px solid #323232;
+    }
+
+
+    .mobile-company-upload-container-selfie{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        height: 14.125rem;
+        gap: 1rem;
+        padding: 2rem 1rem 2rem 1rem;
+        margin-top: 2rem;
+        border-top: 1px solid #323232;
+    }
+
+
+    .mobile-company-upload-container-enterprise{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        height: 14.125rem;
         gap: 1rem;
         padding: 2rem 1rem 2rem 1rem;
         margin-top: 2rem;

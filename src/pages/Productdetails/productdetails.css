@@ -4204,14 +4204,26 @@
     
     .cost-container{
         display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 5rem;
+        max-width: 100%;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        background: var(--navbar-background);
+    }
+
+    .cost-container-content{
+        display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 2.063rem;
-        width: 100vw;
-        max-width: 100%;
-        margin-left: 0rem;
-        margin-right: 0rem;
-
+        width: 95%;
+        height: 100%;
+        padding: 1rem 0rem;
     }
 
     .cost-content{
@@ -4219,7 +4231,8 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
-        height: 3.3rem;
+        width: 30%;
+        height: 4rem;
     }
     
     .cost-container p{
@@ -4230,11 +4243,8 @@
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 500;
-        font-size: 0.75rem;
-        line-height: 0.938rem;
-        /* identical to box height */
-        
-        
+        font-size: 0.875rem;
+        line-height: 1.063rem;
         color: #9B9B9B;
     }
     
@@ -4243,11 +4253,8 @@
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 500;
-        font-size: 1.175rem;
-        line-height: 1.188rem;
-        /* identical to box height */
-        
-        
+        font-size: 1.25rem;
+        line-height: 1.5rem;
         color: #FFFFFF;
     }
     
@@ -4259,11 +4266,22 @@
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 500;
-        font-size: 0.625rem;
-        line-height: 0.75rem;
-        
-        /* gradient */
-        
+        font-size: 0.875rem;
+        line-height: 1.063rem;
+        background: var(--btn-border-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+
+
+    #price-details span{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.063rem;
         background: var(--btn-border-gradient);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -4276,10 +4294,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 65%;
-        max-width: 12.225rem;
+        width: 80%;
+        max-width: 13rem;
         height: 3rem;
-        gap: .3rem;
         margin-bottom: 0rem;
     }
     
@@ -4295,11 +4312,8 @@
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 600;
-        font-size: 0.75rem;
-        line-height: 0.875rem;
-        /* identical to box height */
-        
-        
+        font-size: .875rem;
+        line-height: 1.063rem;
         color: #FFFFFF;
     }
     
@@ -4318,15 +4332,11 @@
         font-weight: 500;
         font-size: 0.75rem;
         line-height: 0.875rem;
-        /* identical to box height */
-        
-        
-        /* new blue */
-        
         color: #0E9BE1;
     }
 
     .tablet-cuppon{
+        width: 2.875rem;
         height: 100%;
     }
     
