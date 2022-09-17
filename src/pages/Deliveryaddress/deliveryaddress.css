@@ -2126,279 +2126,7 @@
 @media only screen and (max-width:500px){
 
 
-    .delivery-mobile-product-name{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100vw;
-        height: 6.5rem;
-        margin-top: 6rem;
-
-    }
-
-    .delivery-mobile-product-name-content{
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        width: 95%;
-        height: 100%;
-        padding: .5rem .5rem .5rem .5rem;
-        background: #1E1E1E;
-        border-radius: 6px;
-    }
-
-    .delivery-mobile-product-img{
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        width: 6.5rem;
-        height: 5rem;
-    }
-
-    .delivery-mobile-product-img img{
-        width: 100%;
-        height: 100%;
-    }
-
-    .delivery-mobile-product-desc{
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        width: 100%;
-        height: 5rem;
-        margin-left: .75rem;
-    }
-    .delivery-mobile-product-desc p{
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 1rem;
-        line-height: 1.25rem;
-        color: #DFDFDF;
-    }
-
-    .delivery-mobile-subscription-price{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100vw;
-        height: 10.75rem;
-        margin-top: 2rem;
-    }
-
-    .delivery-mobile-subscription-price-content{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-        width: 95%;
-        height: 100%;
-        background: #1E1E1E;
-        border-radius: 6px;
-        padding: 1rem 1.5rem 1rem 1.5rem;
-    }
-
-    .delivery-mobile-monthly-rent{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        gap: 1rem;
-        padding-bottom: 1.5rem;
-        border-bottom: 1px solid #646464;
-    }
-
-    .delivery-mobile-monthly-rent p{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-    }
-
-    .delivery-mobile-subscription-price-content p{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 1rem;
-        line-height: 1.25rem;
-        /* identical to box height */
-        
-        
-        color: #DFDFDF;
-    }
-
-
-    .delivery-mobile-claim-gst-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100vw;
-        height: 11.25rem;
-        background: #0F0F0F;
-        margin-top: 2rem;
-        margin-bottom: 6rem;
-    }
-
-    .delivery-mobile-claim-gst-content{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        width: 95%;
-        height: 100%;
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-    }
-
-    .mobile-claim-gst-btn{
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        width: 100%;
-        gap: 3rem;
-    }
-
-    .mobile-claim-gst-btn button{
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        padding: 8px 12px;
-        gap: 10px;
-        background: #191919;
-        border-radius: 3px;
-        border: none;
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 1rem;
-        line-height: 1.25rem;
-        /* identical to box height */
-        
-        
-        /* grey1 */
-        
-        color: #DFDFDF;
-    }
-
-    .delivery-mobile-claim-gst-content label{
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .delivery-mobile-claim-gst-content label span{
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 1rem;
-        line-height: 1.25rem;
-        color: #DFDFDF;
-    }
-
-
-    .mobile-price-to-pay-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100vw;
-        height: 5rem;
-        margin-top: 2rem;
-        background: #0F0F0F;
-        padding-right: 1.5rem;
-        position: fixed;
-        bottom: 0;
-    }
-
-    .mobile-price-to-pay-content{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 95%;
-        height: 100%;
-    }
-
-    .mobile-price-to-pay-left-part{
-        padding-left: 1rem;
-    }
-
-    #to-pay{
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 0.75rem;
-        line-height: 1.063rem;
-        color: #9B9B9B;
-    }
-
-    #to-pay-price{
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 1.375rem;
-        line-height: 1.5rem;
-        
-        color: #FFFFFF;
-    }
-
-    #to-pay-details{
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 0.875rem;
-        line-height: 1.063rem;
-        background: var(--btn-border-gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-
-    .mobile-delivery-priceinfo-container{
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        backdrop-filter: blur(2px);
-    }
-
-
-    .mobile-proceed-btn{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 13px 28px;
-        gap: 8px;
-        
-        background: #1AA9F0;
-        border-radius: 5px;
-        border: none;
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 1rem;
-        line-height: 1.25rem;
-        /* identical to box height */
-        
-        
-        color: #FFFFFF;
-    }
-
     .mobile-delivery-page-container{
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -2841,6 +2569,8 @@
         margin-top: 2rem;
         background: #141414;
         position: fixed;
+        left: 0;
+        right: 0;
         bottom: 0;
     }
 
@@ -2933,11 +2663,6 @@
         font-weight: 400;
         font-size: 0.5;
         line-height: 0.75rem;
-        /* identical to box height */
-        
-        
-        /* gradient */
-        
         background: var(--btn-border-gradient);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -2945,7 +2670,7 @@
     }
 
     .mobile-delivery-productdetails-page{
-        position: absolute;
+        position: fixed;
         top: 0;
         bottom: 0;
         left: 0;
@@ -2957,6 +2682,7 @@
         background: #050505;
         width: 100%;
         height: 100%;
+        z-index: 11;
     }
 
     .mobile-delivery-proddetails-heading-container{
@@ -2966,6 +2692,7 @@
         width: 100vw;
         height: 4rem;
         background: var(--navbar-background);
+        z-index: 11;
     }
 
     .mobile-delivery-proddetails-heading-content{

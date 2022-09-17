@@ -21,6 +21,7 @@ import Payment from './pages/Payment/payment';
 import Agreement from './pages/Agreement/agreement';
 import Individualpurchase from './pages/Individualpurchase/individualpurchase';
 import Companypurchase from './pages/Companypurchase/companypurchase';
+import Mobileordersummary from './pages/Mobileordersummary/mobileordersummary';
 
 
 
@@ -46,6 +47,9 @@ const App = () => {
           <Route path='/agreement' element={<Agreement />} />
           <Route path='/individualpurchase' element={<Individualpurchase />} />
           <Route path='/companypurchase' element={<Companypurchase />} />
+          <Route path='/ordersummary' element={<Mobileordersummary/>} />
+          <Route path='/ordersummary' element={<Mobileordersummary/>} />
+
 
       </Routes>
     </Router>

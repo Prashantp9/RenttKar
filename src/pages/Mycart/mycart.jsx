@@ -142,7 +142,7 @@ const Mycart = () => {
                 </div>
 
                 <button className="mobile-mycart-checkout-btn" type="submit">
-                  <Link to="/deliveryaddress">Checkout →</Link>
+                  <Link to="/ordersummary">Checkout →</Link>
                 </button>
               </div>
             </div>
