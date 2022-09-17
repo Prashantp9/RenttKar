@@ -2311,6 +2311,8 @@
         margin-top: 2rem;
         background: #0F0F0F;
         padding-right: 1.5rem;
+        position: fixed;
+        bottom: 0;
     }
 
     .mobile-price-to-pay-content{

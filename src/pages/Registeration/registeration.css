@@ -360,10 +360,10 @@
         align-items: center;
         background: var(--navbar-background);
         width: 95%;
-        height: 35.813rem;
+        height: 36.813rem;
         min-width: 10rem;
         max-width: 23.75rem;
-        max-height: 35.813rem;
+        max-height: 36.813rem;
         border-radius: 6px;
     }
 
@@ -416,9 +416,9 @@
         justify-content: space-between;
         align-items: center;
         width: 90%;
-        height: 20rem;
+        height: 21.75rem;
         max-width: 22.75rem;
-        max-height: 20.75rem;
+        max-height: 21.75rem;
         gap: 1.5rem;
         margin-top: 2rem;
     }
@@ -480,6 +480,7 @@
         border: none;
         outline: none;
         margin-top: 3rem;
+        margin-bottom: 3rem;
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 500;
