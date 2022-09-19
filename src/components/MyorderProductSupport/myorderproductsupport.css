@@ -1,0 +1,30 @@
+.myorder-productsupport-container{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(2px);
+    z-index: 11;
+}
+
+.myorder-productsupport-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width:45rem;
+    height: 40rem;
+    background: #191919;
+    border-radius: 6px;
+    opacity: 1;
+}
+
+.myorder-productsupport-content > textarea {
+    width: 100%;
+}

@@ -160,9 +160,6 @@
     font-weight: 500;
     font-size: 0.875rem;
     line-height: 1.063rem;
-    /* identical to box height */
-    
-    
     color: #DFDFDF;
     margin-left: 0.25rem;
     margin-bottom: 0rem;
@@ -183,7 +180,6 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-
     background: #1E1E1E;
     box-shadow: 0px 1.40025px 5.60101px rgba(0, 0, 0, 0.4);
     border-radius: 4px;
@@ -197,15 +193,11 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 15px;
-    /* identical to box height */
-    
-    
     color: #DFDFDF;
     margin-bottom: 0rem;
 }
 
 .price-filter-container, .offer-filter-container, .popularity-filter-container{
-    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;

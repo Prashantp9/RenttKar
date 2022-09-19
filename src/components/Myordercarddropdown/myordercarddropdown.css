@@ -1,0 +1,30 @@
+.myorder-dropdown-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 18rem;
+    height: 17.875rem;
+    position: absolute;
+    top: 0;
+    right: .5rem;
+    z-index: 10;
+    background: #191919;
+    border-radius: 6px;
+    padding: 1.5rem;
+    row-gap: 1rem;
+}
+
+.myorder-dropdown-container > p{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: #FFFFFF;
+
+}

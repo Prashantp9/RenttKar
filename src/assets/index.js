@@ -156,7 +156,11 @@ export {default as OrderAccepted} from "./Images/orderAccepted.svg"
 export {default as UploadFileGradient} from "./Images/uploadFileGradient.svg"
 export {default as DeliveryEdit} from "./Images/deliveryEdit.svg"
 export {default as DeliveryDelete} from "./Images/deliveryDelete.svg"
-
+export {default as Help} from "./Images/help.svg"
+export {default as Threedots} from "./Images/threedots.svg"
+export {default as Download} from "./Images/download.svg"
+export {default as Packagedetails} from "./Images/packagedetails.svg"
+export {default as Cancellation} from "./Images/cancellation.svg"
 
 
 
