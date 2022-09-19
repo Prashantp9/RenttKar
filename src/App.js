@@ -22,6 +22,7 @@ import Agreement from './pages/Agreement/agreement';
 import Individualpurchase from './pages/Individualpurchase/individualpurchase';
 import Companypurchase from './pages/Companypurchase/companypurchase';
 import Mobileordersummary from './pages/Mobileordersummary/mobileordersummary';
+import Myorder from './pages/Myorder/myorder';
 
 
 
@@ -49,8 +50,7 @@ const App = () => {
           <Route path='/companypurchase' element={<Companypurchase />} />
           <Route path='/ordersummary' element={<Mobileordersummary/>} />
           <Route path='/ordersummary' element={<Mobileordersummary/>} />
-
-
+          <Route path='/myorder' element={<Myorder />} />
       </Routes>
     </Router>
   )

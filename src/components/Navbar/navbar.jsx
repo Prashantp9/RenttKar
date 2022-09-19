@@ -183,8 +183,8 @@ const Dropdown = () => {
       <div className="dropdownContent">
       <div className="Content"></div>
       <div className="dropDown">
-      <a href="" className="menu6">
-          My Order
+        <a href="" className="menu6">
+          <Link to="/myorder">My Order</Link>
         </a>
         <a href="" className="menu1">
           Share Your Products

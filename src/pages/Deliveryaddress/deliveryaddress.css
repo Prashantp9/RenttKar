@@ -2253,6 +2253,7 @@
         margin-top: 2.5rem;
         background: var(--btn-border-gradient);
         border-radius: 5px;
+        z-index: 11;
     }
 
     .mobile-delivery-add-addr-btn{

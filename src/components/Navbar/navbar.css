@@ -416,6 +416,11 @@
   .menu6{
     top: 2rem;
   }
+
+  .menu6 > a{
+    text-decoration: none;
+    color: var(--font-color);
+  }
   .menu1{
     top: 5rem;
     
