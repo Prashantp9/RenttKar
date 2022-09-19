@@ -349,9 +349,11 @@
         width: 100vw;
         height: 100%;
         max-width: 100vw;
-        max-height: 100%;
+        min-height: 46rem;
+        max-height: 85rem;
         margin-top: 4rem;
         backdrop-filter: blur(3px);
+        margin-bottom: 0rem;
     }
     
     .registerContent{
@@ -360,12 +362,12 @@
         align-items: center;
         background: var(--navbar-background);
         width: 95%;
-        height: 36.813rem;
+        height: 100%;
         min-width: 10rem;
         max-width: 23.75rem;
-        max-height: 36.813rem;
+        max-height: 100%;
         border-radius: 6px;
-        margin-top: 5rem;
+        margin-top: 2rem;
     }
 
     .registerArtWork{
