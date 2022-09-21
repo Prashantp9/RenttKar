@@ -1,0 +1,184 @@
+.myorder-extend-payment-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+    z-index: 11;
+    overflow: hidden;
+}
+
+.myorder-extend-payment-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 50rem;
+    height: 36rem;
+    background: #141414;
+    border-radius: 6px; 
+}
+
+.myorder-extend-payment-upperpart{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 84%;
+    padding: 2rem;
+}
+
+#payment-extend-text{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 0rem;
+}
+
+
+.myorder-extend-payment-lowerpart{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 16%;
+    background: #1E1E1E;
+    border-radius: 0px 0px 6px 6px;
+    padding: 2rem 3rem 2rem 3rem;
+    column-gap: 1rem;
+
+}
+
+.myorder-extend-payment-lowerpart > p{
+    margin-bottom: 0rem;
+}
+
+.myorder-extend-payment-tab-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 23rem;
+    margin-top: 2rem;
+}
+
+.myorder-extend-payment-tab{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+    column-gap: 10rem;
+}
+
+.myorder-extend-payment-tab > p{
+    height: 100%;
+    margin-bottom: 0rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#myorder-agree-text{
+    background: var(--btn-border-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    cursor: pointer;
+}
+
+#myorder-pay-text{
+    position: relative;
+    cursor: pointer;
+}
+
+#myorder-pay-text::before{
+    content: "";
+    position: absolute;
+    top: 80%;
+    width: 100%;
+    left: 0;
+    height: 2px;
+    background: var(--btn-border-gradient);
+}
+
+
+.myorder-payment-types-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 1rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 1rem;
+    row-gap: 1rem;
+}
+
+
+#total-cost{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: .75rem;
+    line-height: 1rem;
+    color: #9B9B9B;
+}
+
+
+#total-price{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: #DFDFDF;
+}
+
+#price-info{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: .875rem;
+    line-height: 1.063rem;
+    background: var(--btn-border-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;   
+}
+
+.myorder-pay-mode-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    background: #191919;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
+    border-radius: 6px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.myorder-pay-mode-container > p{
+    margin-bottom: 0rem;
+}

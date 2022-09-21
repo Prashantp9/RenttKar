@@ -13,3 +13,6 @@ export {default as Pricebreakdown} from "./Pricebreakdown/pricebreakdown";
 export {default as MyorderCard} from "./Myordercard/myordercard";
 export {default as MyordercardDropdown} from "./Myordercarddropdown/myordercarddropdown";
 export {default as MyorderProductsupport} from "./MyorderProductSupport/myorderproductsupport";
+export {default as MyorderExtendPackage} from "./MyorderExtendpackage/myorderextendpackage";
+export {default as MyorderExtendAgreement} from "./MyorderExtendAgreement/myorderextendagreement";
+export {default as MyorderExtendPayment} from "./Myorderextendpayment/myorderextendpayment";

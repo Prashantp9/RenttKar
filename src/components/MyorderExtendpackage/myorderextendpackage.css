@@ -1,0 +1,314 @@
+.myorder-extend-package-container{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px);
+    z-index: 11;
+}
+
+.myorder-extend-package-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 50rem;
+    height: 36rem;
+    background: #141414;
+    border-radius: 6px;
+}
+
+.myorder-extend-package-upperpart{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 80%;
+    padding: 2rem;
+}
+
+
+#extended-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    color: #FFFFFF;
+    margin-bottom: 0rem;
+}
+
+#extended-desc{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.063rem;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+}
+
+
+.myorder-extended-offer-card-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 9rem;
+    column-gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.myorder-send-request-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 10rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid #646464;
+    border-bottom: 1px solid #646464;
+}
+
+.myorder-extended-offer-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 8rem;
+    height: 100%;
+    background: #0F0F0F;
+    border-radius: 6px;
+}
+
+#card-off-percent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2.5rem;
+    background: #0E9BE1;
+    border-radius: 6px 6px 0px 0px;
+    margin-bottom: 0rem;
+}
+
+.card-offer-desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: .75rem 0.875rem .75rem 0.875rem;
+}
+
+
+#card-off-percent{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: #DFDFDF;   
+}
+
+
+#card-cut-price{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: .75rem;
+    line-height: 1rem;
+    text-align: center;
+    text-decoration-line: line-through;  
+    color: #9B9B9B;
+    
+}
+
+#card-offer-price{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    color: #DFDFDF; 
+    margin-top: .75rem;
+}
+
+#card-off-percent > span {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: #DFDFDF;
+    margin-left: .25rem; 
+}
+
+.card-offer-desc > p{
+    margin-bottom: 0rem;
+}
+
+#card-offer-duration{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 1.5rem;
+    background: #141414;
+    border-radius: 3px;
+    margin-top: .75rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.063rem;
+    color: #DFDFDF;
+}
+
+
+#myorder-request-desc{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.063rem;
+    color: #FFFFFF;
+    margin-bottom: 0rem;
+}
+
+
+.myorder-date-extension-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    height: 2.5rem;
+    margin-top: 1.5rem;
+}
+
+.myorder-calender{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 50%;
+    height: 100%;
+}
+
+.myorder-calender > input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    padding-left: 1.5rem;
+    background: #111111;
+    border-radius: 6px 0px 0px 6px;
+    outline: none;
+    border: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 1.063rem;
+    color: #9B9B9B;
+}
+
+.myorder-calender > .myorder-calender-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+    background: #0E9BE1;
+    border-radius: 0px 6px 6px 0px;
+}
+
+.myorder-date-extension-container > button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    background: #0E9BE1;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+    color: #DFDFDF;
+}
+
+
+
+.myorder-extend-package-lowerpart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 18%;
+    padding: 1rem 2rem;
+    background: #1E1E1E;
+    border-radius: 0px 0px 6px 6px;
+}
+
+.myorder-extend-package-lowerpart > p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+    color: #9B9B9B;
+    text-align: start;
+    margin-bottom: 0rem;
+}
+
+.myorder-extend-package-lowerpart > p > span{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: #DFDFDF;
+}
+
+.myorder-extend-package-lowerpart > button{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 45px;
+    gap: 10px;
+    background: #0E9BE1;
+    border-radius: 5px;
+    outline: none;
+    opacity: .5;
+    border: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: .75rem;
+    line-height: 1rem;
+    color: #FFFFFF;
+}
+

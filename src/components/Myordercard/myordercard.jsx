@@ -1,10 +1,11 @@
 import React,{useState} from "react";
-import { MyordercardDropdown, MyorderProductsupport } from "..";
+import { MyordercardDropdown, MyorderExtendPackage, MyorderProductsupport } from "..";
 import "./myordercard.css";
 
 const Myordercard = (props) => {
     const[isDropdown, setIsDropdown] = useState(false);
     const[isProductsupport, setIsProductsupport] = useState(false)
+    const[isPackageExtend, setIsPackageExtend] = useState(false)
   return (
     <>
       <div className="myorder-card">
@@ -14,7 +15,10 @@ const Myordercard = (props) => {
           </div>
           <div className="myorder-extended-product-name">
             <p>{props.productname}</p>
-            <button type="submit">Extend Date</button>
+            <button type="submit" onClick={() => setIsPackageExtend(!isPackageExtend)}>Extend Date</button>
+            {isPackageExtend && 
+              <MyorderExtendPackage onclick={() => setIsPackageExtend(!isPackageExtend)}/>
+            }
           </div>
           <div className="myorder-product-desc">
             <p>
@@ -33,7 +37,7 @@ const Myordercard = (props) => {
               <img src={props.help} alt={props.help} style={{width:"1rem", height:"1rem", marginRight:".5rem"}}/> <span>Help</span>
             </p>
             {isProductsupport && (
-                <MyorderProductsupport />
+                <MyorderProductsupport onclick={() => setIsProductsupport(!isProductsupport)}/>
             )}
           </div>
           <img src={props.threedots} alt={props.threedots} style={{width:"0.275rem", height:"1.5rem", cursor:"pointer"}} onClick={() => setIsDropdown(!isDropdown)}/>

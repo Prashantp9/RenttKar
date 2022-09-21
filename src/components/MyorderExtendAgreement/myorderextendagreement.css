@@ -1,0 +1,201 @@
+.myorder-extend-agreement-container{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+    z-index: 11;
+}
+
+
+.myorder-extend-agreement-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 50rem;
+    height: 36rem;
+    background: #141414;
+    border-radius: 6px;
+}
+
+.myorder-extend-agreement-upperpart{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 84%;
+    padding: 2rem;
+}
+
+#extend-agreement-text{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    color: #FFFFFF;
+    margin-bottom: 0rem;
+}
+
+.myorder-extend-agreement-tab-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 90%;
+    margin-top: 2rem;
+}
+
+.myorder-extend-agreement-tab{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 2rem;
+    column-gap: 10rem;
+}
+
+.myorder-extend-termscondition-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 70%;
+    margin-top: 1rem;
+    background: #070707;
+    padding: 1rem 2rem 1rem 1rem;
+    overflow-y: scroll;
+}
+
+.myorder-extend-termscondition-container > p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: .875rem;
+    line-height: 1.063rem;
+    text-align: justify;
+    color: #DFDFDF;
+}
+
+.myorder-extend-agreement-tab > p{
+    width: 6rem;
+    height: 100%;
+    margin-bottom: 0rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#extend-agreement-active{
+    position: relative;
+} 
+
+#extend-agreement-active::before{
+    content: "";
+    position: absolute;
+    top: 80%;
+    width: 100%;
+    left: 0;
+    height: 2px;
+    background: var(--btn-border-gradient);
+}
+
+.myorder-extend-agreement-tab  p::before{
+    content: "";
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    height: 1px;
+    border-radius: 2px;
+    background: var(--btn-border-gradient);
+}
+
+
+
+.myorder-extend-agreement-lowerpart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 16%;
+    background: #1E1E1E;
+    border-radius: 0px 0px 6px 6px;
+    padding: 1rem 3rem 1rem 3rem;
+}
+
+.myorder-extend-agreement-tab-container > label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
+
+
+.myorder-extend-agreement-tab-container > label > span{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: #FFFFFF;
+}
+
+
+.myorder-extend-agreement-lowerpart > p{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: .875rem;
+    line-height: 1.063rem;
+    color: #9B9B9B;
+}
+
+.myorder-extend-agreement-lowerpart > p > span{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    text-align: right;
+    color: #FFFFFF;
+}
+
+
+.myorder-extend-agreement-lowerpart > button{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 15px 40px;
+    gap: 10px;
+    background: #0E9BE1;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: .75rem;
+    line-height: 0.938rem;
+    color: #FFFFFF;
+}
