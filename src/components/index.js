@@ -16,3 +16,8 @@ export {default as MyorderProductsupport} from "./MyorderProductSupport/myorderp
 export {default as MyorderExtendPackage} from "./MyorderExtendpackage/myorderextendpackage";
 export {default as MyorderExtendAgreement} from "./MyorderExtendAgreement/myorderextendagreement";
 export {default as MyorderExtendPayment} from "./Myorderextendpayment/myorderextendpayment";
+export {default as MyorderTennureExtend} from "./Myordertennureextend/myordertennureextend";
+export {default as MyorderPackageDetails} from "./Myorderpackagedetails/myorderpackagedetails";
+export {default as MyorderPackagePayment} from "./Myorderpackagepayment/myorderpackagepayment";
+export {default as OrderAccepted} from "./Orderaccepted/orderaccepted";
+export {default as MyorderCancellation} from "./Myordercancellation/myordercancellation";

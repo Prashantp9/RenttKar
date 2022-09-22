@@ -1,187 +1,200 @@
-.myorder-productsupport-container{
+.myorder-cancellation-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100vw;
     height: 100vh;
-    backdrop-filter: blur(2px);
     z-index: 11;
+    backdrop-filter: blur(5px);
 }
 
-.myorder-productsupport-content{
+
+.myorder-cancellation-content{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    width:45rem;
-    height: 35rem;
-    background: #191919;
+    width: 50rem;
+    height: 36rem;
+    background: #141414;
     border-radius: 6px;
-    opacity: 1;
-    padding: 2rem 3rem;
+    padding: 2rem;
 }
 
-#support-text{
+#cancellation-text{
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     width: 100%;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
     font-size: 1.125rem;
     line-height: 1.375rem;
-    color: #DFDFDF;
+    color: #FFFFFF;
     margin-bottom: 0rem;
 }
 
-#exp-heading{
+#cancellation-desc{
+    width: 90%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color: #FFFFFF;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+}
+
+
+
+#cancellation-reason{
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
     font-size: 1rem;
-    line-height: 1.25rem;
-    color: #DFDFDF; 
-    margin-top: 1.5rem;
-    margin-bottom: 0rem; 
-}
-
-
-#support-desc{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    color: #9B9B9B;
-    margin-top: 1rem;
-    margin-bottom: 0rem; 
-}
-.myorder-productsupport-content > textarea {
-    width: 100%;
-    height: 9rem;
-    padding: 1rem;
-    background: #111111;
-    border-radius: 6px;
-    border: none;
-    outline: none;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 0.875rem;
-    line-height: 1.063rem;
-    color: #9B9B9B;
+    line-height: 1.5rem;
+    color: #FFFFFF;
     margin-top: 2rem;
-    resize: none;
+    margin-bottom: 0rem;
 }
 
-.myorder-product-issue-img{
+.myorder-cancellation-content > label{
     margin-top: 1rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 9rem;
+}
+
+.myorder-cancellation-content > label > span{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    color: #FFFFFF;
+    margin-left: 1rem;
+}
+
+
+.myorder-cancellation-content > input{
+    width: 80%;
     height: 3rem;
+    padding-left: 1.5rem;
+    margin-top: 1.5rem;
     background: #111111;
     border-radius: 6px;
-    padding: .5rem 1rem .5rem .5rem;
-}
-
-.myorder-product-issue-img > p{
-    margin-bottom: 0rem;
+    outline: none;
+    border: none;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
     font-size: 0.875rem;
-    line-height: 1.25rem;
-    color: #9B9B9B;
+    line-height: 1rem;
+    color: #9B9B9B;  
 }
 
-.myorder-upload-img-container{
+
+.myorder-cancellation-calender-container{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 1.5rem;
-    cursor: pointer;
+    width: 100%;
+    height: 3rem;
+    margin-top: 3rem;
 }
 
-.myorder-upload-img-container > p{
-    margin-bottom: 0rem;
+
+.cancellation-calender-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 40%;
+    height: 100%; 
+
+}
+
+.cancellation-calender-content > input{
+    width: 85%;
+    height: 100%;
+    padding-left: 1.5rem;
+    background: #111111;
+    border-radius: 6px 0px 0px 6px;
+    outline: none;
+    border: none;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
     font-size: 0.875rem;
-    line-height: 1.063rem;
-    color: #DFDFDF; 
-    cursor: pointer;
+    line-height: 1rem;
+    color: #9B9B9B; 
 }
 
-.myorder-upload-img-container > input[type="file"]{
-    cursor: pointer;
-    position: absolute;
-    transform: scale(2);
-    opacity: 0;
-}
 
-.myorder-productsupport-content > button{
+.calender-img{
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    align-self: center;
-    padding: 14px 50px;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 100%;
     background: #0E9BE1;
+    border-radius: 0px 6px 6px 0px;
+}
+
+.myorder-cancellation-calender-container > button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    padding: 13px 24px;
+    gap: 8px;
+    background: #B8352C;
     border-radius: 5px;
+    outline: none;
     border: none;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 0.875rem;
-    line-height: 1.25rem;
-    color: #DFDFDF; 
-    margin-top: 3rem;
-
+    line-height: 1rem;
+    color: #FFFFFF; 
 }
 
 
-.myorder-submit-container{
+
+.myorder-cancellation-submitted-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100vw;
     height: 100vh;
-    backdrop-filter: blur(10px);
     z-index: 11;
+    backdrop-filter: blur(5px);
 }
 
-.myorder-submit-content{
+.myorder-cancellation-submitted-content{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width:40rem;
+    width: 40rem;
     height: 30rem;
-    background: #191919;
+    background: #141414;
     border-radius: 6px;
-    opacity: 1;
     padding: 4rem;
 }
 
-#submitted-text{
-    margin-top: 4rem;
-    margin-bottom: 0rem;
+#cancel-request-text{
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
@@ -189,11 +202,12 @@
     line-height: 1.375rem;
     text-align: center;
     color: #DFDFDF;
+    margin-bottom: 0rem;
+    margin-top: 4rem;
 }
 
-#submitted-desc{
-    margin-top: 1.5rem;
-    margin-bottom: 0rem;
+
+#cancel-request-desc{
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
@@ -201,9 +215,12 @@
     line-height: 1.25rem;
     text-align: center;
     color: #DFDFDF;
+    margin-bottom: 0rem;
+    margin-top: 1.5rem;
 }
 
-#submitted-btn{
+
+#cancel-request-done-btn{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -212,7 +229,7 @@
     background: #0E9BE1;
     border-radius: 5px;
     border: none;
-    margin-top: 3rem;
+    margin-top: 4rem;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
@@ -221,5 +238,3 @@
     text-align: center;
     color: #DFDFDF;
 }
-
-
