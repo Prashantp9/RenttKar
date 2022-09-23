@@ -163,6 +163,9 @@ export {default as Packagedetails} from "./Images/packagedetails.svg"
 export {default as Cancellation} from "./Images/cancellation.svg"
 export {default as GoPro} from "./Images/gopro.svg"
 export {default as GradientCamera} from "./Images/gradientcam.svg"
+export {default as GradientUpArrow} from "./Images/gradientuparrow.svg"
+export {default as GradientDownArrow} from "./Images/gradientdownarrow.svg"
+export {default as Call} from "./Images/call.svg"
 
 
 

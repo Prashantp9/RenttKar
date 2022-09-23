@@ -12,7 +12,7 @@ const Myordertennureextend = () => {
           <p id="tennure-extended-text">Tenure Extended</p>
           <p id="tennure-extended-desc">
             Thank you! Your extension has been accepted by us. You can check out
-            your order details in My Orders.
+            your order details in <span>My Orders.</span> 
           </p>
         <button type="submit" id="tennure-extended-done-button">
             <Link to="/"style={{textDecoration:"none", color:"#FFFFFF"}}>Done</Link>

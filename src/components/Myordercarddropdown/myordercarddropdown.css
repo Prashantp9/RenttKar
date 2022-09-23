@@ -28,3 +28,56 @@
     color: #FFFFFF;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 500px){
+
+    .myorder-dropdown-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 16.313rem;
+        height: 15.25rem;
+        position: absolute;
+        top: 0;
+        right: .5rem;
+        z-index: 10;
+        background: #191919;
+        border-radius: 6px;
+        padding: 1.5rem;
+        row-gap: 1.5rem;
+    }
+    
+    .myorder-dropdown-container > p{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        color: #FFFFFF;
+    
+    }
+    
+}
