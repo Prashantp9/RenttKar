@@ -4,7 +4,14 @@ import {
   MyorderExtendPackage,
   MyorderProductsupport,
 } from "..";
-import { Pc, Threedots } from "../../assets";
+import {
+  DownArrow,
+  Pc,
+  PriceInfo,
+  TabletDelete,
+  TabletEdit,
+  Threedots,
+} from "../../assets";
 import "./myordercard.css";
 import { Link } from "react-router-dom";
 
@@ -23,7 +30,12 @@ const Myordercard = (props) => {
             <div className="mobile-myorder-prodname">
               <p>Playstation 4</p>
               <button type="submit">
-                <Link to="/mobilemyorderextend" style={{textDecoration:"none", color:"#FFFFFF"}}>Extend Date</Link>
+                <Link
+                  to="/mobilemyorderextend"
+                  style={{ textDecoration: "none", color: "#FFFFFF" }}
+                >
+                  Extend Date
+                </Link>
               </button>
             </div>
             <img
@@ -48,6 +60,48 @@ const Myordercard = (props) => {
     );
   }
   if (window.innerWidth <= 768) {
+    return (
+      <>
+        <div className="tablet-myorder-card">
+          <div className="tablet-myorder-card-content">
+          <div className="tablet-myorder-card-img">
+            <img src={Pc} alt="pc" />
+          </div>
+
+          <div className="tablet-myorder-card-product-desc">
+            <p>Playstation 4</p>
+            <button
+              type="submit"
+              onClick={() => setIsPackageExtend(!isPackageExtend)}
+            >
+              Extend Date
+            </button>
+            {isPackageExtend && (
+              <MyorderExtendPackage
+                onclick={() => setIsPackageExtend(!isPackageExtend)}
+              />
+            )}
+          </div>
+
+          <div className="tablet-myorder-card-button">
+            <p>
+              End date <span>21/05/2022</span>
+            </p>
+            <p>
+              Status <span>Order Incomplete</span>
+            </p>
+          </div>
+          <img
+            src={Threedots}
+            alt="threedots"
+            onClick={() => setIsDropdown(!isDropdown)}
+            style={{ width: ".25rem", height: "1.5rem" }}
+          />
+          {isDropdown && <MyordercardDropdown />}
+          </div>
+        </div>
+      </>
+    );
   } else {
     return (
       <>

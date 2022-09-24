@@ -14,7 +14,7 @@ import {
   Right,
   Left,
   ExcludeLeft,
-  ExcludeRight
+  ExcludeRight,
 } from "../../assets";
 import {
   Footer,
@@ -22,7 +22,7 @@ import {
   Navbar,
   Sliderproductcard,
   Mobileproductcard,
-  Scrollerbutton
+  Scrollerbutton,
 } from "../../components";
 import "./myorder.css";
 
@@ -32,6 +32,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
+import Myordercard from "../../components/Myordercard/myordercard";
 
 const Myorder = () => {
   const [isFilter, setIsFilter] = useState(false);
@@ -196,7 +197,10 @@ const Myorder = () => {
           </div>
         </div>
 
-        <div className="mycart-suggestion-container" style={{background:"#070707"}}>
+        <div
+          className="mycart-suggestion-container"
+          style={{ background: "#070707" }}
+        >
           <div className="mycart-suggestion-content">
             <div className="mycart-suggestion-text-container">
               <h1>You Might Also Like</h1>
@@ -275,7 +279,6 @@ const Myorder = () => {
               </SwiperSlide>
             </Swiper>
 
-
             <div
               className="suggestion-button.container"
               style={{
@@ -317,8 +320,88 @@ const Myorder = () => {
           </div>
         </div>
 
-
         <Scrollerbutton />
+
+        <Footer />
+      </>
+    );
+  }
+  if (window.innerWidth <= 768) {
+    return (
+      <>
+        <Navbar />
+        <div className="myorder-text-container">
+          <div className="myorder-text-content">
+            <p>My Orders</p>
+          </div>
+        </div>
+
+        <div className="myorder-type-container">
+          <div className="myorder-type-content">
+            <p
+              style={{
+                background: isActive ? "var(--btn-border-gradient)" : "",
+                backgroundClip: isActive ? "text" : "",
+                WebkitBackgroundClip: isActive ? "text" : "",
+                WebkitTextFillColor: isActive ? "transparent" : "",
+                backgroundClip: isActive ? "text" : "",
+              }}
+              onClick={handleClick}
+            >
+              All Order
+            </p>
+            <p onClick={handleClick}>Subscriptions</p>
+            <p onClick={handleClick}>Completed Order</p>
+          </div>
+        </div>
+
+        <div className="myorder-sort-container">
+          <div className="myorder-sort-content">
+            <p>
+              <img src={Sort} alt="sort" /> Sort:
+            </p>
+            <div className="myorder-recent-filter" onClick={handlefilterModal}>
+              <p>
+                Recent <img src={Filter} alt="filter" />
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {isFilter && (
+          <>
+            <div className="myorder-filter-container">
+              <div className="myorder-filter-content">
+                <div className="myorder-choose-filter">
+                  <label htmlFor="recent" onClick={handlefilterModal}>
+                    <input type="radio" name="recent" id="" />
+                    <span style={{ marginLeft: ".5rem" }}>Recent</span>
+                  </label>
+
+                  <label htmlFor="old" onClick={handlefilterModal}>
+                    <input type="radio" name="old" id="" />
+                    <span style={{ marginLeft: ".5rem" }}>Old</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </>
+        )}
+
+        <div className="myorder-extended-card-container">
+          <div className="myorder-extended-card-content">
+            <Myordercard />
+            <Myordercard />
+            <Myordercard />
+            <Myordercard />
+          </div>
+        </div>
+
+        <div className="mycart-suggestion-container">
+          <div className="mycart-suggestion-content">
+            <Sliderproductcard text="You Might Also Like" />
+          </div>
+        </div>
 
         <Footer />
       </>

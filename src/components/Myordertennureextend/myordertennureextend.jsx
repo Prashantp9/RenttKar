@@ -3,7 +3,7 @@ import { OrderAccepted } from "../../assets";
 import "./myordertennureextend.css";
 import { Link } from "react-router-dom";
 
-const Myordertennureextend = () => {
+const Myordertennureextend = (props) => {
   return (
     <>
       <div className="myorder-tennure-extend-container">
@@ -14,8 +14,8 @@ const Myordertennureextend = () => {
             Thank you! Your extension has been accepted by us. You can check out
             your order details in <span>My Orders.</span> 
           </p>
-        <button type="submit" id="tennure-extended-done-button">
-            <Link to="/"style={{textDecoration:"none", color:"#FFFFFF"}}>Done</Link>
+        <button type="submit" id="tennure-extended-done-button" onClick={props.onclick}>
+            Done
         </button>
         </div>
       </div>

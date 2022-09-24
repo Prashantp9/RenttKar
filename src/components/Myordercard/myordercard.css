@@ -144,6 +144,117 @@
 
 
 
+@media only screen and (max-width: 768px){
+    .tablet-myorder-card{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 10rem;
+      background: #0F0F0F;
+      border-radius: 6px;
+      margin-top: 2rem;
+      padding: .75rem;
+    }
+
+    .tablet-myorder-card-content{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+
+
+    .tablet-myorder-card-img{
+      width: 8.5rem;
+      height: 8.5rem;
+      border-radius: 7px;
+    }
+
+    .tablet-myorder-card-img > img{
+      width: 100%;
+      height: 100%;
+      border-radius: 7px;
+    }
+
+
+    .tablet-myorder-card-product-desc{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 10rem;
+      height: 100%;
+      padding-bottom: .5rem;
+    }
+
+    .tablet-myorder-card-product-desc > p{
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.125rem;
+      line-height: 1.375rem;
+      color: #DFDFDF;
+    }
+
+    .tablet-myorder-card-product-desc > button{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 13px 24px;
+      gap: 8px;
+      background: #1AA9F0;
+      border-radius: 5px;
+      border: none;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 600;
+      font-size: .875rem;
+      line-height: 1.063rem;
+      color: #FFFFFF; 
+    }
+
+    .tablet-myorder-card-button{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20rem;
+      height: 100%;
+      column-gap: 4rem;
+    }
+
+    .tablet-myorder-card-button > p {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        text-align: center;
+        color: #646464;
+        row-gap: .5rem;
+    }
+
+    .tablet-myorder-card-button > p > span{
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      text-align: center;
+      color: #FFFFFF;
+    }
+}
+
+
+
 
 
 
