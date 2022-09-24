@@ -24,6 +24,8 @@ import Companypurchase from './pages/Companypurchase/companypurchase';
 import Mobileordersummary from './pages/Mobileordersummary/mobileordersummary';
 import Myorder from './pages/Myorder/myorder';
 import Mobilemyorderextend from './pages/Mobilemyorderextend/mobilemyorderextend';
+import Mobilemyorderproductsupp from './pages/Mobilemyorderproductsupp/mobilemyorderproductsupp';
+import Mobilemyorderproductcancel from './pages/Mobilemyorderproductcancel/mobilemyorderproductcancel';
 
 
 
@@ -53,6 +55,8 @@ const App = () => {
           <Route path='/ordersummary' element={<Mobileordersummary/>} />
           <Route path='/myorder' element={<Myorder />} />
           <Route path='/mobilemyorderextend' element={<Mobilemyorderextend />} />
+          <Route path='/mobilemyorderproductsupp' element={<Mobilemyorderproductsupp />} />
+          <Route path='/mobilemyorderproductcancel' element={<Mobilemyorderproductcancel />} />
       </Routes>
     </Router>
   )

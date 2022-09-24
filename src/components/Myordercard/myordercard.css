@@ -213,6 +213,7 @@
     align-items: flex-start;
     width: 12rem;
     height: 100%;
+    padding-top: .5rem;
   }
 
   .mobile-myorder-prodname > p {
@@ -222,6 +223,10 @@
     font-size: 1.125rem;
     line-height: 1.25rem;
     color: #ffffff;
+  }
+
+  .mobile-myorder-upperpart > img{
+    margin-top: .2rem;
   }
 
   .mobile-myorder-prodname > button {
