@@ -44,7 +44,7 @@ const Myordercard = (props) => {
               style={{ width: "0.313rem", height: "1.5rem" }}
               onClick={() => setIsDropdown(!isDropdown)}
             />
-            {isDropdown && <MyordercardDropdown />}
+            {isDropdown && <MyordercardDropdown  onclick={() => setIsDropdown(!isDropdown)}/>}
           </div>
 
           <div className="mobile-myorder-lowerpart">
@@ -169,12 +169,13 @@ const Myordercard = (props) => {
         </div>
         {props.class && (
           <>
-            <div className={props.class}>
+            <div className={props.class} style={{cursor:"pointer"}} onClick={() => setIsPackageExtend(!isPackageExtend)}>
               <p>
                 <span style={{ marginRight: ".5rem" }}>Deal Breaker:</span> Get
                 20% Off on extending tennure for 2 Months{" "}
               </p>
             </div>
+            {isPackageExtend && <MyorderExtendPackage onclick={() => setIsPackageExtend(!isPackageExtend)}/>}
           </>
         )}
       </>

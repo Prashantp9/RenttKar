@@ -16,7 +16,7 @@ import {
 } from "../../assets";
 import "./myordercarddropdown.css";
 
-const Myordercarddropdown = () => {
+const Myordercarddropdown = (props) => {
   const [isProduct, setIsProduct] = useState(false);
   const [isPackage, setIsPackage] = useState(false);
   const [isCancellation, setIsCancellation] = useState(false);
@@ -120,8 +120,8 @@ const Myordercarddropdown = () => {
                           us. You can check out your order details in{" "}
                           <Link to="">My Orders</Link>.
                         </p>
-                        <button type="submit">
-                          <Link to="/">Done</Link>
+                        <button type="submit" onClick={props.onclick}>
+                          Done
                         </button>
                       </div>
                     </div>

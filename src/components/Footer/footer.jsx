@@ -29,7 +29,7 @@ const footer = () => {
               <p><img src={Phone} alt="Phone" className='phone'/><span className='number'>7900042875</span></p>
         
               {/* phone */}
-              <a href="mailto:"><img src={Mail} alt="Mail" className='mail'/><span className='mailId'>rentkar@gmail.com</span></a>
+              <a href="mailto:"><img src={Mail} alt="Mail" className='mail'/><span className='mailId'>rentkarr@gmail.com</span></a>
         </div>
         {/* description */}
         <p className='description'>Rentkar is a leading rental tech platform based in Mumbai, Pune, and Bengaluru. The mission for us is to create a sustainable sharing culture.We are grateful to have served 30,000+ customers with love and quality service.</p>

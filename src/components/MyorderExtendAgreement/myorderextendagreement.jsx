@@ -167,7 +167,7 @@ const Myorderextendagreement = (props) => {
               <button type="submit" onClick={() => setIsPayment(!isPayment)}>
                 Proceed
               </button>
-              {isPayment && <MyorderExtendPayment />}
+              {isPayment && <MyorderExtendPayment onclick={props.onclick}/>}
             </div>
           </div>
         </div>

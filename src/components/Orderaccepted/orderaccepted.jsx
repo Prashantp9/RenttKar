@@ -4,7 +4,7 @@ import "./orderaccepted.css";
 
 import { Link } from "react-router-dom";
 
-const Orderaccepted = () => {
+const Orderaccepted = (props) => {
 
   return (
     <>
@@ -15,10 +15,11 @@ const Orderaccepted = () => {
           <p id="credit-text">Woohoo! 65 Credits Earned</p>
           <p id="order-accept-desc">
             Sit back and relax! Your order has been accepted by us. You can
-            check out your order details in <Link to="/myorder" style={{textDecoration:"none", color:"#0E9BE1"}}>My Order</Link>.
+            check out your order details in <a href="" onClick={props.onclick} id={props.id} style={{textDecoration:"none"}}>My Order</a>.
           </p>
-          <button type="submit" id="order-accept-button" >
-            <Link to="/" style={{textDecoration:"none", color:"#FFFFFF"}}>Done</Link>
+          <button type="submit" id={props.class} onClick={props.onclick}
+          >
+            Done
           </button>
 
         </div>

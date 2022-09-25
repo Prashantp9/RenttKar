@@ -24,7 +24,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { MyorderTennureExtend } from "../../components";
 
-const Mobilemyorderextend = () => {
+const Mobilemyorderextend = (props) => {
   const [isAgreement, setIsAgreement] = useState(false);
   const [isPayment, setIsPayment] = useState(false);
   const [isClick, setIsClick] = useState(false);
@@ -452,7 +452,7 @@ const Mobilemyorderextend = () => {
                                     >
                                       Make Payment
                                     </button>
-                                    {isDone && <MyorderTennureExtend />}
+                                    {isDone && <MyorderTennureExtend onclick={props.onclick}/>}
                                   </div>
                                 </>
                               )}

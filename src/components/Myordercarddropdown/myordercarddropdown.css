@@ -102,6 +102,36 @@
     
     }
 
+    .mobile-myorder-order-details-container{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        z-index: 11;
+        backdrop-filter: blur(10px);
+
+    }
+
+    .mobile-myorder-order-details-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 95%;
+        max-width: 20.813rem;
+        height: 27.25rem;
+        background: #191919;
+        box-shadow: 0px 4px 15px 1px rgba(0, 0, 0, 0.5);
+        border-radius: 6px;
+        padding: 1.5rem 1rem;
+    }
+
     .mobile-myorder-order-details-content > h4{
         font-family: 'Montserrat';
         font-style: normal;

@@ -238,3 +238,274 @@
     text-align: center;
     color: #DFDFDF;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .myorder-cancellation-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 11;
+        backdrop-filter: blur(5px);
+    }
+    
+    
+    .myorder-cancellation-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 95%;
+        max-width: 50rem;
+        height: 45.313rem;
+        background: #141414;
+        border-radius: 6px;
+        padding: 3rem 2rem;
+    }
+    
+    #cancellation-text{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        color: #FFFFFF;
+        margin-bottom: 0rem;
+    }
+    
+    #cancellation-desc{
+        width: 90%;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: #FFFFFF;
+        margin-top: 2rem;
+        margin-bottom: 0rem;
+    }
+    
+    
+    
+    #cancellation-reason{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        color: #FFFFFF;
+        margin-top: 2rem;
+        margin-bottom: 0rem;
+    }
+    
+    .myorder-cancellation-content > label{
+        margin-top: 2rem;
+    }
+    
+    .myorder-cancellation-content > label > span{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        color: #FFFFFF;
+        margin-left: 1rem;
+    }
+    
+    
+    .myorder-cancellation-content > input{
+        width: 100%;
+        height: 3rem;
+        padding-left: 1.5rem;
+        margin-top: 3rem;
+        background: #111111;
+        border-radius: 6px;
+        outline: none;
+        border: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        color: #9B9B9B;  
+    }
+    
+    
+    .myorder-cancellation-calender-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 3rem;
+        margin-top: 3rem;
+    }
+    
+    
+    .cancellation-calender-content {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 50%;
+        height: 100%; 
+    
+    }
+    
+    .cancellation-calender-content > input{
+        width: 85%;
+        height: 100%;
+        padding-left: 1.5rem;
+        background: #111111;
+        border-radius: 6px 0px 0px 6px;
+        outline: none;
+        border: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        color: #9B9B9B; 
+    }
+    
+    
+    .calender-img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        height: 100%;
+        background: var(--btn-border-gradient);
+        border-radius: 0px 6px 6px 0px;
+    }
+    
+    .myorder-cancellation-calender-container > button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        height: 100%;
+        padding: 13px 24px;
+        gap: 8px;
+        background: #B8352C;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1rem;
+        color: #FFFFFF; 
+    }
+    
+    
+    
+    .myorder-cancellation-submitted-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 11;
+        backdrop-filter: blur(5px);
+    }
+    
+    .myorder-cancellation-submitted-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 40rem;
+        height: 30rem;
+        background: #141414;
+        border-radius: 6px;
+        padding: 4rem;
+    }
+    
+    #cancel-request-text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+        text-align: center;
+        color: #DFDFDF;
+        margin-bottom: 0rem;
+        margin-top: 4rem;
+    }
+    
+    
+    #cancel-request-desc{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        text-align: center;
+        color: #DFDFDF;
+        margin-bottom: 0rem;
+        margin-top: 1.5rem;
+    }
+    
+    
+    #cancel-request-done-btn{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 15px 24px;
+        gap: 10px;
+        background: var(--btn-border-gradient);
+        border-radius: 5px;
+        border: none;
+        margin-top: 4rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        text-align: center;
+        color: #DFDFDF;
+    }
+}

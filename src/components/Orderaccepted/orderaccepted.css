@@ -73,5 +73,45 @@
     background: #0E9BE1;
     border-radius: 5px;
     margin-top: 3rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: #FFFFFF;
+    border: none;
+}
+
+
+
+#tablet-order-accept-button{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 6.188rem;
+    height: 3.25rem;
+    padding: 15px 24px;
+    gap: 10px;
+    background: var(--btn-border-gradient);
+    border-radius: 5px;
+    margin-top: 3rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: #FFFFFF;
+    border: none;
+}
+
+#myorder-link{
+    color: #0E9BE1;
+}
+
+#tablet-myorder-link{
+    background: var(--btn-border-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 

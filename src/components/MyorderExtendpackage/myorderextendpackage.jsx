@@ -356,7 +356,7 @@ const Myorderextendpackage = (props) => {
                   >
                     Extend Date
                   </button>
-                  {isAgreement && <MyorderExtendAgreement />}
+                  {isAgreement && <MyorderExtendAgreement onclick={props.onclick}/>}
                 </>
               ) : (
                 <button

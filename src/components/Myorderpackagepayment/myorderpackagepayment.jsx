@@ -107,7 +107,7 @@ const Myorderpackagepayment = (props) => {
                       <button type="submit" onClick={() => setIsDone(!isDone)}>
                         Make Payment
                       </button>
-                      {isDone && <Orderaccepted />}
+                      {isDone && <Orderaccepted onclick={props.onclick} class="order-accept-button" id="myorder-link"/>}
                     </div>
                   </>
                 )}
