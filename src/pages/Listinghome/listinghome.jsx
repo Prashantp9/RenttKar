@@ -440,6 +440,9 @@ const Listinghome = () => {
       </>
     );
   }
+
+
+
   if (window.innerWidth <= 768) {
     return (
       <>
@@ -475,8 +478,8 @@ const Listinghome = () => {
                     src={Ellipse}
                     alt="ellipse"
                     style={{
-                      width: "8rem",
-                      height: "8rem",
+                      width: "7.5rem",
+                      height: "7.5rem",
                       position: "relative",
                     }}
                   />
@@ -499,8 +502,8 @@ const Listinghome = () => {
                     src={Ellipse}
                     alt="ellipse"
                     style={{
-                      width: "8rem",
-                      height: "8rem",
+                      width: "7.5rem",
+                      height: "7.5rem",
                       position: "relative",
                     }}
                   />
@@ -523,8 +526,8 @@ const Listinghome = () => {
                     src={Ellipse}
                     alt="ellipse"
                     style={{
-                      width: "8rem",
-                      height: "8rem",
+                      width: "7.5rem",
+                      height: "7.5rem",
                       position: "relative",
                     }}
                   />
@@ -844,8 +847,8 @@ const Listinghome = () => {
                     src={Ellipse}
                     alt="ellipse"
                     style={{
-                      width: "8rem",
-                      height: "8rem",
+                      width: "5rem",
+                      height: "5rem",
                       position: "relative",
                     }}
                   />
@@ -853,7 +856,7 @@ const Listinghome = () => {
                     src={Livelighter}
                     alt="light"
                     id="listing-benefits-symbol"
-                    style={{ width: "6rem", height: "6rem" }}
+                    style={{ width: "3rem", height: "3rem" }}
                   />
                 </div>
                 <p id="benefits-heading">Live Lighter</p>
@@ -868,8 +871,8 @@ const Listinghome = () => {
                     src={Ellipse}
                     alt="ellipse"
                     style={{
-                      width: "8rem",
-                      height: "8rem",
+                      width: "5rem",
+                      height: "5rem",
                       position: "relative",
                     }}
                   />
@@ -877,7 +880,7 @@ const Listinghome = () => {
                     src={Securitydeposit}
                     alt="light"
                     id="listing-benefits-symbol"
-                    style={{ width: "6rem", height: "6rem" }}
+                    style={{ width: "3rem", height: "3rem" }}
                   />
                 </div>
                 <p id="benefits-heading">No Security Deposit</p>
@@ -892,8 +895,8 @@ const Listinghome = () => {
                     src={Ellipse}
                     alt="ellipse"
                     style={{
-                      width: "8rem",
-                      height: "8rem",
+                      width: "5rem",
+                      height: "5rem",
                       position: "relative",
                     }}
                   />
@@ -901,7 +904,7 @@ const Listinghome = () => {
                     src={Shareearn}
                     alt="light"
                     id="listing-benefits-symbol"
-                    style={{ width: "6rem", height: "6rem" }}
+                    style={{ width: "3rem", height: "3rem" }}
                   />
                 </div>
                 <p id="benefits-heading">Share & Earn</p>
@@ -916,8 +919,8 @@ const Listinghome = () => {
                     src={Ellipse}
                     alt="ellipse"
                     style={{
-                      width: "8rem",
-                      height: "8rem",
+                      width: "5rem",
+                      height: "5rem",
                       position: "relative",
                     }}
                   />
@@ -925,7 +928,7 @@ const Listinghome = () => {
                     src={Samedaydelivery}
                     alt="light"
                     id="listing-benefits-symbol"
-                    style={{ width: "6rem", height: "6rem" }}
+                    style={{ width: "3rem", height: "3rem" }}
                   />
                 </div>
                 <p id="benefits-heading">Same Day Delivery</p>

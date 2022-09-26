@@ -125,7 +125,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 20rem;
+    height: 15rem;
     margin-top: 4rem;
 }
 
@@ -144,8 +144,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 8rem;
-    height: 8rem;
+    width: 5rem;
+    height: 5rem;
 }
 
 
@@ -165,7 +165,8 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-top: 3rem;
+    margin-top: 1.875rem;
+    margin-bottom: 0rem;
 }
 
 #benefits-info{
@@ -180,7 +181,8 @@
     line-height: 1.063rem;
     text-align: center;
     color: #DFDFDF;
-    margin-top: 1rem;
+    margin-top: 1.375rem;
+    margin-bottom: 0rem;
 }
 
 
