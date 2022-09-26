@@ -166,6 +166,12 @@ export {default as GradientCamera} from "./Images/gradientcam.svg"
 export {default as GradientUpArrow} from "./Images/gradientuparrow.svg"
 export {default as GradientDownArrow} from "./Images/gradientdownarrow.svg"
 export {default as Call} from "./Images/call.svg"
+export {default as GirlArt} from "./Images/girlart.svg"
+export {default as Securitydeposit} from "./Images/securitydeposit.svg"
+export {default as Shareearn} from "./Images/shareearn.svg"
+export {default as Ellipse} from "./Images/Ellipse.svg"
+export {default as Livelighter} from "./Images/livelighter.svg"
+export {default as Samedaydelivery} from "./Images/samedaydelivery.svg"
 
 
 

@@ -12,7 +12,7 @@ import { Navbar, Footer, Catogerycard, Sliderproductcard, Scrollerbutton, Contac
 
 // images
 import {Console,HeaderImg,  Artwork,  Union,  Delivery, Deposit, Light,  Esport,  Times,  Tech,  Lbb,  Learn,  Aadil,  Renuka,  Ammy,  Music,  Camera,  Apple,  Computers,  Show, Boxes} from "../../assets";
-
+import { Link } from "react-router-dom";
 
 
 const CatogeriesCard = () =>{
@@ -341,7 +341,9 @@ const Home = () => {
               </button>
               <button className="listItemm">
                 <div className="buttonContentt" style={{ background: "#070707" }}>
+                <Link to="/listinghome" style={{textDecoration:"none"}}>
                   <span className="listTextt">Learn More</span>
+                </Link>
                 </div>
               </button>
             </div>

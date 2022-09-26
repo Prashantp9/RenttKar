@@ -11,7 +11,7 @@ const Accessoriescard = (props) => {
             <img id='accessories-img' src={props.imgSrc} alt="accessories-image" />
             <p id='accessories-name'>{props.name}</p>
             <p id='accessories-price'><img src={Rupees} alt="rupees" />{props.price}</p>
-            <button className="accessories-btn" data="Add +"></button>
+            <button className="accessories-btn" data={props.data}></button>
         </div>
     </>
   )

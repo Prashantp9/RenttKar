@@ -645,6 +645,7 @@ const Productdetails = () => {
                   imgSrc={Playstation}
                   name="Projector"
                   price="500/Month"
+                  data="Add +"
                 />
               </SwiperSlide>
 
@@ -653,6 +654,7 @@ const Productdetails = () => {
                   imgSrc={Playstation}
                   name="Projector"
                   price="500/Month"
+                  data="Add +"
                 />
               </SwiperSlide>
 
@@ -661,6 +663,7 @@ const Productdetails = () => {
                   imgSrc={Playstation}
                   name="Projector"
                   price="500/Month"
+                  data="Add +"
                 />
               </SwiperSlide>
 
@@ -669,6 +672,7 @@ const Productdetails = () => {
                   imgSrc={Playstation}
                   name="Projector"
                   price="500/Month"
+                  data="Add +"
                 />
               </SwiperSlide>
 
@@ -677,6 +681,7 @@ const Productdetails = () => {
                   imgSrc={Playstation}
                   name="Projector"
                   price="500/Month"
+                  data="Add +"
                 />
               </SwiperSlide>
 
@@ -685,6 +690,7 @@ const Productdetails = () => {
                   imgSrc={Playstation}
                   name="Projector"
                   price="500/Month"
+                  data="Add +"
                 />
               </SwiperSlide>
             </Swiper>

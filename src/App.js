@@ -26,6 +26,7 @@ import Myorder from './pages/Myorder/myorder';
 import Mobilemyorderextend from './pages/Mobilemyorderextend/mobilemyorderextend';
 import Mobilemyorderproductsupp from './pages/Mobilemyorderproductsupp/mobilemyorderproductsupp';
 import Mobilemyorderproductcancel from './pages/Mobilemyorderproductcancel/mobilemyorderproductcancel';
+import Listinghome from './pages/Listinghome/listinghome';
 
 
 
@@ -57,6 +58,7 @@ const App = () => {
           <Route path='/mobilemyorderextend' element={<Mobilemyorderextend />} />
           <Route path='/mobilemyorderproductsupp' element={<Mobilemyorderproductsupp />} />
           <Route path='/mobilemyorderproductcancel' element={<Mobilemyorderproductcancel />} />
+          <Route path='/listinghome' element={<Listinghome />} />
       </Routes>
     </Router>
   )
