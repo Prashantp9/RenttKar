@@ -16,7 +16,60 @@ import { Link } from "react-router-dom";
 
 
 const CatogeriesCard = () =>{
-  if(window.innerWidth > 500 && window.innerWidth < 769){
+  if(window.innerWidth <= 320){
+    return(
+      <div className="catogeriesContainer">
+      <div className="catogeriesContent">
+      <Swiper
+          width={450}
+          slidesPerView={4}
+          spaceBetween={10}
+          centeredSlides={false}
+          slidesPerGroup={3}
+          grabCursor={true}
+          loop={true}
+          loopFillGroupWithBlank={false}
+      >
+      <SwiperSlide style={{maxWidth:"8rem", maxHeight: "8rem"}}>
+        <Catogerycard
+          imgSrc = {Console}
+          className="catImg"
+          name = "Gaming"
+        />
+      </SwiperSlide>
+
+      {/* 2 */}
+      <SwiperSlide style={{maxWidth:"8rem", maxHeight: "8rem"}}>
+      <Catogerycard
+          imgSrc = {Music}
+          className="catImg"
+          name = "Music"
+        />
+      </SwiperSlide>
+
+      {/* 3 */}
+      <SwiperSlide style={{maxWidth:"8rem", maxHeight: "8rem"}}>
+      <Catogerycard
+          imgSrc = {Camera}
+          className="catImg"
+          name = "Camera"
+        />
+      </SwiperSlide>
+
+      {/* 4 */}
+      <SwiperSlide style={{maxWidth:"8rem", maxHeight: "8rem"}}>
+      <Catogerycard
+          imgSrc = {Apple}
+          className="catImg"
+          name = "Apple"
+        />
+      </SwiperSlide>
+    </Swiper>
+    </div>
+    </div>
+    )
+  }
+  if((window.innerWidth > 577 && window.innerWidth < 992)){
     return(
       <div className="catogeriesContainer">
       <div className="catogeriesContent">
@@ -171,7 +224,7 @@ const Home = () => {
               ></button>
             </div>
             <div className="carousel-inner" style={{ borderRadius: "15px"}}>
-              <div className="carousel-item active" style={{ borderRadius: "15px"}}>
+              <div className="carousel-item active" style={{ borderRadius: "15px", height:"100%"}}>
                 <img
                   style={{ borderRadius: "15px",width:"100%", height:"100%" }}
                   src={HeaderImg}
@@ -179,7 +232,7 @@ const Home = () => {
                   alt="..."
                 />
               </div>
-              <div className="carousel-item" style={{ borderRadius: "15px"}}>
+              <div className="carousel-item" style={{ borderRadius: "15px", height:"100%"}}>
                 <img
                   style={{ borderRadius: "15px",width:"100%", height:"100%"  }}
                   src={HeaderImg}
@@ -187,7 +240,7 @@ const Home = () => {
                   alt="..."
                 />
               </div>
-              <div className="carousel-item" style={{ borderRadius: "15px"}}>
+              <div className="carousel-item" style={{ borderRadius: "15px", height:"100%"}}>
                 <img
                   style={{ borderRadius: "15px",width:"100%", height:"100%"  }}
                   src={HeaderImg}

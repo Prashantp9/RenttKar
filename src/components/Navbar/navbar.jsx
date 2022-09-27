@@ -95,6 +95,204 @@ const Dropdown = () => {
     }
   }
 
+  if (window.innerWidth <= 320) {
+    return (
+      <div className="dropdownContainer"
+      style={{
+        height: isLogin ? "30rem" : "22rem",
+      }}
+      >
+        <div className="dropdownContent">
+          <div className="Content"></div>
+          <div
+            className="dropDown"
+            style={{
+              height: isLogin ? "30rem" : "22rem",
+            }}
+          >
+            <ul>
+              <li onClick={() => setIsLogin(!isLogin)}>
+                {isLogin ? (
+                  <p className="menu6">
+                    <Link to="/login">Ronak Kumar <img src={GradientUpArrow} alt="uparrow" /></Link>
+                  </p>
+                ) : (
+                  <p className="menu6">
+                    Login/Sign-up{" "}
+                    <img src={GradientDownArrow} alt="downarrow" />
+                  </p>
+                )}
+              </li>
+              {isLogin && (
+                <>
+                  <li className="menu10">My Profile</li>
+                  <li className="menu11">
+                    <Link to="/myorder" style={{textDecoration:"none", color:"#FFFFFF"}}>My Order</Link>
+                  </li>
+                  <li className="menu12">My Listing</li>
+                  <li className="menu13">My Credit</li>
+                </>
+              )}
+
+              <div
+                className="dropDown-section"
+                style={{
+                  top: isLogin ? "11rem" : "3rem",
+                }}
+              >
+                <li style={{ cursor: "pointer" }}>
+                  <a
+                    href={() => setIsOpen(!isOpen)}
+                    className="menu7"
+                    onClick={() => setIsOpen(!isOpen)}
+                  >
+                    {city} <img src={DownArrow} alt="downArrow" />
+                  </a>
+                  {isOpen && (
+                    <div className="container">
+                      <div
+                        className="containerContent"
+                        style={{ opacity: "1" }}
+                      >
+                        <div
+                          className="locationContainer"
+                          style={{ opacity: "1" }}
+                        >
+                          <h1 className="selectCity">Select your City</h1>
+                          <img
+                            src={Cross}
+                            alt="close"
+                            className="close"
+                            onClick={() => setIsOpen(!isOpen)}
+                          />
+                          <div className="cityContainer">
+                            <div
+                              className={toggleActiveStyles(0)}
+                              onClick={function () {
+                                setCity("Banglore");
+                                toggleActive(0);
+                              }}
+                            >
+                              <img src={Banglore} alt="" className="cityImg" />
+                              <p className="cityName bangloreCity">Banglore</p>
+                            </div>
+                            <div
+                              className={toggleActiveStyles(1)}
+                              onClick={function () {
+                                setCity("Mumbai");
+                                toggleActive(1);
+                              }}
+                            >
+                              <img src={Mumbai} alt="" className="cityImg" />
+                              <p className="cityName mumbaiCity">Mumbai</p>
+                            </div>
+                            <div
+                              className={toggleActiveStyles(2)}
+                              onClick={function () {
+                                setCity("Pune");
+                                toggleActive(2);
+                              }}
+                            >
+                              <img src={Pune} alt="" className="cityImg" />
+                              <p className="cityName puneCity">Pune</p>
+                            </div>
+                            <div
+                              className={toggleActiveStyles(3)}
+                              onClick={function () {
+                                setCity("Delhi");
+                                toggleActive(3);
+                              }}
+                            >
+                              <img src={Delhi} alt="" className="cityImg" />
+                              <p className="cityName delhiCity">Delhi</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </li>
+
+                <li>
+                  <Link to="/mycart" className="menu8">
+                    My Cart
+                  </Link>
+                </li>
+
+                <li>
+                  <a href="" className="menu9">
+                    Catogeries
+                  </a>
+                </li>
+              </div>
+
+              <li>
+                <a
+                  href=""
+                  className="menu1"
+                  style={{
+                    color: "#ffffff",
+                    top: isLogin ? "19.5rem" : "12rem",
+                  }}
+                >
+                  List Items
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href=""
+                  className="menu2"
+                  style={{
+                    top: isLogin ? "21.5rem" : "14rem",
+                  }}
+                >
+                  How Renting Works
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href=""
+                  className="menu3"
+                  style={{
+                    top: isLogin ? "23.5rem" : "16rem",
+                  }}
+                >
+                  Rentkar for Business
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href=""
+                  className="menu4"
+                  style={{
+                    top: isLogin ? "25.5rem" : "18rem",
+                  }}
+                >
+                  Rentkar for Events
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href=""
+                  className="menu5"
+                  style={{
+                    top: isLogin ? "27.5rem" : "20rem",
+                  }}
+                >
+                  Invest in Ecosystem
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   if (window.innerWidth <= 768) {
     return (
       <div className="dropdownContainer"

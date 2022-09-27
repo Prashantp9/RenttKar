@@ -7,7 +7,7 @@ const Catogerycard = (props) => {
     <>
         <div className="catogeryCard">
             <Link to="/catogeries">
-                <img src={props.imgSrc}  alt="Console" />
+                <img src={props.imgSrc}  alt="Console"  className='cat-card-img'/>
                 <p className="catText">{props.name}</p>
             </Link>
         </div>

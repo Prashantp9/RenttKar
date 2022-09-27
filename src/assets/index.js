@@ -80,7 +80,7 @@ export {default as Sort} from "./Images/Sort.svg";
 export {default as Filter} from "./Images/filter.svg"
 export {default as MobileFilter} from "./Images/mobileFilter.svg"
 export {default as MobileFilterCloseBtn} from "./Images/mobileFilterCloseBtn.svg"
-export {default as ProductHeaderImage} from "./Images/productImage.svg"
+export {default as ProductHeaderImage} from "./Images/productImage.png"
 
 
 export {default as Controller1} from "./Images/controller1.svg"
@@ -172,6 +172,7 @@ export {default as Shareearn} from "./Images/shareearn.svg"
 export {default as Ellipse} from "./Images/Ellipse.svg"
 export {default as Livelighter} from "./Images/livelighter.svg"
 export {default as Samedaydelivery} from "./Images/samedaydelivery.svg"
+
 
 
 

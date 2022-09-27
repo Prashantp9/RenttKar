@@ -56,6 +56,169 @@ import {
   AddCart,
 } from "../../assets";
 
+const Accessoriescardslider = () => {
+  if (window.innerWidth <= 320) {
+    return (
+      <>
+        <Swiper
+          width={450}
+          slidesPerView={3}
+          centeredSlides={false}
+          spaceBetween={10}
+          slidesPerGroup={3}
+          grabCursor={true}
+          loop={true}
+          loopFillGroupWithBlank={true}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={{
+            prevEl: ".rented-together-left-button",
+            nextEl: ".rented-together-right-button",
+          }}
+          modules={[Navigation]}
+          className="mySwiper"
+          style={{ zIndex: "0" }}
+        >
+          <SwiperSlide style={{ marginRight: "1rem" }}>
+            <Accessoriescard
+              imgSrc={Playstation}
+              name="Projector"
+              price="500/Month"
+              data="Add +"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Accessoriescard
+              imgSrc={Playstation}
+              name="Projector"
+              price="500/Month"
+              data="Add +"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Accessoriescard
+              imgSrc={Playstation}
+              name="Projector"
+              price="500/Month"
+              data="Add +"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Accessoriescard
+              imgSrc={Playstation}
+              name="Projector"
+              price="500/Month"
+              data="Add +"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Accessoriescard
+              imgSrc={Playstation}
+              name="Projector"
+              price="500/Month"
+              data="Add +"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Accessoriescard
+              imgSrc={Playstation}
+              name="Projector"
+              price="500/Month"
+              data="Add +"
+            />
+          </SwiperSlide>
+        </Swiper>
+      </>
+    );
+  }
+  if (window.innerWidth <= 767) {
+    return (
+      <>
+        <Swiper
+          width={530}
+          slidesPerView={3}
+          centeredSlides={false}
+          spaceBetween={10}
+          slidesPerGroup={3}
+          grabCursor={true}
+          loop={true}
+          loopFillGroupWithBlank={true}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={{
+            prevEl: ".rented-together-left-button",
+            nextEl: ".rented-together-right-button",
+          }}
+          modules={[Navigation]}
+          className="mySwiper"
+          style={{ zIndex: "0" }}
+        >
+          <SwiperSlide style={{ marginRight: "1rem" }}>
+            <Accessoriescard
+              imgSrc={Playstation}
+              name="Projector"
+              price="500/Month"
+              data="Add +"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Accessoriescard
+              imgSrc={Playstation}
+              name="Projector"
+              price="500/Month"
+              data="Add +"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Accessoriescard
+              imgSrc={Playstation}
+              name="Projector"
+              price="500/Month"
+              data="Add +"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Accessoriescard
+              imgSrc={Playstation}
+              name="Projector"
+              price="500/Month"
+              data="Add +"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Accessoriescard
+              imgSrc={Playstation}
+              name="Projector"
+              price="500/Month"
+              data="Add +"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Accessoriescard
+              imgSrc={Playstation}
+              name="Projector"
+              price="500/Month"
+              data="Add +"
+            />
+          </SwiperSlide>
+        </Swiper>
+      </>
+    );
+  }
+};
+
 const Coupponbtn = () => {
   const [isCuppon, setIsCuppon] = useState(false);
 
@@ -316,13 +479,20 @@ const Productdetails = () => {
                   className="slideIndicator3"
                 ></button>
               </div>
-              <div className="carousel-inner" style={{ zIndex: "-1" }}>
-                <div className="carousel-item active" style={{ zIndex: "-1" }}>
+              <div
+                className="carousel-inner"
+                style={{ zIndex: "-1", width: "100%", height: "100%" }}
+              >
+                <div
+                  className="carousel-item active"
+                  style={{ zIndex: "-1", width: "100%", height: "100%" }}
+                >
                   <img
                     style={{
                       borderRadius: "6px",
                       width: "100%",
                       height: "100%",
+                      maxHeight: "100%",
                     }}
                     src={ProductHeaderImage}
                     className=" w-100 productImg"
@@ -592,6 +762,7 @@ const Productdetails = () => {
         </div>
 
         <div className="product-frequently-rented-together">
+          <div className="product-frequently-rented-together-content">
           <div className="product-frequently-rented-together-text">
             <p>Most Frequently Rented Together</p>
             <div className="product-frequently-rented-together-button">
@@ -620,80 +791,8 @@ const Productdetails = () => {
             </div>
           </div>
           <div className="product-frequently-rented-together-card-container">
-            <Swiper
-              width={570}
-              slidesPerView={3}
-              centeredSlides={false}
-              spaceBetween={10}
-              slidesPerGroup={3}
-              grabCursor={true}
-              loop={true}
-              loopFillGroupWithBlank={true}
-              pagination={{
-                clickable: true,
-              }}
-              navigation={{
-                prevEl: ".rented-together-left-button",
-                nextEl: ".rented-together-right-button",
-              }}
-              modules={[Navigation]}
-              className="mySwiper"
-              style={{ zIndex: "-1" }}
-            >
-              <SwiperSlide style={{ marginRight: "2rem" }}>
-                <Accessoriescard
-                  imgSrc={Playstation}
-                  name="Projector"
-                  price="500/Month"
-                  data="Add +"
-                />
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <Accessoriescard
-                  imgSrc={Playstation}
-                  name="Projector"
-                  price="500/Month"
-                  data="Add +"
-                />
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <Accessoriescard
-                  imgSrc={Playstation}
-                  name="Projector"
-                  price="500/Month"
-                  data="Add +"
-                />
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <Accessoriescard
-                  imgSrc={Playstation}
-                  name="Projector"
-                  price="500/Month"
-                  data="Add +"
-                />
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <Accessoriescard
-                  imgSrc={Playstation}
-                  name="Projector"
-                  price="500/Month"
-                  data="Add +"
-                />
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <Accessoriescard
-                  imgSrc={Playstation}
-                  name="Projector"
-                  price="500/Month"
-                  data="Add +"
-                />
-              </SwiperSlide>
-            </Swiper>
+            <Accessoriescardslider />
+          </div>
           </div>
         </div>
 
@@ -723,161 +822,159 @@ const Productdetails = () => {
 
         <div className="cost-container">
           <div className="cost-container-content">
-          <div className="cost-content">
-            <p id="total-cost-heading">Total cost</p>
-            <p id="price-text">
-              <img src={Rupees} alt="rupees" /> 750/Mn
-            </p>
+            <div className="cost-content">
+              <p id="total-cost-heading">Total cost</p>
+              <p id="price-text">
+                <img src={Rupees} alt="rupees" /> 750/Mn
+              </p>
 
-            <p
-              id="price-details"
-              style={{ cursor: "pointer", marginTop: ".2rem" }}
-              onClick={() => setIsHovering(!isHovering)}
-            >
-              <span>viewdetails</span>{" "}
-            </p>
-            {isHovering && (
-              <div className="mobile-price-breakdown-container">
-                <div className="price-breakdown-container">
-                  <div className="price-breakdown-heading">
-                    <p>Price Breakdown</p>
-                    <img
-                      src={SmallCross}
-                      alt="cross"
-                      onClick={() => setIsHovering(!isHovering)}
-                    />
-                  </div>
-                  <div
-                    className="product-prices"
-                    style={{ borderBottom: "1px solid #464646" }}
-                  >
-                    <p style={{ marginTop: "2rem" }} id="product-name">
-                      PS4{" "}
-                      <span>
-                        <img src={Rupees} alt="rupees" />
-                        500/day
-                      </span>
-                    </p>
-                    <p id="product-name">
-                      Addons1{" "}
-                      <span>
-                        <img src={Rupees} alt="rupees" />
-                        500/day
-                      </span>
-                    </p>
-                    <p id="product-name">
-                      Addons2{" "}
-                      <span>
-                        <img src={Rupees} alt="rupees" />
-                        100/day
-                      </span>
-                    </p>
-                    <p id="product-name">
-                      Addons3{" "}
-                      <span>
-                        <img src={Rupees} alt="rupees" />
-                        100/day
-                      </span>
-                    </p>
-                    <p id="product-name">
-                      Addons4{" "}
-                      <span>
-                        <img src={Rupees} alt="rupees" />
-                        100/day
-                      </span>
-                    </p>
-                    <p
-                      id="product-name"
-                      style={{
-                        paddingBottom: "1.5rem",
-                      }}
+              <p
+                id="price-details"
+                style={{ cursor: "pointer", marginTop: ".2rem" }}
+                onClick={() => setIsHovering(!isHovering)}
+              >
+                <span>viewdetails</span>{" "}
+              </p>
+              {isHovering && (
+                <div className="mobile-price-breakdown-container">
+                  <div className="price-breakdown-container">
+                    <div className="price-breakdown-heading">
+                      <p>Price Breakdown</p>
+                      <img
+                        src={SmallCross}
+                        alt="cross"
+                        onClick={() => setIsHovering(!isHovering)}
+                      />
+                    </div>
+                    <div
+                      className="product-prices"
+                      style={{ borderBottom: "1px solid #464646" }}
                     >
-                      Addons5{" "}
-                      <span>
-                        <img src={Rupees} alt="rupees" />
-                        100/day
-                      </span>
-                    </p>
-                  </div>
+                      <p style={{ marginTop: "2rem" }} id="product-name">
+                        PS4{" "}
+                        <span>
+                          <img src={Rupees} alt="rupees" />
+                          500/day
+                        </span>
+                      </p>
+                      <p id="product-name">
+                        Addons1{" "}
+                        <span>
+                          <img src={Rupees} alt="rupees" />
+                          500/day
+                        </span>
+                      </p>
+                      <p id="product-name">
+                        Addons2{" "}
+                        <span>
+                          <img src={Rupees} alt="rupees" />
+                          100/day
+                        </span>
+                      </p>
+                      <p id="product-name">
+                        Addons3{" "}
+                        <span>
+                          <img src={Rupees} alt="rupees" />
+                          100/day
+                        </span>
+                      </p>
+                      <p id="product-name">
+                        Addons4{" "}
+                        <span>
+                          <img src={Rupees} alt="rupees" />
+                          100/day
+                        </span>
+                      </p>
+                      <p
+                        id="product-name"
+                        style={{
+                          paddingBottom: "1.5rem",
+                        }}
+                      >
+                        Addons5{" "}
+                        <span>
+                          <img src={Rupees} alt="rupees" />
+                          100/day
+                        </span>
+                      </p>
+                    </div>
 
-                  <div className="no-of-days">
-                    <p style={{ marginTop: ".8rem" }}>
-                      <span></span>{" "}
-                      <span>
-                        <img src={Rupees} alt="rupees" />
-                        1000/day
-                      </span>
-                    </p>
-                    <p style={{ marginTop: ".8rem" }}>
-                      No of days <span>x 92 days</span>
-                    </p>
-                  </div>
+                    <div className="no-of-days">
+                      <p style={{ marginTop: ".8rem" }}>
+                        <span></span>{" "}
+                        <span>
+                          <img src={Rupees} alt="rupees" />
+                          1000/day
+                        </span>
+                      </p>
+                      <p style={{ marginTop: ".8rem" }}>
+                        No of days <span>x 92 days</span>
+                      </p>
+                    </div>
 
-                  <div className="total-price">
-                    <p style={{ marginTop: ".8rem" }}>
-                      Sub total{" "}
-                      <span>
-                        <img src={Rupees} alt="rupees" />
-                        92000
-                      </span>
-                    </p>
-                    <p style={{ marginTop: ".8rem" }}>
-                      GST{" "}
-                      <span>
-                        + <img src={Rupees} alt="rupees" />
-                        4356
-                      </span>
-                    </p>
-                    <p
-                      style={{
-                        marginTop: ".8rem",
-                        marginBottom: "1rem",
-                        color: "#209132",
-                      }}
-                    >
-                      Coupon discount{" "}
-                      <span>
-                        - <img src={Rupees} alt="rupees" className="green" />
-                        14356
-                      </span>
-                    </p>
-                  </div>
+                    <div className="total-price">
+                      <p style={{ marginTop: ".8rem" }}>
+                        Sub total{" "}
+                        <span>
+                          <img src={Rupees} alt="rupees" />
+                          92000
+                        </span>
+                      </p>
+                      <p style={{ marginTop: ".8rem" }}>
+                        GST{" "}
+                        <span>
+                          + <img src={Rupees} alt="rupees" />
+                          4356
+                        </span>
+                      </p>
+                      <p
+                        style={{
+                          marginTop: ".8rem",
+                          marginBottom: "1rem",
+                          color: "#209132",
+                        }}
+                      >
+                        Coupon discount{" "}
+                        <span>
+                          - <img src={Rupees} alt="rupees" className="green" />
+                          14356
+                        </span>
+                      </p>
+                    </div>
 
-                  <div className="grand-total">
-                    <p>
-                      {" "}
-                      Grand Total{" "}
-                      <span>
-                        <img src={Rupees} alt="rupees" />
-                        82000
-                      </span>
-                    </p>
+                    <div className="grand-total">
+                      <p>
+                        {" "}
+                        Grand Total{" "}
+                        <span>
+                          <img src={Rupees} alt="rupees" />
+                          82000
+                        </span>
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            )}
-          </div>
+              )}
+            </div>
 
-          <div className="button-container">
-            <Link
-              to="/redeemcoupon"
-            >
-              <img
-                src={TabletCouppon}
-                alt="tabletCuppon"
-                className="tablet-cuppon"
-              />
-            </Link>
+            <div className="button-container">
+              <Link to="/redeemcoupon">
+                <img
+                  src={TabletCouppon}
+                  alt="tabletCuppon"
+                  className="tablet-cuppon"
+                />
+              </Link>
 
-            <button type="submit" className="add-to-cart">
-              <img
-                src={WhiteCart}
-                alt="cart"
-                style={{ marginRight: ".5rem" }}
-              />
-              Add to Cart
-            </button>
-          </div>
+              <button type="submit" className="add-to-cart">
+                <img
+                  src={WhiteCart}
+                  alt="cart"
+                  style={{ marginRight: ".5rem" }}
+                />
+                Add to Cart
+              </button>
+            </div>
           </div>
         </div>
 
@@ -1146,9 +1243,9 @@ const Productdetails = () => {
                 </div>
                 <div className="product-frequently-rented-together-card-container">
                   <Swiper
-                    width={570}
+                    width={560}
                     slidesPerView={3}
-                    centeredSlides={false}
+                    centeredSlides={true}
                     spaceBetween={10}
                     slidesPerGroup={3}
                     grabCursor={true}
@@ -1170,6 +1267,7 @@ const Productdetails = () => {
                         imgSrc={Playstation}
                         name="Projector"
                         price="500/Month"
+                        data="Add +"
                       />
                     </SwiperSlide>
 
@@ -1178,6 +1276,7 @@ const Productdetails = () => {
                         imgSrc={Playstation}
                         name="Projector"
                         price="500/Month"
+                        data="Add +"
                       />
                     </SwiperSlide>
 
@@ -1186,6 +1285,7 @@ const Productdetails = () => {
                         imgSrc={Playstation}
                         name="Projector"
                         price="500/Month"
+                        data="Add +"
                       />
                     </SwiperSlide>
 
@@ -1194,6 +1294,7 @@ const Productdetails = () => {
                         imgSrc={Playstation}
                         name="Projector"
                         price="500/Month"
+                        data="Add +"
                       />
                     </SwiperSlide>
 
@@ -1202,6 +1303,7 @@ const Productdetails = () => {
                         imgSrc={Playstation}
                         name="Projector"
                         price="500/Month"
+                        data="Add +"
                       />
                     </SwiperSlide>
 
@@ -1210,6 +1312,7 @@ const Productdetails = () => {
                         imgSrc={Playstation}
                         name="Projector"
                         price="500/Month"
+                        data="Add +"
                       />
                     </SwiperSlide>
                   </Swiper>
