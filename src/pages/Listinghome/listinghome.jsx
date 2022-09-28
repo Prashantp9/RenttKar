@@ -36,6 +36,7 @@ import {
   UpArrow,
   Ask,
 } from "../../assets";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const Listinghome = () => {
@@ -57,7 +58,9 @@ const Listinghome = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna,
                 tincidunt proin elit nisi, id{" "}
               </p>
-              <button type="submit">List Items</button>
+              <button type="submit">
+                <Link to="/mylisting" style={{textDecoration:"none", color:"#FFFFFF"}}>List Items</Link>
+              </button>
             </div>
           </div>
         </div>
@@ -185,7 +188,7 @@ const Listinghome = () => {
             <p>Do You Have?</p>
             <div className="listing-home-lend-card">
               <Swiper
-                width={570}
+                width={460}
                 slidesPerView={3}
                 centeredSlides={false}
                 spaceBetween={10}
@@ -196,7 +199,7 @@ const Listinghome = () => {
                 modules={[Navigation]}
                 className="mySwiper"
               >
-                <SwiperSlide style={{ marginRight: "2rem" }}>
+                <SwiperSlide style={{ marginRight: "0rem" }}>
                   <Accessoriescard
                     imgSrc={Playstation}
                     name="Projector"
@@ -459,7 +462,9 @@ const Listinghome = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna,
                 tincidunt proin elit nisi, id{" "}
               </p>
-              <button type="submit">List Items</button>
+              <button type="submit">
+               <Link to="/mylisting" style={{textDecoration:"none", color:"#FFFFFF"}}>List Items</Link>
+              </button>
             </div>
           </div>
         </div>
@@ -825,7 +830,9 @@ const Listinghome = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna,
                 tincidunt proin elit nisi, id{" "}
               </p>
-              <button type="submit">List Items</button>
+              <button type="submit">
+              <Link to="/mylisting" style={{textDecoration:"none", color:"#FFFFFF"}}>List Items</Link>
+              </button>
             </div>
             <div className="listing-home-header-rightpart">
               <img src={GirlArt} alt="girlart" />

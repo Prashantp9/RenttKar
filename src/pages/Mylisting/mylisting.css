@@ -1,0 +1,408 @@
+.mylisting-heading-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 2rem;
+    margin-top: 6.625rem;
+}
+
+.mylisting-heading-content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    max-width: 64.375rem;
+    height: 100%;
+}
+
+.mylisting-heading-content > p {
+    margin-bottom: 0rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.375rem;
+    line-height: 1.688rem;
+    color: #DFDFDF;
+}
+
+.mylisting-sorting-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 3.875rem;
+    margin-top: 2.5rem;
+}
+
+.mylisting-sorting-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 64.375rem;
+    height: 100%;
+}
+
+.mylisting-filter-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 10rem;
+    height: 2.438rem;
+    gap: 1.25rem;
+}
+
+.mylisting-filter-container > p{
+    margin-bottom: 0rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.063rem;
+    color: #DFDFDF;
+}
+
+.mylisting-sorting-filter{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 5.438rem;
+    height: 2.438rem;
+    background: #1E1E1E;
+    box-shadow: 0px 1.40025px 5.60101px rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+}
+
+.mylisting-sorting-filter > p{
+    margin-bottom: 0rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 0.938rem;
+    color: #DFDFDF;
+}
+
+
+.mylisting-btn-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 18rem;
+    height: 100%; 
+}
+
+
+#mylisting-learn-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 24px;
+    gap: 8px;
+    background: transparent;
+    border: 1.5px solid #0E9BE1;
+    border-radius: 5px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 0.938rem;
+    color: #0E9BE1;
+}
+
+
+
+
+#mylisting-list-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 13px 24px;
+    gap: 8px;
+    background: #0E9BE1;
+    border-radius: 5px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 0.938rem;
+    color: #FFFFFF;
+    border: none;
+}
+
+
+.mylisting-newproduct-list-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    z-index: 11;
+}
+
+.mylisting-newproduct-list-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 45.5rem;
+    height: 42.875rem;
+    background: #191919;
+    border-radius: 6px;
+    padding: 2rem;
+}
+
+.mylisting-newproduct-list-content > p{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    color: #DFDFDF;
+    margin-bottom: 0rem;
+}
+
+.mylisting-newproduct-list-content > input{
+    width: 100%;
+    height: 3rem;
+    padding-left: 1.5rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.063rem;
+    color: #DFDFDF;
+    background: #111111;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    margin-top: 2rem;
+}
+
+
+#fade-in{
+    transition: opacity 1s ease;
+}
+
+#fade-out{
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.mylisting-product-accessories-container{
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    align-items: flex-start;
+    width: 100%;
+    height: 10rem;
+    resize: none;
+    background: #111111;
+    border-radius: 6px;
+    margin-top: 2rem;
+    padding: 1.5rem;
+}
+
+.mylisting-product-accessories-container > p{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.063rem;
+    color: #DFDFDF;
+    background: #191919;
+    border-radius: 3px;
+    padding: .5rem;
+    gap: .5rem;
+}
+
+
+#add-accessories{
+    color: #9B9B9B;   
+}
+
+
+#suggestion-text{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 1.25rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: #DFDFDF; 
+    margin-top: .5rem;
+    margin-bottom: 0rem;
+}
+
+#suggestion-text > span{
+    color: #9B9B9B;
+    margin-right: .2rem;
+}
+
+
+.mylisting-pincode-warrenty-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.mylisting-pincode-warrenty-container > input{
+    width: 50%;
+    height: 100%;
+    padding: 0rem 1.5rem;
+    background: #111111;
+    border-radius: 6px;
+    outline: none;
+    border:none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.063rem;
+    color: #9B9B9B;
+}
+
+
+.mylisting-upload-img-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+
+.mylisting-upload-img-container input[type="file"]{
+    cursor: pointer;
+    position: absolute;
+    transform: scale(2);
+    opacity: 0;
+}
+
+.mylisting-upload-img-container > p{
+    margin-bottom: 0rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: #DFDFDF;
+}
+
+
+.mylisting-prod-img-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 0.75rem;
+    width: 4rem;
+    height: 4rem;
+    position: relative;
+}
+
+.mylisting-prod-img-container > #prod-img{
+    border-radius: 6px;
+}
+
+.mylisting-prod-img-container > #photo-cross-img{
+    position: absolute;
+    top: -.5rem;
+    left: 3.5rem;
+}
+
+
+.mylisting-newproduct-list-content > button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    padding: 13px 24px;
+    gap: 8px;
+    background: #0E9BE1;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: #FFFFFF;
+    margin-top: 2.5rem;
+}
+
+.mylisting-card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 60rem;
+}
+
+
+.mylisting-card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    max-width: 64.375rem;
+    height: 100%;          
+}
+
+
+.mylisting-accessories-card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 28rem;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+}
+
+.mylisting-accessories-card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    max-width: 64.375rem;
+    height: 100%;
+}
+
+
+.mylisting-card-slider-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 18rem;
+    margin-top: 3rem;
+}
+
+

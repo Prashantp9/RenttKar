@@ -7,6 +7,7 @@
     height: 18.313rem;
     background: linear-gradient(61.95deg, #0A0A0A 36.21%, #070707 45.04%, #0A0A0A 58.22%);
     border-radius: 4px;
+    position: relative;
 }
 
 

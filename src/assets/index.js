@@ -172,6 +172,7 @@ export {default as Shareearn} from "./Images/shareearn.svg"
 export {default as Ellipse} from "./Images/Ellipse.svg"
 export {default as Livelighter} from "./Images/livelighter.svg"
 export {default as Samedaydelivery} from "./Images/samedaydelivery.svg"
+export {default as PhotoCross} from "./Images/photoCross.svg"
 
 
 
