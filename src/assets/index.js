@@ -174,6 +174,9 @@ export {default as Livelighter} from "./Images/livelighter.svg"
 export {default as Samedaydelivery} from "./Images/samedaydelivery.svg"
 export {default as PhotoCross} from "./Images/photoCross.svg"
 
+export {default as Macbook} from "./Images/macbook.svg"
+export {default as GoPro2} from "./Images/gopro2.svg"
+
 
 
 

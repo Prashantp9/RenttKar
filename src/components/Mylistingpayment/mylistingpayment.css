@@ -1,0 +1,274 @@
+.mylisting-prod-select-payment-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    z-index: 11;
+  }
+  
+  .mylisting-prod-select-payment-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 45.5rem;
+    height: 40rem;
+    background: #141414;
+    border-radius: 6px;
+    padding: 2rem;
+  }
+  
+  #payment-details-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    color: #dfdfdf;
+    margin-bottom: 0rem;
+  }
+  
+  #payment-details-desc {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.688rem;
+    color: #dfdfdf;
+    margin-top: 1.5rem;
+  }
+  
+  .mylisting-payment-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30rem;
+    overflow-y: scroll;
+    padding-top: 26rem;
+  }
+  
+  .mylisting-payment-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:center;
+    width: 100%;
+    height: 54rem;
+  }
+  
+  .mylisting-payment-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    background: #191919;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
+    border-radius: 6px;
+  }
+  
+  .mylisting-payment-card > p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0rem;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: #dfdfdf;
+  }
+  
+  #payment-card-or-text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .mylisting-payment-credit-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 14.25rem;
+    background: #191919;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
+    border-radius: 6px;
+    padding: 2rem;
+  }
+  
+  #payment-credit-desc {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: #dfdfdf;
+  }
+  
+  .mylisting-payment-credit-container > button {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px 40px;
+    gap: 10px;
+    background: #0e9be1;
+    border-radius: 5px;
+    align-self: center;
+    border: none;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.063rem;
+    color: #ffffff;
+    margin-top: 2rem;
+  }
+  
+  .mylisting-payment-bank-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 22rem;
+    background: #191919;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
+    border-radius: 0px 0px 6px 6px;
+    padding: 2rem;
+    row-gap: 1.5rem;
+  }
+  
+  .mylisting-payment-bank-container > input{
+      width: 100%;
+      height: 3rem;
+      padding-left: 1.5rem;
+      background: #111111;
+      border-radius: 6px;
+      outline: none;
+      border: none;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 0.875rem;
+      line-height: 1.063rem;
+      color: #9B9B9B;
+  }
+  
+  .mylisting-payment-bank-container > button{
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 20px 50px;
+      gap: 10px;
+      background: #0E9BE1;
+      border-radius: 5px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 0.875rem;
+      line-height: 1.063;
+      color: #FFFFFF;
+      border: none;
+  }
+
+  .mylisting-payment-details-received-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        backdrop-filter: blur(10px);
+        z-index: 11;
+    }
+
+
+    .mylisting-payment-details-received-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 40.875rem;
+        height: 30rem;
+        background: #191919;
+        border-radius: 6px;
+        padding: 3rem;
+    }
+
+    .mylisting-payment-details-received-content > img{
+        margin-top: 2rem;
+    }
+
+
+    #payment-details-done-text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+        color: #DFDFDF;
+        margin-top: 3rem;
+        margin-bottom: 0rem;
+    }
+
+
+    #payment-details-done-desc{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        color: #DFDFDF;
+        margin-top: 1.5rem;
+        margin-bottom: 0rem;    
+    }
+
+    .mylisting-payment-details-received-content > button{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 15px 24px;
+        gap: 10px;
+        background: #0E9BE1;
+        border-radius: 5px;
+        margin-top: 4rem;
+        border: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1.063rem;
+        color: #FFFFFF;
+    }
+
+
+    
+  

@@ -27,6 +27,12 @@ import {
   Right,
   ExcludeLeft,
   ExcludeRight,
+  OrderAccepted,
+  Laptop,
+  Playstn,
+  Macbook,
+  Pc,
+  GoPro2,
 } from "../../assets";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -34,6 +40,11 @@ import { useEffect } from "react";
 
 const Mylisting = () => {
   const [isListing, setIsListing] = useState(false);
+  const [isDone, setIsDone] = useState(false);
+  const [isFilter, setIsFilter] = useState(false);
+  const handlefilterModal = () => {
+    setIsFilter((prevState) => !prevState);
+  };
   const swiper = useSwiper();
 
   return (
@@ -51,11 +62,12 @@ const Mylisting = () => {
             <p>
               <img src={Sort} alt="sort" /> Sort:
             </p>
-            <div className="mylisting-sorting-filter">
+            <div className="mylisting-sorting-filter" style={{cursor:"pointer"}} onClick={handlefilterModal}>
               <p>
-                Recent <img src={Filter} alt="filter" />
+                Recent <img src={Filter} alt="filter" style={{userSelect:"none"}}/>
               </p>
             </div>
+
           </div>
 
           <div className="mylisting-btn-container">
@@ -157,7 +169,57 @@ const Mylisting = () => {
                         style={{ width: "4rem", height: "4rem" }}
                       />
                     </div>
-                    <button type="submit">Confirm Details</button>
+                    <button type="submit" onClick={() => setIsDone(!isDone)}>
+                      Confirm Details
+                    </button>
+                    {isDone && (
+                      <>
+                        <div className="mylisting-congrulation-container">
+                          <div className="mylisting-congrulation-content">
+                            <div className="mylisting-congrulation-text-container">
+                              <img
+                                src={OrderAccepted}
+                                alt="orderaccept"
+                                style={{
+                                  width: "7.434rem",
+                                  height: "4.063rem",
+                                }}
+                              />
+                              <div className="mylisting-congrulation-desc">
+                                <p id="congrulation-text">Congrulation</p>
+                                <p id="congrulation-desc">
+                                  Your product has been sent on a job interview
+                                  for selection. We will notify you once it has
+                                  been approved.
+                                </p>
+                              </div>
+                            </div>
+
+                            <div className="mylisting-suggestion-img-container">
+                              <p>See around! Do you also have?</p>
+                              <div className="mylisting-suggestion-img-content">
+                                <img src={Playstn} alt="playstation" />
+                                <img src={Laptop} alt="laptop" />
+                                <img src={Playstation} alt="Playstation" />
+                                <img src={GoPro} alt="gopro" />
+                                <img src={Macbook} alt="macbook" />
+                                <img src={Pc} alt="pc" />
+                                <img src={GoPro2} alt="gopro2" />
+                                <img src={Playstn} alt="playstation" />
+                                <img src={Laptop} alt="laptop" />
+                                <img src={Playstation} alt="playstation" />
+                              </div>
+                              <button
+                                type="submit"
+                                onClick={() => setIsDone(!isDone)}
+                              >
+                                Done
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </>
+                    )}
                   </div>
                 </div>
               </>
@@ -165,6 +227,26 @@ const Mylisting = () => {
           </div>
         </div>
       </div>
+      {isFilter && (
+          <>
+            <div className="mylisting-filters-container">
+              <div className="mylisting-filters-content">
+                <div className="mylisting-choose-filters">
+                  <label htmlFor="recent" onClick={handlefilterModal}>
+                    <input type="radio" name="recent" id="" />
+                    <span style={{ marginLeft: ".5rem" }}>Recent</span>
+                  </label>
+
+                  <label htmlFor="old" onClick={handlefilterModal}>
+                    <input type="radio" name="old" id="" />
+                    <span style={{ marginLeft: ".5rem" }}>Old</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </>
+        )}
+
 
       <div className="mylisting-card-container">
         <div className="mylisting-card-content">
@@ -173,7 +255,11 @@ const Mylisting = () => {
             status="Approval Pending"
           />
 
-          <Mylistingcard class="prod-status-approved" status="Approved" />
+          <Mylistingcard
+            class="prod-status-approved"
+            status="Approved"
+            agreeContainer="mylisting-prod-card-agreement-container"
+          />
 
           <Mylistingcard
             class="prod-status-active"
@@ -219,79 +305,79 @@ const Mylisting = () => {
             </div>
           </div>
           <div className="mylisting-card-slider-container">
-          <Swiper
-            width={580}
-            slidesPerView={3}
-            centeredSlides={false}
-            spaceBetween={40}
-            slidesPerGroup={3}
-            grabCursor={true}
-            loop={true}
-            loopFillGroupWithBlank={true}
-            pagination={{
-              clickable: true,
-            }}
-            navigation={{
-              prevEl: ".leftButton",
-              nextEl: ".rightButton",
-            }}
-            modules={[Navigation]}
-            className="mySwiper"
-          >
-            <SwiperSlide style={{ marginRight: "0rem" }}>
-              <Accessoriescard
-                imgSrc={Playstation}
-                name="Projector"
-                price="500/Month"
-                data="Lend"
-              />
-            </SwiperSlide>
+            <Swiper
+              width={580}
+              slidesPerView={3}
+              centeredSlides={false}
+              spaceBetween={40}
+              slidesPerGroup={3}
+              grabCursor={true}
+              loop={true}
+              loopFillGroupWithBlank={true}
+              pagination={{
+                clickable: true,
+              }}
+              navigation={{
+                prevEl: ".leftButton",
+                nextEl: ".rightButton",
+              }}
+              modules={[Navigation]}
+              className="mySwiper"
+            >
+              <SwiperSlide style={{ marginRight: "0rem" }}>
+                <Accessoriescard
+                  imgSrc={Playstation}
+                  name="Projector"
+                  price="500/Month"
+                  data="Lend"
+                />
+              </SwiperSlide>
 
-            <SwiperSlide>
-              <Accessoriescard
-                imgSrc={Playstation}
-                name="Projector"
-                price="500/Month"
-                data="Lend"
-              />
-            </SwiperSlide>
+              <SwiperSlide>
+                <Accessoriescard
+                  imgSrc={Playstation}
+                  name="Projector"
+                  price="500/Month"
+                  data="Lend"
+                />
+              </SwiperSlide>
 
-            <SwiperSlide>
-              <Accessoriescard
-                imgSrc={Playstation}
-                name="Projector"
-                price="500/Month"
-                data="Lend"
-              />
-            </SwiperSlide>
+              <SwiperSlide>
+                <Accessoriescard
+                  imgSrc={Playstation}
+                  name="Projector"
+                  price="500/Month"
+                  data="Lend"
+                />
+              </SwiperSlide>
 
-            <SwiperSlide>
-              <Accessoriescard
-                imgSrc={Playstation}
-                name="Projector"
-                price="500/Month"
-                data="Lend"
-              />
-            </SwiperSlide>
+              <SwiperSlide>
+                <Accessoriescard
+                  imgSrc={Playstation}
+                  name="Projector"
+                  price="500/Month"
+                  data="Lend"
+                />
+              </SwiperSlide>
 
-            <SwiperSlide>
-              <Accessoriescard
-                imgSrc={Playstation}
-                name="Projector"
-                price="500/Month"
-                data="Lend"
-              />
-            </SwiperSlide>
+              <SwiperSlide>
+                <Accessoriescard
+                  imgSrc={Playstation}
+                  name="Projector"
+                  price="500/Month"
+                  data="Lend"
+                />
+              </SwiperSlide>
 
-            <SwiperSlide>
-              <Accessoriescard
-                imgSrc={Playstation}
-                name="Projector"
-                price="500/Month"
-                data="Lend"
-              />
-            </SwiperSlide>
-          </Swiper>
+              <SwiperSlide>
+                <Accessoriescard
+                  imgSrc={Playstation}
+                  name="Projector"
+                  price="500/Month"
+                  data="Lend"
+                />
+              </SwiperSlide>
+            </Swiper>
           </div>
         </div>
       </div>

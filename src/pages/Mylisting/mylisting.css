@@ -360,7 +360,7 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 60rem;
+    height: 75rem;
 }
 
 
@@ -404,5 +404,176 @@
     height: 18rem;
     margin-top: 3rem;
 }
+
+
+.mylisting-congrulation-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(10px);
+    z-index: 11;
+}
+
+.mylisting-congrulation-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 45.5rem;
+    height: 40.313rem;
+    background: #191919;
+    border-radius: 6px;
+    padding: 2rem;
+}
+
+.mylisting-congrulation-text-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 8rem;
+    gap: 2.5rem;
+}
+
+.mylisting-congrulation-desc > p{
+    margin-bottom: 0rem;
+}
+
+#congrulation-text{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    color: #DFDFDF;
+}
+
+#congrulation-desc{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: #9B9B9B;
+    margin-top: .5rem;
+}
+
+.mylisting-suggestion-img-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 25.938rem;
+    margin-top: 2rem;
+    padding: 1.5rem;
+}
+
+.mylisting-suggestion-img-container > p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: #DFDFDF;
+}
+
+.mylisting-suggestion-img-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 15rem;
+    flex-wrap: wrap;
+}
+
+.mylisting-suggestion-img-content > img{
+    width: 6.514rem;
+    height: 6.514rem;
+    border-radius: 6px;
+}
+
+
+.mylisting-suggestion-img-container > button{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    align-self: center;
+    padding: 15px 24px;
+    gap: 10px;
+    background: #0E9BE1;
+    border-radius: 5px;
+    border: none;
+    margin-top: 2rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: #FFFFFF;
+}
+
+
+
+.mylisting-filters-container{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 6.25rem;
+    z-index: 1;
+    margin-top: .2rem;
+}
+
+.mylisting-filters-content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    max-width: 64.375rem;
+    height: 100%;
+}
+
+.mylisting-choose-filters{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 7.813rem;
+    height: 6.25rem;
+    background: #0A0A0A;
+    box-shadow: 0px 1.80132px 13.5099px rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    margin-left: 4.6rem;
+    row-gap: 1rem;
+    margin-top: -1.5rem;
+}
+
+.mylisting-choose-filters > label{
+    width: 100%;
+    padding-left: 1.5rem;
+}
+
+.mylisting-choose-filters > label > span{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.063rem;
+    color: #FFFFFF;
+}
+
+
+
+
+
 
 

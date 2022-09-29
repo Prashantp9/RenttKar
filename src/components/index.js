@@ -23,3 +23,5 @@ export {default as OrderAccepted} from "./Orderaccepted/orderaccepted";
 export {default as MyorderCancellation} from "./Myordercancellation/myordercancellation";
 export {default as Mylistingcard} from "./Mylistingcard/mylistingcard";
 export {default as Mylistingcarddropdown} from "./Mylistingcarddropdown/mylistingcarddropdown";
+export {default as Mylistingagreement} from "./Mylistingagreement/mylistingagreement";
+export {default as Mylistingpayment} from "./Mylistingpayment/mylistingpayment";
