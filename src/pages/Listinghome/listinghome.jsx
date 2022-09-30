@@ -39,10 +39,268 @@ import {
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
+const Accessoriescardslider = () => {
+  if (window.innerWidth <= 320) {
+    return (
+      <>
+        <Swiper
+          width={480}
+          slidesPerView={3}
+          centeredSlides={false}
+          spaceBetween={10}
+          slidesPerGroup={3}
+          grabCursor={true}
+          loop={true}
+          loopFillGroupWithBlank={true}
+          modules={[Navigation]}
+          className="mySwiper"
+        >
+          <SwiperSlide style={{ marginRight: "0rem" }}>
+            <Accessoriescard
+              imgSrc={Playstation}
+              name="Projector"
+              price="500/Month"
+              data="Add +"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Accessoriescard
+              imgSrc={Playstation}
+              name="Projector"
+              price="500/Month"
+              data="Add +"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Accessoriescard
+              imgSrc={Playstation}
+              name="Projector"
+              price="500/Month"
+              data="Add +"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Accessoriescard
+              imgSrc={Playstation}
+              name="Projector"
+              price="500/Month"
+              data="Add +"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Accessoriescard
+              imgSrc={Playstation}
+              name="Projector"
+              price="500/Month"
+              data="Add +"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Accessoriescard
+              imgSrc={Playstation}
+              name="Projector"
+              price="500/Month"
+              data="Add +"
+            />
+          </SwiperSlide>
+        </Swiper>
+      </>
+    );
+  }
+  if (window.innerWidth <= 576) {
+    return (
+      <>
+        <Swiper
+          width={560}
+          slidesPerView={3}
+          centeredSlides={false}
+          spaceBetween={10}
+          slidesPerGroup={3}
+          grabCursor={true}
+          loop={true}
+          loopFillGroupWithBlank={true}
+          modules={[Navigation]}
+          className="mySwiper"
+        >
+          <SwiperSlide style={{ marginRight: "0rem" }}>
+            <Accessoriescard
+              imgSrc={Playstation}
+              name="Projector"
+              price="500/Month"
+              data="Add +"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Accessoriescard
+              imgSrc={Playstation}
+              name="Projector"
+              price="500/Month"
+              data="Add +"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Accessoriescard
+              imgSrc={Playstation}
+              name="Projector"
+              price="500/Month"
+              data="Add +"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Accessoriescard
+              imgSrc={Playstation}
+              name="Projector"
+              price="500/Month"
+              data="Add +"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Accessoriescard
+              imgSrc={Playstation}
+              name="Projector"
+              price="500/Month"
+              data="Add +"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Accessoriescard
+              imgSrc={Playstation}
+              name="Projector"
+              price="500/Month"
+              data="Add +"
+            />
+          </SwiperSlide>
+        </Swiper>
+      </>
+    );
+  }
+  if (window.innerWidth <= 991) {
+    return (
+      <>
+        <Swiper
+          width={570}
+          slidesPerView={3}
+          centeredSlides={false}
+          spaceBetween={10}
+          slidesPerGroup={3}
+          grabCursor={true}
+          loop={true}
+          loopFillGroupWithBlank={true}
+          modules={[Navigation]}
+          className="mySwiper"
+        >
+          <SwiperSlide style={{ marginRight: "2rem" }}>
+            <Accessoriescard
+              imgSrc={Playstation}
+              name="Projector"
+              price="500/Month"
+              data="Add +"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Accessoriescard
+              imgSrc={Playstation}
+              name="Projector"
+              price="500/Month"
+              data="Add +"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Accessoriescard
+              imgSrc={Playstation}
+              name="Projector"
+              price="500/Month"
+              data="Add +"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Accessoriescard
+              imgSrc={Playstation}
+              name="Projector"
+              price="500/Month"
+              data="Add +"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Accessoriescard
+              imgSrc={Playstation}
+              name="Projector"
+              price="500/Month"
+              data="Add +"
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Accessoriescard
+              imgSrc={Playstation}
+              name="Projector"
+              price="500/Month"
+              data="Add +"
+            />
+          </SwiperSlide>
+        </Swiper>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <Accessoriescard
+          imgSrc={Playstation}
+          name="Projector"
+          price="500/Month"
+          data="Lend"
+        />
+
+        <Accessoriescard
+          imgSrc={Playstation}
+          name="Projector"
+          price="500/Month"
+          data="Lend"
+        />
+
+        <Accessoriescard
+          imgSrc={Playstation}
+          name="Projector"
+          price="500/Month"
+          data="Lend"
+        />
+
+        <Accessoriescard
+          imgSrc={Playstation}
+          name="Projector"
+          price="500/Month"
+          data="Lend"
+        />
+
+        <Accessoriescard
+          imgSrc={Playstation}
+          name="Projector"
+          price="500/Month"
+          data="Lend"
+        />
+      </>
+    );
+  }
+};
+
 const Listinghome = () => {
   const [isClick, setIsClick] = useState(false);
 
-  if (window.innerWidth <= 500) {
+  if (window.innerWidth <= 576) {
     return (
       <>
         <Navbar />
@@ -59,7 +317,12 @@ const Listinghome = () => {
                 tincidunt proin elit nisi, id{" "}
               </p>
               <button type="submit">
-                <Link to="/mylisting" style={{textDecoration:"none", color:"#FFFFFF"}}>List Items</Link>
+                <Link
+                  to="/mylisting"
+                  style={{ textDecoration: "none", color: "#FFFFFF" }}
+                >
+                  List Items
+                </Link>
               </button>
             </div>
           </div>
@@ -92,7 +355,7 @@ const Listinghome = () => {
                   <p id="benefits-info">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
-                  </div>
+                </div>
               </div>
 
               <div className="listing-home-benefits-types-content">
@@ -187,72 +450,7 @@ const Listinghome = () => {
           <div className="listing-home-lend-card-content">
             <p>Do You Have?</p>
             <div className="listing-home-lend-card">
-              <Swiper
-                width={460}
-                slidesPerView={3}
-                centeredSlides={false}
-                spaceBetween={10}
-                slidesPerGroup={3}
-                grabCursor={true}
-                loop={true}
-                loopFillGroupWithBlank={true}
-                modules={[Navigation]}
-                className="mySwiper"
-              >
-                <SwiperSlide style={{ marginRight: "0rem" }}>
-                  <Accessoriescard
-                    imgSrc={Playstation}
-                    name="Projector"
-                    price="500/Month"
-                    data="Add +"
-                  />
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <Accessoriescard
-                    imgSrc={Playstation}
-                    name="Projector"
-                    price="500/Month"
-                    data="Add +"
-                  />
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <Accessoriescard
-                    imgSrc={Playstation}
-                    name="Projector"
-                    price="500/Month"
-                    data="Add +"
-                  />
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <Accessoriescard
-                    imgSrc={Playstation}
-                    name="Projector"
-                    price="500/Month"
-                    data="Add +"
-                  />
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <Accessoriescard
-                    imgSrc={Playstation}
-                    name="Projector"
-                    price="500/Month"
-                    data="Add +"
-                  />
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <Accessoriescard
-                    imgSrc={Playstation}
-                    name="Projector"
-                    price="500/Month"
-                    data="Add +"
-                  />
-                </SwiperSlide>
-              </Swiper>
+              <Accessoriescardslider />
             </div>
           </div>
         </div>
@@ -435,7 +633,7 @@ const Listinghome = () => {
           </div>
         </div>
 
-        <Scrollerbutton  />
+        <Scrollerbutton />
 
         <Contactbutton />
 
@@ -444,9 +642,7 @@ const Listinghome = () => {
     );
   }
 
-
-
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 991) {
     return (
       <>
         <Navbar />
@@ -463,7 +659,12 @@ const Listinghome = () => {
                 tincidunt proin elit nisi, id{" "}
               </p>
               <button type="submit">
-               <Link to="/mylisting" style={{textDecoration:"none", color:"#FFFFFF"}}>List Items</Link>
+                <Link
+                  to="/mylisting"
+                  style={{ textDecoration: "none", color: "#FFFFFF" }}
+                >
+                  List Items
+                </Link>
               </button>
             </div>
           </div>
@@ -563,72 +764,7 @@ const Listinghome = () => {
           <div className="listing-home-lend-card-content">
             <p>Do You Have?</p>
             <div className="listing-home-lend-card">
-              <Swiper
-                width={570}
-                slidesPerView={3}
-                centeredSlides={false}
-                spaceBetween={10}
-                slidesPerGroup={3}
-                grabCursor={true}
-                loop={true}
-                loopFillGroupWithBlank={true}
-                modules={[Navigation]}
-                className="mySwiper"
-              >
-                <SwiperSlide style={{ marginRight: "2rem" }}>
-                  <Accessoriescard
-                    imgSrc={Playstation}
-                    name="Projector"
-                    price="500/Month"
-                    data="Add +"
-                  />
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <Accessoriescard
-                    imgSrc={Playstation}
-                    name="Projector"
-                    price="500/Month"
-                    data="Add +"
-                  />
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <Accessoriescard
-                    imgSrc={Playstation}
-                    name="Projector"
-                    price="500/Month"
-                    data="Add +"
-                  />
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <Accessoriescard
-                    imgSrc={Playstation}
-                    name="Projector"
-                    price="500/Month"
-                    data="Add +"
-                  />
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <Accessoriescard
-                    imgSrc={Playstation}
-                    name="Projector"
-                    price="500/Month"
-                    data="Add +"
-                  />
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <Accessoriescard
-                    imgSrc={Playstation}
-                    name="Projector"
-                    price="500/Month"
-                    data="Add +"
-                  />
-                </SwiperSlide>
-              </Swiper>
+              <Accessoriescardslider />
             </div>
           </div>
         </div>
@@ -831,7 +967,12 @@ const Listinghome = () => {
                 tincidunt proin elit nisi, id{" "}
               </p>
               <button type="submit">
-              <Link to="/mylisting" style={{textDecoration:"none", color:"#FFFFFF"}}>List Items</Link>
+                <Link
+                  to="/mylisting"
+                  style={{ textDecoration: "none", color: "#FFFFFF" }}
+                >
+                  List Items
+                </Link>
               </button>
             </div>
             <div className="listing-home-header-rightpart">
@@ -958,40 +1099,7 @@ const Listinghome = () => {
           <div className="listing-home-lend-card-content">
             <p>Do You Have?</p>
             <div className="listing-home-lend-card">
-              <Accessoriescard
-                imgSrc={Playstation}
-                name="Projector"
-                price="500/Month"
-                data="Lend"
-              />
-
-              <Accessoriescard
-                imgSrc={Playstation}
-                name="Projector"
-                price="500/Month"
-                data="Lend"
-              />
-
-              <Accessoriescard
-                imgSrc={Playstation}
-                name="Projector"
-                price="500/Month"
-                data="Lend"
-              />
-
-              <Accessoriescard
-                imgSrc={Playstation}
-                name="Projector"
-                price="500/Month"
-                data="Lend"
-              />
-
-              <Accessoriescard
-                imgSrc={Playstation}
-                name="Projector"
-                price="500/Month"
-                data="Lend"
-              />
+              <Accessoriescardslider />
             </div>
           </div>
         </div>

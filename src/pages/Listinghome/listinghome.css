@@ -375,8 +375,6 @@
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
-
-
 .listing-home-submit-question-container > button{
     display: flex;
     flex-direction: row;
@@ -405,16 +403,849 @@
 
 
 
-
-
-/* tablet ipads */
-@media only screen and (max-width:768px){
+/* desktops & laptops */
+@media only screen and (max-width:1199px){
     .listing-home-header-container{
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100vw;
         height: 100vh;
+        background: var(--container-background);
+        margin-top: 4.125rem;
+    }
+    
+    
+    .listing-home-header-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        max-width: 64.375rem;
+        height: 100%;
+    }
+    
+    .listing-home-header-leftpart{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 25rem;
+        height: 30rem;
+        padding-top: 5rem;
+    }
+    
+    #ecosystem-text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 2.5rem;
+        color: #DFDFDF;
+    }
+    
+    
+    #ecosystem-desc{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 2.25rem;
+        color: #DFDFDF;
+        margin-top: 2rem;
+    }
+    
+    .listing-home-header-leftpart > button{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 12px 24px;
+        gap: 10px;
+        background: #1BACF4 ;
+        border-radius: 4px;
+        border: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 0.75rem;
+        line-height: 1.375rem;
+        color: #FFFFFF;
+        margin-top: 2rem;
+    }
+    .listing-home-header-rightpart{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32rem;
+        height: 30rem;
+    }
+    
+    .listing-home-header-rightpart > img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    
+    .listing-home-benefits-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 40rem;
+    }
+    
+    .listing-home-benefits-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 90%;
+        max-width: 64.375rem;
+        height: 100%;
+    }
+    
+    
+    #benefits-text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.375rem;
+        line-height: 1.688rem;
+        color: #DFDFDF;
+        margin-top: 6rem;
+    }
+    
+    
+    #benefits-desc{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        text-align: center;
+        color: #9B9B9B;
+        margin-top: 2rem;
+    }
+    
+    .listing-home-benefits-types-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 15rem;
+        margin-top: 4rem;
+    }
+    
+    
+    .listing-home-benefits-types-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 15rem;
+        height: 100%;
+    }
+    
+    
+    .listing-home-big-ellipse{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5rem;
+        height: 5rem;
+    }
+    
+    
+    #listing-benefits-symbol{
+        position: absolute;
+    }
+    
+    
+    #benefits-heading{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+        text-align: center;
+        background: var(--btn-border-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-top: 1.875rem;
+        margin-bottom: 0rem;
+    }
+    
+    #benefits-info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.063rem;
+        text-align: center;
+        color: #DFDFDF;
+        margin-top: 1.375rem;
+        margin-bottom: 0rem;
+    }
+    
+    
+    .listing-home-how-works-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 30rem;
+        background: var(--container-background);
+    }
+    
+    .listing-home-how-works-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 90%;
+        max-width: 64.375rem;
+        height: 100%;
+    
+    }
+    
+    .listing-home-how-works-content > p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.375rem;
+        line-height: 1.688rem;
+        text-align: center;
+        color: #DFDFDF;
+        margin-top: 5rem;
+    }
+    
+    
+    
+    .listing-home-lend-card-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 35rem;
+    }
+    
+    
+    .listing-home-lend-card-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 95%;
+        max-width: 64.375rem;
+        height: 100%;
+    }
+    
+    
+    .listing-home-lend-card-content > p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.375rem;
+        line-height: 1.688rem;
+        color: #DFDFDF;
+        margin-top: 6rem;
+        margin-bottom: 0rem;
+    }
+    
+    .listing-home-lend-card{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 19rem;
+        margin-top: 4rem;
+    }
+    
+    
+    
+    .listing-home-frequently-asked-question-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 65rem;
+    }
+    
+    .listing-home-frequently-asked-question-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 90%;
+        max-width: 64.375rem;
+        height: 100%;
+    }
+    
+    .listing-home-frequently-asked-question-content > p{
+        margin-top: 6.5rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.375rem;
+        line-height: 1.688rem;
+        color: #DFDFDF;
+    }
+    
+    
+    .listing-home-question-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 30rem;
+        margin-top: 4rem;
+    }
+    
+    .listing-home-question-answers{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: flex-start;
+        width: 80%;
+        height: 4rem;
+        border-bottom: 1px solid #191919;
+        gap: 1rem;
+    }
+    
+    
+    #freq-asked-que{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 0rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.063rem;
+        color: #DFDFDF;
+        user-select: none;
+    }
+    
+    #freq-ans{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.75rem;
+        line-height: 0.938rem;
+        color: #DFDFDF;
+        user-select: none;
+    }
+    
+    
+    .listing-home-submit-question-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 30rem;
+        height: 10rem;
+        margin-top: 4rem;
+    }
+    
+    .listing-home-submit-question-input{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 2.5rem;
+        background: #FFFFFF;
+        border-radius: 5px;
+        padding-right: 1rem;
+    }
+    
+    
+    .listing-home-submit-question-input > input{
+        width: 90%;
+        height: 100%;
+        padding-left: 1.5rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.063rem;
+        color: #646464;
+        outline: none;
+        border: none;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    .listing-home-submit-question-container > button{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 15px 24px;
+        gap: 10px;
+        background: #0E9BE1;
+        border-radius: 5px;
+        border: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+        color: #FFFFFF;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Large tablets */
+@media only screen and (max-width:992px){
+    .listing-home-header-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 70rem;
+        background: var(--container-background);
+        margin-top: 4.125rem;
+    }
+    
+    
+    .listing-home-header-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        max-width: 64.375rem;
+        height: 100%;
+    }
+    
+    .listing-home-header-leftpart{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 80%;
+        height: 30rem;
+        padding-top: 5rem;
+    }
+    
+    #ecosystem-text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 2.5rem;
+        color: #DFDFDF;
+    }
+    
+    
+    #ecosystem-desc{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 2.25rem;
+        color: #DFDFDF;
+        margin-top: 2rem;
+        text-align: center;
+    }
+    
+    .listing-home-header-leftpart > button{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 12px 48px;
+        gap: 10px;
+        background: #1BACF4 ;
+        border-radius: 4px;
+        border: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+        color: #FFFFFF;
+        margin-top: 2rem;
+    }
+    .listing-home-header-rightpart{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 30rem;
+        margin-top: 5rem;
+    }
+    
+    .listing-home-header-rightpart > img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    
+    .listing-home-benefits-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 40rem;
+    }
+    
+    .listing-home-benefits-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 90%;
+        max-width: 64.375rem;
+        height: 100%;
+    }
+    
+    
+    #benefits-text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.375rem;
+        line-height: 1.688rem;
+        color: #DFDFDF;
+        margin-top: 6rem;
+    }
+    
+    
+    #benefits-desc{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        text-align: center;
+        color: #9B9B9B;
+        margin-top: 2rem;
+    }
+    
+    .listing-home-benefits-types-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 20rem;
+        margin-top: 4rem;
+    }
+    
+    
+    .listing-home-benefits-types-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 15rem;
+        height: 100%;
+    }
+    
+    
+    .listing-home-big-ellipse{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 8rem;
+        height: 8rem;
+    }
+    
+    
+    #listing-benefits-symbol{
+        position: absolute;
+    }
+    
+    
+    #benefits-heading{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+        text-align: center;
+        background: var(--btn-border-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-top: 3rem;
+    }
+    
+    #benefits-info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.063rem;
+        text-align: center;
+        color: #DFDFDF;
+        margin-top: 1rem;
+    }
+    
+    
+    .listing-home-how-works-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 30rem;
+        background: var(--container-background);
+    }
+    
+    .listing-home-how-works-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 90%;
+        max-width: 64.375rem;
+        height: 100%;
+    
+    }
+    
+    .listing-home-how-works-content > p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.375rem;
+        line-height: 1.688rem;
+        text-align: center;
+        color: #DFDFDF;
+        margin-top: 5rem;
+    }
+    
+    
+    
+    .listing-home-lend-card-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 35rem;
+    }
+    
+    
+    .listing-home-lend-card-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 90%;
+        max-width: 64.375rem;
+        height: 100%;
+    }
+    
+    
+    .listing-home-lend-card-content > p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.375rem;
+        line-height: 1.688rem;
+        color: #DFDFDF;
+        margin-top: 6rem;
+        margin-bottom: 0rem;
+    }
+    
+    .listing-home-lend-card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 19rem;
+        margin-top: 4rem;
+    }
+    
+    
+    
+    .listing-home-frequently-asked-question-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 65rem;
+    }
+    
+    .listing-home-frequently-asked-question-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 90%;
+        max-width: 64.375rem;
+        height: 100%;
+    }
+    
+    .listing-home-frequently-asked-question-content > p{
+        margin-top: 6.5rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.375rem;
+        line-height: 1.688rem;
+        color: #DFDFDF;
+    }
+    
+    
+    .listing-home-question-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 30rem;
+        margin-top: 4rem;
+    }
+    
+    .listing-home-question-answers{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: flex-start;
+        width: 80%;
+        height: 4rem;
+        border-bottom: 1px solid #191919;
+        gap: 1rem;
+    }
+    
+    
+    #freq-asked-que{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 0rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.063rem;
+        color: #DFDFDF;
+        user-select: none;
+    }
+    
+    #freq-ans{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.75rem;
+        line-height: 0.938rem;
+        color: #DFDFDF;
+        user-select: none;
+    }
+    
+    
+    .listing-home-submit-question-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 30rem;
+        height: 10rem;
+        margin-top: 4rem;
+    }
+    
+    .listing-home-submit-question-input{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 2.5rem;
+        background: #FFFFFF;
+        border-radius: 5px;
+        padding-right: 1rem;
+    }
+    
+    
+    .listing-home-submit-question-input > input{
+        width: 90%;
+        height: 100%;
+        padding-left: 1.5rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.063rem;
+        color: #646464;
+        outline: none;
+        border: none;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    
+    
+    .listing-home-submit-question-container > button{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 15px 24px;
+        gap: 10px;
+        background: #0E9BE1;
+        border-radius: 5px;
+        border: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+        color: #FFFFFF;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Medium devices */
+@media only screen and (max-width:768px){
+    .listing-home-header-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 60rem;
         background: var(--container-background);
         margin-top: 4.125rem;
     }
@@ -823,7 +1654,9 @@
 
 
 
-@media only screen and (max-width:500px){
+
+/* mobile phones */
+@media only screen and (max-width:576px){
     .listing-home-header-container{
         display: flex;
         justify-content: center;
@@ -1004,7 +1837,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 80%;
+        width: 100%;
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 500;
@@ -1222,6 +2055,425 @@
         font-weight: 600;
         font-size: 0.875rem;
         line-height: 1.375rem;
+        color: #FFFFFF;
+    }
+              
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* extra small devices watches & phones */
+@media only screen and (max-width:320px){
+    .listing-home-header-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 40rem;
+        background: var(--container-background);
+        margin-top: 4.125rem;
+    }
+    
+    
+    .listing-home-header-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 95%;
+        max-width: 64.375rem;
+        height: 100%;
+    }
+    
+    .listing-home-header-leftpart{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 30rem;
+        padding-top: 3rem;
+    }
+    
+    #ecosystem-text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+        color: #DFDFDF;
+        text-align: center;
+    }
+    
+    
+    #ecosystem-desc{
+        width: 80%;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: #9B9B9B;
+        margin-top: 2rem;
+    }
+    
+    .listing-home-header-leftpart > button{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 12px 24px;
+        gap: 10px;
+        background: var(--btn-border-gradient) ;
+        border-radius: 4px;
+        border: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 0.75rem;
+        line-height: 1.375rem;
+        color: #FFFFFF;
+        margin-top: 2rem;
+    }
+    .listing-home-header-rightpart{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 15.625rem;
+        margin-top: 2rem;
+    }
+    
+    .listing-home-header-rightpart > img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    
+    .listing-home-benefits-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 40rem;
+    }
+    
+    .listing-home-benefits-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 95%;
+        max-width: 64.375rem;
+        height: 100%;
+    }
+    
+    
+    #benefits-text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.375rem;
+        line-height: 1.688rem;
+        color: #DFDFDF;
+        margin-top: 3rem;
+    }
+    
+    
+    
+    .listing-home-benefits-types-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 26rem;
+        margin-top: 3rem;
+    }
+    
+    
+    .listing-home-benefits-types-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 4.5rem;
+    }
+    
+    
+    .listing-home-big-ellipse{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+    
+    
+    #listing-benefits-symbol{
+        position: absolute;
+    }
+
+
+    .benefits-desc-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 70%;
+        height: 100%;
+    }
+    
+    
+    #benefits-heading{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        text-align: center;
+        background: var(--btn-border-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+    
+    #benefits-info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.063rem;
+        text-align: start;
+        color: #DFDFDF;
+        margin-top: .5rem;
+        margin-bottom: 0rem;
+    }
+    
+    
+    .listing-home-how-works-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 30rem;
+        background: var(--container-background);
+    }
+    
+    .listing-home-how-works-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 95%;
+        max-width: 64.375rem;
+        height: 100%;
+    
+    }
+    
+    .listing-home-how-works-content > p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.375rem;
+        line-height: 1.688rem;
+        text-align: center;
+        color: #DFDFDF;
+        margin-top: 5rem;
+    }
+    
+    
+    
+    .listing-home-lend-card-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 30rem;
+    }
+    
+    
+    .listing-home-lend-card-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 95%;
+        max-width: 64.375rem;
+        height: 100%;
+    }
+    
+    
+    .listing-home-lend-card-content > p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.375rem;
+        line-height: 1.688rem;
+        color: #DFDFDF;
+        margin-top: 3rem;
+        margin-bottom: 0rem;
+    }
+    
+    .listing-home-lend-card{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 19rem;
+        margin-top: 4rem;
+    }
+    
+    
+    
+    .listing-home-frequently-asked-question-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 65rem;
+    }
+    
+    .listing-home-frequently-asked-question-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 90%;
+        max-width: 64.375rem;
+        height: 100%;
+    }
+    
+    .listing-home-frequently-asked-question-content > p{
+        margin-top: 6.5rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.375rem;
+        line-height: 1.688rem;
+        color: #DFDFDF;
+    }
+    
+    
+    .listing-home-question-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 30rem;
+        margin-top: 4rem;
+    }
+    
+    .listing-home-question-answers{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: flex-start;
+        width: 100%;
+        height: 4rem;
+        border-bottom: 1px solid #191919;
+        gap: 1rem;
+    }
+    
+    
+    #freq-asked-que{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 0rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.063rem;
+        color: #DFDFDF;
+        user-select: none;
+    }
+    
+    #freq-ans{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.75rem;
+        line-height: 0.938rem;
+        color: #DFDFDF;
+        user-select: none;
+    }
+    
+    
+    .listing-home-submit-question-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 10rem;
+        margin-top: 4rem;
+    }
+    
+    .listing-home-submit-question-input{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 2.5rem;
+        background: #FFFFFF;
+        border-radius: 5px;
+        padding-right: 1rem;
+    }
+    
+    
+    .listing-home-submit-question-input > input{
+        width: 90%;
+        height: 100%;
+        padding-left: 1.5rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.063rem;
+        color: #646464;
+        outline: none;
+        border: none;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    
+    
+    .listing-home-submit-question-container > button{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 12px 24px;
+        gap: 10px;
+        background: var(--btn-border-gradient);
+        border-radius: 5px;
+        border: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1.125rem;
         color: #FFFFFF;
     }
     
