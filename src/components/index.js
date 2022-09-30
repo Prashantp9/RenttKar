@@ -24,4 +24,4 @@ export {default as MyorderCancellation} from "./Myordercancellation/myordercance
 export {default as Mylistingcard} from "./Mylistingcard/mylistingcard";
 export {default as Mylistingcarddropdown} from "./Mylistingcarddropdown/mylistingcarddropdown";
 export {default as Mylistingagreement} from "./Mylistingagreement/mylistingagreement";
-export {default as Mylistingpayment} from "./Mylistingpayment/mylistingpayment";
+export {default as Mylistingpayment} from "./Mylistingpayment/mylistingpayment";    

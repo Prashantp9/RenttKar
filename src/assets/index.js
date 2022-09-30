@@ -177,6 +177,8 @@ export {default as PhotoCross} from "./Images/photoCross.svg"
 export {default as Macbook} from "./Images/macbook.svg"
 export {default as GoPro2} from "./Images/gopro2.svg"
 
+export {default as UploadImg} from "./Images/uploadimg.svg"
+
 
 
 
