@@ -13,6 +13,8 @@ import Mylistingagreement from "../Mylistingagreement/mylistingagreement";
 import Mylistingcarddropdown from "../Mylistingcarddropdown/mylistingcarddropdown";
 import "./mylistingcard.css";
 
+import { Link } from "react-router-dom";
+
 function Productconfirm(props) {
   const [isClick, setIsClick] = useState(false);
   const status = props.status;
@@ -52,7 +54,7 @@ const Mylistingcard = (props) => {
   const [isDropdown, setIsDropdown] = useState(false);
   const [isClick, setIsClick] = useState(false);
 
-  if (window.innerWidth <= 500) {
+  if (window.innerWidth <= 320) {
     return (
       <>
         <div className="mobile-mylisting-card">
@@ -72,6 +74,47 @@ const Mylistingcard = (props) => {
               src={Threedots}
               alt="threedots"
               style={{ width: ".25rem", height: "1.5rem" }}
+              onClick = {() => setIsDropdown(!isDropdown)}
+            />
+            {isDropdown && (
+              <Mylistingcarddropdown
+                onclick={() => setIsDropdown(!isDropdown)}
+              />
+            )}
+          </div>
+          <div className="mobile-mylisting-lowerpart-container">
+            <p>
+              <span>Start date</span>27/02/2022
+            </p>
+            <p>
+              <span>End date</span>27/02/2022
+            </p>
+          </div>
+        </div>
+      </>
+    );
+  }
+
+  if (window.innerWidth <= 576) {
+    return (
+      <>
+        <div className="mobile-mylisting-card">
+          <div className="mobile-mylisting-upperpart-container">
+            <div className="mobile-mylisting-prod-img-container">
+              <img src={Playstn} alt="playstation" />
+            </div>
+
+            <div className="mobile-mylisting-prod-desc-container">
+              <p>Playstation 4</p>
+              <div className="mobile-mylisting-prod-status-container">
+                <p><Link to="/mobilemynewlistingagreement" style={{textDecoration:"none", color:"#DFDFDF"}}>{props.status}</Link></p>
+              </div>
+            </div>
+
+            <img
+              src={Threedots}
+              alt="threedots"
+              style={{ width: ".25rem", height: "1.5rem", position:"absolute", right:"0"}}
               onClick = {() => setIsDropdown(!isDropdown)}
             />
             {isDropdown && (
@@ -168,7 +211,7 @@ const Mylistingcard = (props) => {
   } else {
     return (
       <>
-        <div className="mylisting-card">
+        <div className="mylisting-card" >
           <div className="mylisting-card-con">
             <div className="mylisting-card-prod-img-container">
               <img src={Playstn} alt="playstation" />
@@ -194,7 +237,7 @@ const Mylistingcard = (props) => {
 
             <div className="mylisting-prod-desc-container">
               <p>
-                <span>Renting Cost</span> -{" "}
+                <span>Renting Cost</span> - {" "}
               </p>
               <p>
                 <span>Start Date</span>21/02/2022

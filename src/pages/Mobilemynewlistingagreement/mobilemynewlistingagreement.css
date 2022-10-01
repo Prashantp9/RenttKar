@@ -1,0 +1,135 @@
+.mobile-mynewlisting-agreement-heading-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 4.125rem;
+    background: #191919;
+}
+
+.mobile-mynewlisting-agreement-heading-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 100%;
+}
+
+.mobile-mynewlisting-agreement-heading-content > p{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    color: #DFDFDF;
+}
+
+.mobile-mynewlisting-agreement-desc-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 49.938rem;
+    margin-top: 1.5rem;
+}
+
+.mobile-mynewlisting-agreement-desc-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 95%;
+    height: 100%;
+    background: #191919;
+    border-radius: 6px;
+    padding: 1.5rem 1rem;
+}
+
+.mobile-mynewlisting-termscondition-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 36.688rem;
+    background: #070707;
+    padding: 1.5rem 0rem 0rem 1rem;
+}
+
+.mobile-mynewlisting-termscondition-desc-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 32.563rem;
+    margin-top: 1rem;
+    overflow-y: scroll;
+}
+
+#terms-text{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#terms-desc{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    text-align: justify;
+    color: #FFFFFF;
+    padding-right: 1.5rem;
+}
+
+
+.mobile-mynewlisting-agreement-desc-content > label{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+
+.mobile-mynewlisting-agreement-desc-content > label > input{
+    width: 0.938rem;
+    height: 0.938rem;
+    margin-top: .2rem;
+}
+
+
+.mobile-mynewlisting-agreement-desc-content > label > span{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: .5rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #FFFFFF;
+}
+
+
+.mobile-mynewlisting-agreement-desc-content > button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    padding: 13px 24px;
+    gap: 8px;
+    background: #0E9BE1;
+    border-radius: 5px;
+    border: none;
+    margin-top: 2rem;
+}

@@ -243,6 +243,7 @@
   background: #141414;
   border-top: 1px solid #464646;
   border-radius: 0px 0px 6px 6px;
+  margin-top: -4px;
 }
 
 .mylisting-prod-card-agreement-container > p {
@@ -615,11 +616,263 @@
     text-align: center;
     color: #646464;
   }
+}
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+  @media screen and (max-width:767px) {
+    .mylisting-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 10rem;
+      background: #141414;
+      border-radius: 6px;
+      padding: 0.75rem;
+      margin-top: 2rem;
+    }
+    .mylisting-card-con {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    
+    .mylisting-card-prod-img-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 8rem;
+      height: 8rem;
+      border-radius: 5px;
+    }
+    
+    .mylisting-card-prod-img-container > img {
+      width: 100%;
+      height: 100%;
+    }
+    
+    .mylisting-prod-name-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 10rem;
+      height: 100%;
+      margin-left: 1rem;
+    }
+    
+    .mylisting-prod-name-container > p {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.125rem;
+      line-height: 1.375rem;
+      color: #dfdfdf;
+      margin-bottom: 0rem;
+    }
+    
+    /* approval-pending */
+    .prod-status-approval-pending {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 10rem;
+      height: 3.125rem;
+      background: #191919;
+      border-radius: 5px;
+      margin-top: 3rem;
+    }
+    
+    .prod-status-approval-pending > p {
+      margin-bottom: 0rem;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      text-align: center;
+      color: #9b9b9b;
+    }
+    
+    /* approved */
+    .prod-status-approved {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 8rem;
+      height: 3rem;
+      background: #191919;
+      border-radius: 5px;
+      margin-top: 3rem;
+    }
+    
+    .prod-status-approved > p {
+      margin-bottom: 0rem;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      text-align: center;
+      color: #9b9b9b;
+    }
+    
+    /* active */
+    .prod-status-active {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 8rem;
+      height: 3rem;
+      background: #191919;
+      border-radius: 5px;
+      margin-top: 3rem;
+    }
+    
+    .prod-status-active > p {
+      margin-bottom: 0rem;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      text-align: center;
+      color: #19eeb5;
+    }
+    
+    .green-dot {
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      background: #19eeb5;
+      margin-right: 0.5rem;
+    }
+    
+    /* on-hold */
+    .prod-status-on-hold {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 8rem;
+      height: 3rem;
+      background: #191919;
+      border-radius: 5px;
+      margin-top: 3rem;
+    }
+    
+    .prod-status-on-hold > p {
+      margin-bottom: 0rem;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      text-align: center;
+      color: #d5c53e;
+    }
+    
+    .yellow-dot {
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      background: #d5c53e;
+      margin-right: 0.5rem;
+    }
+    
+    /* in-active */
+    .prod-status-inactive {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 8rem;
+      height: 3rem;
+      background: #191919;
+      border-radius: 5px;
+      margin-top: 3rem;
+    }
+    
+    .prod-status-inactive > p {
+      margin-bottom: 0rem;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      text-align: center;
+      color: #b8352c;
+    }
+    
+    .red-dot {
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      background: #b8352c;
+      margin-right: 0.5rem;
+    }
+    
+    .mylisting-prod-desc-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 12rem;
+      height: 100%;
+      margin-left: 1rem;
+      margin-right: 0rem;
   
-
+    }
   
+  
+    .mylisting-prod-subs-date{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 7rem;
+      height: 100%;
+      row-gap: 2rem;
+    }
+    
+    .mylisting-prod-desc-container > p, .mylisting-prod-subs-date > p{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 0rem;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      text-align: center;
+      color: #dfdfdf;
+      row-gap: 0.5rem;
+    }
+  
+    .mylisting-prod-desc-container > p > span, .mylisting-prod-subs-date > p > span{
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 0.875rem;
+      line-height: 1.063rem;
+      text-align: center;
+      color: #646464;
+    }
+
   .mylisting-listing-card-dropdown-container {
     display: flex;
     flex-direction: column;
@@ -767,7 +1020,17 @@
 
 
 
-@media screen and (max-width:500px) {
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:576px) {
     .mobile-mylisting-card{
         display: flex;
         flex-direction: column;
@@ -783,10 +1046,11 @@
 
     .mobile-mylisting-upperpart-container{
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: flex-start;
       width: 100%;
       height: 5.5rem;
+      position: relative;
     }
 
     .mobile-mylisting-lowerpart-container{
@@ -820,7 +1084,7 @@
       width: 10.438rem;
       height: 100%;
       margin-left: 1rem;
-      margin-right: 3.8rem;
+      margin-right: 1rem;
     }
 
     .mobile-mylisting-prod-desc-container > p{
