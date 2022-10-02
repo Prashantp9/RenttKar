@@ -302,3 +302,320 @@
     
     color: #FFFFFF;
 }
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width:320px){
+    .mobile-mynewlisting-prod-heading-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 4.125rem;
+        background: #191919;
+    }
+    
+    .mobile-mynewlisting-prod-heading-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        height: 100%;
+    }
+    
+    .mobile-mynewlisting-prod-heading-content > p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+        color: #DFDFDF;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    
+    
+    .mobile-mynewlisting-prod-desc-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 49.875rem;
+        margin-top: 1.5rem;
+    }
+    
+    .mobile-mynewlisting-prod-desc-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 95%;
+        height: 100%;
+        background: #191919;
+        border-radius: 6px;
+        padding: 1.5rem 1rem;
+    }
+    
+    
+    .mobile-mynewlisting-prod-desc-content > input{
+        width: 100%;
+        height: 3rem;
+        outline: none;
+        border: none;
+        background: #111111;
+        border-radius: 6px;
+        padding-left: 1.5rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.063rem;
+        color: #DFDFDF;
+    }
+    
+    
+    .mobile-mylisting-accessories-desc-container{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        height: 10.063rem;
+        margin-top: 1.5rem;
+        padding: 0.875rem 1rem;
+        background: #111111;
+        border-radius: 6px;
+        flex-wrap: wrap;
+        gap: .75rem;
+    }
+    
+    .mobile-mylisting-accessories-desc-container > p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: .5rem;
+        gap: .75rem;
+        background: #191919;
+        border-radius: 3px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.063rem;
+        color: #DFDFDF;
+        margin-bottom: 0rem;
+    }
+    
+    #mobile-mynewlisting-newproduct{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.063rem;  
+        color: #DFDFDF;
+        margin-top: 0.875rem;
+    }
+    
+    .mobile-mynewlisting-warranty-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 7.5rem;
+        margin-top: 1.5rem;
+    }
+    
+    .mobile-mynewlisting-warranty-container > input{
+        width: 100%;
+        height: 3rem;
+        background: #111111;
+        border-radius: 6px;
+        border: none;
+        outline: none;
+        padding-left: 1.5rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.063rem;
+        color: #9B9B9B;
+    }
+    
+    
+    
+    #mobile-mynewlisting-upload-text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        color: #DFDFDF;
+        margin-top: 1.5rem;
+    }
+    
+    .mobile-mynewlisting-upload-img-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 4rem;
+        margin-top: 1rem;
+    }
+    
+    
+    .mobile-mynewlisting-upload-img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4rem;
+        height: 100%;
+        border-radius: 5px;
+    }
+    
+    .mobile-mynewlisting-upload-img > img{
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+    
+    
+    .mobile-mynewlisting-upload-img input[type="file"]{
+        cursor: pointer;
+        position: absolute;
+        transform: scale(2);
+        opacity: 0;
+    }
+    
+    
+    .mobile-mynewlisting-prod-desc-content > button{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        padding: 13px 24px;
+        gap: 8px;
+        background: #0E9BE1;
+        border-radius: 5px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: #FFFFFF;
+        border: none;
+        margin-top: 8.003rem;
+    }
+    
+    
+    
+    .mobile-mynewlisting-prodlisted-done-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 100%;
+        background: #191919;
+        padding: 3rem 1.5rem;
+    }
+    
+    
+    .mobile-mynewlisting-prod-suggestion-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        height: 28.563rem;
+        background: #141414;
+        border-radius: 6px;
+        margin-top: 4rem;
+        padding: 1rem;
+    }
+    
+    .mobile-mynewlisting-suggested-prod-img-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    
+        border-radius: 6px;
+        margin-top: 2rem;
+        gap: .7rem;
+    }
+    
+    
+    .mobile-mynewlisting-suggested-prod-img-container > img{
+        width: 4rem;
+        height: 4rem;
+        border-radius: 6px;
+    }
+    
+    #product-listed-text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+        text-align: center;
+        color: #DFDFDF;
+        margin-top: 3rem;
+    }
+    
+    
+    #product-listed-desc{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        text-align: center;
+        color: #9B9B9B;
+        margin-top: 1.5rem;
+    }
+    
+    .mobile-mynewlisting-prod-suggestion-container > button{
+        align-self: center;
+        width: 5.063rem;
+        height: 3rem;
+        margin-top: 2rem;
+        border: none;
+        background: var(--btn-border-gradient);
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        color: #FFFFFF;
+    
+    }
+    
+    #do-you-text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        text-align: center;
+        
+        color: #FFFFFF;
+    }
+}

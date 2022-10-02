@@ -15,6 +15,20 @@ import "./mylistingcarddropdown.css";
 const Mylistingcarddropdown = (props) => {
   const[isCancel, setIsCancel] = useState(false);
 
+  if(window.innerWidth <= 576){
+    return(
+      <>
+         <div className="mylisting-card-dropdown-container">
+          <div className="mylisting-card-dropdown-content">
+            <p><Link to="/mobilemynewlistingcancellation" style={{textDecoration:"none", color:"#FFFFFF"}}><img src={Cancellation} alt="cancellation" style={{width:"1rem",height:"1rem",marginRight:".5rem"}}/> Cancel Lending </Link></p>
+            <p><img src={Download} alt="download" style={{marginRight:".6rem"}}/> Download Agreement</p>
+            <p><img src={Download} alt="download" style={{marginRight:".6rem"}}/> Download Invoice</p>
+            <p><img src={PriceInfo} alt="priceinfo" style={{marginRight:".6rem"}}/> Product Support</p>
+          </div>  
+        </div> 
+      </>
+    );
+  }else {
     return(
       <>
          <div className="mylisting-card-dropdown-container">
@@ -28,6 +42,7 @@ const Mylistingcarddropdown = (props) => {
         </div> 
       </>
     );
+  }
 };
 
 export default Mylistingcarddropdown;
