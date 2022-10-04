@@ -14,6 +14,7 @@ import Mylistingcarddropdown from "../Mylistingcarddropdown/mylistingcarddropdow
 import "./mylistingcard.css";
 
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 function Productconfirm(props) {
   const [isClick, setIsClick] = useState(false);
@@ -28,13 +29,12 @@ function Productconfirm(props) {
                 src={SmallCross}
                 alt="smallcross"
                 onClick={props.onclick}
-                style={{ cursor: "pointer" }}
+                style={{ cursor: "pointer", width:"1.5rem", height:"1.5rem" }}
               />
             </p>
             <img
               src={OrderAccepted}
               alt="orderaccept"
-              style={{ marginTop: "2rem" }}
             />
             <p id="prod-select-text">Product Selected</p>
             <p id="prod-select-desc">
@@ -53,6 +53,13 @@ function Productconfirm(props) {
 const Mylistingcard = (props) => {
   const [isDropdown, setIsDropdown] = useState(false);
   const [isClick, setIsClick] = useState(false);
+  useEffect(() => {
+    if(isClick){
+      document.body.style.position = 'fixed'
+    } else {
+      document.body.style.position = 'relative'
+    }
+  })
 
   if (window.innerWidth <= 320) {
     return (
@@ -175,6 +182,77 @@ const Mylistingcard = (props) => {
                   <span>End Date</span>21/06/2022
                 </p>
               </div>
+            </div>
+            <img
+              src={Threedots}
+              alt="threedots"
+              style={{ width: ".25rem", height: "1.5rem" }}
+              onClick={() => setIsDropdown(!isDropdown)}
+            />
+            {isDropdown && (
+              <Mylistingcarddropdown
+                onclick={() => setIsDropdown(!isDropdown)}
+              />
+            )}
+          </div>
+        </div>
+        {props.agreeContainer && (
+          <>
+            <div
+              className={props.agreeContainer}
+              onClick={() => setIsClick(!isClick)}
+              style={{ cursor: "pointer" }}
+            >
+              <p>
+                Enter your bank details and fill the agreement to proceed or{" "}
+                <span>Contact Us</span>
+              </p>
+            </div>
+            {isClick && (
+              <Mylistingagreement onclick={() => setIsClick(!isClick)} />
+            )}
+          </>
+        )}
+      </>
+    );
+  } 
+  if(window.innerWidth <= 1200){
+    return (
+      <>
+        <div className="mylisting-card" >
+          <div className="mylisting-card-con">
+            <div className="mylisting-card-prod-img-container">
+              <img src={Playstn} alt="playstation" />
+            </div>
+
+            <div className="mylisting-prod-name-container">
+              <p>Playstation 4</p>
+              <div
+                className={props.class}
+                style={{ cursor: "pointer" }}
+                onClick={() => setIsClick(!isClick)}
+              >
+                <div className={props.dot}></div>
+                <p>{props.status}</p>
+              </div>
+              {isClick && (
+                <Productconfirm
+                  status="Approval Pending"
+                  onclick={() => setIsClick(!isClick)}
+                />
+              )}
+            </div>
+
+            <div className="mylisting-prod-desc-container">
+              <p>
+                <span>Renting Cost</span> - {" "}
+              </p>
+              <p>
+                <span>Start Date</span>21/02/2022
+              </p>
+              <p>
+                <span>End Date</span>21/06/2022
+              </p>
             </div>
             <img
               src={Threedots}

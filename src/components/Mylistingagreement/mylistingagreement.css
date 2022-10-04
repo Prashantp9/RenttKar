@@ -9,7 +9,7 @@
     right: 0;
     width: 100vw;
     height: 100vh;
-    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 11;
   }
   
@@ -19,7 +19,7 @@
     justify-content: flex-start;
     align-items: center;
     width: 45.125rem;
-    height: 45.313rem;
+    height: 40.313rem;
     background: #141414;
     border-radius: 6px;
     padding: 2rem;
@@ -56,7 +56,7 @@
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 0.875rem;
     line-height: 1.813rem;
     text-transform: capitalize;
     color: #dfdfdf;
@@ -96,6 +96,127 @@
     font-size: 0.875rem;
     line-height: 1.125rem;
     color: #ffffff;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media only screen and (max-width:1200px) {
+    .mylisting-prod-select-agreement-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 11;
+    }
+    
+    .mylisting-prod-select-agreement-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 40.125rem;
+      height: 32.313rem;
+      background: #141414;
+      border-radius: 6px;
+      padding: 2rem;
+    }
+    
+    .mylisting-prod-select-agreement-content > p {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 1.375rem;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.125rem;
+      line-height: 1.375rem;
+      color: #dfdfdf;
+      margin-bottom: 0rem;
+    }
+    
+    .mylisting-prod-select-agreement-desc {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+      height: 20.875rem;
+      margin-top: 3rem;
+      padding: 1.5rem 3rem 3.625rem 1.5rem;
+      overflow-y: scroll;
+      background: #070707;
+    }
+    
+    .mylisting-prod-select-agreement-desc > p {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 0.875rem;
+      line-height: 1.5rem;
+      text-transform: capitalize;
+      color: #dfdfdf;
+    }
+    
+    .mylisting-prod-select-agreement-content > label {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+      height: 2rem;
+      margin-top: 1.5rem;
+    }
+    
+    .mylisting-prod-select-agreement-content > label > span {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 0.875rem;
+      line-height: 1.125rem;
+      color: #ffffff;
+    }
+    
+    .mylisting-prod-select-agreement-content > button {
+      margin-top: 2.5rem;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 14px 24px;
+      gap: 10px;
+      background: #0e9be1;
+      border-radius: 5px;
+      border: none;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 0.875rem;
+      line-height: 1.063rem;
+      color: #ffffff;
+    }
   }
   
   

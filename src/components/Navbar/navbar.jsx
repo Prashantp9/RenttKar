@@ -24,6 +24,7 @@ import {
   GradientUpArrow,
   GradientDownArrow,
 } from "../../assets";
+import { useEffect } from "react";
 
 // ========================== Searchsuggestion components============================
 const Searchsuggestion = () => (
@@ -77,6 +78,13 @@ const Searchsuggestion = () => (
 const Dropdown = () => {
   const [isLogin, setIsLogin] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    if(isOpen){
+      document.body.style.position = "fixed"
+    } else {
+      document.body.style.position = "relative"
+    }
+  })
   const [city, setCity] = useState("Mumbai");
   const [cityState, changeCityState] = useState({
     activeObject: null,
@@ -525,6 +533,13 @@ const Navbar = () => {
   // ===================== Hooks ==========================
   const [toggleMenu, setToggleMenu] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    if(isOpen){
+      document.body.style.position = "fixed"
+    } else {
+      document.body.style.position = "relative"
+    }
+  })
   const [isClicked, setIsClicked] = useState(false);
   const [isMobileSearch, setMobileSearch] = useState(false);
   const [city, setCity] = useState("Mumbai");

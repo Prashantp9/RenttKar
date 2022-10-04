@@ -1,8 +1,8 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import "./mylistingpayment.css"
 
 
-import { SmallCross, PaymentCard, Upi, RightArrow, OrderAccepted } from '../../assets'
+import { SmallCross, PaymentCard, Upi, RightArrow, OrderAccepted, UpArrow } from '../../assets'
 
 const Mylistingpayment = (props) => {
   const [isBank, setIsBank] = useState(false);
@@ -40,13 +40,13 @@ const Mylistingpayment = (props) => {
                       alt="paymentcard"
                       style={{
                         marginRight: "1rem",
-                        width: "1.688rem",
+                        width: "1.2rem",
                         height: "1.25rem",
                       }}
                     />{" "}
                     Bank Details
                   </p>
-                  <img src={RightArrow} alt="rightarrow" />
+                  {isBank ? <img src={UpArrow} alt="uparrow" /> : <img src={RightArrow} alt="rightarrow" />}
                 </div>
                 {isBank && (
                   <>
@@ -98,8 +98,9 @@ const Mylistingpayment = (props) => {
                       src={PaymentCard}
                       alt="paymentcard"
                       style={{
-                        width: "1.5rem",
+                        width: "1.2rem",
                         height: "1.125rem",
+                        marginRight:"1rem"
                       }}
                     />{" "}
                     Credit
