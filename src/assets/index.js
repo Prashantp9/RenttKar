@@ -179,6 +179,13 @@ export {default as GoPro2} from "./Images/gopro2.svg"
 
 export {default as UploadImg} from "./Images/uploadimg.svg"
 
+export {default as faqs} from "./Images/faqs.svg"
+
+export {default as GradientAsk} from "./Images/gradientask.svg"
+export {default as GradientMobile} from "./Images/gradientmobile.svg"
+export {default as GradientLocation} from "./Images/gradientlocation.svg"
+export {default as GradientEmail} from "./Images/gradientemail.svg"
+
 
 
 

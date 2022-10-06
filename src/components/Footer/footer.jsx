@@ -39,9 +39,9 @@ const footer = () => {
             <a href="" className='otherLink'>About Us</a>
             <a href="" className='otherLink'>Policy</a>
             <a href="" className='otherLink'>Refer</a>
-            <a href="" className='otherLink'>FAQs</a>
+            <a href="/Faqs" className='otherLink'>FAQs</a>
             <a href="" className='otherLink'>Blog</a>
-            <a href="" className='otherLink'>ContactUs</a>
+            <a href="/contactus" className='otherLink'>ContactUs</a>
             </div>
         </div>
 

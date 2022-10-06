@@ -32,6 +32,8 @@ import Mobilemynewlisting from './pages/Mobilemynewlisting/mobilemynewlisting';
 import Mobilemynewlistingagreement from './pages/Mobilemynewlistingagreement/mobilemynewlistingagreement';
 import Mobilemynewlistingpayment from './pages/Mobilemynewlistingpayment/mobilemynewlistingpayment';
 import Mobilemylistingcancellation from './pages/Mobilemylistingcancellation/mobilemylistingcancellation';
+import Faqs from './pages/FAQs/faqs';
+import Contactus from './pages/Contactus/contactus';
 
 
 
@@ -69,6 +71,8 @@ const App = () => {
           <Route path='/mobilemynewlistingagreement' element={<Mobilemynewlistingagreement />} />
           <Route path='/mobilemynewlistingpayment' element={<Mobilemynewlistingpayment />} />
           <Route path='/mobilemynewlistingcancellation' element={<Mobilemylistingcancellation />} />
+          <Route path='/Faqs' element={<Faqs />} />
+          <Route path='/contactus' element={<Contactus/>} />
       </Routes>
     </Router>
   )
