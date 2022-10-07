@@ -23,6 +23,12 @@ import {
   UpArrow,
   GradientUpArrow,
   GradientDownArrow,
+  GradientUser,
+  Myprofile,
+  Myorder,
+  Mylisting,
+  Mycredit,
+  Logout,
 } from "../../assets";
 import { useEffect } from "react";
 
@@ -79,12 +85,12 @@ const Dropdown = () => {
   const [isLogin, setIsLogin] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
-    if(isOpen){
-      document.body.style.position = "fixed"
+    if (isOpen) {
+      document.body.style.position = "fixed";
     } else {
-      document.body.style.position = "relative"
+      document.body.style.position = "relative";
     }
-  })
+  });
   const [city, setCity] = useState("Mumbai");
   const [cityState, changeCityState] = useState({
     activeObject: null,
@@ -105,10 +111,11 @@ const Dropdown = () => {
 
   if (window.innerWidth <= 320) {
     return (
-      <div className="dropdownContainer"
-      style={{
-        height: isLogin ? "30rem" : "22rem",
-      }}
+      <div
+        className="dropdownContainer"
+        style={{
+          height: isLogin ? "30rem" : "22rem",
+        }}
       >
         <div className="dropdownContent">
           <div className="Content"></div>
@@ -122,7 +129,9 @@ const Dropdown = () => {
               <li onClick={() => setIsLogin(!isLogin)}>
                 {isLogin ? (
                   <p className="menu6">
-                    <Link to="/login">Ronak Kumar <img src={GradientUpArrow} alt="uparrow" /></Link>
+                    <Link to="/login">
+                      Ronak Kumar <img src={GradientUpArrow} alt="uparrow" />
+                    </Link>
                   </p>
                 ) : (
                   <p className="menu6">
@@ -135,7 +144,12 @@ const Dropdown = () => {
                 <>
                   <li className="menu10">My Profile</li>
                   <li className="menu11">
-                    <Link to="/myorder" style={{textDecoration:"none", color:"#FFFFFF"}}>My Order</Link>
+                    <Link
+                      to="/myorder"
+                      style={{ textDecoration: "none", color: "#FFFFFF" }}
+                    >
+                      My Order
+                    </Link>
                   </li>
                   <li className="menu12">My Listing</li>
                   <li className="menu13">My Credit</li>
@@ -301,12 +315,13 @@ const Dropdown = () => {
     );
   }
 
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 991) {
     return (
-      <div className="dropdownContainer"
-      style={{
-        height: isLogin ? "36rem" : "28rem",
-      }}
+      <div
+        className="dropdownContainer"
+        style={{
+          height: isLogin ? "36rem" : "28rem",
+        }}
       >
         <div className="dropdownContent">
           <div className="Content"></div>
@@ -320,7 +335,9 @@ const Dropdown = () => {
               <li onClick={() => setIsLogin(!isLogin)}>
                 {isLogin ? (
                   <p className="menu6">
-                    <Link to="/login">Ronak Kumar <img src={GradientUpArrow} alt="uparrow" /></Link>
+                    <Link to="/login">
+                      Ronak Kumar <img src={GradientUpArrow} alt="uparrow" />
+                    </Link>
                   </p>
                 ) : (
                   <p className="menu6">
@@ -333,7 +350,12 @@ const Dropdown = () => {
                 <>
                   <li className="menu10">My Profile</li>
                   <li className="menu11">
-                    <Link to="/myorder" style={{textDecoration:"none", color:"#FFFFFF"}}>My Order</Link>
+                    <Link
+                      to="/myorder"
+                      style={{ textDecoration: "none", color: "#FFFFFF" }}
+                    >
+                      My Order
+                    </Link>
                   </li>
                   <li className="menu12">My Listing</li>
                   <li className="menu13">My Credit</li>
@@ -534,14 +556,16 @@ const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
-    if(isOpen){
-      document.body.style.position = "fixed"
+    if (isOpen) {
+      document.body.style.position = "fixed";
     } else {
-      document.body.style.position = "relative"
+      document.body.style.position = "relative";
     }
-  })
+  });
   const [isClicked, setIsClicked] = useState(false);
   const [isMobileSearch, setMobileSearch] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
+  const [isProfile, setIsProfile] = useState(false);
   const [city, setCity] = useState("Mumbai");
   const [cityState, changeCityState] = useState({
     activeObject: null,
@@ -720,11 +744,145 @@ const Navbar = () => {
         </button>
 
         {/* login button */}
-        <button className="loginButton" type="submit">
-          <Link to="/login" style={{ textDecoration: "none" }}>
+        {isLogin ? (
+          <>
+            <div
+              className="navbar-myprofile-container"
+              onClick={() => setIsProfile(!isProfile)}
+              style={{
+                height: isProfile ? "14rem" : "2.138rem",
+                marginTop: isProfile ? "12rem" : "0rem",
+              }}
+            >
+              {isProfile ? (
+                <>
+                  <div className="navbar-expand-myprofile-container">
+                    <div className="navbar-expand-myprofile-content">
+                      <img
+                        src={GradientUser}
+                        alt="gradientuser"
+                        style={{ width: "1rem", height: "1rem" }}
+                      />
+                      <p>Ronak Ku..</p>
+                      <img
+                        src={UpArrow}
+                        alt="uparrow"
+                        style={{ width: "1rem", height: ".5rem" }}
+                      />
+                    </div>
+                    <div className="navbar-expand-myprofile-option">
+                      <p>
+                        <Link
+                          to="/myprofile"
+                          style={{ textDecoration: "none", color: "#FFFFFF" }}
+                        >
+                          <img
+                            src={Myprofile}
+                            alt="myprofile"
+                            style={{
+                              width: "1rem",
+                              height: "1rem",
+                              marginRight: ".5rem",
+                            }}
+                          />{" "}
+                          My Profile{" "}
+                        </Link>
+                      </p>
+                      <p>
+                        <Link
+                          to="/myorder"
+                          style={{ textDecoration: "none", color: "#FFFFFF" }}
+                        >
+                          <img
+                            src={Myorder}
+                            alt="myorder"
+                            style={{
+                              width: "0.704rem",
+                              height: "0.938rem",
+                              marginRight: ".9rem",
+                            }}
+                          />{" "}
+                          My Order{" "}
+                        </Link>
+                      </p>
+                      <p>
+                        <Link
+                          to="/mylisting"
+                          style={{ textDecoration: "none", color: "#FFFFFF" }}
+                        >
+                          <img
+                            src={Mylisting}
+                            alt="mylisting"
+                            style={{
+                              width: "0.704rem",
+                              height: "0.938rem",
+                              marginRight: ".9rem",
+                            }}
+                          />{" "}
+                          My Listing{" "}
+                        </Link>
+                      </p>
+                      <p>
+                        <Link
+                          to="/mycredit"
+                          style={{ textDecoration: "none", color: "#FFFFFF" }}
+                        >
+                          <img
+                            src={Mycredit}
+                            alt="mycredit"
+                            style={{
+                              width: "0.938rem",
+                              height: "0.938rem",
+                              marginRight: ".7rem",
+                            }}
+                          />{" "}
+                          My Credit{" "}
+                        </Link>
+                      </p>
+                      <p>
+                        <Link
+                          to="/login"
+                          style={{ textDecoration: "none", color: "#FFFFFF" }}
+                        >
+                          <img
+                            src={Logout}
+                            alt="logout"
+                            style={{
+                              width: "0.75rem",
+                              height: "0.75rem",
+                              marginRight: ".9rem",
+                            }}
+                          />{" "}
+                          Logout{" "}
+                        </Link>
+                      </p>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="navbar-myprofile-content">
+                    <img
+                      src={GradientUser}
+                      alt="gradientuser"
+                      style={{ width: "1rem", height: "1rem" }}
+                    />
+                    <p>Ronak Ku..</p>
+                    <img
+                      src={DownArrow}
+                      alt="downarrow"
+                      style={{ width: "1rem", height: ".5rem" }}
+                    />
+                  </div>
+                </>
+              )}
+            </div>
+          </>
+        ) : (
+          <button className="loginButton" onClick={() => setIsLogin(!isLogin)}>
             <span className="loginText">Login/Sign-up</span>
-          </Link>
-        </button>
+          </button>
+        )}
 
         {/* dropdown button */}
         <button

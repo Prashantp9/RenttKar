@@ -308,7 +308,105 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
+
+
   }
+
+
+  .navbar-myprofile-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 2.138rem;
+    padding: 1px;
+    background: var(--btn-border-gradient);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+
+  .navbar-myprofile-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: #191919;
+    border-radius: 5px;
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+
+
+  .navbar-myprofile-content > p, .navbar-expand-myprofile-content > p{
+    margin-bottom: 0rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 0.938rem;
+    color: #FFFFFF;
+    user-select: none;
+}
+
+
+.navbar-expand-myprofile-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  background: var(--btn-border-gradient);
+  border-radius: 5px;
+  gap: 1px;
+
+}
+
+.navbar-expand-myprofile-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 2.138rem;
+  background: #191919;
+  border-radius: 5px 5px 0px 0px;
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+
+.navbar-expand-myprofile-option{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 12rem;
+  background: #191919;
+  border-radius: 0px 0px 5px 5px;
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+
+.navbar-expand-myprofile-option > p{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0rem;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: #FFFFFF;
+  user-select: none;
+  margin-top: 1rem;
+}
 
   .loginButton a{
     display: flex;

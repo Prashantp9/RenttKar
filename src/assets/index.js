@@ -185,6 +185,12 @@ export {default as GradientAsk} from "./Images/gradientask.svg"
 export {default as GradientMobile} from "./Images/gradientmobile.svg"
 export {default as GradientLocation} from "./Images/gradientlocation.svg"
 export {default as GradientEmail} from "./Images/gradientemail.svg"
+export {default as GradientUser} from "./Images/gradientuser.svg"
+export {default as Myprofile} from "./Images/myprofile.svg"
+export {default as Myorder} from "./Images/myorder.svg"
+export {default as Mylisting} from "./Images/mylisting.svg"
+export {default as Mycredit} from "./Images/mycredit.svg"
+export {default as Logout} from "./Images/logout.svg"
 
 
 

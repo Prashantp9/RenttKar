@@ -34,6 +34,7 @@ import Mobilemynewlistingpayment from './pages/Mobilemynewlistingpayment/mobilem
 import Mobilemylistingcancellation from './pages/Mobilemylistingcancellation/mobilemylistingcancellation';
 import Faqs from './pages/FAQs/faqs';
 import Contactus from './pages/Contactus/contactus';
+import Myprofile from './pages/Myprofile/myprofile';
 
 
 
@@ -73,6 +74,7 @@ const App = () => {
           <Route path='/mobilemynewlistingcancellation' element={<Mobilemylistingcancellation />} />
           <Route path='/Faqs' element={<Faqs />} />
           <Route path='/contactus' element={<Contactus/>} />
+          <Route path='/myprofile' element={<Myprofile/>} />
       </Routes>
     </Router>
   )
