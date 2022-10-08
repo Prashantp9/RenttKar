@@ -25,7 +25,7 @@ const Gotopbutton = (props) => {
   };
 
 
-  if (window.innerWidth < 500) {
+  if (window.innerWidth < 576) {
     return (
       <>
         <div className={props.class}>

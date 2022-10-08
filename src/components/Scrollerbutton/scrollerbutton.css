@@ -19,7 +19,7 @@
 
   
 /* iPads, Tablets */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 991px) {
     .reScroll{
         display: none;
       }
@@ -29,7 +29,7 @@
 
 
 /* Mobile phones */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 576px) {
     .reScroll{
         display: none;
       }

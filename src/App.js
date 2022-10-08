@@ -35,6 +35,8 @@ import Mobilemylistingcancellation from './pages/Mobilemylistingcancellation/mob
 import Faqs from './pages/FAQs/faqs';
 import Contactus from './pages/Contactus/contactus';
 import Myprofile from './pages/Myprofile/myprofile';
+import Blog from './pages/Blog/blog';
+import Policy from './pages/Policy/policy';
 
 
 
@@ -75,6 +77,8 @@ const App = () => {
           <Route path='/Faqs' element={<Faqs />} />
           <Route path='/contactus' element={<Contactus/>} />
           <Route path='/myprofile' element={<Myprofile/>} />
+          <Route path='/blog' element={<Blog/>} />
+          <Route path='/policy' element={<Policy/>} />
       </Routes>
     </Router>
   )

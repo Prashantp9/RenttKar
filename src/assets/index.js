@@ -191,6 +191,14 @@ export {default as Myorder} from "./Images/myorder.svg"
 export {default as Mylisting} from "./Images/mylisting.svg"
 export {default as Mycredit} from "./Images/mycredit.svg"
 export {default as Logout} from "./Images/logout.svg"
+export {default as Blog} from "./Images/blog.svg"
+export {default as Blog1} from "./Images/blog1.svg"
+export {default as Blog2} from "./Images/blog2.svg"
+export {default as Blog3} from "./Images/blog3.svg"
+export {default as Blog4} from "./Images/blog4.svg"
+export {default as Next} from "./Images/next.svg"
+export {default as TabletBlog} from "./Images/tableblog.png"
+export {default as Privacy} from "./Images/privacy.svg"
 
 
 

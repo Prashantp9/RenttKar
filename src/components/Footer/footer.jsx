@@ -37,10 +37,10 @@ const footer = () => {
         <div className="footer-links">
           <div className="footer-links-content">
             <a href="" className='otherLink'>About Us</a>
-            <a href="" className='otherLink'>Policy</a>
+            <a href="/policy" className='otherLink'>Policy</a>
             <a href="" className='otherLink'>Refer</a>
             <a href="/Faqs" className='otherLink'>FAQs</a>
-            <a href="" className='otherLink'>Blog</a>
+            <a href="/blog" className='otherLink'>Blog</a>
             <a href="/contactus" className='otherLink'>ContactUs</a>
             </div>
         </div>

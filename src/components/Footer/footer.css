@@ -677,6 +677,242 @@
 @media only screen and (max-width: 767px) {
     .footerContainer{
         display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 26.063rem;
+        background-color: #191919;
+    }
+    
+    .footerContent{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        max-width: 48.125rem;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    .footerLogo{
+        position: absolute;
+        top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 7.059rem;
+        height: 1.123rem;
+        background: url("../../assets/Images/footerLogo.svg");
+        background-repeat: no-repeat;
+
+    }
+    
+    .socials{
+        position: absolute;
+        width: 9.25rem;
+        height: 1.375rem;
+        top: 14rem;
+        left: 2rem; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;  
+        margin-bottom: 1rem;
+    }
+
+    .socials .socialsContent p{
+        display: none;
+    }
+
+    .insta,.facebook,.youtube,.twitter{
+        width: 1.375rem;
+        height: 1.375rem;
+    }
+
+    
+    .contactInfo{
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 20.688rem;
+        height: 1.5rem;
+        top: 14rem;
+        left: 18rem;
+        margin-bottom: 1rem;
+    }
+
+    p{
+        margin: 0;
+    }
+
+    .phone{
+        width: 0.875rem;
+        height: 0.875rem;
+        margin-right: 0.75rem;
+        margin-bottom: .2rem;
+    }
+    
+    .number{
+        width: 7.063rem;
+        height: 1.375rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.063rem;
+        /* identical to box height */
+
+        text-align: center;
+        
+        color: var(--font-color);
+        margin-bottom: 0px;
+    }
+
+    .contactInfo a{
+        margin-top: -.5rem;
+    }
+    
+    .mail{
+        width: 1.026rem;
+        height: 0.813rem;
+        margin-left: 1rem;
+        margin-right: 0.75rem;
+    }
+    .mailId{
+        width: 11.375rem;
+        height: 1.375rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.063rem;
+        /* identical to box height */
+        color: var(--font-color);
+    }
+    
+    .description{
+        position: absolute;
+        top: 4rem;
+        width: 36.688rem;
+        height: 3.25rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+        /* or 161% */
+        
+        text-align: center;
+        
+        color: var(--font-color);
+        margin-top: 2.5rem;
+    }
+    
+    .footer-links{
+        position: absolute;
+        width: 100vw;
+        top: 15.875rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 5.25rem;
+        padding: 1rem;
+        border-top:  1px solid #212121;
+        border-bottom:  1px solid #212121;
+        margin-top: 0rem;
+    }
+
+    .footer-links-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 38.75rem;
+    }
+    
+    .about{
+        width: 6.5rem;
+        height: 1.688rem;
+        
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        
+        /* identical to box height */
+        
+        text-align: center;
+        text-decoration: none;
+        
+        /* gradient */   
+        background: var(--btn-border-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    
+    }
+
+    .otherLink{
+        display: flex;
+        align-items: center;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        /* identical to box height */
+        
+        text-align: center;
+        text-decoration: none;
+        
+        /* White */
+        
+        color: var(--font-color);
+    }
+    
+    .copyRight{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.563rem;
+        line-height: 0.688rem;
+        /* identical to box height */
+        
+        text-align: center;
+        
+        color: #9B9B9B;
+        margin-top: 23.5rem;
+        margin-bottom: 2rem;
+    } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*small mobile & watches */
+@media (max-width: 576px) {
+    .footerContainer{
+        display: flex;
         /* position: absolute; */
         justify-content: center;
         align-items: center;
@@ -881,19 +1117,6 @@
         margin-bottom: 2rem;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
