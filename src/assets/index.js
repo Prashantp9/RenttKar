@@ -199,6 +199,20 @@ export {default as Blog4} from "./Images/blog4.svg"
 export {default as Next} from "./Images/next.svg"
 export {default as TabletBlog} from "./Images/tableblog.png"
 export {default as Privacy} from "./Images/privacy.svg"
+export {default as Share} from "./Images/share.svg"
+export {default as Comment} from "./Images/comment.svg"
+
+export {default as Loyal} from "./Images/loyalpoints.svg"
+export {default as Instagramlogo} from "./Images/instagramlogo.svg"
+export {default as Facebooklogo} from "./Images/facebooklogo.svg"
+export {default as Twitterlogo} from "./Images/twitterlogo.svg"
+export {default as Linklogo} from "./Images/linklogo.svg"
+export {default as Referingfriend} from "./Images/referingfreind.svg"
+export {default as Listingproduct} from "./Images/listingproduct.svg"
+export {default as Rentingproducts} from "./Images/rentingproducts.svg"
+export {default as Leftbutton} from "./Images/leftbutton.svg"
+export {default as Rightbutton} from "./Images/rightbutton.svg"
+
 
 
 

@@ -37,6 +37,8 @@ import Contactus from './pages/Contactus/contactus';
 import Myprofile from './pages/Myprofile/myprofile';
 import Blog from './pages/Blog/blog';
 import Policy from './pages/Policy/policy';
+import Readblog from './pages/Readblog/readblog';
+import Creditreferal from './pages/Creditrefral/creditreferal';
 
 
 
@@ -79,6 +81,8 @@ const App = () => {
           <Route path='/myprofile' element={<Myprofile/>} />
           <Route path='/blog' element={<Blog/>} />
           <Route path='/policy' element={<Policy/>} />
+          <Route path='/readblog' element={<Readblog/>} />
+          <Route path='/creditreferal' element={<Creditreferal/>} />
       </Routes>
     </Router>
   )

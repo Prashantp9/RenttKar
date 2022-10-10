@@ -26,10 +26,10 @@ const footer = () => {
         </div>
         <div className="contactInfo">              
               {/* phone */}
-              <a href="tel:+917900042875"><img src={Phone} alt="Phone" className='phone'/><span className='number'>7900042875</span></a>
+              <a href="tel:+917900042875" style={{textDecoration:"none"}}><img src={Phone} alt="Phone" className='phone'/><span className='number'>7900042875</span></a>
         
               {/* phone */}
-              <a href="mailto:"><img src={Mail} alt="Mail" className='mail'/><span className='mailId'>rentkarr@gmail.com</span></a>
+              <a href="mailto:" style={{textDecoration:"none"}}><img src={Mail} alt="Mail" className='mail'/><span className='mailId'>rentkarr@gmail.com</span></a>
         </div>
         {/* description */}
         <p className='description'>Rentkar is a leading rental tech platform based in Mumbai, Pune, and Bengaluru. The mission for us is to create a sustainable sharing culture.We are grateful to have served 30,000+ customers with love and quality service.</p>
@@ -38,7 +38,7 @@ const footer = () => {
           <div className="footer-links-content">
             <a href="" className='otherLink'>About Us</a>
             <a href="/policy" className='otherLink'>Policy</a>
-            <a href="" className='otherLink'>Refer</a>
+            <a href="/creditreferal" className='otherLink'>Refer</a>
             <a href="/Faqs" className='otherLink'>FAQs</a>
             <a href="/blog" className='otherLink'>Blog</a>
             <a href="/contactus" className='otherLink'>ContactUs</a>

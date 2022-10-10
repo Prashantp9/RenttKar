@@ -4,6 +4,8 @@ import "./blog.css";
 import { Blogcard, Contactbutton, Footer, Navbar, Scrollerbutton } from "../../components";
 import { Blog1, Blog2, Blog3, Blog4, Next, RightArrow, TabletBlog } from "../../assets";
 
+import { Link } from "react-router-dom";
+
 const Blog = () => {
     if(window.innerWidth <= 576){
         return (
@@ -187,14 +189,15 @@ const Blog = () => {
                 </div>
               </div>
         
-              <div className="blog-upper-card-container">
+              <Link to="/readblog" style={{textDecoration:"none"}}>
+              <div className="blog-upper-card-container" >
                 <div className="blog-upper-card-content">
                   <div className="blog-upper-card-img-container">
                     <img src={TabletBlog} alt="blog" />
                   </div>
         
                   <div className="blog-upper-card-desc-container">
-                    <p id="blog-uppercard-heading">
+                    <p id="blog-uppercard-heading" >
                       Resources for creating your own reading app
                     </p>
                     <div className="blog-uppercard-desc-cat-container">
@@ -221,6 +224,7 @@ const Blog = () => {
                   </div>
                 </div>
               </div>
+              </Link>
         
               <div className="blog-card-container">
                 <div className="blog-card-content">
