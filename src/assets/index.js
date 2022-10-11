@@ -213,6 +213,14 @@ export {default as Rentingproducts} from "./Images/rentingproducts.svg"
 export {default as Leftbutton} from "./Images/leftbutton.svg"
 export {default as Rightbutton} from "./Images/rightbutton.svg"
 
+export {default as Story} from "./Images/story.svg"
+export {default as Tree} from "./Images/tree.svg"
+export {default as Mission} from "./Images/mission.svg"
+export {default as Ceo} from "./Images/ceo.png"
+export {default as Linkedin} from "./Images/linkedinlogo.svg"
+export {default as GradientRightArrow} from "./Images/gradientrightarrow.svg"
+export {default as GradientLeftArrow} from "./Images/gradientleftarrow.svg"
+
 
 
 

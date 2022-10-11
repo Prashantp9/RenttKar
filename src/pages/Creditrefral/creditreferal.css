@@ -159,78 +159,600 @@
   color: #dfdfdf;
 }
 
-#referal-copy{
+#referal-copy {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #0e9be1;
+}
+
+.credit-gold-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 35%;
+  height: 100%;
+}
+
+#gold-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.375rem;
+  line-height: 1.813rem;
+  background: linear-gradient(90deg, #bc9c49 0%, #d4b451 52.6%, #bc9c49 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0rem;
+}
+
+#coming-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #dfdfdf;
+  margin-bottom: 0rem;
+}
+
+#gold-content {
+  width: 80%;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  text-align: center;
+  color: #9b9b9b;
+  margin-bottom: 0rem;
+}
+
+.credit-get-points-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 30rem;
+  margin-top: 4rem;
+}
+
+.credit-get-points-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 90%;
+  max-width: 64.375rem;
+  height: 100%;
+  background: #141414;
+  border-radius: 6px;
+  padding: 2rem;
+}
+
+#get-point-text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 2rem;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.375rem;
+  line-height: 1.813rem;
+  text-align: center;
+  color: #dfdfdf;
+  margin-bottom: 0rem;
+}
+
+.credit-types-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 18rem;
+}
+
+.credit-refering-friend-container,
+.credit-listing-product-container,
+.credit-renting-products-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+}
+
+#credit-point-heading {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #dfdfdf;
+  margin-top: 3rem;
+  margin-bottom: 0rem;
+}
+
+#credit-point-desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  text-align: center;
+  color: #9b9b9b;
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+}
+
+#credit-refer-id {
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  text-align: center;
+  color: #dfdfdf;
+}
+
+#credit-refer-id > span {
+  color: #0e9be1;
+}
+
+.credit-transaction-heading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.credit-transaction-heading-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+  max-width: 64.375rem;
+  height: 100%;
+}
+
+.credit-transaction-heading-content > p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.375rem;
+  line-height: 1.813rem;
+  color: #dfdfdf;
+  margin-bottom: 0rem;
+}
+
+.credit-transaction-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 40.875rem;
+  margin-bottom: 5rem;
+}
+
+.credit-transaction-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+  max-width: 64.375rem;
+  height: 100%;
+  background: #141414;
+  border-radius: 6px;
+}
+
+.credit-transaction-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 4rem;
+  border-radius: 6px 6px 0px 0px;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  border-bottom: 2px solid #1e1e1e;
+}
+
+.credit-loyality-header,
+.credit-datetime-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 20%;
+  height: 100%;
+}
+
+.credit-details-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 40%;
+  height: 100%;
+}
+
+.credit-loyality-header > p,
+.credit-details-header > p,
+.credit-datetime-header > p {
+  margin-bottom: 0rem;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #dfdfdf;
+}
+
+.credit-transaction-content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 32rem;
+}
+
+.credit-transaction-list-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 4rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  border-bottom: 2px solid #1e1e1e;
+}
+
+.credit-loyality-points,
+.credit-time {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 20%;
+  height: 100%;
+}
+
+.credit-loyality-points > p {
+  margin-bottom: 0rem;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.credit-details {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 40%;
+  height: 100%;
+}
+
+.credit-details > p {
+  margin-bottom: 0rem;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #dfdfdf;
+}
+
+.credit-time > p {
+  margin-bottom: 0rem;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #9b9b9b;
+}
+
+#green-point {
+  color: #47bc1e;
+}
+
+#red-point {
+  color: #d34e4e;
+}
+
+.credit-navigation-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  border-radius: 0px 0px 6px 6px;
+}
+
+.credit-navigation-button > p {
+  margin-bottom: 0rem;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #dfdfdf;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 991px) {
+  .credit-heading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 2rem;
+    margin-top: 8rem;
+  }
+
+  .credit-heading-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    max-width: 64.375rem;
+    height: 100%;
+  }
+
+  .credit-heading-content > p {
+    margin-bottom: 0rem;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.375rem;
+    line-height: 1.813rem;
+    color: #dfdfdf;
+  }
+
+  .credit-loyal-points-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 18.75rem;
+    margin-top: 4rem;
+  }
+
+  .credit-loyal-points-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    max-width: 64.375rem;
+    height: 100%;
+    background: #141414;
+    border-radius: 6px;
+    padding: 2rem;
+  }
+
+  .credit-loyal-points {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+  }
+
+  .credit-loyal-points > p {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: #dfdfdf;
+    margin-bottom: 0rem;
+  }
+
+  .credit-share-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+    height: 100%;
+    border-left: 3px solid #191919;
+    border-right: none;
+  }
+
+  .credit-referal-code {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    height: 3rem;
+  }
+
+  .referal-code-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+    border-left: 2px dashed #0e9be1;
+    border-top: 2px dashed #0e9be1;
+    border-bottom: 2px dashed #0e9be1;
+    border-radius: 6px 0px 0px 6px;
+  }
+
+  .referal-code-container > p {
+    margin-bottom: 0rem;
+  }
+
+  .referal-copy-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    background: rgba(14, 155, 225, 0.2);
+    border: 2px solid #0e9be1;
+    border-radius: 0px 6px 6px 0px;
+  }
+
+  .referal-copy-container > p {
+    margin-bottom: 0rem;
+  }
+
+  #share-heading {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.813rem;
+    color: #dfdfdf;
+    margin-bottom: 0rem;
+  }
+
+  #share-credit {
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.25rem;
-    color: #0E9BE1;
+    color: #dfdfdf;
+    margin-bottom: 0rem;
+  }
 
-}
+  #share-via {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.063rem;
+    color: #dfdfdf;
+    margin-bottom: 0rem;
+  }
 
+  #referal-code {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: #dfdfdf;
+  }
 
-.credit-gold-container{
+  #referal-copy {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: #0e9be1;
+  }
+
+  .credit-gold-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     width: 35%;
     height: 100%;
-}
+  }
 
-
-
-#gold-text{
-    font-family: 'Montserrat';
+  #gold-text {
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
     font-size: 1.375rem;
     line-height: 1.813rem;
-    background: linear-gradient(90deg, #BC9C49 0%, #D4B451 52.6%, #BC9C49 100%);
+    background: linear-gradient(90deg, #bc9c49 0%, #d4b451 52.6%, #bc9c49 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 0rem;
-}
+  }
 
-
-
-#coming-text{
-    font-family: 'Montserrat';
+  #coming-text {
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
     font-size: 1.125rem;
     line-height: 1.375rem;
-    color: #DFDFDF;
+    color: #dfdfdf;
     margin-bottom: 0rem;
-}
+  }
 
-
-#gold-content{
+  #gold-content {
     width: 80%;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.25rem;
     text-align: center;
-    color: #9B9B9B;
+    color: #9b9b9b;
     margin-bottom: 0rem;
-}
+  }
 
-
-.credit-get-points-container{
+  .credit-get-points-container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 30rem;
+    height: 33.563  rem;
     margin-top: 4rem;
-}
+    background: #141414;
+  }
 
-
-.credit-get-points-content{
+  .credit-get-points-content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -238,95 +760,90 @@
     width: 90%;
     max-width: 64.375rem;
     height: 100%;
-    background: #141414;
-    border-radius: 6px;
+    background: transparent;
+    border-radius: 0px;
     padding: 2rem;
-}
+  }
 
-
-
-#get-point-text{
+  #get-point-text {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: 100%;
     height: 2rem;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
     font-size: 1.375rem;
     line-height: 1.813rem;
     text-align: center;
-    color: #DFDFDF;
+    color: #dfdfdf;
     margin-bottom: 0rem;
-}
+  }
 
-.credit-types-container{
+  .credit-types-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 18rem;
-}
+    height: 20rem;
+  }
 
-.credit-refering-friend-container, .credit-listing-product-container, .credit-renting-products-container{
+  .credit-refering-friend-container,
+  .credit-listing-product-container,
+  .credit-renting-products-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     width: 30%;
     height: 100%;
-}
+  }
 
-
-
-#credit-point-heading{
-    font-family: 'Montserrat';
+  #credit-point-heading {
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
     font-size: 1.125rem;
     line-height: 1.375rem;
-    color: #DFDFDF;
+    color: #dfdfdf;
     margin-top: 3rem;
     margin-bottom: 0rem;
-}
+  }
 
-#credit-point-desc{
+  #credit-point-desc {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 90%;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.25rem;
     text-align: center;
-    color: #9B9B9B;
+    color: #9b9b9b;
     margin-top: 2rem;
     margin-bottom: 0rem;
-}
+  }
 
-#credit-refer-id{
+  #credit-refer-id {
     margin-top: 1rem;
     margin-bottom: 0rem;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.375rem;
     text-align: center;
-    color: #DFDFDF;
-}
+    color: #dfdfdf;
+  }
 
+  #credit-refer-id > span {
+    color: #0e9be1;
+  }
 
-#credit-refer-id > span{
-    color: #0E9BE1;
-}
-
-
-
-.credit-transaction-heading-container{
+  .credit-transaction-heading-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -334,38 +851,37 @@
     height: 2rem;
     margin-top: 4rem;
     margin-bottom: 4rem;
-}
+  }
 
-.credit-transaction-heading-content{
+  .credit-transaction-heading-content {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: 90%;
     max-width: 64.375rem;
     height: 100%;
-}
+  }
 
-.credit-transaction-heading-content > p{
-    font-family: 'Montserrat';
+  .credit-transaction-heading-content > p {
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
     font-size: 1.375rem;
     line-height: 1.813rem;
-    color: #DFDFDF;
+    color: #dfdfdf;
     margin-bottom: 0rem;
-}
+  }
 
-
-.credit-transaction-container{
+  .credit-transaction-container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 40.875rem;
     margin-bottom: 5rem;
-}
+  }
 
-.credit-transaction-content{
+  .credit-transaction-content {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -375,142 +891,630 @@
     height: 100%;
     background: #141414;
     border-radius: 6px;
-}
+  }
 
-.credit-transaction-header-container{
+  .credit-transaction-header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 4rem;
     border-radius: 6px 6px 0px 0px;
-    padding-left: 4rem;
-    padding-right: 4rem;
-    border-bottom: 2px solid #1E1E1E;
-}
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-bottom: 2px solid #1e1e1e;
+  }
 
-.credit-loyality-header, .credit-datetime-header{
+  .credit-loyality-header,
+  .credit-datetime-header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 20%;
+    width: 25%;
     height: 100%;
-}
+  }
 
-.credit-details-header{
+  .credit-details-header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: 40%;
     height: 100%;
-}
+  }
 
-.credit-loyality-header > p, .credit-details-header > p, .credit-datetime-header > p{
+  .credit-loyality-header > p,
+  .credit-details-header > p,
+  .credit-datetime-header > p {
     margin-bottom: 0rem;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.25rem;
-    color: #DFDFDF;
-}
+    color: #dfdfdf;
+  }
 
-
-.credit-transaction-content-container{
+  .credit-transaction-content-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     width: 100%;
     height: 32rem;
-}
+  }
 
-
-.credit-transaction-list-content{
+  .credit-transaction-list-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 4rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
-    border-bottom: 2px solid #1E1E1E;
-    
-}
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-bottom: 2px solid #1e1e1e;
+  }
 
-.credit-loyality-points, .credit-time{
+  .credit-loyality-points,
+  .credit-time {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 20%;
+    width: 25%;
     height: 100%;
-}
+  }
 
-
-.credit-loyality-points > p{
+  .credit-loyality-points > p {
     margin-bottom: 0rem;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
     font-size: 0.875rem;
     line-height: 1.25rem;
-}
+  }
 
-
-.credit-details{
+  .credit-details {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: 40%;
     height: 100%;
-}
+  }
 
-
-.credit-details > p{
+  .credit-details > p {
     margin-bottom: 0rem;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    color: #DFDFDF;    
-}
+    color: #dfdfdf;
+  }
 
-.credit-time > p{
+  .credit-time > p {
     margin-bottom: 0rem;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    color: #9B9B9B;    
-}
+    color: #9b9b9b;
+  }
 
-#green-point{
-    color: #47BC1E;
-}
+  #green-point {
+    color: #47bc1e;
+  }
 
-#red-point{
-    color: #D34E4E;
-}
+  #red-point {
+    color: #d34e4e;
+  }
 
-
-
-.credit-navigation-button{
+  .credit-navigation-button {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 5rem;
     border-radius: 0px 0px 6px 6px;
-}
+  }
 
-.credit-navigation-button > p{
+  .credit-navigation-button > p {
     margin-bottom: 0rem;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.25rem;
-    color: #DFDFDF;
+    color: #dfdfdf;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 767px){
+      .mobile-credit-heading-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 2rem;
+        margin-top: 6rem;
+      }
+
+
+      .mobile-credit-heading-content{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 95%;
+        max-width: 26.27rem;
+        height: 100%;
+      }
+
+      .mobile-credit-heading-content > p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.375rem;
+        line-height: 1.688rem;
+        color: #DFDFDF;
+      }
+
+
+      .mobile-credit-loyality-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 15.625rem;
+        margin-top: 3rem;
+      }
+
+      .mobile-credit-loyality-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+        max-width: 26.27rem;
+        height: 100%;
+        background: #0F0F0F;
+        border-radius: 6px;
+        padding: 2rem;
+      }
+
+      
+      #mobile-loyality-text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        color: #DFDFDF;
+      }
+
+      #mobile-loyality-price{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.375rem;
+        line-height: 1.5rem;
+        color: #DFDFDF;
+      }
+
+
+      .mobile-credit-share-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 18.563rem;
+        margin-top: 1.5rem;
+      }
+
+
+      .mobile-credit-share-content{
+        display: flex;
+        flex-direction: column ;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+        max-width: 26.27rem;
+        height: 100%;
+        background: #0F0F0F;
+        border-radius: 6px;
+        padding: 2rem;
+      }
+
+
+      .mobile-share-credit-code-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        height: 3.875rem;
+      }
+
+      .mobile-credit-code{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        height: 100%;
+        border-left:  2px dashed #1AA9F0;
+        border-top:  2px dashed #1AA9F0;
+        border-bottom:  2px dashed #1AA9F0;
+        border-radius: 6px 0px 0px 6px;
+      }
+
+      .mobile-credit-code > p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.375rem;
+        color: #DFDFDF;
+
+      }
+
+      .mobile-share-copy-text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        height: 100%;
+        background: rgba(26, 169, 240, 0.2);
+        border: 2px solid #1AA9F0;
+        border-radius: 0px 6px 6px 0px;
+      }
+
+      .mobile-share-copy-text > p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.375rem;
+        color: #1AA9F0;
+      }
+
+
+      #mobile-share-text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+        color: #DFDFDF;
+      }
+
+
+      #mobile-sharevia-text{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        color: #DFDFDF;
+      }
+
+
+
+      .mobile-get-points-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 29.625rem;
+        margin-top: 3.5rem;
+        background: #070707;
+      }
+
+
+      .mobile-get-points-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 95%;
+        max-width: 26.27rem;
+        height: 100%;
+        padding: 2.5rem 0rem;
+      }
+
+      .mobile-get-points-content > p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        color: #DFDFDF;
+      }
+
+
+      .mobile-refer-friend-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 5.5rem; 
+        margin-top: 2.5rem;
+      }
+
+      .mobile-refer-friend-img-container{
+        width: 4rem;
+        height: 100%;
+      }
+
+      .mobile-refer-friend-img-container > img{
+        width: 100%;
+        height: 100%;
+      }
+
+
+      .mobile-refer-friend-desc-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 75%;
+        height: 100%;
+        gap: .5rem;
+      }
+
+      #mobile-refering-text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        color: #DFDFDF;
+      }
+
+      #mobile-refering-desc{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        color: #9B9B9B;
+      }
+
+      #mobile-refering-desc > span{
+          color: #DFDFDF;
+      }
+
+      #mobile-refering-desc > span > span{
+        color: #1AA9F0;
+      }
+
+
+
+
+      .mobile-transaction-history-text-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 2rem;
+        margin-top: 3.25rem;
+      }
+
+
+      .mobile-transaction-history-text-content{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 95%;
+        max-width: 26.27rem;
+        height: 100%;
+      }
+
+      .mobile-transaction-history-text-content > p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        text-align: center;
+        color: #DFDFDF;
+      }
+
+      .mobile-transaction-history-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 48.375rem;
+        margin-top: 2.5rem;
+        margin-bottom: 4rem;
+      }
+
+
+      .mobile-transaction-history-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 95%;
+        max-width: 26.27rem;
+        height: 100%;
+        background: #0F0F0F;
+        border-radius: 6px;
+      }
+
+      .mobile-transaction-history-table-header-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 5.25rem;
+        border-bottom: 2px solid #191919;
+        padding-left: 1.25rem;
+      }
+
+      .transaction-his-loyal-header{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 30%;
+        height: 100%;
+        flex-wrap: wrap;
+      }
+
+
+      .transaction-his-loyal-header > p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: #DFDFDF;
+      }
+
+      .transaction-his-details-header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        height: 100%;
+      }
+
+
+      .transaction-his-details-header > p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        color: #DFDFDF;
+      }
+
+      .mobile-transaction-list-details{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 6.375rem;
+        padding-left: 1.25rem;
+        border-bottom: 2px solid #191919;
+      }
+
+
+      .mobile-transaction-loyality-point{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 30%;
+        height: 100%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+
+      .mobile-transaction-details-date{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 70%;
+        height: 100%;
+        gap: .25rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+
+
+      .mobile-transaction-loyality-point > p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+
+
+      #green{
+        color: #47BC1E;
+      }
+
+      #red{
+        color: #B8352C;
+      }
+
+
+      #mobile-details-desc{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+        color: #DFDFDF;
+      }
+
+      #mobile-details-date{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.75rem;
+        line-height: 1.375rem;
+        color: #9B9B9B;
+      }
+
+
+      #mobile-navigation-btn{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          font-family: 'Montserrat';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 1rem;
+          line-height: 1.25rem;
+          color: #DFDFDF;
+      }
+
+
+
+
+
+
+  
+      
+
+      
+
+
 }

@@ -36,7 +36,7 @@ const footer = () => {
         {/* footer links */}
         <div className="footer-links">
           <div className="footer-links-content">
-            <a href="" className='otherLink'>About Us</a>
+            <a href="/aboutus" className='otherLink'>About Us</a>
             <a href="/policy" className='otherLink'>Policy</a>
             <a href="/creditreferal" className='otherLink'>Refer</a>
             <a href="/Faqs" className='otherLink'>FAQs</a>

@@ -1,0 +1,1068 @@
+.aboutus-company-desc-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 6rem;
+    margin-top: 6rem;
+}
+
+.aboutus-company-desc-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 64.375rem;
+    height: 100%;
+}
+
+.aboutus-company-desc-content > p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.813rem;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 0rem;
+}
+
+
+.aboutus-story-img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 22.641rem;
+    margin-top: 4rem;
+}
+
+
+.aboutus-story-img-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 64.375rem;
+}
+
+
+.aboutus-our-story-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 28.375rem;
+    margin-top: 8.078rem;
+}
+
+.aboutus-our-story-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 64.375rem;
+    height: 100%;
+}
+
+
+.aboutus-our-story-heading-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+}
+
+.aboutus-our-story-heading-container > p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.813rem;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 0rem;
+}
+
+
+.aboutus-our-story-desc-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 21rem;
+}
+
+.aboutus-our-story-desc-container > p{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.375rem;
+    line-height: 2.25rem;
+    letter-spacing: 0.05em;
+    color: #DFDFDF;
+    margin-bottom: 0rem;
+}
+
+
+
+.aboutus-mission-vision-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 30rem;
+    margin-top: 8.078rem;
+}
+
+.aboutus-mission-vision-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 64.375rem;
+    height: 100%;
+}
+
+
+.aboutus-mission-vision-heading-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+}
+
+.aboutus-mission-vision-heading-container > p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.375rem;
+    line-height: 1.813rem;
+    letter-spacing: 0.05em;
+    color: #DFDFDF;
+    margin-bottom: 0rem;
+}
+
+
+.aboutus-mission-vision-desc-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 24rem;
+}
+
+
+.aboutus-mission-vision-desc-container > p{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 40%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.375rem;
+    line-height: 2.25rem;
+    letter-spacing: 0.05em;
+    text-align: end;
+    color: #DFDFDF;
+    margin-bottom: 0rem;  
+}
+
+
+
+.aboutus-our-team-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 32rem;
+    margin-top: 8.125rem;
+    margin-bottom: 5rem;
+}
+
+.aboutus-our-team-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 64.375rem;
+    height: 100%;
+}
+
+
+.aboutus-our-team-heading-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+}
+
+.aboutus-our-team-heading-container > p{
+    margin-bottom: 0rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.375rem;
+    line-height: 1.813rem;
+    color: #DFDFDF;
+}
+
+.aboutus-ceo-desc-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 24rem;
+}
+
+.aboutus-ceo-desc-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 18rem;
+    height: 24rem;
+    background: radial-gradient(115.1% 83.22% at 50% 40.4%, rgba(20, 20, 20, 0.5) 0%, rgba(25, 25, 25, 0.5) 100%);
+    box-shadow: 0px 5.01961px 15.0588px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+
+.aboutus-ceo-desc-img-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 18rem;
+    height: 18rem;
+}
+
+.aboutus-ceo-desc-img-container > img{
+    width: 100%;
+    height: 100%;
+    border-radius: 6px 6px 0px 0px;
+}
+
+
+#ceo-name-text{
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+    margin-bottom: 0rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: #DFDFDF;
+}
+
+#ceo-text{
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.063rem;
+    color: #9B9B9B;
+    margin-bottom: 0rem;
+}
+
+
+.aboutus-ceo-desc-content-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 18rem;
+    height: 24rem;
+    background: radial-gradient(115.1% 83.22% at 50% 40.4%, rgba(20, 20, 20, 0.5) 0%, rgba(25, 25, 25, 0.5) 100%);
+    box-shadow: 0px 5.01961px 15.0588px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    padding: 2rem;
+}
+
+.aboutus-ceo-desc-content-container > p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #DFDFDF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 991px){
+    .aboutus-company-desc-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 6rem;
+        margin-top: 6rem;
+    }
+    
+    .aboutus-company-desc-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        max-width: 64.375rem;
+        height: 100%;
+    }
+    
+    .aboutus-company-desc-content > p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.25rem;
+        line-height: 1.813rem;
+        text-align: center;
+        color: #FFFFFF;
+        margin-bottom: 0rem;
+    }
+    
+    
+    .aboutus-story-img-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 22.189rem;
+        margin-top: 8rem;
+    }
+    
+    
+    .aboutus-story-img-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        max-width: 64.375rem;
+    }
+
+    .aboutus-story-img-content > img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    
+    .aboutus-our-story-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 40.375rem;
+        margin-top: 8rem;
+    }
+    
+    .aboutus-our-story-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+        max-width: 64.375rem;
+        height: 100%;
+    }
+    
+    
+    .aboutus-our-story-heading-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 2rem;
+    }
+    
+    .aboutus-our-story-heading-container > p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 1.813rem;
+        text-align: center;
+        color: #FFFFFF;
+        margin-bottom: 0rem;
+    }
+    
+    
+    .aboutus-our-story-desc-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 30rem;
+    }
+    
+    .aboutus-our-story-desc-container > p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.25rem;
+        line-height: 1.813rem;
+        letter-spacing: 0.05em;
+        color: #DFDFDF;
+        margin-bottom: 0rem;
+        text-align: center;
+    }
+    
+    
+    
+    .aboutus-mission-vision-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 30rem;
+        margin-top: 8rem;
+    }
+    
+    .aboutus-mission-vision-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        max-width: 64.375rem;
+        height: 100%;
+    }
+    
+    
+    .aboutus-mission-vision-heading-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 2rem;
+    }
+    
+    .aboutus-mission-vision-heading-container > p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.375rem;
+        line-height: 1.813rem;
+        letter-spacing: 0.05em;
+        color: #DFDFDF;
+        text-align: center;
+        margin-bottom: 0rem;
+    }
+    
+    
+    .aboutus-mission-vision-desc-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 20rem;
+    }
+    
+    
+    .aboutus-mission-vision-desc-container > p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.25rem;
+        line-height: 1.813rem;
+        letter-spacing: 0.05em;
+        text-align: center;
+        color: #DFDFDF;
+        margin-bottom: 0rem;  
+    }
+    
+    
+    
+    .aboutus-our-team-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 64rem;
+        margin-top: 8.125rem;
+        margin-bottom: 8rem;
+    }
+    
+    .aboutus-our-team-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+        max-width: 64.375rem;
+        height: 100%;
+    }
+    
+    
+    .aboutus-our-team-heading-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 2rem;
+    }
+    
+    .aboutus-our-team-heading-container > p{
+        margin-bottom: 0rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.375rem;
+        line-height: 1.813rem;
+        color: #DFDFDF;
+    }
+    
+    .aboutus-ceo-desc-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 4rem;
+        width: 100%;
+        height: 58rem;
+    }
+    
+    .aboutus-ceo-desc-card{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 17.75rem;
+        height: 24.875rem;
+        background: radial-gradient(115.1% 83.22% at 50% 40.4%, rgba(20, 20, 20, 0.5) 0%, rgba(25, 25, 25, 0.5) 100%);
+        box-shadow: 0px 5.01961px 15.0588px rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+    }
+    
+    .aboutus-ceo-desc-img-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 17.75rem;
+        height: 16rem;
+    }
+    
+    .aboutus-ceo-desc-img-container > img{
+        width: 100%;
+        height: 100%;
+        border-radius: 6px 6px 0px 0px;
+    }
+    
+    
+    #ceo-name-text{
+        margin-top: 1.5rem;
+        margin-left: 1.5rem;
+        margin-bottom: 0rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        color: #DFDFDF;
+    }
+    
+    #ceo-text{
+        margin-top: 1rem;
+        margin-left: 1.5rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.063rem;
+        color: #9B9B9B;
+        margin-bottom: 0rem;
+    }
+
+
+    .aboutus-more-info-button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 3rem;
+        border-top: 2px solid #191919;
+        margin-top: 1rem;
+        cursor: pointer;
+    }
+
+    .aboutus-more-info-button > p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.063rem;
+        background: var(--btn-border-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    
+    .aboutus-ceo-desc-content-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 17.75rem;
+        height: 24.875rem;
+        background: radial-gradient(115.1% 83.22% at 50% 40.4%, rgba(20, 20, 20, 0.5) 0%, rgba(25, 25, 25, 0.5) 100%);
+        box-shadow: 0px 5.01961px 15.0588px rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+        padding: 0rem;
+    }
+    
+    .aboutus-ceo-desc-content-container > p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: #DFDFDF;
+        margin-top: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .aboutus-ceo-desc-content-container > a{
+        margin-top: 6rem;
+        margin-left: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 767px){
+    .aboutus-company-desc-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 6rem;
+        margin-top: 6rem;
+    }
+    
+    .aboutus-company-desc-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        max-width: 64.375rem;
+        height: 100%;
+    }
+    
+    .aboutus-company-desc-content > p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.25rem;
+        line-height: 1.813rem;
+        text-align: center;
+        color: #FFFFFF;
+        margin-bottom: 0rem;
+    }
+    
+    
+    .aboutus-story-img-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 11.189rem;
+        margin-top: 4rem;
+    }
+    
+    
+    .aboutus-story-img-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        max-width: 64.375rem;
+    }
+
+    .aboutus-story-img-content > img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    
+    .aboutus-our-story-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 35.375rem;
+        margin-top: 6rem;
+    }
+    
+    .aboutus-our-story-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+        max-width: 64.375rem;
+        height: 100%;
+    }
+    
+    
+    .aboutus-our-story-heading-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 2rem;
+    }
+    
+    .aboutus-our-story-heading-container > p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 1.813rem;
+        text-align: center;
+        color: #FFFFFF;
+        margin-bottom: 0rem;
+    }
+    
+    
+    .aboutus-our-story-desc-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 30rem;
+    }
+    
+    .aboutus-our-story-desc-container > p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        letter-spacing: 0.05em;
+        color: #DFDFDF;
+        margin-bottom: 0rem;
+        text-align: center;
+    }
+    
+    
+    
+    .aboutus-mission-vision-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 28rem;
+        margin-top: 6rem;
+    }
+    
+    .aboutus-mission-vision-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+        max-width: 64.375rem;
+        height: 100%;
+    }
+    
+    
+    .aboutus-mission-vision-heading-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 2rem;
+    }
+    
+    .aboutus-mission-vision-heading-container > p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.375rem;
+        line-height: 1.813rem;
+        letter-spacing: 0.05em;
+        color: #DFDFDF;
+        text-align: center;
+        margin-bottom: 0rem;
+    }
+    
+    
+    .aboutus-mission-vision-desc-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 22rem;
+    }
+    
+    
+    .aboutus-mission-vision-desc-container > p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        letter-spacing: 0.05em;
+        text-align: center;
+        color: #DFDFDF;
+        margin-bottom: 0rem;  
+    }
+    
+    
+    
+    .aboutus-our-team-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 85rem;
+        margin-top: 8.125rem;
+        margin-bottom: 5rem;
+    }
+    
+    .aboutus-our-team-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+        max-width: 64.375rem;
+        height: 100%;
+    }
+    
+    
+    .aboutus-our-team-heading-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 2rem;
+    }
+    
+    .aboutus-our-team-heading-container > p{
+        margin-bottom: 0rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.375rem;
+        line-height: 1.813rem;
+        color: #DFDFDF;
+    }
+    
+    .aboutus-ceo-desc-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 80rem;
+    }
+    
+    .aboutus-ceo-desc-card{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 17.75rem;
+        height: 24.875rem;
+        background: radial-gradient(115.1% 83.22% at 50% 40.4%, rgba(20, 20, 20, 0.5) 0%, rgba(25, 25, 25, 0.5) 100%);
+        box-shadow: 0px 5.01961px 15.0588px rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+    }
+    
+    .aboutus-ceo-desc-img-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 17.75rem;
+        height: 16rem;
+    }
+    
+    .aboutus-ceo-desc-img-container > img{
+        width: 100%;
+        height: 100%;
+        border-radius: 6px 6px 0px 0px;
+    }
+    
+    
+    #ceo-name-text{
+        margin-top: 1.5rem;
+        margin-left: 1.5rem;
+        margin-bottom: 0rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        color: #DFDFDF;
+    }
+    
+    #ceo-text{
+        margin-top: 1rem;
+        margin-left: 1.5rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.063rem;
+        color: #9B9B9B;
+        margin-bottom: 0rem;
+    }
+
+
+    .aboutus-more-info-button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 3rem;
+        border-top: 2px solid #191919;
+        margin-top: 1rem;
+        cursor: pointer;
+    }
+
+    .aboutus-more-info-button > p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.063rem;
+        background: var(--btn-border-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    
+    .aboutus-ceo-desc-content-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 17.75rem;
+        height: 24.875rem;
+        background: radial-gradient(115.1% 83.22% at 50% 40.4%, rgba(20, 20, 20, 0.5) 0%, rgba(25, 25, 25, 0.5) 100%);
+        box-shadow: 0px 5.01961px 15.0588px rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+        padding: 0rem;
+    }
+    
+    .aboutus-ceo-desc-content-container > p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: #DFDFDF;
+        margin-top: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .aboutus-ceo-desc-content-container > a{
+        margin-top: 6rem;
+        margin-left: 1rem;
+    }
+}

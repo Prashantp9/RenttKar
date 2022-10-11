@@ -39,6 +39,8 @@ import Blog from './pages/Blog/blog';
 import Policy from './pages/Policy/policy';
 import Readblog from './pages/Readblog/readblog';
 import Creditreferal from './pages/Creditrefral/creditreferal';
+import Aboutus from './pages/Aboutus/aboutus';
+
 
 
 
@@ -46,43 +48,44 @@ const App = () => {
   return (
     <Router>
       <Routes>
-          <Route index element={<Home />} />
-          <Route path='/' element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path='/otp' element={<Otp />} />
-          <Route path='/registeration' element={<Registeration />} />
-          <Route path='/catogeries' element={<Catogery />} />
-          <Route path='/searchresultfound' element={<Searchfound />} />
-          <Route path='/searchresultnotfound' element={<Searchnotfound />} />
-          <Route path='/productdetails' element={<Productdetails />} />
-          <Route path='/freeaddons' element={<Mobileaddons />} />
-          <Route path='/paidaddons' element={<Mobilepaidaddons />} />
-          <Route path='/redeemcoupon' element={<Mobileredeemcoupon />} />
-          <Route path='/mycart' element={<Mycart />} />
-          <Route path='/deliveryaddress' element={<Deliveryaddress />} />
-          <Route path='/payment' element={<Payment />} />
-          <Route path='/agreement' element={<Agreement />} />
-          <Route path='/individualpurchase' element={<Individualpurchase />} />
-          <Route path='/companypurchase' element={<Companypurchase />} />
-          <Route path='/ordersummary' element={<Mobileordersummary/>} />
-          <Route path='/ordersummary' element={<Mobileordersummary/>} />
-          <Route path='/myorder' element={<Myorder />} />
-          <Route path='/mobilemyorderextend' element={<Mobilemyorderextend />} />
-          <Route path='/mobilemyorderproductsupp' element={<Mobilemyorderproductsupp />} />
-          <Route path='/mobilemyorderproductcancel' element={<Mobilemyorderproductcancel />} />
-          <Route path='/listinghome' element={<Listinghome />} />
-          <Route path='/mylisting' element={<Mylisting />} />
-          <Route path='/mobilemynewlisting' element={<Mobilemynewlisting />} />
-          <Route path='/mobilemynewlistingagreement' element={<Mobilemynewlistingagreement />} />
-          <Route path='/mobilemynewlistingpayment' element={<Mobilemynewlistingpayment />} />
-          <Route path='/mobilemynewlistingcancellation' element={<Mobilemylistingcancellation />} />
-          <Route path='/Faqs' element={<Faqs />} />
-          <Route path='/contactus' element={<Contactus/>} />
-          <Route path='/myprofile' element={<Myprofile/>} />
-          <Route path='/blog' element={<Blog/>} />
-          <Route path='/policy' element={<Policy/>} />
-          <Route path='/readblog' element={<Readblog/>} />
-          <Route path='/creditreferal' element={<Creditreferal/>} />
+        <Route index element={<Home />} />
+        <Route path='/' element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path='/otp' element={<Otp />} />
+        <Route path='/registeration' element={<Registeration />} />
+        <Route path='/catogeries' element={<Catogery />} />
+        <Route path='/searchresultfound' element={<Searchfound />} />
+        <Route path='/searchresultnotfound' element={<Searchnotfound />} />
+        <Route path='/productdetails' element={<Productdetails />} />
+        <Route path='/freeaddons' element={<Mobileaddons />} />
+        <Route path='/paidaddons' element={<Mobilepaidaddons />} />
+        <Route path='/redeemcoupon' element={<Mobileredeemcoupon />} />
+        <Route path='/mycart' element={<Mycart />} />
+        <Route path='/deliveryaddress' element={<Deliveryaddress />} />
+        <Route path='/payment' element={<Payment />} />
+        <Route path='/agreement' element={<Agreement />} />
+        <Route path='/individualpurchase' element={<Individualpurchase />} />
+        <Route path='/companypurchase' element={<Companypurchase />} />
+        <Route path='/ordersummary' element={<Mobileordersummary />} />
+        <Route path='/ordersummary' element={<Mobileordersummary />} />
+        <Route path='/myorder' element={<Myorder />} />
+        <Route path='/mobilemyorderextend' element={<Mobilemyorderextend />} />
+        <Route path='/mobilemyorderproductsupp' element={<Mobilemyorderproductsupp />} />
+        <Route path='/mobilemyorderproductcancel' element={<Mobilemyorderproductcancel />} />
+        <Route path='/listinghome' element={<Listinghome />} />
+        <Route path='/mylisting' element={<Mylisting />} />
+        <Route path='/mobilemynewlisting' element={<Mobilemynewlisting />} />
+        <Route path='/mobilemynewlistingagreement' element={<Mobilemynewlistingagreement />} />
+        <Route path='/mobilemynewlistingpayment' element={<Mobilemynewlistingpayment />} />
+        <Route path='/mobilemynewlistingcancellation' element={<Mobilemylistingcancellation />} />
+        <Route path='/Faqs' element={<Faqs />} />
+        <Route path='/contactus' element={<Contactus />} />
+        <Route path='/myprofile' element={<Myprofile />} />
+        <Route path='/blog' element={<Blog />} />
+        <Route path='/policy' element={<Policy />} />
+        <Route path='/readblog' element={<Readblog />} />
+        <Route path='/creditreferal' element={<Creditreferal />} />
+        <Route path='/aboutus' element={<Aboutus />} />
       </Routes>
     </Router>
   )
