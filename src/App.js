@@ -40,6 +40,7 @@ import Policy from './pages/Policy/policy';
 import Readblog from './pages/Readblog/readblog';
 import Creditreferal from './pages/Creditrefral/creditreferal';
 import Aboutus from './pages/Aboutus/aboutus';
+import Submitblog from './pages/Submitblog/submitblog';
 
 
 
@@ -86,6 +87,7 @@ const App = () => {
         <Route path='/readblog' element={<Readblog />} />
         <Route path='/creditreferal' element={<Creditreferal />} />
         <Route path='/aboutus' element={<Aboutus />} />
+        <Route path='/submitblog' element={<Submitblog />} />
       </Routes>
     </Router>
   )

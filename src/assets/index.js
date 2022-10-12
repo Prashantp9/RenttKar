@@ -220,6 +220,7 @@ export {default as Ceo} from "./Images/ceo.png"
 export {default as Linkedin} from "./Images/linkedinlogo.svg"
 export {default as GradientRightArrow} from "./Images/gradientrightarrow.svg"
 export {default as GradientLeftArrow} from "./Images/gradientleftarrow.svg"
+export {default as Uploadblogimg} from "./Images/uploadblogimg.png"
 
 
 
