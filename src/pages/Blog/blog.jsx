@@ -28,9 +28,6 @@ const Blog = () => {
         <div className="blog-header-container">
           <p id="blog-heading-text">RentKar Blog</p>
           <p id="blog-heading-desc">Learn how renting can save environment</p>
-          <button>
-            <Link to="/submitblog">Create Blog +</Link>
-          </button>
         </div>
 
         <div className="blog-catogery-container">
@@ -88,7 +85,6 @@ const Blog = () => {
         <div className="blog-header-container">
           <p id="blog-heading-text">RentKar Blog</p>
           <p id="blog-heading-desc">Learn how renting can save environment</p>
-          <button>Create Blog +</button>
         </div>
 
         <div className="blog-catogery-container">

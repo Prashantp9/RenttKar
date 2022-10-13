@@ -221,6 +221,9 @@ export {default as Linkedin} from "./Images/linkedinlogo.svg"
 export {default as GradientRightArrow} from "./Images/gradientrightarrow.svg"
 export {default as GradientLeftArrow} from "./Images/gradientleftarrow.svg"
 export {default as Uploadblogimg} from "./Images/uploadblogimg.png"
+export {default as Refresh} from "./Images/refresh.svg"
+export {default as Grow} from "./Images/growwithus.png"
+export {default as Quality} from "./Images/quality.svg"
 
 
 

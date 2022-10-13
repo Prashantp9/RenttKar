@@ -534,7 +534,7 @@ const Dropdown = () => {
             <a href="" className="menu2">
               How Renting Works
             </a>
-            <a href="" className="menu3">
+            <a href="/forbusiness" className="menu3">
               Rentkar for Business
             </a>
             <a href="" className="menu4">
