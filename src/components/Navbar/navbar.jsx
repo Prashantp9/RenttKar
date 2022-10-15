@@ -186,6 +186,7 @@ const Dropdown = () => {
                             alt="close"
                             className="close"
                             onClick={() => setIsOpen(!isOpen)}
+                            style={{width:"1rem", height:"1rem"}}
                           />
                           <div className="cityContainer">
                             <div
@@ -392,6 +393,7 @@ const Dropdown = () => {
                             alt="close"
                             className="close"
                             onClick={() => setIsOpen(!isOpen)}
+                            style={{width:"1rem", height:"1rem"}}
                           />
                           <div className="cityContainer">
                             <div
@@ -614,6 +616,7 @@ const Navbar = () => {
                   alt="close"
                   className="close"
                   onClick={() => setIsOpen(!isOpen)}
+                  style={{width:"1rem", height:"1rem"}}
                 />
                 <div className="cityContainer">
                   <div

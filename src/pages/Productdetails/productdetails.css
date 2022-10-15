@@ -583,7 +583,7 @@
     width: 100%;
     height: 100%;
     gap: 0.375rem;
-    border-radius: 4px;
+    border-radius: 3px;
     background: var(--container-background);
 
 }
@@ -1228,7 +1228,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 19.125rem;
+    max-width: 20.125rem;
     height: 2.688rem;
     margin-bottom: 2rem;
     gap: .5rem;
@@ -1508,6 +1508,306 @@
     border-radius: 16px;
     border: none;
 }
+
+
+.product-details-wishlist-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(5px);
+    z-index: 11;
+}
+
+.product-details-wishlist-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 54rem;
+    height: 40rem;
+    background: #191919;
+    border-radius: 6px;
+    padding: 2rem;
+}
+
+
+#wait-list-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.375rem;
+    line-height: 1.5rem;
+    color: #FFFFFF;
+    margin-bottom: 0rem;
+}
+
+.product-details-name-no-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+    margin-top: 2.5rem;
+}
+
+
+.product-details-name-no-container > input{
+    width: 45%;
+    height: 100%;
+    background: #111111;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    padding-left: 1.5rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.125rem;
+    color: #DFDFDF;
+}
+
+
+
+.prod-name-wish-list-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+    margin-top: 2rem;
+}
+
+.prod-name-wish-list-container > input{
+    width: 100%;
+    height: 100%;
+    background: #111111;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    padding-left: 1.5rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.125rem;
+    color: #DFDFDF;
+}
+
+
+.prod-details-package-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    margin-top: 2rem;
+}
+
+
+.prod-details-package-one{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 100%;
+    border-radius: 6px;
+    background: var(--btn-border-gradient);
+}
+
+.prod-details-package-one-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background: #0F0F0F;
+}
+
+
+#prod-details-month-text{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: #9B9B9B;
+    text-align: center;
+    margin-bottom: 0rem;
+    row-gap: .25rem;
+}
+
+#prod-details-price-text{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.125rem;
+    color: #DFDFDF; 
+    text-align: center;
+    margin-bottom: 0rem;
+}
+
+
+
+.prod-details-date-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+    margin-top: 2.5rem;
+    column-gap: 2rem;
+}
+
+.prod-details-from-date-container , .prod-details-upto-date-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+}
+
+.prod-details-from-date-container > p, .prod-details-upto-date-container > p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.125rem;
+    color: #DFDFDF;
+    margin-bottom: 0rem;
+}
+
+
+.prod-details-date-input-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+}
+
+.prod-details-date-input-container > input{
+    width: 80%;
+    height: 100%;
+    background: #FFFFFF;
+    border-radius: 5px 0px 0px 5px;
+    border: none;
+    outline: none;
+    padding-left: 1.5rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.125rem;
+    color: #191919;
+}
+
+.prod-details-calender-img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+    background: #0E9BE1;
+    border-radius: 0px 5px 5px 0px;
+}
+
+
+.prod-details-city-pin-input-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+    margin-top: 2.5rem;
+}
+
+.prod-details-city-pin-input-container > input{
+    width: 45%;
+    height: 100%;
+    padding-left: 1.5rem;
+    border: none;
+    outline: none;
+    background: #111111;
+    border-radius: 6px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.125rem;
+    color: #DFDFDF;
+}
+
+.prod-details-city-input-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 45%;
+    height: 100%;
+    background: #111111;
+    border-radius: 6px;
+    padding-left: 1.5rem;
+}
+
+.prod-details-city-input-container > input{
+    width: 90%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: #111111;
+    border-radius: 6px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.125rem;
+    background: linear-gradient(91deg, #1BACF4 0%, #19EEB5 100.16%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; 
+}
+
+
+
+.product-details-wishlist-content > button{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    align-self: center;
+    padding: 15px 24px;
+    gap: 10px;
+    background: #0E9BE1;
+    border-radius: 5px;
+    border: none;
+    margin-top: 2.5rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.125rem;
+    color: #FFFFFF; 
+}
+
+
+
+
+
+
 
 
 
@@ -2138,7 +2438,7 @@
         height: 100%;
         gap: 0.375rem;
         background: var(--container-background);
-        border-radius: 4px;
+        border-radius: 3px;
     
     }
     
@@ -3652,7 +3952,7 @@
         height: 100%;
         gap: 0.375rem;
         background: var(--container-background);
-        border-radius: 4px;
+        border-radius: 3px;
     
     }
     

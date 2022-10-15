@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { Navigation } from "swiper";
 import DatePicker from "react-datepicker";
@@ -54,6 +54,7 @@ import {
   Cross,
   Gradientcouppon,
   AddCart,
+  GradientLocation,
 } from "../../assets";
 
 const Accessoriescardslider = () => {
@@ -221,6 +222,13 @@ const Accessoriescardslider = () => {
 
 const Coupponbtn = () => {
   const [isCuppon, setIsCuppon] = useState(false);
+  useEffect(() => {
+    if(isCuppon){
+      document.body.style.position = "fixed"
+    } else {
+      document.body.style.position = "relative"
+    }
+  })
 
   if (window.innerWidth > 500 && window.innerWidth <= 768) {
     return (
@@ -442,6 +450,26 @@ const Productdetails = () => {
   const [isPaidaddons, setIsPaidaddons] = useState(false);
   const [data, setData] = useState(question);
   const [addCart, setAddCart] = useState(false);
+  const [sixMonth, setSixmonth] = useState(false);
+  const [threeMonth, setThreemonth] = useState(false);
+  const [oneMonth, setOnemonth] = useState(false);
+  const [oneWeek, setOneweek] = useState(false);
+  const [towDay, setTowday] = useState(false);
+  const [oneDay, setOneday] = useState(false);
+  const [wishSix, setWishsix] = useState(false);
+  const [wishThree, setWishthree] = useState(false);
+  const [wishOne, setWishOne] = useState(false);
+  const [wishOnew, setWishonew] = useState(false);
+  const [wishTwo, setWishtwo] = useState(false);
+  const [wishOned, setWishoned] = useState(false);
+  const [wishList, setWishlist] = useState(false);
+  useEffect(() => {
+    if(wishList || isFreeaddons || isPaidaddons){
+      document.body.style.position = "fixed"
+    } else {
+      document.body.style.position = "relative"
+    }
+  })
 
   if (window.innerWidth <= 500) {
     return (
@@ -568,37 +596,65 @@ const Productdetails = () => {
             <p id="product-heading">Playstation 4</p>
             <p id="select-text">Select a Plan</p>
             <div className="select-plan-container">
-              <div className="plan">
+              <div
+                className="plan"
+                style={{
+                  padding: sixMonth ? "1px" : "0px",
+                  cursor: "pointer",
+                }}
+                onClick={() => setSixmonth(!sixMonth)}
+              >
                 <div className="plan-content">
                   <p id="subscription-time">6 Month</p>
                   <p id="subscription-price">
                     <img src={Rupees} alt="rupees" />
-                    9,000/6Mn
+                    9k/6Mn
                   </p>
                 </div>
               </div>
 
-              <div className="plan">
+              <div
+                className="plan"
+                style={{
+                  padding: threeMonth ? "1px" : "0px",
+                  cursor: "pointer",
+                }}
+                onClick={() => setThreemonth(!threeMonth)}
+              >
                 <div className="plan-content">
                   <p id="subscription-time">3 Month</p>
                   <p id="subscription-price">
                     <img src={Rupees} alt="rupees" />
-                    4,500/3Mn
+                    4.5k/3Mn
                   </p>
                 </div>
               </div>
 
-              <div className="plan">
+              <div
+                className="plan"
+                style={{
+                  padding: oneMonth ? "1px" : "0px",
+                  cursor: "pointer",
+                }}
+                onClick={() => setOnemonth(!oneMonth)}
+              >
                 <div className="plan-content">
                   <p id="subscription-time">1 Month</p>
                   <p id="subscription-price">
                     <img src={Rupees} alt="rupees" />
-                    1500/Mn
+                    1.5k/Mn
                   </p>
                 </div>
               </div>
 
-              <div className="plan">
+              <div
+                className="plan"
+                style={{
+                  padding: oneWeek ? "1px" : "0px",
+                  cursor: "pointer",
+                }}
+                onClick={() => setOneweek(!oneWeek)}
+              >
                 <div className="plan-content">
                   <p id="subscription-time">1 Week</p>
                   <p id="subscription-price">
@@ -608,7 +664,14 @@ const Productdetails = () => {
                 </div>
               </div>
 
-              <div className="plan">
+              <div
+                className="plan"
+                style={{
+                  padding: towDay ? "1px" : "0px",
+                  cursor: "pointer",
+                }}
+                onClick={() => setTowday(!towDay)}
+              >
                 <div className="plan-content">
                   <p id="subscription-time">2 Days</p>
                   <p id="subscription-price">
@@ -618,7 +681,14 @@ const Productdetails = () => {
                 </div>
               </div>
 
-              <div className="plan">
+              <div
+                className="plan"
+                style={{
+                  padding: oneDay ? "1px" : "0px",
+                  cursor: "pointer",
+                }}
+                onClick={() => setOneday(!oneDay)}
+              >
                 <div className="plan-content">
                   <p id="subscription-time">1 Day</p>
                   <p id="subscription-price">
@@ -763,36 +833,36 @@ const Productdetails = () => {
 
         <div className="product-frequently-rented-together">
           <div className="product-frequently-rented-together-content">
-          <div className="product-frequently-rented-together-text">
-            <p>Most Frequently Rented Together</p>
-            <div className="product-frequently-rented-together-button">
-              <div
-                className="rented-together-left-button"
-                onClick={() => swiper.slidePrev()}
-              >
-                <img
-                  src={Left}
-                  onMouseOver={(e) => (e.currentTarget.src = ExcludeLeft)}
-                  onMouseOut={(e) => (e.currentTarget.src = Left)}
-                  className="leftVector"
-                />
-              </div>
-              <div
-                className="rented-together-right-button"
-                onClick={() => swiper.slideNext()}
-              >
-                <img
-                  src={Right}
-                  onMouseOver={(e) => (e.currentTarget.src = ExcludeRight)}
-                  onMouseOut={(e) => (e.currentTarget.src = Right)}
-                  className="rightVector"
-                />
+            <div className="product-frequently-rented-together-text">
+              <p>Most Frequently Rented Together</p>
+              <div className="product-frequently-rented-together-button">
+                <div
+                  className="rented-together-left-button"
+                  onClick={() => swiper.slidePrev()}
+                >
+                  <img
+                    src={Left}
+                    onMouseOver={(e) => (e.currentTarget.src = ExcludeLeft)}
+                    onMouseOut={(e) => (e.currentTarget.src = Left)}
+                    className="leftVector"
+                  />
+                </div>
+                <div
+                  className="rented-together-right-button"
+                  onClick={() => swiper.slideNext()}
+                >
+                  <img
+                    src={Right}
+                    onMouseOver={(e) => (e.currentTarget.src = ExcludeRight)}
+                    onMouseOut={(e) => (e.currentTarget.src = Right)}
+                    className="rightVector"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-          <div className="product-frequently-rented-together-card-container">
-            <Accessoriescardslider />
-          </div>
+            <div className="product-frequently-rented-together-card-container">
+              <Accessoriescardslider />
+            </div>
           </div>
         </div>
 
@@ -1350,7 +1420,14 @@ const Productdetails = () => {
                 <p id="product-heading">Playstation 4</p>
                 <p id="select-text">Select a Plan</p>
                 <div className="select-plan-container">
-                  <div className="plan">
+                  <div
+                    className="plan"
+                    style={{
+                      padding: sixMonth ? "1px" : "0px",
+                      cursor: "pointer",
+                    }}
+                    onClick={() => setSixmonth(!sixMonth)}
+                  >
                     <div className="plan-content">
                       <p id="subscription-time">6 Month</p>
                       <p id="subscription-price">
@@ -1360,7 +1437,14 @@ const Productdetails = () => {
                     </div>
                   </div>
 
-                  <div className="plan">
+                  <div
+                    className="plan"
+                    style={{
+                      padding: threeMonth ? "1px" : "0px",
+                      cursor: "pointer",
+                    }}
+                    onClick={() => setThreemonth(!threeMonth)}
+                  >
                     <div className="plan-content">
                       <p id="subscription-time">3 Month</p>
                       <p id="subscription-price">
@@ -1370,7 +1454,14 @@ const Productdetails = () => {
                     </div>
                   </div>
 
-                  <div className="plan">
+                  <div
+                    className="plan"
+                    style={{
+                      padding: oneMonth ? "1px" : "0px",
+                      cursor: "pointer",
+                    }}
+                    onClick={() => setOnemonth(!oneMonth)}
+                  >
                     <div className="plan-content">
                       <p id="subscription-time">1 Month</p>
                       <p id="subscription-price">
@@ -1380,7 +1471,14 @@ const Productdetails = () => {
                     </div>
                   </div>
 
-                  <div className="plan">
+                  <div
+                    className="plan"
+                    style={{
+                      padding: oneWeek ? "1px" : "0px",
+                      cursor: "pointer",
+                    }}
+                    onClick={() => setOneweek(!oneWeek)}
+                  >
                     <div className="plan-content">
                       <p id="subscription-time">1 Week</p>
                       <p id="subscription-price">
@@ -1390,7 +1488,14 @@ const Productdetails = () => {
                     </div>
                   </div>
 
-                  <div className="plan">
+                  <div
+                    className="plan"
+                    style={{
+                      padding: towDay ? "1px" : "0px",
+                      cursor: "pointer",
+                    }}
+                    onClick={() => setTowday(!towDay)}
+                  >
                     <div className="plan-content">
                       <p id="subscription-time">2 Days</p>
                       <p id="subscription-price">
@@ -1400,7 +1505,14 @@ const Productdetails = () => {
                     </div>
                   </div>
 
-                  <div className="plan">
+                  <div
+                    className="plan"
+                    style={{
+                      padding: oneDay ? "1px" : "0px",
+                      cursor: "pointer",
+                    }}
+                    onClick={() => setOneday(!oneDay)}
+                  >
                     <div className="plan-content">
                       <p id="subscription-time">1 Day</p>
                       <p id="subscription-price">
@@ -2266,30 +2378,418 @@ const Productdetails = () => {
                 </div>
 
                 <div className="button-container">
-                  <div
-                    className="addCart-button"
-                    onClick={() => setAddCart(!addCart)}
-                  >
-                    {addCart ? (
-                      <button type="submit" className="added-to-cart">
-                        <img
-                          src={AddCart}
-                          alt="cart"
-                          style={{ marginRight: ".5rem" }}
-                        />
-                        Add to Cart
-                      </button>
-                    ) : (
-                      <button type="submit" className="add-to-cart">
-                        <img
-                          src={WhiteCart}
-                          alt="cart"
-                          style={{ marginRight: ".5rem" }}
-                        />
-                        Add to Cart
-                      </button>
-                    )}
-                  </div>
+                  {addCart ? (
+                    <>
+                      <div
+                        className="addCart-button"
+                        onClick={() => setWishlist(!wishList)}
+                      >
+                        <button type="submit" className="added-to-cart">
+                          <img
+                            src={AddCart}
+                            alt="cart"
+                            style={{ marginRight: ".5rem" }}
+                          />
+                          Added to Cart
+                        </button>
+                      </div>
+                      {wishList && (
+                        <>
+                          <div className="product-details-wishlist-container">
+                            <div className="product-details-wishlist-content">
+                              <p id="wait-list-text">
+                                Wait List{" "}
+                                <img
+                                  src={SmallCross}
+                                  alt="smallcross"
+                                  style={{
+                                    width: "1.5rem",
+                                    height: "1.5rem",
+                                    cursor: "pointer",
+                                  }}
+                                  onClick={() => setWishlist(!wishList)}
+                                />
+                              </p>
+                              <div className="product-details-name-no-container">
+                                <input
+                                  type="text"
+                                  name=""
+                                  id=""
+                                  placeholder="Enter your name"
+                                />
+                                <input
+                                  type="tel"
+                                  name=""
+                                  id=""
+                                  placeholder="Enter your number"
+                                />
+                              </div>
+
+                              <div className="prod-name-wish-list-container">
+                                <input
+                                  type="text"
+                                  name=""
+                                  id=""
+                                  placeholder="Enter product name"
+                                />
+                              </div>
+
+                              <div className="prod-details-package-container">
+                                <div
+                                  className="prod-details-package-one"
+                                  style={{
+                                    padding: wishSix ? "1px" : "0px",
+                                    cursor: "pointer",
+                                    userSelect: "none",
+                                  }}
+                                  onClick={() => setWishsix(!wishSix)}
+                                >
+                                  <div className="prod-details-package-one-content">
+                                    <p
+                                      id="prod-details-month-text"
+                                      style={{
+                                        background: wishSix
+                                          ? "linear-gradient(91deg, #1BACF4 0%, #19EEB5 100.16%)"
+                                          : "",
+                                        WebkitBackgroundClip: wishSix
+                                          ? "transparent"
+                                          : "",
+                                        WebkitTextFillColor: wishSix
+                                          ? "transparent"
+                                          : "",
+                                        backgroundClip: wishSix ? "text" : "",
+                                      }}
+                                    >
+                                      6 Month
+                                    </p>
+                                    <p
+                                      id="prod-details-price-text"
+                                      style={{
+                                        background: wishSix
+                                          ? "linear-gradient(91deg, #1BACF4 0%, #19EEB5 100.16%)"
+                                          : "",
+                                        WebkitBackgroundClip: wishSix
+                                          ? "transparent"
+                                          : "",
+                                        WebkitTextFillColor: wishSix
+                                          ? "transparent"
+                                          : "",
+                                        backgroundClip: wishSix ? "text" : "",
+                                      }}
+                                    >
+                                      ₹5,000/Mn
+                                    </p>
+                                  </div>
+                                </div>
+
+                                <div
+                                  className="prod-details-package-one"
+                                  style={{
+                                    padding: wishThree ? "1px" : "0px",
+                                    cursor: "pointer",
+                                    userSelect: "none",
+                                  }}
+                                  onClick={() => setWishthree(!wishThree)}
+                                >
+                                  <div className="prod-details-package-one-content">
+                                    <p
+                                      id="prod-details-month-text"
+                                      style={{
+                                        background: wishThree
+                                          ? "linear-gradient(91deg, #1BACF4 0%, #19EEB5 100.16%)"
+                                          : "",
+                                        WebkitBackgroundClip: wishThree
+                                          ? "transparent"
+                                          : "",
+                                        WebkitTextFillColor: wishThree
+                                          ? "transparent"
+                                          : "",
+                                        backgroundClip: wishThree ? "text" : "",
+                                      }}
+                                    >
+                                      3 Month
+                                    </p>
+                                    <p
+                                      id="prod-details-price-text"
+                                      style={{
+                                        background: wishThree
+                                          ? "linear-gradient(91deg, #1BACF4 0%, #19EEB5 100.16%)"
+                                          : "",
+                                        WebkitBackgroundClip: wishThree
+                                          ? "transparent"
+                                          : "",
+                                        WebkitTextFillColor: wishThree
+                                          ? "transparent"
+                                          : "",
+                                        backgroundClip: wishThree ? "text" : "",
+                                      }}
+                                    >
+                                      ₹5,000/Mn
+                                    </p>
+                                  </div>
+                                </div>
+
+                                <div
+                                  className="prod-details-package-one"
+                                  style={{
+                                    padding: wishOne ? "1px" : "0px",
+                                    cursor: "pointer",
+                                    userSelect: "none",
+                                  }}
+                                  onClick={() => setWishOne(!wishOne)}
+                                >
+                                  <div className="prod-details-package-one-content">
+                                    <p
+                                      id="prod-details-month-text"
+                                      style={{
+                                        background: wishOne
+                                          ? "linear-gradient(91deg, #1BACF4 0%, #19EEB5 100.16%)"
+                                          : "",
+                                        WebkitBackgroundClip: wishOne
+                                          ? "transparent"
+                                          : "",
+                                        WebkitTextFillColor: wishOne
+                                          ? "transparent"
+                                          : "",
+                                        backgroundClip: wishOne ? "text" : "",
+                                      }}
+                                    >
+                                      1 Month
+                                    </p>
+                                    <p
+                                      id="prod-details-price-text"
+                                      style={{
+                                        background: wishOne
+                                          ? "linear-gradient(91deg, #1BACF4 0%, #19EEB5 100.16%)"
+                                          : "",
+                                        WebkitBackgroundClip: wishOne
+                                          ? "transparent"
+                                          : "",
+                                        WebkitTextFillColor: wishOne
+                                          ? "transparent"
+                                          : "",
+                                        backgroundClip: wishOne ? "text" : "",
+                                      }}
+                                    >
+                                      ₹5,00/Mn
+                                    </p>
+                                  </div>
+                                </div>
+
+                                <div
+                                  className="prod-details-package-one"
+                                  style={{
+                                    padding: wishOnew ? "1px" : "0px",
+                                    cursor: "pointer",
+                                    userSelect: "none",
+                                  }}
+                                  onClick={() => setWishonew(!wishOnew)}
+                                >
+                                  <div className="prod-details-package-one-content">
+                                    <p
+                                      id="prod-details-month-text"
+                                      style={{
+                                        background: wishOnew
+                                          ? "linear-gradient(91deg, #1BACF4 0%, #19EEB5 100.16%)"
+                                          : "",
+                                        WebkitBackgroundClip: wishOnew
+                                          ? "transparent"
+                                          : "",
+                                        WebkitTextFillColor: wishOnew
+                                          ? "transparent"
+                                          : "",
+                                        backgroundClip: wishOnew ? "text" : "",
+                                      }}
+                                    >
+                                      1 Week
+                                    </p>
+                                    <p
+                                      id="prod-details-price-text"
+                                      style={{
+                                        background: wishOnew
+                                          ? "linear-gradient(91deg, #1BACF4 0%, #19EEB5 100.16%)"
+                                          : "",
+                                        WebkitBackgroundClip: wishOnew
+                                          ? "transparent"
+                                          : "",
+                                        WebkitTextFillColor: wishOnew
+                                          ? "transparent"
+                                          : "",
+                                        backgroundClip: wishOnew ? "text" : "",
+                                      }}
+                                    >
+                                      ₹5,000/Mn
+                                    </p>
+                                  </div>
+                                </div>
+
+                                <div
+                                  className="prod-details-package-one"
+                                  style={{
+                                    padding: wishTwo ? "1px" : "0px",
+                                    cursor: "pointer",
+                                    userSelect: "none",
+                                    background: wishTwo
+                                      ? "linear-gradient(91deg, #1BACF4 0%, #19EEB5 100.16%)"
+                                      : "",
+                                  }}
+                                  onClick={() => setWishtwo(!wishTwo)}
+                                >
+                                  <div className="prod-details-package-one-content">
+                                    <p
+                                      id="prod-details-month-text"
+                                      style={{
+                                        background: wishTwo
+                                          ? "linear-gradient(91deg, #1BACF4 0%, #19EEB5 100.16%)"
+                                          : "",
+                                        WebkitBackgroundClip: wishTwo
+                                          ? "transparent"
+                                          : "",
+                                        WebkitTextFillColor: wishTwo
+                                          ? "transparent"
+                                          : "",
+                                        backgroundClip: wishTwo ? "text" : "",
+                                      }}
+                                    >
+                                      2 Day
+                                    </p>
+                                    <p
+                                      id="prod-details-price-text"
+                                      style={{
+                                        background: wishTwo
+                                          ? "linear-gradient(91deg, #1BACF4 0%, #19EEB5 100.16%)"
+                                          : "",
+                                        WebkitBackgroundClip: wishTwo
+                                          ? "transparent"
+                                          : "",
+                                        WebkitTextFillColor: wishTwo
+                                          ? "transparent"
+                                          : "",
+                                        backgroundClip: wishTwo ? "text" : "",
+                                      }}
+                                    >
+                                      ₹500/Day
+                                    </p>
+                                  </div>
+                                </div>
+
+                                <div
+                                  className="prod-details-package-one"
+                                  style={{
+                                    padding: wishOned ? "1px" : "0px",
+                                    cursor: "pointer",
+                                    userSelect: "none",
+                                  }}
+                                  onClick={() => setWishoned(!wishOned)}
+                                >
+                                  <div className="prod-details-package-one-content">
+                                    <p
+                                      id="prod-details-month-text"
+                                      style={{
+                                        background: wishOned
+                                          ? "linear-gradient(91deg, #1BACF4 0%, #19EEB5 100.16%)"
+                                          : "",
+                                        WebkitBackgroundClip: wishOned
+                                          ? "transparent"
+                                          : "",
+                                        WebkitTextFillColor: wishOned
+                                          ? "transparent"
+                                          : "",
+                                        backgroundClip: wishOned ? "text" : "",
+                                      }}
+                                    >
+                                      1 Day
+                                    </p>
+                                    <p
+                                      id="prod-details-price-text"
+                                      style={{
+                                        background: wishOned
+                                          ? "linear-gradient(91deg, #1BACF4 0%, #19EEB5 100.16%)"
+                                          : "",
+                                        WebkitBackgroundClip: wishOned
+                                          ? "transparent"
+                                          : "",
+                                        WebkitTextFillColor: wishOned
+                                          ? "transparent"
+                                          : "",
+                                        backgroundClip: wishOned ? "text" : "",
+                                      }}
+                                    >
+                                      ₹500/Day
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="prod-details-date-container">
+                                <div className="prod-details-from-date-container">
+                                  <p>From: </p>
+                                  <div className="prod-details-date-input-container">
+                                    <input type="date" name="" id="" />
+                                    <div className="prod-details-calender-img-container">
+                                      <img src={Calender} alt="calender" />
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="prod-details-upto-date-container">
+                                  <p>Upto: </p>
+                                  <div className="prod-details-date-input-container">
+                                    <input type="date" name="" id="" />
+                                    <div className="prod-details-calender-img-container">
+                                      <img src={Calender} alt="calender" />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="prod-details-city-pin-input-container">
+                                <div className="prod-details-city-input-container">
+                                  <img
+                                    src={GradientLocation}
+                                    alt="location"
+                                    style={{
+                                      width: "0.938rem",
+                                      height: "1.25rem",
+                                    }}
+                                  />
+                                  <input
+                                    type="text"
+                                    name=""
+                                    id=""
+                                    placeholder="Enter your city"
+                                  />
+                                </div>
+                                <input
+                                  type="text"
+                                  name=""
+                                  id=""
+                                  placeholder="Enter your pincode"
+                                />
+                              </div>
+
+                              <button type="submit">Enter Wait List</button>
+                            </div>
+                          </div>
+                        </>
+                      )}
+                    </>
+                  ) : (
+                    <>
+                      <div
+                        className="addCart-button"
+                        onClick={() => setAddCart(!addCart)}
+                      >
+                        <button type="submit" className="add-to-cart">
+                          <img
+                            src={WhiteCart}
+                            alt="cart"
+                            style={{ marginRight: ".5rem" }}
+                          />
+                          Add to Cart
+                        </button>
+                      </div>
+                    </>
+                  )}
                   <Coupponbtn />
                 </div>
 
