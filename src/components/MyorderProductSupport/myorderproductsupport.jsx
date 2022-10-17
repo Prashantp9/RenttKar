@@ -4,9 +4,17 @@ import { GoPro, GradientCamera, OrderAccepted, SmallCross } from "../../assets";
 import "./myorderproductsupport.css";
 
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const Myorderproductsupport = (props) => {
   const [isSubmit, setIsSubmit] = useState(false);
+  useEffect(() => {
+    if(isSubmit) {
+      document.body.style.position = "fixed";
+    } else {
+      document.body.style.position = "relative" ;
+    }
+  })
 
   if (window.innerWidth <= 768) {
     return (

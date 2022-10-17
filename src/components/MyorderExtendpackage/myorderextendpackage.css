@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(2px);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 11;
 }
 
@@ -316,6 +316,24 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width:768px){
     .tablet-myorder-extend-package-container{
         position: fixed;
@@ -328,7 +346,7 @@
         align-items: center;
         width: 100vw;
         height: 100vh;
-        backdrop-filter: blur(5px);
+        background: rgba(0, 0, 0, 0.5);
         z-index: 11;
     }
 

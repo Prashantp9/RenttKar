@@ -426,7 +426,7 @@ const Home = () => {
               slidesPerGroup={1}
               grabCursor={true}
               loop={true}
-              loopFillGroupWithBlank={true}
+              loopFillGroupWithBlank={false}
               pagination={{
                 clickable: true,
               }}

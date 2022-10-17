@@ -578,7 +578,7 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
-    backdrop-filter: blur(2px);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .delivery-gst-details-content{
@@ -699,7 +699,7 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
-    backdrop-filter: blur(2px);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 10;
 }
 

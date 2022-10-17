@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
@@ -14,6 +15,16 @@ import "./mylistingcarddropdown.css";
 
 const Mylistingcarddropdown = (props) => {
   const[isCancel, setIsCancel] = useState(false);
+  const[isPackage, setIsPackage] = useState(false);
+  
+  useEffect(() => {
+    if(isCancel || isPackage){
+      document.body.style.position = "fixed";
+    } else {
+      document.body.style.position = "relative";
+    }
+
+  })
 
   if(window.innerWidth <= 576){
     return(

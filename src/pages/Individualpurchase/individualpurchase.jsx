@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import "./individualpurchase.css";
 import { Navbar } from "../../components";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
@@ -32,6 +32,13 @@ const Individualpurchase = () => {
   const [isorderConfirm, setIsOrderconfirm] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
   const [isProductdetails, setIsProductdetails] = useState(false);
+  useEffect(() => {
+    if(isorderConfirm){
+      document.body.style.position = "fixed"
+    } else {
+      document.body.style.position = "relative"
+    }
+  })
 
   if (window.innerWidth <= 500) {
     return (

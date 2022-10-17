@@ -257,7 +257,7 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
-    backdrop-filter: blur(2px);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 10;
 }
 
@@ -267,7 +267,7 @@
     justify-content: flex-start;
     align-items: center;
     width: 40.875rem;
-    height: 25.938rem;
+    height: 28.938rem;
     background: #191919;
     border-radius: 6px;
     padding: 2rem 4rem 2rem 4rem;

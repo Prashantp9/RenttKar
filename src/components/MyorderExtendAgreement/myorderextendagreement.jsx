@@ -7,6 +7,13 @@ import "./myorderextendagreement.css";
 
 const Myorderextendagreement = (props) => {
   const [isPayment, setIsPayment] = useState(false);
+  useEffect(() => {
+    if(isPayment) {
+      document.body.style.position = "fixed";
+    } else {
+      document.body.style.position = "relative";
+    }
+  })
 
   if (window.innerWidth <= 768) {
     return (

@@ -10,7 +10,7 @@
     width: 100vw;
     height: 100vh;
     z-index: 11;
-    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 
@@ -179,7 +179,7 @@
     width: 100vw;
     height: 100vh;
     z-index: 11;
-    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .myorder-cancellation-submitted-content{
@@ -279,7 +279,7 @@
         width: 100vw;
         height: 100vh;
         z-index: 11;
-        backdrop-filter: blur(5px);
+        background: rgba(0, 0, 0, 0.5);
     }
     
     
@@ -449,7 +449,7 @@
         width: 100vw;
         height: 100vh;
         z-index: 11;
-        backdrop-filter: blur(5px);
+        background: rgba(0, 0, 0, 0.5);
     }
     
     .myorder-cancellation-submitted-content{

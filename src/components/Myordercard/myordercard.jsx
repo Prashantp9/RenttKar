@@ -14,11 +14,21 @@ import {
 } from "../../assets";
 import "./myordercard.css";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const Myordercard = (props) => {
   const [isDropdown, setIsDropdown] = useState(false);
   const [isProductsupport, setIsProductsupport] = useState(false);
   const [isPackageExtend, setIsPackageExtend] = useState(false);
+
+  useEffect(() => {
+    if (isProductsupport || isPackageExtend) {
+      document.body.style.position = "fixed";
+    } else {
+      document.body.style.position = "relative";
+    }
+  });
+
   if (window.innerWidth <= 500) {
     return (
       <>
@@ -44,7 +54,9 @@ const Myordercard = (props) => {
               style={{ width: "0.313rem", height: "1.5rem" }}
               onClick={() => setIsDropdown(!isDropdown)}
             />
-            {isDropdown && <MyordercardDropdown  onclick={() => setIsDropdown(!isDropdown)}/>}
+            {isDropdown && (
+              <MyordercardDropdown onclick={() => setIsDropdown(!isDropdown)} />
+            )}
           </div>
 
           <div className="mobile-myorder-lowerpart">
@@ -64,40 +76,40 @@ const Myordercard = (props) => {
       <>
         <div className="tablet-myorder-card">
           <div className="tablet-myorder-card-content">
-          <div className="tablet-myorder-card-img">
-            <img src={Pc} alt="pc" />
-          </div>
+            <div className="tablet-myorder-card-img">
+              <img src={Pc} alt="pc" />
+            </div>
 
-          <div className="tablet-myorder-card-product-desc">
-            <p>Playstation 4</p>
-            <button
-              type="submit"
-              onClick={() => setIsPackageExtend(!isPackageExtend)}
-            >
-              Extend Date
-            </button>
-            {isPackageExtend && (
-              <MyorderExtendPackage
-                onclick={() => setIsPackageExtend(!isPackageExtend)}
-              />
-            )}
-          </div>
+            <div className="tablet-myorder-card-product-desc">
+              <p>Playstation 4</p>
+              <button
+                type="submit"
+                onClick={() => setIsPackageExtend(!isPackageExtend)}
+              >
+                Extend Date
+              </button>
+              {isPackageExtend && (
+                <MyorderExtendPackage
+                  onclick={() => setIsPackageExtend(!isPackageExtend)}
+                />
+              )}
+            </div>
 
-          <div className="tablet-myorder-card-button">
-            <p>
-              End date <span>21/05/2022</span>
-            </p>
-            <p>
-              Status <span>Order Incomplete</span>
-            </p>
-          </div>
-          <img
-            src={Threedots}
-            alt="threedots"
-            onClick={() => setIsDropdown(!isDropdown)}
-            style={{ width: ".25rem", height: "1.5rem" }}
-          />
-          {isDropdown && <MyordercardDropdown />}
+            <div className="tablet-myorder-card-button">
+              <p>
+                End date <span>21/05/2022</span>
+              </p>
+              <p>
+                Status <span>Order Incomplete</span>
+              </p>
+            </div>
+            <img
+              src={Threedots}
+              alt="threedots"
+              onClick={() => setIsDropdown(!isDropdown)}
+              style={{ width: ".25rem", height: "1.5rem" }}
+            />
+            {isDropdown && <MyordercardDropdown />}
           </div>
         </div>
       </>
@@ -169,13 +181,21 @@ const Myordercard = (props) => {
         </div>
         {props.class && (
           <>
-            <div className={props.class} style={{cursor:"pointer"}} onClick={() => setIsPackageExtend(!isPackageExtend)}>
+            <div
+              className={props.class}
+              style={{ cursor: "pointer" }}
+              onClick={() => setIsPackageExtend(!isPackageExtend)}
+            >
               <p>
                 <span style={{ marginRight: ".5rem" }}>Deal Breaker:</span> Get
                 20% Off on extending tennure for 2 Months{" "}
               </p>
             </div>
-            {isPackageExtend && <MyorderExtendPackage onclick={() => setIsPackageExtend(!isPackageExtend)}/>}
+            {isPackageExtend && (
+              <MyorderExtendPackage
+                onclick={() => setIsPackageExtend(!isPackageExtend)}
+              />
+            )}
           </>
         )}
       </>

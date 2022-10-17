@@ -10,10 +10,19 @@ import "swiper/css/navigation";
 import "swiper/css/autoplay";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { Navigation } from "swiper";
+import { useEffect } from "react";
 
 const Myorderextendpackage = (props) => {
   const [isClick, setIsClick] = useState(false);
   const [isAgreement, setIsAgreement] = useState(false);
+
+  useEffect(() => {
+    if(isClick || isAgreement){
+      document.body.style.position = "fixed";
+    } else {
+      document.body.style.position = "relative";
+    }
+  })
 
   if (window.innerWidth <= 768) {
     return (

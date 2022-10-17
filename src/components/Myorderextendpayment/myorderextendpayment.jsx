@@ -17,6 +17,13 @@ const Myorderextendpayment = (props) => {
   const [isAgreement, setIsAgreement] = useState(false);
   const [isCredit, setIsCredit] = useState(false);
   const [isDone, setIsDone] = useState(false);
+
+  if(isCredit || isDone) {
+    document.body.style.position = "fixed";
+  } else {
+    document.body.style.position = "relative";
+  }
+
   if (window.innerWidth <= 768) {
     return (
       <>
@@ -33,7 +40,7 @@ const Myorderextendpayment = (props) => {
                     {" "}
                     <img src={GradientDone} alt="done" /> Agreement
                   </p>
-                  {isAgreement && <MyorderExtendAgreement />}
+                  {isAgreement && <MyorderExtendAgreement onclick={props.onclick}/>}
                   <p id="myorder-pay-text">Payment</p>
                 </div>
                 <div className="myorder-payment-types-container">
@@ -221,7 +228,7 @@ const Myorderextendpayment = (props) => {
                     {" "}
                     <img src={GradientDone} alt="done" /> Agreement
                   </p>
-                  {isAgreement && <MyorderExtendAgreement />}
+                  {isAgreement && <MyorderExtendAgreement onclick={props.onclick}/>}
                   <p id="myorder-pay-text">Payment</p>
                 </div>
                 <div className="myorder-payment-types-container">

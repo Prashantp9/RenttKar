@@ -4,9 +4,19 @@ import { Calender, OrderAccepted, SmallCross } from "../../assets";
 import "./myordercancellation.css";
 
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const Myordercancellation = (props) => {
   const [isCancel, setIsCancel] = useState(false);
+
+  useEffect(() => {
+    if(isCancel) {
+      document.body.style.position = "fixed";
+    } else {
+      document.body.style.position = "relative";
+    }
+  })
+
   if (window.innerWidth <= 768) {
     return (
       <>

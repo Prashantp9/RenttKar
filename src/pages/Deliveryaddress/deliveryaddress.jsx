@@ -37,6 +37,7 @@ import {
 } from "../../assets";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const Deliveryaddress = () => {
   const [showAddpage, setShowaddpage] = useState(false);
@@ -50,6 +51,14 @@ const Deliveryaddress = () => {
   const [isCoupon, setIsCoupon] = useState(false);
   const [isNewaddress, setIsNewaddress] = useState(false);
   const [searchAdd, setSearchadd] = useState(false);
+  useEffect(() => {
+    if(isNewaddress || isGstdetails || isCoupon){
+      document.body.style.position = "fixed";
+    } else {
+      document.body.style.position = "relative"
+    }
+  })
+
 
   if (window.innerWidth <= 500) {
     return (

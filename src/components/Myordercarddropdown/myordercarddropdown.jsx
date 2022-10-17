@@ -15,12 +15,22 @@ import {
   OrderAccepted
 } from "../../assets";
 import "./myordercarddropdown.css";
+import { useEffect } from "react";
 
 const Myordercarddropdown = (props) => {
   const [isProduct, setIsProduct] = useState(false);
   const [isPackage, setIsPackage] = useState(false);
   const [isCancellation, setIsCancellation] = useState(false);
   const [isOrderconfirm , setIsOrderConfirm] = useState(false);
+
+  useEffect(() => {
+    if(isProduct || isPackage || isCancellation || isOrderconfirm){
+      document.body.style.position = "fixed";
+    } else {
+      document.body.style.position = "relative";
+    }
+  })
+
   if (window.innerWidth <= 500) {
     return (
       <>

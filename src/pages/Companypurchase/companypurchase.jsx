@@ -25,6 +25,7 @@ import {
   OrderAccepted,
 } from "../../assets";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const Companypurchase = () => {
   const [isGstdetails, setIsGstdetails] = useState(false);
@@ -32,6 +33,13 @@ const Companypurchase = () => {
   const [isorderConfirm, setIsOrderconfirm] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
   const [isProductdetails, setIsProductdetails] = useState(false);
+  useEffect(() => {
+    if(isorderConfirm){
+      document.body.style.position = "fixed"
+    } else {
+      document.body.style.position = "relative"
+    }
+  })
 
   if (window.innerWidth <= 500) {
     return (

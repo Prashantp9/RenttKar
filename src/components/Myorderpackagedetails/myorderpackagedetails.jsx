@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { MyorderExtendPackage, MyorderPackagePayment, OrderAccepted } from "..";
 import { Pc, PriceInfo, SmallCross } from "../../assets";
@@ -8,6 +8,15 @@ const Myorderpackagedetails = (props) => {
   const [isPackage, setIsPackage] = useState(false);
   const [isPayment, setIsPayment] = useState(false);
   const [isDone, setIsDone] = useState(false);
+
+  useEffect(() => {
+    if(isPackage || isPayment || isDone){
+      document.body.style.position = "fixed";
+    } else {
+      document.body.style.position = "relative";
+    }
+  })
+
   if (window.innerWidth <= 768) {
     return(
       <>
